@@ -1,5 +1,4 @@
 import React from 'react';
-import Constants from '../../../constants/constants';
 import Pattern from './../parts/Pattern';
 
 export const Yandex = () => {

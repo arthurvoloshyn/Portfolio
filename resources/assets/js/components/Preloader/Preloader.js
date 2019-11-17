@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Loading from './lib/Loading';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import './scss/Preloader.scss';
-import {URLS} from './../../constants/urls';
+import { URLS } from './../../constants/urls';
 import PropTypes from 'prop-types';
 
 function mapStateToProps (state) {

@@ -65,7 +65,6 @@ class Neocore extends Component {
                     Created a new various functionality, also covered with tests.
                     Optimized queries to the MongoDB database, added indexes.
 
-
                 </div>
 
                 <div className={'arrow ' + (this.state.info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle}/>

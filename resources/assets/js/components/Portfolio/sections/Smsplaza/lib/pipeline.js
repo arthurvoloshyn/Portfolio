@@ -52,9 +52,8 @@ function initPipe (i) {
 }
 
 function updatePipes () {
-
-  if(!pipeProps){
-    return
+  if (!pipeProps) {
+    return;
   }
 
   tick++;
@@ -158,8 +157,8 @@ function resize () {
 }
 
 function render () {
-  if(!ctx){
-    return
+  if (!ctx) {
+    return;
   }
   ctx.b.save();
   ctx.b.fillStyle = backgroundColor;
@@ -202,11 +201,10 @@ export function remove () {
     document.querySelector('.content--canvas--smsplaza canvas').remove();
   }
 
-    container = null;
-    canvas = null;
-    ctx = null;
-    center = null;
-    tick = null;
-    pipeProps = null;
-
+  container = null;
+  canvas = null;
+  ctx = null;
+  center = null;
+  tick = null;
+  pipeProps = null;
 }
