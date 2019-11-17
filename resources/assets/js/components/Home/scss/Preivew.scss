@@ -1,0 +1,78 @@
+
+.Preivew {
+
+  margin: 0 auto;
+  text-align: center;
+  color: #87ceeb;
+  text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
+
+  div:nth-child(1) {
+    font-family: 'Wire One', Helvetica, Arial, sans-serif; // initial
+
+    //font-family: 'Chinese', Helvetica, Arial, sans-serif; // 3/5
+
+    //font-family: 'bonzai', Helvetica, Arial, sans-serif; // 4/5
+
+    //font-family: 'Karate', Helvetica, Arial, sans-serif; // 2/5
+
+    //font-family: 'shanghai', Helvetica, Arial, sans-serif; // 4/5
+
+    //font-family: 'Shoguns', Helvetica, Arial, sans-serif; //3/5
+
+    //font-family: 'YOZAKURA-Regular', Helvetica, Arial, sans-serif; //3/5
+
+    //font-family: 'Zenzai', Helvetica, Arial, sans-serif; // 1/5
+
+    font-size: 100px;
+    color: white;
+
+    text-shadow: 0 0 10px #87ceeb,
+    0 0 15px #87ceeb,
+    0 0 30px deepskyblue,
+    0 0 30px deepskyblue,
+    0 0 30px deepskyblue,
+    0 0 40px deepskyblue,
+    0 0 50px deepskyblue,
+    0 0 60px deepskyblue,
+    0 0 70px deepskyblue,
+    0 0 80px deepskyblue,
+    0 0 90px deepskyblue,
+    0 0 100px skyblue;
+
+    @media  (max-width: 800px) {
+      text-shadow: 0 0 10px #87ceeb,
+      0 0 15px #87ceeb,
+      0 0 30px deepskyblue,
+      0 0 100px skyblue;
+    }
+  }
+
+  @media (max-width: 500px) {
+    div:nth-child(1) {
+      font-size: 80px;
+    }
+  }
+
+  div:nth-child(2) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 500px) {
+    div:nth-child(2) {
+      font-size: 20px;
+    }
+  }
+
+
+  div:nth-child(3) {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 500px) {
+    div:nth-child(3) {
+      font-size: 14px;
+    }
+  }
+
+}

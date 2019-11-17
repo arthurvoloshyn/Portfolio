@@ -1,0 +1,160 @@
+
+.Factoringvergelijken {
+
+  background-image: linear-gradient(to right top, #2F2541, #6E3C5F, #B0576A, #E38065, #FEB85F, #F9F871);
+
+  .technologies-container {
+
+    .technologies {
+
+      width: 700px;
+      height: 100px;
+      background-image: url(#{$img-path}/factoringvergelijken/factoringvergelijken-desktop.png);
+
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+    }
+
+    .description {
+
+      p {
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        font-family: 'Hammersmith One', sans-serif;
+        line-height: 28px;
+
+        max-width: 600px;
+        font-size: 18px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+        color: black;
+        text-align: center;
+        font-weight: normal;
+
+        margin-top: 40px;
+        margin-bottom: 10px;
+
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+    .rotate_button {
+      figure {
+
+        span {
+
+          border: 5px solid black;
+
+        }
+        span:nth-child(1) {
+          color: #2F2541;
+          background: transparent;
+        }
+        span:nth-child(2) {
+          color: #2F2541;
+          background: transparent;
+        }
+
+      }
+    }
+
+  }
+  .logo-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      width: 500px;
+      @media (max-height: 400px) {
+        width: 220px !important;
+      }
+    }
+
+    .header {
+      font-family: 'Open Sans', 'Condensed';
+      text-transform: uppercase;
+      color: black;
+      font-size: 50px;
+      font-weight: 600;
+      z-index: 100;
+      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px;
+    }
+    .paragraph {
+
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      font-family: 'Hammersmith One', sans-serif;
+      font-size: 20px;
+      color: black;
+      letter-spacing: 0.62px;
+      line-height: 30px;
+      font-weight: 300;
+      z-index: 100;
+    }
+  }
+  .arrow {
+    display: block;
+    background-position: center;
+    background-size: 80px;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+  }
+  .show {
+    background-image: url(#{$img-path}/down-arrow.svg);
+  }
+  .hide {
+    background-image: url(#{$img-path}/cancel.svg);
+  }
+
+  @media (max-width: 850px) {
+    .technologies {
+
+      width: 350px !important;
+      height: 220px !important;
+      background-image: url(#{$img-path}/factoringvergelijken/factoringvergelijken-mobile.png) !important;
+
+    }
+  }
+
+  @media (max-width: 500px) {
+
+    .technologies {
+
+      width: 250px !important;
+      height: 150px !important;
+      background-image: url(#{$img-path}/factoringvergelijken/factoringvergelijken-mobile.png) !important;
+
+    }
+
+    .logo-container {
+      img {
+
+        width: 100%;
+        max-width: 300px;
+
+      }
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-2",
+    ["es2016"]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "babel-plugin-transform-class-properties",
+    "babel-plugin-syntax-dynamic-import"
+  ]
+}

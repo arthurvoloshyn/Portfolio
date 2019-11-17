@@ -1,0 +1,16 @@
+@import "Map";
+@import "Form";
+
+.contact_page_container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+@media (max-width: 1320px) {
+  .contact_page_container {
+    flex-direction: column !important;
+
+  }
+
+}

@@ -1,0 +1,19 @@
+.toTopAnchor{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+  background-image: url(/imgs/totop.svg);
+  background-position: center;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  cursor: pointer;
+}
+
+@media (max-height: 500px) {
+  .toTopAnchor{
+    display: none !important;
+  }
+}

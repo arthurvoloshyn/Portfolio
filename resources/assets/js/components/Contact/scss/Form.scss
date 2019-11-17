@@ -1,0 +1,144 @@
+.contact-form {
+  min-height: 100vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+
+  p {
+    color: #87ceeb;
+    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
+  }
+  p:first-of-type {
+    font-family: 'Wire One', Helvetica, Arial, sans-serif;
+    font-size: 100px;
+  }
+
+  p:nth-child(2) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 460px) {
+
+    p:nth-child(2) {
+      font-size: 14px;
+    }
+  }
+
+  form {
+    width: 100%;
+
+    @media (max-width: 450px) {
+
+      div:nth-child(1) {
+        flex-direction: column;
+      }
+
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      input,textarea  {
+        background-color: #181818;
+        border: none;
+        height: 50px;
+        padding-left: 15px;
+        outline: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        color: #87ceeb;
+        text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
+      }
+
+
+
+      input[name='username'], input[name='email'] {
+        max-width: 300px;
+        width: 50%;
+      }
+
+
+      input::placeholder, textarea::placeholder {
+        color: #87ceeb;
+        text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
+      }
+
+      input[name='subject'] {
+        width: 100%;
+        max-width: 610px;
+        margin-top: 5px;
+      }
+
+      textarea[name='body'] {
+        width: 100%;
+        max-width: 610px;
+        height: 250px;
+        margin-top: 5px;
+      }
+      input[type='submit'] {
+        width: 150px;
+        height: 40px;
+        margin-top: 5px;
+        background: transparent;
+        border: 2px solid deepskyblue;
+        color: deepskyblue;
+        padding-left: 6px;
+      }
+
+      input[type='submit']:hover {
+        background: deepskyblue;
+        color: #161517;
+        transition-duration: 1s;
+      }
+
+      @media (max-width: 450px) {
+
+        input{
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
+
+        input[name='username'], input[name='email'] {
+          max-width: 290px;
+          width: 100%;
+          margin-top: 5px;
+        }
+
+        input[name='subject']{
+          max-width: 290px;
+        }
+
+        textarea[name='body']{
+          max-width: 290px;
+        }
+
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1320px) {
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.badInput {
+  border-bottom: 2px solid #F62619 !important;
+  transition-duration: 1s !important;
+}
+
+.goodInput {
+  border-bottom: 2px solid !important;
+  transition-duration: 1s !important;
+}

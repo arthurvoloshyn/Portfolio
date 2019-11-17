@@ -1,0 +1,4 @@
+resources/assets/js/components/Skills/lib/*
+resources/assets/js/components/Portfolio/sections/CompareIp/lib/charming.min.js
+resources/assets/js/components/Portfolio/sections/CompareIp/lib/anime.min.js
+resources/assets/js/components/Menu/lib/SVGMenu.js

@@ -1,0 +1,135 @@
+
+.CherryPick {
+
+  background: #F00000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DC281E, #F00000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DC281E, #F00000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  .technologies-container {
+
+    .technologies {
+
+      div div{
+        filter: drop-shadow( 5px 5px 5px rgba(0,0,0,0.5) );
+      }
+
+      div:nth-child(1) {
+        div:nth-child(1) {
+          background-image: url(#{$img-path}/cheryPick/angular.png);
+        }
+        div:nth-child(2) {
+          background-image: url(#{$img-path}/cheryPick/laravel.png);
+        }
+        div:nth-child(3) {
+          background-image: url(#{$img-path}/cheryPick/mysql.png);
+        }
+      }
+      div:nth-child(2) {
+        div:nth-child(1) {
+          background-image: url(#{$img-path}/cheryPick/php.png);
+        }
+        div:nth-child(2) {
+          background-image: url(#{$img-path}/cheryPick/js.png);
+        }
+      }
+    }
+
+    .description {
+
+      p {
+        font-family: 'Hammersmith One', sans-serif;
+        max-width: 600px;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: black;
+        text-align: center;
+
+      }
+      a{
+        color: black;
+        text-decoration: none;
+      }
+    }
+    .rotate_button {
+      display: none;
+    }
+
+  }
+  .logo-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      width: 200px;
+    }
+
+    .header{
+      font-family: 'Open Sans', 'Condensed';
+      text-transform: uppercase;
+      color: black;
+      font-size: 50px;
+      font-weight: 600;
+      z-index: 100;
+      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px;
+    }
+    .paragraph{
+      display: inline-block;
+      font-family: 'Hammersmith One', sans-serif;
+      font-size: 20px;
+      color: black;
+      letter-spacing: 0.62px;
+      line-height: 30px;
+      font-weight: 300;
+      z-index: 100;
+    }
+  }
+  .arrow {
+    display: block;
+    background-position: center;
+    background-size: 80px;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+  }
+  .show{
+    background-image: url(#{$img-path}/down-arrow.svg);
+  }
+  .hide{
+    background-image: url(#{$img-path}/cancel.svg);
+  }
+}
+@media (max-width: 500px) {
+  .Smoke_Zone {
+    .technologies-container {
+
+      .technologies {
+        flex-direction: column;
+        margin-bottom: 50px;
+        div div {
+          background-size: 50px !important;
+          width: 50px !important;
+          height: 50px !important;
+        }
+        div:nth-child(1) {
+          div:nth-child(1) {
+            background-size: 100px !important;
+            width: 100px !important;
+            height: 100px !important;
+          }
+        }
+      }
+
+    }
+
+  }
+}
