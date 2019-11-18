@@ -2,7 +2,7 @@
 
 Laravel and React
 
-https://arturvoloshyn.000webhostapp.com/
+https://arturvoloshyn.neosvita.com/
 
 ## Requirements
 - PHP 7.2
