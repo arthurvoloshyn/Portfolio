@@ -11,5 +11,5 @@ https://arturvoloshyn.000webhostapp.com/
 
 ## Install
 1. Copy .env.dist as .env
-2. Replace the database connection string in the .env file (Line 8 - 13)
+2. Replace the database connection string in the .env file
 3. php artisan serv
