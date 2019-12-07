@@ -1,53 +1,51 @@
 import React from 'react';
 import Pattern from './../parts/Pattern';
 
-export const Yandex = () => {
-  return (
-    <Pattern
-      classname="Yandex"
-      logo='../imgs/yandex/logo.png'
-      url={''}
-      effectClassIn='bounceIn'
-      effectClassOut='bounceOut'
-      technologies={_ => (
+export const Yandex = () => (
+  <Pattern
+    classname='Yandex'
+    logo='../imgs/yandex/logo.png'
+    url={''}
+    effectClassIn='bounceIn'
+    effectClassOut='bounceOut'
+    technologies={_ => (
 
-        <div className={'technologies'}>
-        </div>
-      )}
+      <div className={'technologies'}>
+      </div>
+    )}
 
-      description={() => (
+    description={() => (
 
-        <div className={'description'}>
-          <p>
-            <b>I</b> have build the game. This is SPA on jquery and <b>w</b>ebpack
-
-            <br/>
-                        with Ada<b>p</b>tive <b>I</b>nterface
-
-            <br/>
-                        and <b>o</b>ptimization of perform<b>a</b>nce
-          </p>
-        </div>
-      )}
-
-      figure={() => (
-
-        <div>
-
-        </div>
-      )}
-
-      logoDescription={ () => (
+      <div className={'description'}>
         <p>
-          <b>S</b>imple and relaxing game
+          <b>I</b> have build the game. This is SPA on jquery and <b>w</b>ebpack
+
           <br/>
-                    In honor of <b>F</b>ebruary 23
+                      with Ada<b>p</b>tive <b>I</b>nterface
+
           <br/>
-                    For <b>Y</b>andex maps
+                      and <b>o</b>ptimization of perform<b>a</b>nce
         </p>
-      )}
+      </div>
+    )}
 
-    />
+    figure={() => (
 
-  );
-};
+      <div>
+
+      </div>
+    )}
+
+    logoDescription={ () => (
+      <p>
+        <b>S</b>imple and relaxing game
+        <br/>
+                  In honor of <b>F</b>ebruary 23
+        <br/>
+                  For <b>Y</b>andex maps
+      </p>
+    )}
+
+  />
+
+);

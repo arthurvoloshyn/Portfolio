@@ -7,7 +7,8 @@ const coordinates = {
   lng: 24.709721,
   zoom: 12
 };
-const position = [coordinates.lat, coordinates.lng];
+const { lat, lng, zoom } = coordinates;
+const position = [lat, lng];
 const Icon = L.icon({
   iconUrl: '../imgs/location-pin.png',
   shadowUrl: '',
@@ -15,18 +16,17 @@ const Icon = L.icon({
   iconAnchor: [19, 38] // point of the icon which will correspond to marker's location
 
 });
+const { mapUrl, accessToken } = Constants;
+const URL = `${mapUrl}${accessToken}`;
 
-const MapLeaflet = () => {
-  return (
-
-    <Map center={position} zoomControl={false} className="map-container" id='mapid' zoom={coordinates.zoom}>
-      <TileLayer
-        url={Constants.mapUrl + Constants.accessToken}
-      />
-      <Marker position={position} icon={Icon}>
-      </Marker>
-    </Map>
-  );
-};
+const MapLeaflet = () => (
+  <Map center={position} zoomControl={false} className='map-container' id='mapid' zoom={zoom}>
+    <TileLayer
+      url={URL}
+    />
+    <Marker position={position} icon={Icon}>
+    </Marker>
+  </Map>
+);
 
 export default MapLeaflet;

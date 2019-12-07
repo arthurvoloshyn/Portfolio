@@ -26,9 +26,11 @@ const style = {
   }
 };
 
+const { outter, bgLayerStyle } = style;
+
 class History24 extends Component {
-  UNSAFE_componentWillReceiveProps (nextProps) {
-    if (nextProps.page.page === URLS.history24) {
+  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+    if (page === URLS.history24) {
       $('#fp-nav ul li a span').addClass('history24-bg');
     } else {
       $('#fp-nav ul li a span').removeClass('history24-bg');
@@ -38,12 +40,12 @@ class History24 extends Component {
   render () {
     return (
 
-      <div style={style.outter}>
-        <div style={style.bgLayerStyle}/>
+      <div style={outter}>
+        <div style={bgLayerStyle}/>
 
         <Pattern
 
-          classname="History24"
+          classname='History24'
           logo='../imgs/pantheon2.svg'
           url={Constants.history24}
           effectClassIn='zoomIn'
@@ -77,7 +79,7 @@ class History24 extends Component {
           )}
 
           logoDescription={() => (
-            <p className="header-container">
+            <p className='header-container'>
               <span className={'header'}>HISTORY.RF</span>
               <span className={'paragraph'}>Russian portal for online preparation for exams on history</span>
             </p>
@@ -90,12 +92,11 @@ class History24 extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  return {
-    page: state.page,
-    preloader: state.preloader
-  };
-}
+const mapStateToProps = ({ page, preloader }) => ({
+  page,
+  preloader
+});
+
 History24.propTypes = {
   page: PropTypes.object,
   preloader: PropTypes.object

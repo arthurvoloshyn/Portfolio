@@ -16,8 +16,8 @@ const style = {
 };
 
 class Arcbazar extends Component {
-  UNSAFE_componentWillReceiveProps (nextProps) {
-    if (nextProps.page.page === URLS.arcbazar) {
+  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+    if (page === URLS.arcbazar) {
       $('#fp-nav ul li a span').addClass('arcbazar-bg');
     } else {
       $('#fp-nav ul li a span').removeClass('arcbazar-bg');
@@ -28,7 +28,7 @@ class Arcbazar extends Component {
     return (
       <ParallaxMousemove containerStyle={style.outter}>
         <Pattern
-          classname="Arcbazar"
+          classname='Arcbazar'
           logo='../imgs/arcbazar_logo.png'
           url={Constants.arcbazr}
           effectClassIn='flipInY'
@@ -77,12 +77,10 @@ class Arcbazar extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  return {
-    page: state.page,
-    preloader: state.preloader
-  };
-}
+const mapStateToProps = ({ page, preloader }) => ({
+  page,
+  preloader
+});
 
 Arcbazar.propTypes = {
   page: PropTypes.object,

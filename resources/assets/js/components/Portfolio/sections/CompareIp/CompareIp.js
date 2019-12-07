@@ -6,35 +6,39 @@ import { connect } from 'react-redux';
 import { URLS } from '../../../../constants/urls';
 import PropTypes from 'prop-types';
 
+const { compareip } = URLS;
+
 class CompareIp extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      visible: 0,
-      animateClass: 'hide',
-      firstTime: true
-    };
-    this.showDescription = _ => {
-      this.setState(
-        {
-          animateClass: 'animated fadeIn'
-        }
-      );
-    };
-  }
+  state = {
+    visible: 0,
+    animateClass: 'hide',
+    firstTime: true
+  };
+
+  showDescription = _ => {
+    this.setState(
+      {
+        animateClass: 'animated fadeIn'
+      }
+    );
+  };
 
   componentDidUpdate (prevProps) {
-    if (!this.props.preloader.preloader && prevProps.preloader.preloader && this.props.page.page === URLS.compareip && this.state.firstTime) {
+    const { preloader: { preloader }, page: { page } } = this.props;
+
+    if (!preloader && prevProps.preloader.preloader && page === compareip && this.state.firstTime) {
       this.show();
     }
   }
 
   UNSAFE_componentWillReceiveProps (nextProps) {
-    if (this.props.page.page !== URLS.compareip && nextProps.page.page === URLS.compareip && this.state.firstTime) {
+    const { page: { page } } = this.props;
+
+    if (page !== compareip && nextProps.page.page === compareip && this.state.firstTime) {
       this.show();
     }
 
-    if (this.props.page.page !== URLS.compareip && nextProps.page.page === URLS.compareip) {
+    if (page !== compareip && nextProps.page.page === compareip) {
       $('#fp-nav ul li a span').addClass('compareip-bg');
     } else {
       $('#fp-nav ul li a span').removeClass('compareip-bg');
@@ -52,23 +56,25 @@ class CompareIp extends Component {
   }
 
   render () {
+    const { visible, animateClass } = this.state;
+
     return (
       <div className={'CompareIp'}>
         <div className={'content'}>
           <div className={'slideshow'}>
             <div className={'slide slide--current'}>
               <div className={'slide__bg slide__bg--6'}></div>
-              <h2 style={{ opacity: this.state.visible }} className={'word word--6'}>CompareIp</h2>
+              <h2 style={{ opacity: visible }} className={'word word--6'}>CompareIp</h2>
 
-              <div className={'description ' + this.state.animateClass}>
+              <div className={'description ' + animateClass}>
                 <p className={'word--6 small-text'}>
                                     Online service for patenting of inventions
                 </p>
 
                 <div className={'img-container'}>
                 </div>
-                <a href={Constants.compareIp} target="_blank" rel="noopener noreferrer">
-                  <button className="draw-border">Live</button>
+                <a href={Constants.compareIp} target='_blank' rel='noopener noreferrer'>
+                  <button className='draw-border'>Live</button>
                 </a>
               </div>
             </div>
@@ -79,12 +85,11 @@ class CompareIp extends Component {
     );
   }
 }
-function mapStateToProps (state) {
-  return {
-    page: state.page,
-    preloader: state.preloader
-  };
-}
+
+const mapStateToProps = ({ page, preloader }) => ({
+  page,
+  preloader
+});
 
 CompareIp.propTypes = {
   page: PropTypes.object,

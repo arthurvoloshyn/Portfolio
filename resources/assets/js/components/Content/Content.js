@@ -1,43 +1,39 @@
-import React, { Component, Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { URLS } from './../../constants/urls';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import LoadingPage from '../LoadingPage';
-import '../../../../../node_modules/leaflet/dist/leaflet.css';
+import 'leaflet/dist/leaflet.css';
 import './scss/Content.scss';
 
-const Skills = React.lazy(() => import('./../Skills/Skills'));
-const Contact = React.lazy(() => import('./../Contact/Contact'));
-const Portfolio = React.lazy(() => {
+const Skills = lazy(() => import('./../Skills/Skills'));
+const Contact = lazy(() => import('./../Contact/Contact'));
+const Portfolio = lazy(() => {
   return new Promise(resolve => {
     setTimeout(() => resolve(import('./../Portfolio/Portfolio')), 3000);
   });
 });
-const Home = React.lazy(() => import('./../Home/Home'));
+const Home = lazy(() => import('./../Home/Home'));
 
-function mapStateToProps (state) {
-  return {
-    menu: state.menu
-  };
-}
+const Loading = <LoadingPage />;
 
-class Content extends Component {
-  render () {
-    return (
-      <div id="main_container" className={this.props.menu.status ? 'main-light' : 'main-dark'}>
+const mapStateToProps = ({ menu }) => ({ menu });
 
-        <Suspense fallback={<LoadingPage/>}>
-          <Route exact path={URLS.url_skills} component={Skills}/>
-          <Route exact path={URLS.url_contacts} component={Contact}/>
-          <Route exact path={URLS.url_portfolio} component={Portfolio}/>
-          <Route exact path={URLS.url_home} component={Home}/>
-        </Suspense>
+const { url_skills, url_contacts, url_portfolio, url_home } = URLS;
 
-      </div>
-    );
-  }
-}
+const Content = ({ menu: { status } }) => (
+  <div id='main_container' className={status ? 'main-light' : 'main-dark'}>
+
+    <Suspense fallback={Loading}>
+      <Route exact path={url_skills} component={Skills}/>
+      <Route exact path={url_contacts} component={Contact}/>
+      <Route exact path={url_portfolio} component={Portfolio}/>
+      <Route exact path={url_home} component={Home}/>
+    </Suspense>
+
+  </div>
+);
 
 Content.propTypes = {
   menu: PropTypes.object

@@ -5,15 +5,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Abirix extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      info: false
-    };
-  }
+  state = {
+    info: false
+  };
 
-  UNSAFE_componentWillReceiveProps (nextProps) {
-    if (nextProps.page.page === URLS.abirix) {
+  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+    if (page === URLS.abirix) {
       setup();
       $('#fp-nav ul li a span').addClass('abirix-bg');
     } else {
@@ -22,74 +19,74 @@ class Abirix extends Component {
     }
   }
 
-    toggle= () => {
-      this.setState({
-        info: !this.state.info
-      });
-    };
+  toggle = () => {
+    this.setState({
+      info: !this.state.info
+    });
+  };
 
-    render () {
-      return (
-        <div className="demo-4 abirix">
+  render () {
+    const { info } = this.state;
 
-          <main>
-            <div className="frame">
-            </div>
+    return (
+      <div className='demo-4 abirix'>
 
-            <div className="content content--canvas-abirix">
+        <main>
+          <div className='frame'>
+          </div>
 
-              <div className={'abirix-container'}>
+          <div className='content content--canvas-abirix'>
 
-                <div className={'header'}>
+            <div className={'abirix-container'}>
 
-                  <div className={'logo'}>
-                                    ABIRIX CRM
-                  </div>
+              <div className={'header'}>
 
-                  <div className={'description'}>
-
-                                    crm system for sales company
-
-                  </div>
-
+                <div className={'logo'}>
+                                  ABIRIX CRM
                 </div>
 
-                <div className={'tech-container ' + (this.state.info ? 'd-none' : 'd-flex')}>
-                  <div className={'row'}>
-                    <div className={'techs'}></div>
-                  </div>
-                </div>
+                <div className={'description'}>
 
-                <div className={'info-container tzie-small ' + (this.state.info ? 'd-flex' : 'd-none')}>
-
-                                I have completed writing the crm system in a team,
-                                designed and wrote the main system components, developed the database.
-                                Used TypeScript as the interface development tool and Laravel as the backend API;
-                                Complete test coverage;
-                                Development with strict flow based on Agile princes;
-                                Transfer data from legacy systems.
+                                  crm system for sales company
 
                 </div>
-
-                <div className={'arrow ' + (this.state.info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle}/>
 
               </div>
 
+              <div className={'tech-container ' + (info ? 'd-none' : 'd-flex')}>
+                <div className={'row'}>
+                  <div className={'techs'}></div>
+                </div>
+              </div>
+
+              <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
+
+                              I have completed writing the crm system in a team,
+                              designed and wrote the main system components, developed the database.
+                              Used TypeScript as the interface development tool and Laravel as the backend API;
+                              Complete test coverage;
+                              Development with strict flow based on Agile princes;
+                              Transfer data from legacy systems.
+
+              </div>
+
+              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle}/>
+
             </div>
 
-          </main>
+          </div>
 
-        </div>
-      );
-    }
+        </main>
+
+      </div>
+    );
+  }
 }
 
-function mapStateToProps (state) {
-  return {
-    page: state.page,
-    preloader: state.preloader
-  };
-}
+const mapStateToProps = ({ page, preloader }) => ({
+  page,
+  preloader
+});
 
 Abirix.propTypes = {
   page: PropTypes.object,

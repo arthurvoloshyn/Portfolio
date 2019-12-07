@@ -4,17 +4,17 @@ const initialState = {
   status: false
 };
 
-function menuReducer (state = initialState, action) {
-  switch (action.type) {
+const menuReducer = (state = initialState, { type, status }) => {
+  switch (type) {
     case ACTION_SET_MENU_STATUS : {
-      return { status: action.status };
+      return { status };
     }
     case ACTION_TOGGLE_MENU_STATUS : {
-      return { status: !action.status };
+      return { status: !status };
     }
     default:
       return state;
   }
-}
+};
 
 export default menuReducer;

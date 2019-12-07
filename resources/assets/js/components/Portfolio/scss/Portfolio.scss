@@ -1,73 +1,72 @@
-$img-path : "/imgs";
+$img-path: '/imgs';
 
 @import 'common/base.css';
 
-@import "Pattern";
-@import "ScrollButton";
-@import "sections/Yandex";
-@import "sections/Smoke_Zone";
-@import "sections/History24";
-@import "sections/WellHome";
-@import "sections/C2corner";
-@import "sections/CherryPick";
-@import "sections/Houses";
-@import "sections/Arcbazar";
-@import "sections/Factoringvergelijken";
-@import "sections/Linksful";
-@import "sections/Smsplaza";
-@import "sections/Abirix";
-@import "sections/CompareIp";
-@import "sections/Neocore";
+@import 'Pattern';
+@import 'ScrollButton';
+@import 'sections/Yandex';
+@import 'sections/Smoke_Zone';
+@import 'sections/History24';
+@import 'sections/WellHome';
+@import 'sections/C2corner';
+@import 'sections/CherryPick';
+@import 'sections/Houses';
+@import 'sections/Arcbazar';
+@import 'sections/Factoringvergelijken';
+@import 'sections/Linksful';
+@import 'sections/Smsplaza';
+@import 'sections/Abirix';
+@import 'sections/CompareIp';
+@import 'sections/Neocore';
 
-
-.neocore-bg{
+.neocore-bg {
   background: #eec60a !important;
 }
 
-.linkful-bg{
+.linkful-bg {
   background: #3c48fa !important;
 }
 
-.compareip-bg{
+.compareip-bg {
   background: rgba(237,32,37,0.7) !important;
 }
 
-.abirix-bg{
+.abirix-bg {
   background: #f0ea42 !important;
 }
 
-.smsplaza-bg{
+.smsplaza-bg {
   background: #41B883 !important;
 }
 
-.houses-bg{
-  background: white !important;
+.houses-bg {
+  background: #ffffff !important;
 }
 
-.welhome-bg{
+.welhome-bg {
   background: #E6E6E6 !important;
 }
 
-.history24-bg{
+.history24-bg {
   background: #E6E6E6 !important;
 }
 
-.smoke-zone-bg{
+.smoke-zone-bg {
   background: #D40080 !important;
 }
 
-.yandex-bg{
+.yandex-bg {
   background: #ED2025 !important;
 }
 
-.c2corner-bg{
+.c2corner-bg {
   background: #003399 !important;
 }
 
-.arcbazar-bg{
-  background: black !important;
+.arcbazar-bg {
+  background: #000000 !important;
 }
 
-.factoringvergelijken-bg{
-  background: black !important;
+.factoringvergelijken-bg {
+  background: #000000 !important;
 }

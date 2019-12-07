@@ -6,8 +6,8 @@ import { URLS } from '../../../constants/urls';
 import PropTypes from 'prop-types';
 
 class C2Corner extends Component {
-  UNSAFE_componentWillReceiveProps (nextProps) {
-    if (nextProps.page.page === URLS.c2corner) {
+  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+    if (page === URLS.c2corner) {
       $('#fp-nav ul li a span').addClass('c2corner-bg');
     } else {
       $('#fp-nav ul li a span').removeClass('c2corner-bg');
@@ -19,7 +19,7 @@ class C2Corner extends Component {
 
       <Pattern
 
-        classname="C2Corner"
+        classname='C2Corner'
         logo={null}
         logoText={'C2CORNER'}
         url={Constants.c2corner}
@@ -64,12 +64,11 @@ class C2Corner extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  return {
-    page: state.page,
-    preloader: state.preloader
-  };
-}
+const mapStateToProps = ({ page, preloader }) => ({
+  page,
+  preloader
+});
+
 C2Corner.propTypes = {
   page: PropTypes.object,
   preloader: PropTypes.object

@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import {
-  BrowserRouter as Router
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Content from './components/Content/Content';
 import Preloader from './components/Preloader/Preloader';
@@ -21,9 +19,9 @@ const store = createStore(reducers);
 
 render(
   <Router>
-    <div className="global-wrapper">
+    <div className='global-wrapper'>
       <Provider store={store}>
-        <div id="ip-container" className="ip-container">
+        <div id='ip-container' className='ip-container'>
 
           <div>
             <Menu/>

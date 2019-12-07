@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { URLS } from './../../constants/urls';
 import './scss/Portfolio.scss';
-import { bindActionCreators } from 'redux';
 import { setPage } from '../../actions/page';
 import { Factoringvergelijken } from './sections/Factoringvergelijken';
 import Linkful from './sections/Linkful/Linkful';
@@ -21,65 +20,62 @@ import Neocore from './sections/Neocore/Neocore';
 
 const sections = {};
 
-sections[URLS.linkful] = <Linkful/>;
-sections[URLS.compareip] = <CompareIp/>;
-sections[URLS.smsplaza] = <Smsplaza/>;
-sections[URLS.factoringvergelijken] = <Factoringvergelijken/>;
-sections[URLS.abirix] = <Abirix/>;
-sections[URLS.c2corner] = <C2Corner/>;
-sections[URLS.neocore] = <Neocore/>;
-sections[URLS.arcbazar] = <Arcbazar/>;
-sections[URLS.yandex] = <Yandex/>;
-sections[URLS.houses] = <Houses/>;
-sections[URLS.history24] = <History24/>;
-sections[URLS.welhome] = <WellHome/>;
+const { linkful, compareip, smsplaza, factoringvergelijken, abirix, c2corner, neocore, arcbazar, yandex, houses, history24, welhome } = URLS;
+
+sections[linkful] = <Linkful/>;
+sections[compareip] = <CompareIp/>;
+sections[smsplaza] = <Smsplaza/>;
+sections[factoringvergelijken] = <Factoringvergelijken/>;
+sections[abirix] = <Abirix/>;
+sections[c2corner] = <C2Corner/>;
+sections[neocore] = <Neocore/>;
+sections[arcbazar] = <Arcbazar/>;
+sections[yandex] = <Yandex/>;
+sections[houses] = <Houses/>;
+sections[history24] = <History24/>;
+sections[welhome] = <WellHome/>;
 
 const sectionUrls = Object.keys(sections);
 
 class Portfolio extends Component {
-    setSlide = page => {
-      this.props.setPage(page);
-    };
-
-    render () {
-      return (
-        <div>
-          <ReactFullpage
-            navigation={true}
-            keyboardScrolling={true}
-            anchors={sectionUrls}
-            onLeave={(origin, destination, direction) => {
-              this.setSlide(destination.anchor);
-            }}
-
-            render={({ state, fullpageApi }) => {
-              return (
-                <ReactFullpage.Wrapper>
-                  {
-                    Object.values(sections).map((section, key) => <div key={key}
-                      className="section">{section}</div>)
-                  }
-                </ReactFullpage.Wrapper>
-              );
-            }}
-          />
-
-        </div>
-
-      );
-    }
-}
-
-function mapStateToProps (state) {
-  return {
-    page: state.page,
-    preloader: state.preloader
+  setSlide = page => {
+    this.props.setPage(page);
   };
+
+  render () {
+    return (
+      <div>
+        <ReactFullpage
+          navigation={true}
+          keyboardScrolling={true}
+          anchors={sectionUrls}
+          onLeave={(origin, { anchor }, direction) => {
+            this.setSlide(anchor);
+          }}
+
+          render={({ state, fullpageApi }) => (
+            <ReactFullpage.Wrapper>
+              {
+                Object.values(sections).map((section, key) => (
+                  <div key={key} className='section'>{section}</div>
+                ))
+              }
+            </ReactFullpage.Wrapper>
+          )}
+        />
+
+      </div>
+
+    );
+  }
 }
 
-function matchDispatchToProps (dispatch) {
-  return bindActionCreators({ setPage: setPage }, dispatch);
-}
+const mapStateToProps = ({ page, preloader }) => ({
+  page,
+  preloader
+});
+
+const matchDispatchToProps = { setPage };
 
 Portfolio.propTypes = {
   setPage: PropTypes.func

@@ -1,15 +1,13 @@
-
 .WellHome {
 
-  background: white;
+  background: #ffffff;
 
   .technologies-container {
-
     .technologies {
 
       width: 700px;
       height: 100px;
-      background-image: url(#{$img-path}/welhome/welhome-desktop.png);
+      background-image: url("#{$img-path}/welhome/welhome-desktop.png");
 
       display: block;
       background-position: center;
@@ -19,7 +17,6 @@
     }
 
     .description {
-
       p {
         font-family: 'Roboto';
         max-width: 600px;
@@ -28,21 +25,24 @@
         margin-bottom: 10px;
         padding-left: 20px;
         padding-right: 20px;
-        color: black;
+        color: #000000;
         text-align: center;
         font-weight: 100;
 
       }
-      a{
-        color: black;
+
+      a {
+        color: #000000;
         text-decoration: none;
       }
     }
+
     .rotate_button {
       display: none;
     }
 
   }
+
   .logo-container {
 
     display: flex;
@@ -55,22 +55,24 @@
       width: 400px;
     }
 
-    .header{
+    .header {
 
       display: none !important;
 
     }
-    .paragraph{
+
+    .paragraph {
       font-family: 'Luckiest Guy', cursive;
       font-size: 20px;
-      color: black;
+      color: #000000;
       letter-spacing: 0.62px;
       line-height: 30px;
       font-weight: 300;
       z-index: 100;
-      margin-top: 0px !important;
+      margin-top: 0 !important;
     }
   }
+
   .arrow {
     display: block;
     background-position: center;
@@ -81,11 +83,13 @@
     cursor: pointer;
     position: relative;
   }
-  .show{
-    background-image: url(#{$img-path}/down-arrow.svg);
+
+  .show {
+    background-image: url("#{$img-path}/down-arrow.svg");
   }
-  .hide{
-    background-image: url(#{$img-path}/cancel.svg);
+
+  .hide {
+    background-image: url("#{$img-path}/cancel.svg");
   }
 
   @media (max-width: 850px) {
@@ -93,18 +97,14 @@
 
       width: 350px !important;
       height: 220px !important;
-      background-image: url(#{$img-path}/welhome/welhome-mobile.png) !important;
+      background-image: url("#{$img-path}/welhome/welhome-mobile.png") !important;
 
     }
   }
 
   @media (max-width: 500px) {
-
-
     .logo-container {
-
-
-      .header{
+      .header {
         font-size: 36px !important;
         text-align: center;
       }
@@ -112,10 +112,8 @@
     }
 
     .technologies-container {
-
       .description {
-
-        p span{
+        p span {
 
           display: none;
 
@@ -126,7 +124,7 @@
 
         width: 250px !important;
         height: 150px !important;
-        background-image: url(#{$img-path}/welhome/welhome-mobile.png) !important;
+        background-image: url("#{$img-path}/welhome/welhome-mobile.png") !important;
 
       }
 
@@ -135,5 +133,3 @@
   }
 
 }
-
-

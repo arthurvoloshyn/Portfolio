@@ -6,9 +6,7 @@
   display: none !important;
 }
 
-
 .Pattern {
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,16 +19,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .technologies {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+
       div {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
         div {
           display: block;
           background-position: center;
@@ -44,23 +45,26 @@
         }
       }
     }
+
     .description {
       max-width: 600px;
       margin-top: 20px;
       margin-bottom: 20px;
       padding-left: 20px;
       padding-right: 20px;
+
       @media (max-height: 400px) {
+
         margin-top: 10px !important;
         margin-bottom: 10px !important;
-       p{
-         line-height: 22px !important;
-       }
+
+        p {
+          line-height: 22px !important;
+        }
       }
-
     }
-    .rotate_button {
 
+    .rotate_button {
       figure {
         margin-bottom: 30px !important;
         width: 200px;
@@ -83,8 +87,8 @@
           -webkit-transform-style: preserve-3d;
           transition: 0.25s;
           -webkit-transition: 0.25s;
-
         }
+
         span {
           width: 100%;
           height: 100%;
@@ -97,6 +101,7 @@
           text-align: center;
           text-transform: uppercase;
         }
+
         span:nth-child(1) {
           transform: translate3d(0, 0, 30px);
           -webkit-transform: translate3d(0, 0, 30px);
@@ -106,32 +111,34 @@
           transform: rotateX(90deg) translate3d(0, 0, 30px);
           -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px);
         }
-
       }
     }
-
   }
+
   .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     img {
       width: 300px;
       @media (max-height: 400px) {
         width: 120px !important;
       }
     }
-    .header-container{
+
+    .header-container {
       text-align: center !important;
-      .header{
+
+      .header {
         display: block;
       }
     }
   }
 }
 
-@media (max-width: 500px),  (max-height: 400px) {
+@media (max-width: 500px), (max-height: 400px) {
   .Pattern {
     .technologies-container {
       .technologies {
@@ -143,12 +150,14 @@
           height: 50px !important;
         }
       }
+
       .description {
-        margin-top: 0px !important;
+        margin-top: 0 !important;
         margin-bottom: 20px;
         font-size: 16px !important;
         line-height: 22px;
-        p{
+
+        p {
           margin-top: 15px !important;
           margin-bottom: 5px !important;
           font-size: 17px !important;
@@ -156,15 +165,17 @@
         }
       }
     }
-    .logo-container {
 
+    .logo-container {
       img {
         width: 150px;
       }
-      .logoText{
+
+      .logoText {
         font-size: 40px !important;
       }
-      .paragraph{
+
+      .paragraph {
         font-size: 17px !important;
         max-width: 300px !important;
       }
@@ -173,6 +184,7 @@
         margin-bottom: 15px !important;
       }
     }
+
     .arrow {
       background-size: 40px !important;
       width: 40px !important;
@@ -186,9 +198,8 @@
     .technologies-container {
       .technologies {
         flex-direction: column;
-        margin-bottom: 50px;;
+        margin-bottom: 50px;
       }
-
     }
   }
 }
@@ -196,7 +207,6 @@
 @media (max-height: 850px) {
   .Pattern {
     .technologies-container {
-
       div {
         justify-content: space-between !important;
       }
@@ -204,37 +214,33 @@
       .technologies {
         flex-direction: column;
         margin-bottom: 50px;
+
         div div {
           background-size: 50px !important;
           width: 50px !important;
           height: 50px !important;
         }
       }
-
     }
-
   }
 }
 
-@media (max-height: 650px) and (orientation: landscape){
-
+@media (max-height: 650px) and (orientation: landscape) {
   .Pattern {
-
-    .technologies-container .description p{
+    .technologies-container .description p {
 
       display: none !important;
 
     }
 
-    .logo-container .paragraph{
+    .logo-container .paragraph {
 
       max-width: none !important;
 
     }
 
-    .header{
-      margin-top: 0px !important;
+    .header {
+      margin-top: 0 !important;
     }
   }
-
 }

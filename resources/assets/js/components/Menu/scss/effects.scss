@@ -2,6 +2,7 @@
   span {
     color: $colorActive !important;
   }
+
   i {
     color: #5f656f !important;
 
@@ -11,66 +12,66 @@
   }
 }
 
-.effects-normal{
-  @include effects(deepskyblue)
+.effects-normal {
+  @include effects(#00bfff)
 }
 
-.effects-neocore{
+.effects-neocore {
   @include effects(#eec60a)
 }
 
-.effects-linkful{
+.effects-linkful {
   @include effects(#3c48fa)
 }
 
-.effects-smsplaza{
+.effects-smsplaza {
   @include effects(#41B883)
 }
 
-.effects-abirix{
+.effects-abirix {
   @include effects(#f0ea42)
 }
 
-.effects-houses{
-  @include effects(white)
+.effects-houses {
+  @include effects(#ffffff)
 }
 
-.effects-welhome{
+.effects-welhome {
   @include effects(#E6E6E6)
 }
 
-.effects-history24{
+.effects-history24 {
   @include effects(#E6E6E6)
 }
 
-.effects-smoke-zone{
+.effects-smoke-zone {
   @include effects(#D40080)
 }
 
-.effects-yandex{
+.effects-yandex {
   @include effects(#ED2025)
 }
 
-.effects-compareIp{
+.effects-compareIp {
   @include effects(rgba(237,32,37,0.7))
 }
 
-.effects-c2corner{
+.effects-c2corner {
   @include effects(#003399)
 }
 
-.effects-cherry{
+.effects-cherry {
   @include effects(#E8222D)
 }
 
-.effects-house{
+.effects-house {
   @include effects(#E6E6E6)
 }
 
-.effects-arcbazar{
+.effects-arcbazar {
   @include effects(#8F6AB7)
 }
 
-.effects-factoringvergelijken{
+.effects-factoringvergelijken {
   @include effects(#B0576A)
 }

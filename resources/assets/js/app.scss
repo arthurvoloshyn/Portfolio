@@ -1,9 +1,12 @@
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:after,
+.clearfix:before {
   content: '';
   display: table;
 }
@@ -18,8 +21,9 @@ body {
   font-weight: 400;
   font-size: 1em;
   font-family: 'Raleway', Arial, sans-serif;
-  margin: 0px !important;
+  margin: 0 !important;
 }
+
 .global-wrapper {
   background: #0E0D10;
 }

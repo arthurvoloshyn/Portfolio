@@ -1,6 +1,4 @@
-
 .smsplaza {
-
   .frame {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
@@ -38,11 +36,11 @@
     }
 
     .arrow-up {
-      background-image: url(#{$img-path}/smsplaza/arrow-up.svg);
+      background-image: url("#{$img-path}/smsplaza/arrow-up.svg");
     }
 
     .arrow-down {
-      background-image: url(#{$img-path}/smsplaza/arrow-down.svg);
+      background-image: url("#{$img-path}/smsplaza/arrow-down.svg");
     }
 
     .description {
@@ -65,7 +63,7 @@
 
       .logo {
         color: #41B883;
-        text-shadow: #36495D 4px 4px 0px;
+        text-shadow: #36495D 4px 4px 0;
         z-index: 100;
         font-size: 65px;
         font-family: 'Luckiest Guy', cursive;
@@ -77,6 +75,7 @@
     .d-flex {
       display: flex;
     }
+
     .d-none {
       display: none;
     }
@@ -96,9 +95,11 @@
       color: #41B883;
 
     }
+
     .tzie-small {
       font-size: 18px !important;
     }
+
     .tech-container {
 
       width: 100%;
@@ -107,6 +108,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       .row {
 
         display: flex;
@@ -121,7 +123,7 @@
           background-size: contain;
           width: 100%;
           height: 300px;
-          background-image: url(#{$img-path}/smsplaza/smsplaza.png);
+          background-image: url("#{$img-path}/smsplaza/smsplaza.png");
         }
 
       }
@@ -132,10 +134,10 @@
 
 @media (max-width: 650px) {
   .smsplaza {
-
     .info-container {
       max-width: 300px !important;
     }
+
     .description {
       font-size: 16px !important;
       max-width: 350px !important;
@@ -153,9 +155,7 @@
 
 @media (max-width: 530px) {
   .smsplaza {
-
     .header {
-
       .logo {
 
         font-size: 45px !important;
@@ -173,7 +173,6 @@
 
 @media (max-width: 400px) {
   .smsplaza {
-
     .info-container {
       max-width: 250px !important;
     }

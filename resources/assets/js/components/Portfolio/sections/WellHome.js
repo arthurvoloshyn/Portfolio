@@ -20,54 +20,54 @@ const style = {
   }
 };
 
-export const WellHome = () => {
-  return (
-    <div style={style.outter}>
-      <div style={style.bgLayerStyle}/>
+const { outter, bgLayerStyle } = style;
 
-      <Pattern
+export const WellHome = () => (
+  <div style={outter}>
+    <div style={bgLayerStyle}/>
 
-        classname="WellHome"
-        logo='../imgs/wh.jpg'
-        url={''}
-        effectClassIn='lightSpeedIn'
-        effectClassOut='lightSpeedOut'
-        technologies={_ => (
+    <Pattern
 
-          <div className={'technologies'}>
-          </div>
-        )}
+      classname='WellHome'
+      logo='../imgs/wh.jpg'
+      url={''}
+      effectClassIn='lightSpeedIn'
+      effectClassOut='lightSpeedOut'
+      technologies={_ => (
 
-        description={() => (
+        <div className={'technologies'}>
+        </div>
+      )}
 
-          <div className={'description'}>
-            <p>
-                            I have developed CRM system in order
-                            to automate business processes in the
-                            company engaged in the sale of real estate - <b><a href={'http://www.welhome.ru/'}
-                target={'blank'}>Welhome</a></b>
-              <span>,
-                                based on SugarCRM; designed the database and system architecture; integration with
-                                existing enterprise systems</span>
-            </p>
-          </div>
-        )}
+      description={() => (
 
-        figure={() => (
-
-          <div>
-
-          </div>
-        )}
-
-        logoDescription={() => (
-          <p className="header-container">
-            <span className={'paragraph'}>CRM system for real estate company</span>
+        <div className={'description'}>
+          <p>
+                          I have developed CRM system in order
+                          to automate business processes in the
+                          company engaged in the sale of real estate - <b><a href={'http://www.welhome.ru/'}
+              target={'blank'}>Welhome</a></b>
+            <span>,
+                              based on SugarCRM; designed the database and system architecture; integration with
+                              existing enterprise systems</span>
           </p>
-        )}
+        </div>
+      )}
 
-      />
+      figure={() => (
 
-    </div>
-  );
-};
+        <div>
+
+        </div>
+      )}
+
+      logoDescription={() => (
+        <p className='header-container'>
+          <span className={'paragraph'}>CRM system for real estate company</span>
+        </p>
+      )}
+
+    />
+
+  </div>
+);

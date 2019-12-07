@@ -4,14 +4,14 @@ const initialState = {
   preloader: false
 };
 
-function preloaderReducer (state = initialState, action) {
-  switch (action.type) {
+const preloaderReducer = (state = initialState, { type, preloader }) => {
+  switch (type) {
     case ACTION_SET_PRELOADER_STATUS : {
-      return { preloader: action.preloader };
+      return { preloader };
     }
     default:
       return state;
   }
-}
+};
 
 export default preloaderReducer;

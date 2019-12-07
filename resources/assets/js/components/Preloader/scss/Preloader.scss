@@ -1,17 +1,18 @@
 @import "./preloaderEffect";
 @import "./animate.min";
 
-.transparent{
+.transparent {
   transition-duration: 0.5s;
   opacity: 0 !important;
 }
-.show{
+
+.show {
   opacity: 1 !important;
   transition-duration: 0.5s;
 }
 
-#img_loader{
-  filter: drop-shadow(0px 0px 10px deepskyblue);
+#img_loader {
+  filter: drop-shadow(0px 0px 10px #00bfff);
   max-width: 380px;
   min-width: 90px;
   width: 30%;
@@ -22,41 +23,46 @@
 
 @-webkit-keyframes img_loader {
   0% {
-    filter: drop-shadow(0px 0px 10px deepskyblue)
+    filter: drop-shadow(0px 0px 10px #00bfff)
   }
+
   50% {
-    filter: drop-shadow(0px 0px 2px deepskyblue)
+    filter: drop-shadow(0px 0px 2px #00bfff)
   }
+
   100% {
-    filter: drop-shadow(0px 0px 10px deepskyblue)
+    filter: drop-shadow(0px 0px 10px #00bfff)
   }
 }
 
 @keyframes img_loader {
   0% {
-    filter: drop-shadow(0px 0px 10px deepskyblue)
+    filter: drop-shadow(0px 0px 10px #00bfff)
   }
+
   50% {
-    filter: drop-shadow(0px 0px 2px deepskyblue)
+    filter: drop-shadow(0px 0px 2px #00bfff)
   }
+
   100% {
-    filter: drop-shadow(0px 0px 10px deepskyblue)
+    filter: drop-shadow(0px 0px 10px #00bfff)
   }
 }
 
 @media (max-height: 800px) {
-  #img_loader{
+  #img_loader {
     width: 50% !important;
   }
 }
+
 @media (max-height: 600px) {
-  #img_loader{
+  #img_loader {
     display: none;
   }
 }
 
 @media (max-width: 500px) {
-  #img_loader{
+  #img_loader {
     width: 75%;
   }
 }

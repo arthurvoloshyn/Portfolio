@@ -1,4 +1,4 @@
-@import "Icons";
+@import 'Icons';
 
 .menu {
   position: fixed;
@@ -14,7 +14,7 @@
   transition: transform 0.6s;
   pointer-events: none;
 
-  button{
+  button {
     background: transparent;
     border: none;
     width: 30px;
@@ -28,14 +28,14 @@
     cursor: pointer !important;
     pointer-events: visiblePainted;
 
-    &::before,
+    & span,
     &::after,
-    & span {
+    &::before {
       background: #5f656f;
     }
 
-    &::before,
-    &::after{
+    &::after,
+    &::before {
       content: '';
       position: absolute;
       height: 2px;
@@ -48,7 +48,7 @@
       transition: transform 0.25s;
     }
 
-    span{
+    span {
       position: absolute;
       width: 100%;
       height: 2px;
@@ -59,16 +59,17 @@
       transition: opacity 0.25s;
     }
 
-    &::after{
+    &::after {
       -webkit-transform: translate3d(0, 10px, 0);
       transform: translate3d(0, 10px, 0);
     }
 
-    &::before{
+    &::before {
       -webkit-transform: translate3d(0, -10px, 0);
       transform: translate3d(0, -10px, 0);
     }
   }
+
   .inner {
     width: calc(100% + 25px);
     padding: 0 140px 2em 0;
@@ -79,7 +80,6 @@
     pointer-events: none;
 
     ul {
-
       list-style: none;
       padding: 0;
       margin: 0;
@@ -101,7 +101,7 @@
       }
 
       li {
-        margin: 0 0 2em 0;
+        margin: 0 0 2em;
         -webkit-transform: translate3d(-150px, 0, 0);
         transform: translate3d(-150px, 0, 0);
         -webkit-transition: -webkit-transform 0.6s;
@@ -112,7 +112,7 @@
         align-content: center;
         justify-content: center;
 
-        i{
+        i {
           -webkit-tap-highlight-color: transparent;
 
           @media (max-height: 350px) {
@@ -126,24 +126,29 @@
           text-align: center;
           margin-bottom: 3px;
         }
-        span{
+
+        span {
           font-weight: bold;
           font-size: 0.75em;
-          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           display: block;
           margin: 0 auto;
           text-align: center !important;
         }
-        i, span {
+
+        i,
+        span {
           cursor: pointer;
         }
-        a{
+
+        a {
           outline: none;
           text-decoration: none;
         }
       }
     }
-    @import "effects";
+
+    @import 'effects';
   }
 
   .morph-shape {
@@ -152,14 +157,14 @@
     height: 100%;
     top: 0;
     right: 0;
+
     svg path {
       stroke: #5f656f;
       stroke-width: 5px;
     }
   }
 
-  @import "stroke";
-
+  @import 'stroke';
 }
 
 .menu.menu--open {
@@ -172,17 +177,18 @@
   transform: translate3d(0, 0, 0);
 }
 
-
 .menu--open {
   .menu__handle {
     &::before {
       -webkit-transform: rotate3d(0, 0, 1, 45deg);
       transform: rotate3d(0, 0, 1, 45deg);
     }
+
     &::after {
       -webkit-transform: rotate3d(0, 0, 1, -45deg);
       transform: rotate3d(0, 0, 1, -45deg);
     }
+
     span {
       opacity: 0;
     }
@@ -190,7 +196,6 @@
 }
 
 @media screen and (max-width: 63em) {
-
   .menu {
     -webkit-transform: translate3d(-170px, 0, 0);
     transform: translate3d(-170px, 0, 0);
@@ -206,5 +211,3 @@
     margin: 0 0 0.6em 0 !important;
   }
 }
-
-

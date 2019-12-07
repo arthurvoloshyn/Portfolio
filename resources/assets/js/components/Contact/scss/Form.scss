@@ -11,6 +11,7 @@
     color: #87ceeb;
     text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
   }
+
   p:first-of-type {
     font-family: 'Wire One', Helvetica, Arial, sans-serif;
     font-size: 100px;
@@ -21,7 +22,6 @@
   }
 
   @media (max-width: 460px) {
-
     p:nth-child(2) {
       font-size: 14px;
     }
@@ -31,11 +31,9 @@
     width: 100%;
 
     @media (max-width: 450px) {
-
       div:nth-child(1) {
         flex-direction: column;
       }
-
     }
 
     div {
@@ -44,7 +42,8 @@
       justify-content: center;
       align-items: center;
 
-      input,textarea  {
+      input,
+      textarea {
         background-color: #181818;
         border: none;
         height: 50px;
@@ -57,15 +56,14 @@
         text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
       }
 
-
-
-      input[name='username'], input[name='email'] {
+      input[name='username'],
+      input[name='email'] {
         max-width: 300px;
         width: 50%;
       }
 
-
-      input::placeholder, textarea::placeholder {
+      input::placeholder,
+      textarea::placeholder {
         color: #87ceeb;
         text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
       }
@@ -82,52 +80,49 @@
         height: 250px;
         margin-top: 5px;
       }
+
       input[type='submit'] {
         width: 150px;
         height: 40px;
         margin-top: 5px;
         background: transparent;
-        border: 2px solid deepskyblue;
-        color: deepskyblue;
+        border: 2px solid #00bfff;
+        color: #00bfff;
         padding-left: 6px;
       }
 
       input[type='submit']:hover {
-        background: deepskyblue;
+        background: #00bfff;
         color: #161517;
         transition-duration: 1s;
       }
 
       @media (max-width: 450px) {
-
-        input{
+        input {
           margin-left: 0 !important;
           margin-right: 0 !important;
         }
 
-
-        input[name='username'], input[name='email'] {
+        input[name='username'],
+        input[name='email'] {
           max-width: 290px;
           width: 100%;
           margin-top: 5px;
         }
 
-        input[name='subject']{
+        input[name='subject'] {
           max-width: 290px;
         }
 
-        textarea[name='body']{
+        textarea[name='body'] {
           max-width: 290px;
         }
-
       }
-
     }
   }
 }
 
 @media (max-width: 1320px) {
-
   .contact-form {
     width: 100%;
   }

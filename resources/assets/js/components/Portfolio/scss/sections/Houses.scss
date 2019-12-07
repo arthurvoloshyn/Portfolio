@@ -1,17 +1,15 @@
-
 .Houses {
 
-  background-image: url(#{$img-path}/city.jpg);
+  background-image: url("#{$img-path}/city.jpg");
 
   background-size: cover;
 
   .technologies-container {
-
     .technologies {
 
       width: 700px;
       height: 100px;
-      background-image: url(#{$img-path}/houses/houses-desktop.png);
+      background-image: url("#{$img-path}/houses/houses-desktop.png");
 
       display: block;
       background-position: center;
@@ -21,7 +19,6 @@
     }
 
     .description {
-
       p {
 
         font-family: 'Alfa Slab One', cursive;
@@ -31,11 +28,12 @@
         margin-bottom: 50px;
         padding-left: 20px;
         padding-right: 20px;
-        color: white;
+        color: #ffffff;
         text-align: center;
-        filter: drop-shadow( 0px 0px 15px rgba(0,0,0,0.5) );
+        filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.5));
       }
     }
+
     .rotate_button {
 
       //figure {
@@ -46,10 +44,10 @@
       //
       //  }
       //  span:nth-child(1) {
-      //    color: white;;
+      //    color: #ffffff;;
       //  }
       //  span:nth-child(2) {
-      //    color: white;
+      //    color: #ffffff;
       //    background: transparent;
       //  }
       //
@@ -60,6 +58,7 @@
     }
 
   }
+
   .logo-container {
 
     display: flex;
@@ -67,83 +66,82 @@
     align-items: center;
     justify-content: center;
 
-    .logoText{
+    .logoText {
 
-      color: white;
+      color: #ffffff;
       font-family: 'Alfa Slab One', cursive;
-      text-shadow: black 4px 4px 0px;
+      text-shadow: #000000 4px 4px 0;
       z-index: 100;
       font-size: 65px;
       line-height: 0;
 
     }
 
-    .header{
+    .header {
       font-family: 'Open Sans', 'Condensed';
       text-transform: uppercase;
-      color: white;
+      color: #ffffff;
       font-size: 50px;
       font-weight: 600;
       z-index: 100;
       text-align: center;
-      filter: drop-shadow( 0px 0px 15px rgba(0,0,0,0.5) );
+      filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.5));
     }
-    .paragraph{
+
+    .paragraph {
 
       font-family: 'Alfa Slab One', cursive;
       font-size: 20px;
-      color: white;
+      color: #ffffff;
       letter-spacing: 0.62px;
       line-height: 30px;
       font-weight: 300;
       text-align: center;
       z-index: 100;
-      filter: drop-shadow( 0px 0px 15px rgba(0,0,0,0.5) );
+      filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.5));
     }
   }
+
   .arrow {
     display: block;
-    background-image: url(#{$img-path}/down-arrow_white.svg);
+    background-image: url("#{$img-path}/down-arrow_white.svg");
     background-position: center;
     background-size: 80px;
     width: 80px;
     height: 80px;
     margin: auto;
     cursor: pointer;
-    -webkit-filter: drop-shadow(0px 0px 15px black);
-    filter: drop-shadow(0px 0px 15px black);
-  }
-  .show{
-    background-image: url(#{$img-path}/down-arrow_white.svg);
-  }
-  .hide{
-    background-image: url(#{$img-path}/cancel_white.svg);
+    -webkit-filter: drop-shadow(0px 0px 15px #000000);
+    filter: drop-shadow(0px 0px 15px #000000);
   }
 
+  .show {
+    background-image: url("#{$img-path}/down-arrow_white.svg");
+  }
+
+  .hide {
+    background-image: url("#{$img-path}/cancel_white.svg");
+  }
 
   @media (max-width: 850px) {
     .technologies {
 
       width: 350px !important;
       height: 220px !important;
-      background-image: url(#{$img-path}/houses/houses-mobile.png) !important;
+      background-image: url("#{$img-path}/houses/houses-mobile.png") !important;
 
     }
   }
 
   @media (max-width: 500px) {
-
     .technologies {
 
       width: 250px !important;
       height: 150px !important;
-      background-image: url(#{$img-path}/houses/houses-mobile.png) !important;
+      background-image: url("#{$img-path}/houses/houses-mobile.png") !important;
 
     }
 
   }
 
-
 }
-
-

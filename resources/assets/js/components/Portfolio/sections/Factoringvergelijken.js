@@ -22,54 +22,54 @@ const style = {
   }
 };
 
-export const Factoringvergelijken = () => {
-  return (
-    <div style={style.outter}>
-      <div style={style.bgLayerStyle}/>
+const { outter, bgLayerStyle } = style;
 
-      <Pattern
+export const Factoringvergelijken = () => (
+  <div style={outter}>
+    <div style={bgLayerStyle}/>
 
-        classname="Factoringvergelijken"
-        logo='../imgs/logo_f.png'
-        url={Constants.factoringvergelijken}
-        effectClassIn='slideInDown'
-        effectClassOut='zoomOutUp'
-        technologies={() => (
+    <Pattern
 
-          <div className={'technologies'}>
+      classname='Factoringvergelijken'
+      logo='../imgs/logo_f.png'
+      url={Constants.factoringvergelijken}
+      effectClassIn='slideInDown'
+      effectClassOut='zoomOutUp'
+      technologies={() => (
 
-          </div>
-        )}
+        <div className={'technologies'}>
 
-        description={() => (
+        </div>
+      )}
 
-          <div className={'description'}>
-            <p>
-                            My team and I have developed the application build with JS and PHP.
-                            Also I have made and designed some parts of the interface;
-                            improvement of modules in the administration panel
-            </p>
-          </div>
-        )}
+      description={() => (
 
-        figure={() => (
-
-          <div>
-            <span>View</span>
-            <span>factoring</span>
-          </div>
-        )}
-
-        logoDescription={() => (
-          <p className="header-container">
-            <span className={'paragraph'}>
-                            Online factoring services
-            </span>
+        <div className={'description'}>
+          <p>
+                          My team and I have developed the application build with JS and PHP.
+                          Also I have made and designed some parts of the interface;
+                          improvement of modules in the administration panel
           </p>
-        )}
+        </div>
+      )}
 
-      />
+      figure={() => (
 
-    </div>
-  );
-};
+        <div>
+          <span>View</span>
+          <span>factoring</span>
+        </div>
+      )}
+
+      logoDescription={() => (
+        <p className='header-container'>
+          <span className={'paragraph'}>
+                          Online factoring services
+          </span>
+        </p>
+      )}
+
+    />
+
+  </div>
+);

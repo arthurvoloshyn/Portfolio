@@ -22,9 +22,11 @@ const style = {
   }
 };
 
+const { outter, bgLayerStyle } = style;
+
 class Houses extends Component {
-  UNSAFE_componentWillReceiveProps (nextProps) {
-    if (nextProps.page.page === URLS.houses) {
+  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+    if (page === URLS.houses) {
       $('#fp-nav ul li a span').addClass('houses-bg');
     } else {
       $('#fp-nav ul li a span').removeClass('houses-bg');
@@ -34,11 +36,11 @@ class Houses extends Component {
   render () {
     return (
 
-      <div style={style.outter}>
-        <div style={style.bgLayerStyle}/>
+      <div style={outter}>
+        <div style={bgLayerStyle}/>
         <Pattern
 
-          classname="Houses"
+          classname='Houses'
           logo={null}
           logoText={'HOOMES'}
           url={''}
@@ -79,12 +81,10 @@ class Houses extends Component {
   }
 }
 
-function mapStateToProps (state) {
-  return {
-    page: state.page,
-    preloader: state.preloader
-  };
-}
+const mapStateToProps = ({ page, preloader }) => ({
+  page,
+  preloader
+});
 
 Houses.propTypes = {
   page: PropTypes.object
