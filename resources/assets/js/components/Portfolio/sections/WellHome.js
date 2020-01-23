@@ -1,5 +1,8 @@
 import React from 'react';
-import Pattern from './../parts/Pattern';
+
+import { IMGS } from '../../../constants/imgs';
+
+import Pattern from '../parts/Pattern';
 
 const style = {
   outter: {
@@ -9,7 +12,7 @@ const style = {
     overflow: 'hidden'
   },
   bgLayerStyle: {
-    backgroundImage: 'url(../imgs/Skyline.png)',
+    backgroundImage: `url(${IMGS.skyline})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     width: '110%',
@@ -24,50 +27,34 @@ const { outter, bgLayerStyle } = style;
 
 export const WellHome = () => (
   <div style={outter}>
-    <div style={bgLayerStyle}/>
+    <div style={bgLayerStyle} />
 
     <Pattern
-
-      classname='WellHome'
-      logo='../imgs/wh.jpg'
-      url={''}
-      effectClassIn='lightSpeedIn'
-      effectClassOut='lightSpeedOut'
-      technologies={_ => (
-
-        <div className={'technologies'}>
-        </div>
-      )}
-
+      classname="WellHome"
+      logo={IMGS.wellHome}
+      url=""
+      effectClassIn="lightSpeedIn"
+      effectClassOut="lightSpeedOut"
+      technologies={() => <div className="technologies" />}
       description={() => (
-
-        <div className={'description'}>
+        <div className="description">
           <p>
-                          I have developed CRM system in order
-                          to automate business processes in the
-                          company engaged in the sale of real estate - <b><a href={'http://www.welhome.ru/'}
-              target={'blank'}>Welhome</a></b>
-            <span>,
-                              based on SugarCRM; designed the database and system architecture; integration with
-                              existing enterprise systems</span>
+            I have developed CRM system in order to automate business processes in the company engaged in the sale of real estate -{' '}
+            <b>
+              <a href="http://www.welhome.ru/" target="_blank" rel="noopener noreferrer">
+                Welhome
+              </a>
+            </b>
+            <span>, based on SugarCRM; designed the database and system architecture; integration with existing enterprise systems</span>
           </p>
         </div>
       )}
-
-      figure={() => (
-
-        <div>
-
-        </div>
-      )}
-
+      figure={() => <div />}
       logoDescription={() => (
-        <p className='header-container'>
-          <span className={'paragraph'}>CRM system for real estate company</span>
+        <p className="header-container">
+          <span className="paragraph">CRM system for real estate company</span>
         </p>
       )}
-
     />
-
   </div>
 );

@@ -8,6 +8,7 @@ https://arturvoloshyn.neosvita.com/
 - PHP 7.2
 - MySQL
 - Composer
+- libpng
 
 ## Install
 1. Copy .env.dist as .env

@@ -59,5 +59,17 @@ Route::get('/contacts', function () {
 
 })->name('contacts');
 
+Route::get('/offline', function () {
+
+    $meta = [
+        'title' => 'Artur Voloshyn | Software Engineer - Contact me',
+        'description' => 'The official site of the professional web developer Artur Voloshyn. Contact form with me',
+        'keywords' => 'Artur Voloshyn, Voloshyn, official website, Feedback, contact me',
+    ];
+
+    return view('offline', ['meta' => $meta]);
+
+})->name('offline');
+
 
 Route::post('mail', 'MailController@index');

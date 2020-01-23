@@ -1,7 +1,6 @@
-'use strict';
+import { DetectBrowser } from '../../../../../services/DetectBrowser';
 
 import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../common/util';
-import { DetectBrowser } from '../../../../../services/DetectBrowser';
 
 const pipeCount = 15;
 const pipePropCount = 8;
@@ -26,7 +25,7 @@ let center;
 let tick;
 let pipeProps;
 
-function initPipes () {
+const initPipes = () => {
   pipeProps = new Float32Array(pipePropsLength);
 
   let i;
@@ -34,14 +33,21 @@ function initPipes () {
   for (i = 0; i < pipePropsLength; i += pipePropCount) {
     initPipe(i);
   }
-}
+};
 
-function initPipe (i) {
-  let x, y, direction, speed, life, ttl, width, hue;
+const initPipe = i => {
+  let x;
+  let y;
+  let direction;
+  let speed;
+  let life;
+  let ttl;
+  let width;
+  let hue;
 
   x = rand(canvas.a.width);
   y = center[1];
-  direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
+  direction = round(rand(1)) ? HALF_PI : TAU - HALF_PI;
   speed = baseSpeed + rand(rangeSpeed);
   life = 0;
   ttl = baseTTL + rand(rangeTTL);
@@ -49,9 +55,9 @@ function initPipe (i) {
   hue = baseHue + rand(rangeHue);
 
   pipeProps.set([x, y, direction, speed, life, ttl, width, hue], i);
-}
+};
 
-function updatePipes () {
+const updatePipes = () => {
   if (!pipeProps) {
     return;
   }
@@ -63,9 +69,9 @@ function updatePipes () {
   for (i = 0; i < pipePropsLength; i += pipePropCount) {
     updatePipe(i);
   }
-}
+};
 
-function updatePipe (i) {
+const updatePipe = i => {
   let i2 = 1 + i;
   let i3 = 2 + i;
   let i4 = 3 + i;
@@ -73,7 +79,16 @@ function updatePipe (i) {
   let i6 = 5 + i;
   let i7 = 6 + i;
   let i8 = 7 + i;
-  let x, y, direction, speed, life, ttl, width, hue, turnChance, turnBias;
+  let x;
+  let y;
+  let direction;
+  let speed;
+  let life;
+  let ttl;
+  let width;
+  let hue;
+  let turnChance;
+  let turnBias;
 
   x = pipeProps[i];
   y = pipeProps[i2];
@@ -100,9 +115,9 @@ function updatePipe (i) {
 
   checkBounds(x, y);
   life > ttl && initPipe(i);
-}
+};
 
-function drawPipe (x, y, life, ttl, width, hue) {
+const drawPipe = (x, y, life, ttl, width, hue) => {
   ctx.a.save();
   ctx.a.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) * 0.125})`;
   ctx.a.beginPath();
@@ -110,16 +125,18 @@ function drawPipe (x, y, life, ttl, width, hue) {
   ctx.a.stroke();
   ctx.a.closePath();
   ctx.a.restore();
-}
+};
 
-function checkBounds (x, y) {
-  if (x > canvas.a.width) x = 0;
-  if (x < 0) x = canvas.a.width;
-  if (y > canvas.a.height) y = 0;
-  if (y < 0) y = canvas.a.height;
-}
+const checkBounds = (x, y) => {
+  const { width, height } = canvas.a;
 
-function createCanvas () {
+  if (x > width) x = 0;
+  if (x < 0) x = width;
+  if (y > height) y = 0;
+  if (y < 0) y = height;
+};
+
+const createCanvas = () => {
   container = document.querySelector('.content--canvas--smsplaza');
   canvas = {
     a: document.createElement('canvas'),
@@ -137,9 +154,9 @@ function createCanvas () {
   };
   center = [];
   tick = 0;
-}
+};
 
-function resize () {
+const resize = () => {
   const { innerWidth, innerHeight } = window;
 
   canvas.a.width = innerWidth;
@@ -152,17 +169,22 @@ function resize () {
 
   ctx.b.drawImage(canvas.a, 0, 0);
 
-  center[0] = 0.5 * canvas.a.width;
-  center[1] = 0.5 * canvas.a.height;
-}
+  const { width, height } = canvas.a;
 
-function render () {
+  center[0] = 0.5 * width;
+  center[1] = 0.5 * height;
+};
+
+const render = () => {
   if (!ctx) {
     return;
   }
+
+  const { width, height } = canvas.b;
+
   ctx.b.save();
   ctx.b.fillStyle = backgroundColor;
-  ctx.b.fillRect(0, 0, canvas.b.width, canvas.b.height);
+  ctx.b.fillRect(0, 0, width, height);
   ctx.b.restore();
 
   ctx.b.save();
@@ -175,17 +197,17 @@ function render () {
   ctx.b.save();
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
-}
+};
 
-function draw () {
+const draw = () => {
   updatePipes();
   render();
   window.requestAnimationFrame(draw);
-}
+};
 
 window.addEventListener('resize', resize);
 
-export function setup () {
+export const setup = () => {
   if (document.querySelector('.content--canvas--smsplaza canvas')) {
     return;
   }
@@ -194,9 +216,9 @@ export function setup () {
   resize();
   initPipes();
   draw();
-}
+};
 
-export function remove () {
+export const remove = () => {
   if (document.querySelector('.content--canvas--smsplaza canvas')) {
     document.querySelector('.content--canvas--smsplaza canvas').remove();
   }
@@ -207,4 +229,4 @@ export function remove () {
   center = null;
   tick = null;
   pipeProps = null;
-}
+};

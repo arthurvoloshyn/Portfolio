@@ -1,6 +1,9 @@
 import React from 'react';
-import Pattern from './../parts/Pattern';
+
 import Constants from '../../../constants/constants';
+import { IMGS } from '../../../constants/imgs';
+
+import Pattern from '../parts/Pattern';
 
 const style = {
   outter: {
@@ -10,7 +13,7 @@ const style = {
     overflow: 'hidden'
   },
   bgLayerStyle: {
-    backgroundImage: 'url(../imgs/profil_city.png)',
+    backgroundImage: `url(${IMGS.profilCity})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     width: '110%',
@@ -18,7 +21,6 @@ const style = {
     overflow: 'hidden',
     minHeight: '40vh',
     bottom: '0px'
-
   }
 };
 
@@ -26,50 +28,31 @@ const { outter, bgLayerStyle } = style;
 
 export const Factoringvergelijken = () => (
   <div style={outter}>
-    <div style={bgLayerStyle}/>
+    <div style={bgLayerStyle} />
 
     <Pattern
-
-      classname='Factoringvergelijken'
-      logo='../imgs/logo_f.png'
+      classname="Factoringvergelijken"
+      logo={IMGS.factoringvergelijken}
       url={Constants.factoringvergelijken}
-      effectClassIn='slideInDown'
-      effectClassOut='zoomOutUp'
-      technologies={() => (
-
-        <div className={'technologies'}>
-
-        </div>
-      )}
-
+      effectClassIn="slideInDown"
+      effectClassOut="zoomOutUp"
+      technologies={() => <div className="technologies" />}
       description={() => (
-
-        <div className={'description'}>
-          <p>
-                          My team and I have developed the application build with JS and PHP.
-                          Also I have made and designed some parts of the interface;
-                          improvement of modules in the administration panel
-          </p>
+        <div className="description">
+          <p>My team and I have developed the application build with JS and PHP. Also I have made and designed some parts of the interface; improvement of modules in the administration panel</p>
         </div>
       )}
-
       figure={() => (
-
         <div>
           <span>View</span>
           <span>factoring</span>
         </div>
       )}
-
       logoDescription={() => (
-        <p className='header-container'>
-          <span className={'paragraph'}>
-                          Online factoring services
-          </span>
+        <p className="header-container">
+          <span className="paragraph">Online factoring services</span>
         </p>
       )}
-
     />
-
   </div>
 );

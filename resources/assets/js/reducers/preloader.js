@@ -6,9 +6,8 @@ const initialState = {
 
 const preloaderReducer = (state = initialState, { type, preloader }) => {
   switch (type) {
-    case ACTION_SET_PRELOADER_STATUS : {
+    case ACTION_SET_PRELOADER_STATUS:
       return { preloader };
-    }
     default:
       return state;
   }

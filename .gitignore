@@ -1,12 +1,20 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
 /node_modules
 /public/storage
 /storage/*.key
 /.idea
 /.vscode
 /.vagrant
+
+# testing
+.phpunit.result.cache
+
+# misc
+.env
+
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.env
-.phpunit.result.cache

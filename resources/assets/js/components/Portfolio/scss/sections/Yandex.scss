@@ -1,45 +1,45 @@
-$yandex-red: #ED2025;
+$yandex-red: #ed2025;
 
 @font-face {
-  font-family: 'YS Text';
-  src: url("/fonts/yandex/YandexSansText-Light.eot");
-  src: url("/fonts/yandex/YandexSansText-Light.eot?#iefix") format('embedded-opentype'), url("/fonts/yandex/YandexSansText-Light.woff2") format('woff2'), url("/fonts/yandex/YandexSansText-Light.woff") format('woff'), url("/fonts/yandex/YandexSansText-Light.ttf") format('truetype'), url("/fonts/yandex/YandexSansText-Light.svg#YSText-Light") format('svg');
-  font-weight: 300;
-  font-style: normal;
   font-display: swap;
+  font-family: 'YS Text';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/yandex/YandexSansText-Light.eot');
+  src: url('/fonts/yandex/YandexSansText-Light.eot?#iefix') format('embedded-opentype'), url('/fonts/yandex/YandexSansText-Light.woff2') format('woff2'),
+    url('/fonts/yandex/YandexSansText-Light.woff') format('woff'), url('/fonts/yandex/YandexSansText-Light.ttf') format('truetype'),
+    url('/fonts/yandex/YandexSansText-Light.svg#YSText-Light') format('svg');
 }
 
 .Yandex {
+  background: #ecf0f1;
   p,
   span {
     font-family: 'YS Text';
-    font-weight: 300;
-    font-style: normal;
     font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
   }
-
-  background: #ecf0f1;
 
   .technologies-container {
     .technologies {
-
-      width: 700px;
-      height: 100px;
-      background-image: url("#{$img-path}/yandex/yandex-desktop.png");
-
-      display: block;
+      background-image: url('#{$img-path}/yandex/yandex-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
 
       background-size: contain;
+
+      display: block;
+      height: 100px;
+      width: 700px;
     }
 
     .description {
       p {
+        color: #000;
         font-size: 17px;
-        color: #000000;
-        text-align: center;
         line-height: 30px;
+        text-align: center;
 
         b {
           color: $yandex-red;
@@ -50,24 +50,19 @@ $yandex-red: #ED2025;
     .rotate_button {
       figure {
         span {
-
           border: 5px solid $yandex-red;
-
         }
 
         span:nth-child(1) {
-          color: #000000;
+          color: #000;
         }
 
         span:nth-child(2) {
-          color: #ffffff;
           background: $yandex-red;
+          color: #fff;
         }
-
       }
-
     }
-
   }
 
   .logo-container {
@@ -76,11 +71,11 @@ $yandex-red: #ED2025;
     }
 
     p {
+      color: #000;
       font-size: 17px;
-      color: #000000;
+      font-weight: 300;
       letter-spacing: 0.62px;
       line-height: 42px;
-      font-weight: 300;
       text-align: center;
       z-index: 100;
 
@@ -91,50 +86,41 @@ $yandex-red: #ED2025;
   }
 
   .arrow {
-    display: block;
-    background-image: url("#{$img-path}/down-arrow-red.svg");
+    background-image: url('#{$img-path}/down-arrow-red.svg');
     background-position: center;
     background-size: 80px;
-    width: 80px;
+    cursor: pointer;
+    display: block;
     height: 80px;
     margin: auto;
-    cursor: pointer;
+    width: 80px;
   }
 
   .show {
-    background-image: url("#{$img-path}/down-arrow-red.svg");
+    background-image: url('#{$img-path}/down-arrow-red.svg');
   }
 
   .hide {
-    background-image: url("#{$img-path}/cancel.svg");
+    background-image: url('#{$img-path}/cancel.svg');
   }
 
   @media (max-width: 750px) {
     .technologies-container {
       .technologies {
-
-        width: 350px !important;
+        background-image: url('#{$img-path}/yandex/yandex-mobile.png') !important;
         height: 220px !important;
-        background-image: url("#{$img-path}/yandex/yandex-mobile.png") !important;
-
+        width: 350px !important;
       }
-
     }
-
   }
 
   @media (max-width: 500px) {
     .technologies-container {
       .technologies {
-
-        width: 250px !important;
+        background-image: url('#{$img-path}/yandex/yandex-mobile.png') !important;
         height: 140px !important;
-        background-image: url("#{$img-path}/yandex/yandex-mobile.png") !important;
-
+        width: 250px !important;
       }
-
     }
-
   }
-
 }

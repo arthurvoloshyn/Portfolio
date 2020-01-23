@@ -1,75 +1,71 @@
 .smsplaza {
+  background: hsla(260, 40%, 5%, 1);
   .frame {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
   }
 
   a {
-    text-decoration: none;
     color: inherit;
     outline: none;
+    text-decoration: none;
   }
 
   .mt-50 {
     margin-top: 50px !important;
   }
 
-  background: hsla(260, 40%, 5%, 1);
-
   .smspalza-container {
-
-    width: 100%;
-    height: 100%;
-    z-index: 10000;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100%;
     justify-content: center;
+    width: 100%;
+    z-index: 10000;
 
     .arrow {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      width: 50px;
-      height: 50px;
       cursor: pointer;
+      height: 50px;
+      width: 50px;
     }
 
     .arrow-up {
-      background-image: url("#{$img-path}/smsplaza/arrow-up.svg");
+      background-image: url('#{$img-path}/smsplaza/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url("#{$img-path}/smsplaza/arrow-down.svg");
+      background-image: url('#{$img-path}/smsplaza/arrow-down.svg');
     }
 
     .description {
+      color: #41b883;
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      margin-bottom: 20px;
+      margin-top: 20px;
       max-width: 400px;
       text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      color: #41B883;
     }
 
     .header {
-
-      width: 100%;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      width: 100%;
 
       .logo {
-        color: #41B883;
-        text-shadow: #36495D 4px 4px 0;
-        z-index: 100;
-        font-size: 65px;
+        color: #41b883;
         font-family: 'Luckiest Guy', cursive;
+        font-size: 65px;
         line-height: 1;
+        text-shadow: #36495d 4px 4px 0;
+        z-index: 100;
       }
-
     }
 
     .d-flex {
@@ -81,19 +77,18 @@
     }
 
     .info-container {
-      width: 100%;
-      min-height: 300px;
-      z-index: 10000;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      color: #41b883;
+      flex-direction: column;
 
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      justify-content: center;
       max-width: 400px;
+      min-height: 300px;
       text-align: justify;
-      color: #41B883;
-
+      width: 100%;
+      z-index: 10000;
     }
 
     .tzie-small {
@@ -101,35 +96,31 @@
     }
 
     .tech-container {
-
-      width: 100%;
-      min-height: 300px;
-      z-index: 10000;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
       justify-content: center;
+      min-height: 300px;
+      width: 100%;
+      z-index: 10000;
 
       .row {
-
+        align-items: center;
         display: flex;
         flex-direction: row;
-        width: 300px;
-        align-items: center;
         justify-content: space-between;
+        width: 300px;
 
         div {
+          background-image: url('#{$img-path}/smsplaza/smsplaza.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          width: 100%;
           height: 300px;
-          background-image: url("#{$img-path}/smsplaza/smsplaza.png");
+          width: 100%;
         }
-
       }
     }
   }
-
 }
 
 @media (max-width: 650px) {
@@ -140,15 +131,13 @@
 
     .description {
       font-size: 16px !important;
-      max-width: 350px !important;
-      margin-top: 20px !important;
       margin-bottom: 20px !important;
+      margin-top: 20px !important;
+      max-width: 350px !important;
     }
 
     .row {
-
       width: 200px !important;
-
     }
   }
 }
@@ -157,16 +146,12 @@
   .smsplaza {
     .header {
       .logo {
-
         font-size: 45px !important;
-
       }
     }
 
     .row {
-
       width: 150px !important;
-
     }
   }
 }
@@ -178,9 +163,7 @@
     }
 
     .row {
-
       width: 240px !important;
-
     }
   }
 }

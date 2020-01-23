@@ -1,9 +1,9 @@
-@import "./preloaderEffect";
-@import "./animate.min";
+@import './preloaderEffect';
+@import './animate.min';
 
 .transparent {
-  transition-duration: 0.5s;
   opacity: 0 !important;
+  transition-duration: 0.5s;
 }
 
 .show {
@@ -12,40 +12,40 @@
 }
 
 #img_loader {
-  filter: drop-shadow(0px 0px 10px #00bfff);
-  max-width: 380px;
-  min-width: 90px;
-  width: 30%;
-  pointer-events: none;
   -webkit-animation: img_loader 10s linear infinite;
   animation: img_loader 10s linear infinite;
+  filter: drop-shadow(0 0 10px #00bfff);
+  max-width: 380px;
+  min-width: 90px;
+  pointer-events: none;
+  width: 20%;
 }
 
 @-webkit-keyframes img_loader {
   0% {
-    filter: drop-shadow(0px 0px 10px #00bfff)
+    filter: drop-shadow(0 0 10px #00bfff);
   }
 
   50% {
-    filter: drop-shadow(0px 0px 2px #00bfff)
+    filter: drop-shadow(0 0 2px #00bfff);
   }
 
   100% {
-    filter: drop-shadow(0px 0px 10px #00bfff)
+    filter: drop-shadow(0 0 10px #00bfff);
   }
 }
 
 @keyframes img_loader {
   0% {
-    filter: drop-shadow(0px 0px 10px #00bfff)
+    filter: drop-shadow(0 0 10px #00bfff);
   }
 
   50% {
-    filter: drop-shadow(0px 0px 2px #00bfff)
+    filter: drop-shadow(0 0 2px #00bfff);
   }
 
   100% {
-    filter: drop-shadow(0px 0px 10px #00bfff)
+    filter: drop-shadow(0 0 10px #00bfff);
   }
 }
 
@@ -56,6 +56,12 @@
 }
 
 @media (max-height: 600px) {
+  #img_loader {
+    width: 30% !important;
+  }
+}
+
+@media (max-height: 500px) {
   #img_loader {
     display: none;
   }

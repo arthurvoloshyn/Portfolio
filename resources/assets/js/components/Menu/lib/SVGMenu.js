@@ -1,58 +1,55 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { toggleStatus, setStatusMenu } from '../../../actions/menu';
 
+/* eslint-disable no-unused-vars */
 const UP = 38;
 const DOWN = 40;
 const ESC = 27;
-
-function mapStateToProps (state) {
-  return {
-    menu: state.menu,
-    page: state.page
-  };
-}
-
-function matchDispatchToProps (dispatch) {
-  return bindActionCreators({ setStatus: setStatusMenu, toggleStatus: toggleStatus }, dispatch);
-}
+/* eslint-enable */
 
 class SVGMenu extends Component {
-  constructor (props) {
-    super(props);
-    this.path = window.location.href.split('/')[3].split('#');
-    this.keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-    this.escFunction = this.escFunction.bind(this);
-  }
+  path = window.location.href.split('/')[3].split('#');
+  keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
-  componentDidMount () {
+  componentDidMount() {
     this.init();
     document.addEventListener('keydown', this.escFunction, false);
   }
-  componentWillUnmount () {
+
+  componentWillUnmount() {
     document.removeEventListener('keydown', this.escFunction, false);
   }
 
-  escFunction (event) {
-    if (event.keyCode === ESC) {
+  escFunction = ({ keyCode }) => {
+    if (keyCode === ESC) {
       this.toggle();
     }
-  }
+  };
 
-  componentDidUpdate (prevProps) {
-    if (this.props.page.statusReload) {
-      setTimeout(() => { this.close(); }, 500);
+  componentDidUpdate(prevProps) {
+    const {
+      page: { statusReload }
+    } = this.props;
+
+    if (statusReload) {
+      setTimeout(() => {
+        this.close();
+      }, 500);
     }
   }
 
-  init () {
+  init = () => {
+    const { setStatus } = this.props;
+
     this.el = document.getElementById('menu');
     this.trigger = this.el.querySelector('button.menu__handle');
     this.triggerBody = document.getElementById('main_container');
     this.shapeEl = this.el.querySelector('div.morph-shape');
 
-    var s = Snap(this.shapeEl.querySelector('svg'));
+    const s = Snap(this.shapeEl.querySelector('svg'));
     this.pathEl = s.select('path');
     this.paths = {
       reset: this.pathEl.attr('d'),
@@ -60,17 +57,24 @@ class SVGMenu extends Component {
       close: this.shapeEl.getAttribute('data-morph-close')
     };
 
-    this.props.setStatus(false);
+    setStatus(false);
     this.initEvents();
   };
 
-  initEvents () {
-    this.triggerBody.addEventListener('click', this.toggleBody.bind(this));
-    this.trigger.addEventListener('click', this.toggle.bind(this));
+  initEvents = () => {
+    this.triggerBody.addEventListener('click', this.toggleBody);
+    this.trigger.addEventListener('click', this.toggle);
   };
 
-  toggleBody () {
-    if (this.props.menu.status) {
+  toggleBody = () => {
+    const {
+      menu: { status },
+      toggleStatus
+    } = this.props;
+    const { close, open, reset } = this.paths;
+    const { easeout, elastic } = mina;
+
+    if (status) {
       this.enableScroll();
 
       classie.remove(this.el, 'menu--anim');
@@ -78,16 +82,21 @@ class SVGMenu extends Component {
         classie.remove(this.el, 'menu--open');
       }, 250);
 
-      this.pathEl.stop().animate({ 'path': this.props.menu.status ? this.paths.close : this.paths.open }, 350, mina.easeout, () => {
-        this.pathEl.stop().animate({ 'path': this.paths.reset }, 800, mina.elastic);
-      });
+      this.pathEl.stop().animate({ path: status ? close : open }, 350, easeout, () => this.pathEl.stop().animate({ path: reset }, 800, elastic));
 
-      this.props.toggleStatus(this.props.menu.status);
+      toggleStatus(status);
     }
   };
 
-  toggle () {
-    if (this.props.menu.status) {
+  toggle = () => {
+    const {
+      menu: { status },
+      toggleStatus
+    } = this.props;
+    const { close, open, reset } = this.paths;
+    const { easeout, elastic } = mina;
+
+    if (status) {
       this.enableScroll();
 
       classie.remove(this.el, 'menu--anim');
@@ -102,14 +111,19 @@ class SVGMenu extends Component {
         classie.add(this.el, 'menu--open');
       }, 250);
     }
-    this.pathEl.stop().animate({ 'path': this.props.menu.status ? this.paths.close : this.paths.open }, 350, mina.easeout, () => {
-      this.pathEl.stop().animate({ 'path': this.paths.reset }, 800, mina.elastic);
-    });
+    this.pathEl.stop().animate({ path: status ? close : open }, 350, easeout, () => this.pathEl.stop().animate({ path: reset }, 800, elastic));
 
-    this.props.toggleStatus(this.props.menu.status);
+    toggleStatus(status);
   };
 
-  close () {
+  close = () => {
+    const {
+      menu: { status },
+      toggleStatus
+    } = this.props;
+    const { close, open, reset } = this.paths;
+    const { easeout, elastic } = mina;
+
     this.enableScroll();
 
     classie.remove(this.el, 'menu--anim');
@@ -117,46 +131,76 @@ class SVGMenu extends Component {
       classie.remove(this.el, 'menu--open');
     }, 250);
 
-    this.pathEl.stop().animate({ 'path': this.props.menu.status ? this.paths.close : this.paths.open }, 350, mina.easeout, () => {
-      this.pathEl.stop().animate({ 'path': this.paths.reset }, 800, mina.elastic);
-    });
+    this.pathEl.stop().animate({ path: status ? close : open }, 350, easeout, () => this.pathEl.stop().animate({ path: reset }, 800, elastic));
 
-    this.props.toggleStatus(this.props.menu.status);
-  }
+    toggleStatus(status);
+  };
 
-  preventDefault (e) {
+  preventDefault = e => {
     e = e || window.event;
-    if (e.preventDefault) { e.preventDefault(); }
+    if (e.preventDefault) {
+      e.preventDefault();
+    }
     e.returnValue = false;
-  }
+  };
 
-  preventDefaultForScrollKeys (e) {
+  preventDefaultForScrollKeys = e => {
     if (this.keys[e.keyCode]) {
       this.preventDefault(e);
       return false;
     }
-  }
+  };
 
-  disableScroll () {
-    if (window.addEventListener) // older FF
-    { window.addEventListener('DOMMouseScroll', this.preventDefault, false); }
+  disableScroll = () => {
+    if (window.addEventListener) {
+      // older FF
+      window.addEventListener('DOMMouseScroll', this.preventDefault, false);
+    }
     window.onwheel = this.preventDefault; // modern standard
     window.onmousewheel = document.onmousewheel = this.preventDefault; // older browsers, IE
     window.ontouchmove = this.preventDefault; // mobile
     document.onkeydown = this.preventDefaultForScrollKeys;
-  }
+  };
 
-  enableScroll () {
-    if (window.removeEventListener) { window.removeEventListener('DOMMouseScroll', this.preventDefault, false); }
+  enableScroll = () => {
+    if (window.removeEventListener) {
+      window.removeEventListener('DOMMouseScroll', this.preventDefault, false);
+    }
     window.onmousewheel = document.onmousewheel = null;
     window.onwheel = null;
     window.ontouchmove = null;
     document.onkeydown = null;
-  }
+  };
 
-  render () {
-    return <div></div>;
+  render() {
+    return <div />;
   }
 }
+
+const mapStateToProps = ({ menu, page }) => ({ menu, page });
+
+const matchDispatchToProps = { setStatus: setStatusMenu, toggleStatus };
+
+SVGMenu.propTypes = {
+  menu: PropTypes.shape({
+    status: PropTypes.bool
+  }),
+  page: PropTypes.shape({
+    statusReload: PropTypes.bool
+  }),
+  toggleStatus: PropTypes.func,
+  setStatus: PropTypes.func
+};
+
+SVGMenu.defaultProps = {
+  menu: {
+    status: false
+  },
+  page: {
+    statusReload: false
+  },
+  toggleStatus: () => {},
+  setStatus: () => {}
+};
 
 export default connect(mapStateToProps, matchDispatchToProps)(SVGMenu);

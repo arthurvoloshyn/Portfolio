@@ -1,15 +1,15 @@
 .toTopAnchor {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  display: block;
-  background-image: url("/imgs/totop.svg");
+  background-image: url('#{$img-path}/totop.svg');
   background-position: center;
   background-size: 40px;
-  width: 40px;
+  bottom: 20px;
+  cursor: pointer;
+  display: block;
   height: 40px;
   margin: auto;
-  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  width: 40px;
 }
 
 @media (max-height: 500px) {

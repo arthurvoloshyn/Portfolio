@@ -1,9 +1,6 @@
-/* eslint-disable no-unused-vars */
-
-'use strict';
+import SimplexNoise from 'simplex-noise';
 
 import { cos, fadeInOut, rand, sin, TAU } from '../../common/util';
-import SimplexNoise from 'simplex-noise';
 
 const circleCount = 10;
 const circlePropCount = 8;
@@ -20,6 +17,7 @@ const yOff = 0.0015;
 const zOff = 0.0015;
 const backgroundColor = 'hsla(0,0%,5%,1)';
 
+/* eslint-disable no-unused-vars */
 let container;
 let canvas;
 let ctx;
@@ -27,8 +25,9 @@ let circles;
 let circleProps;
 let simplex;
 let baseHue;
+/* eslint-enable */
 
-function initCircles () {
+const initCircles = () => {
   circleProps = new Float32Array(circlePropsLength);
   simplex = new SimplexNoise();
   baseHue = 220;
@@ -39,13 +38,25 @@ function initCircles () {
   for (i = 0; i < circlePropsLength; i += circlePropCount) {
     initCircle(i);
   }
-}
+};
 
-function initCircle (i) {
-  let x, y, n, t, speed, vx, vy, life, ttl, radius, hue;
+const initCircle = i => {
+  const { width, height } = canvas.a;
 
-  x = rand(canvas.a.width);
-  y = rand(canvas.a.height);
+  let x;
+  let y;
+  let n;
+  let t;
+  let speed;
+  let vx;
+  let vy;
+  let life;
+  let ttl;
+  let radius;
+  let hue;
+
+  x = rand(width);
+  y = rand(height);
   n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
   t = rand(TAU);
   speed = baseSpeed + rand(rangeSpeed);
@@ -57,9 +68,9 @@ function initCircle (i) {
   hue = baseHue + n * rangeHue;
 
   circleProps.set([x, y, vx, vy, life, ttl, radius, hue], i);
-}
+};
 
-function updateCircles () {
+const updateCircles = () => {
   let i;
 
   baseHue++;
@@ -67,11 +78,24 @@ function updateCircles () {
   for (i = 0; i < circlePropsLength; i += circlePropCount) {
     updateCircle(i);
   }
-}
+};
 
-function updateCircle (i) {
-  let i2 = 1 + i; let i3 = 2 + i; let i4 = 3 + i; let i5 = 4 + i; let i6 = 5 + i; let i7 = 6 + i; let i8 = 7 + i;
-  let x, y, vx, vy, life, ttl, radius, hue;
+const updateCircle = i => {
+  let i2 = 1 + i;
+  let i3 = 2 + i;
+  let i4 = 3 + i;
+  let i5 = 4 + i;
+  let i6 = 5 + i;
+  let i7 = 6 + i;
+  let i8 = 7 + i;
+  let x;
+  let y;
+  let vx;
+  let vy;
+  let life;
+  let ttl;
+  let radius;
+  let hue;
 
   x = circleProps[i];
   y = circleProps[i2];
@@ -91,9 +115,9 @@ function updateCircle (i) {
   circleProps[i5] = life;
 
   (checkBounds(x, y, radius) || life > ttl) && initCircle(i);
-}
+};
 
-function drawCircle (x, y, life, ttl, radius, hue) {
+const drawCircle = (x, y, life, ttl, radius, hue) => {
   ctx.a.save();
   ctx.a.fillStyle = `hsla(${hue},60%,30%,${fadeInOut(life, ttl)})`;
   ctx.a.beginPath();
@@ -101,18 +125,15 @@ function drawCircle (x, y, life, ttl, radius, hue) {
   ctx.a.fill();
   ctx.a.closePath();
   ctx.a.restore();
-}
+};
 
-function checkBounds (x, y, radius) {
-  return (
-    x < -radius ||
-        x > canvas.a.width + radius ||
-        y < -radius ||
-        y > canvas.a.height + radius
-  );
-}
+const checkBounds = (x, y, radius) => {
+  const { width, height } = canvas.a;
 
-function createCanvas () {
+  return x < -radius || x > width + radius || y < -radius || y > height + radius;
+};
+
+const createCanvas = () => {
   container = document.querySelector('.content--canvas-neocore');
   canvas = {
     a: document.createElement('canvas'),
@@ -128,9 +149,9 @@ function createCanvas () {
     a: canvas.a.getContext('2d'),
     b: canvas.b.getContext('2d')
   };
-}
+};
 
-function resize () {
+const resize = () => {
   const { innerWidth, innerHeight } = window;
 
   canvas.a.width = innerWidth;
@@ -142,30 +163,33 @@ function resize () {
   canvas.b.height = innerHeight;
 
   ctx.b.drawImage(canvas.a, 0, 0);
-}
+};
 
-function render () {
+const render = () => {
   ctx.b.save();
   ctx.b.filter = 'blur(50px)';
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
-}
+};
 
-function draw () {
+const draw = () => {
   if (!ctx) {
     return;
   }
-  ctx.a.clearRect(0, 0, canvas.a.width, canvas.a.height);
+
+  const { a, b } = canvas;
+
+  ctx.a.clearRect(0, 0, a.width, a.height);
   ctx.b.fillStyle = backgroundColor;
-  ctx.b.fillRect(0, 0, canvas.b.width, canvas.b.height);
+  ctx.b.fillRect(0, 0, b.width, b.height);
   updateCircles();
   render();
   window.requestAnimationFrame(draw);
-}
+};
 
 window.addEventListener('resize', resize);
 
-export function setup () {
+export const setup = () => {
   if (document.querySelector('.content--canvas-neocore canvas')) {
     return;
   }
@@ -174,9 +198,9 @@ export function setup () {
   resize();
   initCircles();
   draw();
-}
+};
 
-export function remove () {
+export const remove = () => {
   if (document.querySelector('.content--canvas-neocore canvas')) {
     document.querySelector('.content--canvas-neocore canvas').remove();
   }
@@ -187,6 +211,6 @@ export function remove () {
   circleProps = null;
   simplex = null;
   baseHue = null;
-}
+};
 
 export default setup;

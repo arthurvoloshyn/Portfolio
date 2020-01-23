@@ -1,8 +1,6 @@
-/* eslint-disable no-unused-vars */
-'use strict';
+import { DetectBrowser } from '../../../../../services/DetectBrowser';
 
 import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../common/util';
-import { DetectBrowser } from '../../../../../services/DetectBrowser';
 
 const particleCount = 75;
 const particlePropCount = 9;
@@ -17,14 +15,16 @@ const baseHue = 10;
 const rangeHue = 100;
 const backgroundColor = 'hsla(60,50%,3%,1)';
 
+/* eslint-disable no-unused-vars */
 let container;
 let canvas;
 let ctx;
 let center;
 let tick;
 let particleProps;
+/* eslint-enable */
 
-function initParticles () {
+const initParticles = () => {
   tick = 0;
   particleProps = new Float32Array(particlePropsLength);
 
@@ -33,13 +33,24 @@ function initParticles () {
   for (i = 0; i < particlePropsLength; i += particlePropCount) {
     initParticle(i);
   }
-}
+};
 
-function initParticle (i) {
-  let theta, x, y, vx, vy, life, ttl, speed, size, hue;
+const initParticle = i => {
+  let theta;
+  let x;
+  let y;
+  let vx;
+  let vy;
+  let life;
+  let ttl;
+  let speed;
+  let size;
+  let hue;
 
-  x = rand(canvas.a.width);
-  y = rand(canvas.a.height);
+  const { width, height } = canvas.a;
+
+  x = rand(width);
+  y = rand(height);
   theta = angle(x, y, center[0], center[1]);
   vx = cos(theta) * 6;
   vy = sin(theta) * 6;
@@ -50,17 +61,17 @@ function initParticle (i) {
   hue = baseHue + rand(rangeHue);
 
   particleProps.set([x, y, vx, vy, life, ttl, speed, size, hue], i);
-}
+};
 
-function drawParticles () {
+const drawParticles = () => {
   let i;
 
   for (i = 0; i < particlePropsLength; i += particlePropCount) {
     updateParticle(i);
   }
-}
+};
 
-function updateParticle (i) {
+const updateParticle = i => {
   let i2 = 1 + i;
   let i3 = 2 + i;
   let i4 = 3 + i;
@@ -69,7 +80,18 @@ function updateParticle (i) {
   let i7 = 6 + i;
   let i8 = 7 + i;
   let i9 = 8 + i;
-  let x, y, theta, vx, vy, life, ttl, speed, x2, y2, size, hue;
+  let x;
+  let y;
+  let theta;
+  let vx;
+  let vy;
+  let life;
+  let ttl;
+  let speed;
+  let x2;
+  let y2;
+  let size;
+  let hue;
 
   x = particleProps[i];
   y = particleProps[i2];
@@ -95,11 +117,11 @@ function updateParticle (i) {
   particleProps[i5] = life;
 
   life > ttl && initParticle(i);
-}
+};
 
-function drawParticle (x, y, theta, life, ttl, size, hue) {
-  let xRel = x - (0.5 * size);
-  let yRel = y - (0.5 * size);
+const drawParticle = (x, y, theta, life, ttl, size, hue) => {
+  let xRel = x - 0.5 * size;
+  let yRel = y - 0.5 * size;
 
   ctx.a.save();
   ctx.a.lineCap = 'round';
@@ -112,9 +134,9 @@ function drawParticle (x, y, theta, life, ttl, size, hue) {
   ctx.a.strokeRect(xRel, yRel, size, size);
   ctx.a.closePath();
   ctx.a.restore();
-}
+};
 
-function createCanvas () {
+const createCanvas = () => {
   container = document.querySelector('.content--canvas-abirix');
   canvas = {
     a: document.createElement('canvas'),
@@ -131,9 +153,9 @@ function createCanvas () {
     b: canvas.b.getContext('2d')
   };
   center = [];
-}
+};
 
-function resize () {
+const resize = () => {
   const { innerWidth, innerHeight } = window;
 
   canvas.a.width = innerWidth;
@@ -146,11 +168,13 @@ function resize () {
 
   ctx.b.drawImage(canvas.a, 0, 0);
 
-  center[0] = 0.5 * canvas.a.width;
-  center[1] = 0.5 * canvas.a.height;
-}
+  const { width, height } = canvas.a;
 
-function renderGlow () {
+  center[0] = 0.5 * width;
+  center[1] = 0.5 * height;
+};
+
+const renderGlow = () => {
   ctx.b.save();
 
   if (!DetectBrowser.isFirefox()) {
@@ -168,36 +192,38 @@ function renderGlow () {
   ctx.b.globalCompositeOperation = 'lighter';
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
-}
+};
 
-function render () {
+const render = () => {
   ctx.b.save();
   ctx.b.globalCompositeOperation = 'lighter';
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
-}
+};
 
-function draw () {
+const draw = () => {
   if (!ctx) {
     return;
   }
   tick++;
 
-  ctx.a.clearRect(0, 0, canvas.a.width, canvas.a.height);
+  const { width, height } = canvas.a;
+
+  ctx.a.clearRect(0, 0, width, height);
 
   ctx.b.fillStyle = backgroundColor;
-  ctx.b.fillRect(0, 0, canvas.a.width, canvas.a.height);
+  ctx.b.fillRect(0, 0, width, height);
 
   drawParticles();
   renderGlow();
   render();
 
   window.requestAnimationFrame(draw);
-}
+};
 
 window.addEventListener('resize', resize);
 
-export function setup () {
+export const setup = () => {
   if (document.querySelector('.content--canvas-abirix canvas')) {
     return;
   }
@@ -206,9 +232,9 @@ export function setup () {
   resize();
   initParticles();
   draw();
-}
+};
 
-export function remove () {
+export const remove = () => {
   if (document.querySelector('.content--canvas-abirix canvas')) {
     document.querySelector('.content--canvas-abirix canvas').remove();
   }
@@ -218,6 +244,6 @@ export function remove () {
   center = null;
   tick = null;
   particleProps = null;
-}
+};
 
 export default setup;

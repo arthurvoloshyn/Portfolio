@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import { remove, setup } from './lib/shift';
-import { URLS } from '../../../../constants/urls';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
+import { URLS } from '../../../../constants/urls';
+
+import { remove, setup } from './lib/shift';
 
 class Neocore extends Component {
   state = {
     info: false
   };
 
-  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const {
+      page: { page }
+    } = nextProps;
+
     if (page === URLS.neocore) {
       setup();
       $('#fp-nav ul li a span').addClass('neocore-bg');
@@ -20,73 +26,60 @@ class Neocore extends Component {
   }
 
   toggle = () => {
+    const { info } = this.state;
+
     this.setState({
-      info: !this.state.info
+      info: !info
     });
   };
 
-  render () {
+  render() {
     const { info } = this.state;
 
     return (
-      <div className='demo-4 neocore'>
-
+      <div className="demo-4 neocore">
         <main>
-          <div className='frame'>
-          </div>
+          <div className="frame" />
 
-          <div className='content content--canvas-neocore'>
+          <div className="content content--canvas-neocore">
+            <div className="neocore-container">
+              <div className="header">
+                <div className="logo" />
 
-            <div className={'neocore-container'}>
-
-              <div className={'header'}>
-
-                <div className={'logo'}>
-
-                </div>
-
-                <div className={'description'}>
-
-                    online casino network
-
-                </div>
-
+                <div className="description">online casino network</div>
               </div>
 
               <div className={'tech-container ' + (info ? 'd-none' : 'd-flex')}>
-                <div className={'row'}>
-                  <div className={'techs'}></div>
+                <div className="row">
+                  <div className="techs" />
                 </div>
               </div>
 
               <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
-
-                  Created a new various functionality, also covered with tests.
-                  Optimized queries to the MongoDB database, added indexes.
-
+                Developed GraphQL API for complex enterprise systems. Created a new various functionality, also covered with tests. Optimized queries to the MongoDB database, added indexes.
               </div>
 
-              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle}/>
-
+              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
             </div>
-
           </div>
-
         </main>
-
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ page, preloader }) => ({
-  page,
-  preloader
-});
+const mapStateToProps = ({ page }) => ({ page });
 
 Neocore.propTypes = {
-  page: PropTypes.object,
-  preloader: PropTypes.object
+  page: PropTypes.shape({
+    page: PropTypes.string
+  })
 };
 
-export default connect(mapStateToProps, {})(Neocore);
+Neocore.defaultProps = {
+  page: {
+    page: ''
+  }
+};
+
+export default connect(mapStateToProps)(Neocore);

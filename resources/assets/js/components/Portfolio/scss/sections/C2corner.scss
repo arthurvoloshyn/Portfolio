@@ -1,47 +1,40 @@
-$mainColor: #003399;
+$mainColor: #039;
 
 .C2Corner {
-
-  background: #3399FF;
+  background: #39f;
 
   .technologies-container {
     .technologies {
-
-      width: 900px;
-      height: 100px;
-      background-image: url("#{$img-path}/c2corner/c2corner-desktop.png");
-
-      display: block;
+      background-image: url('#{$img-path}/c2corner/c2corner-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
 
+      display: block;
+      height: 100px;
+      width: 900px;
     }
 
     .description {
-
       max-width: 900px;
 
       p {
         color: $mainColor;
         font-family: 'Alfa Slab One', cursive;
-        max-width: 900px;
         font-size: 17px;
-        margin-top: 50px;
         margin-bottom: 50px;
+        margin-top: 50px;
+        max-width: 900px;
         padding-left: 20px;
         padding-right: 20px;
         text-align: center;
-
       }
     }
 
     .rotate_button {
       figure {
         span {
-
           border: 5px solid $mainColor;
-
         }
 
         span:nth-child(1) {
@@ -49,100 +42,89 @@ $mainColor: #003399;
         }
 
         span:nth-child(2) {
-          color: $mainColor;
           background: transparent;
+          color: $mainColor;
         }
-
       }
     }
-
   }
 
   .logo-container {
-
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
     display: -webkit-box;
 
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
 
     .logoText {
-
       color: $mainColor;
-      text-shadow: #3366CC 4px 4px 0;
       font-family: 'Alfa Slab One', cursive;
-      z-index: 100;
       font-size: 65px;
       line-height: 0;
-
+      text-shadow: #36c 4px 4px 0;
+      z-index: 100;
     }
 
     .header {
+      color: #fff;
       font-family: 'Open Sans', 'Condensed';
-      text-transform: uppercase;
-      color: #ffffff;
       font-size: 50px;
       font-weight: 600;
-      z-index: 100;
       text-align: center;
+      text-transform: uppercase;
+      z-index: 100;
     }
 
     .paragraph {
-
       color: $mainColor;
       font-family: 'Alfa Slab One', cursive;
       font-size: 20px;
+      font-weight: 300;
       letter-spacing: 0.62px;
       line-height: 30px;
-      font-weight: 300;
+      max-width: 700px;
       text-align: center;
       z-index: 100;
-      max-width: 700px;
     }
   }
 
   .arrow {
-    display: block;
-    background-image: url("#{$img-path}/c2corner/arrow-down.svg");
+    background-image: url('#{$img-path}/c2corner/arrow-down.svg');
     background-position: center;
     background-size: 80px;
-    width: 80px;
+    cursor: pointer;
+    display: block;
     height: 80px;
     margin: 30px auto auto;
-    cursor: pointer;
+    width: 80px;
   }
 
   .show {
-    background-image: url("#{$img-path}/c2corner/arrow-down.svg");
+    background-image: url('#{$img-path}/c2corner/arrow-down.svg');
   }
 
   .hide {
-    background-image: url("#{$img-path}/c2corner/arrow-up.svg");
+    background-image: url('#{$img-path}/c2corner/arrow-up.svg');
   }
 
   @media (max-width: 850px) {
     .technologies {
-
-      width: 350px !important;
+      background-image: url('#{$img-path}/c2corner/c2corner-mobile.png') !important;
       height: 220px !important;
-      background-image: url("#{$img-path}/c2corner/c2corner-mobile.png") !important;
-
+      width: 350px !important;
     }
   }
 
   @media (max-width: 500px) {
     .technologies {
-
-      width: 250px !important;
+      background-image: url('#{$img-path}/c2corner/c2corner-mobile.png') !important;
       height: 150px !important;
-      background-image: url("#{$img-path}/c2corner/c2corner-mobile.png") !important;
-
+      width: 250px !important;
     }
-
   }
 }

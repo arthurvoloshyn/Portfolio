@@ -1,8 +1,8 @@
 import { ACTION_RELOAD_PAGE, ACTION_SET_PAGE } from '../constants/actionTypes';
 
-export const setPage = name => ({
+export const setPage = page => ({
   type: ACTION_SET_PAGE,
-  page: name
+  page
 });
 
 export const reloadPage = statusReload => ({

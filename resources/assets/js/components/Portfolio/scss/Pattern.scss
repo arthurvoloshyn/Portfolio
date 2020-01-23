@@ -7,56 +7,55 @@
 }
 
 .Pattern {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  justify-content: center;
 
   .technologies-container {
-    z-index: 100;
+    align-items: center;
     display: none;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    z-index: 100;
 
     .technologies {
+      align-items: center;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center;
 
       div {
+        align-items: center;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
 
         div {
-          display: block;
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          width: 100px;
+          display: block;
           height: 100px;
           margin-left: 20px;
           margin-right: 20px;
           margin-top: 20px;
+          width: 100px;
         }
       }
     }
 
     .description {
-      max-width: 600px;
-      margin-top: 20px;
       margin-bottom: 20px;
+      margin-top: 20px;
+      max-width: 600px;
       padding-left: 20px;
       padding-right: 20px;
 
       @media (max-height: 400px) {
-
-        margin-top: 10px !important;
         margin-bottom: 10px !important;
+        margin-top: 10px !important;
 
         p {
           line-height: 22px !important;
@@ -66,16 +65,12 @@
 
     .rotate_button {
       figure {
-        margin-bottom: 30px !important;
-        width: 200px;
-        height: 60px;
         cursor: pointer;
-        perspective: 500px;
+        height: 60px;
+        margin-bottom: 30px !important;
         -webkit-perspective: 500px;
-
-        @media (max-height: 400px) {
-          margin-bottom: 10px !important;
-        }
+        perspective: 500px;
+        width: 200px;
 
         &:hover div {
           transform: rotateX(-90deg);
@@ -83,46 +78,51 @@
 
         div {
           height: 100%;
-          transform-style: preserve-3d;
           -webkit-transform-style: preserve-3d;
-          transition: 0.25s;
+          transform-style: preserve-3d;
           -webkit-transition: 0.25s;
+          transition: 0.25s;
         }
 
         span {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          left: 0;
           box-sizing: border-box;
           font-family: 'Source Sans Pro', sans-serif;
-          line-height: 50px;
           font-size: 17pt;
+          height: 100%;
+          left: 0;
+          line-height: 50px;
+          position: absolute;
           text-align: center;
           text-transform: uppercase;
+          width: 100%;
         }
 
         span:nth-child(1) {
-          transform: translate3d(0, 0, 30px);
           -webkit-transform: translate3d(0, 0, 30px);
+          transform: translate3d(0, 0, 30px);
         }
 
         span:nth-child(2) {
-          transform: rotateX(90deg) translate3d(0, 0, 30px);
           -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px);
+          transform: rotateX(90deg) translate3d(0, 0, 30px);
+        }
+
+        @media (max-height: 400px) {
+          margin-bottom: 10px !important;
         }
       }
     }
   }
 
   .logo-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 
     img {
       width: 300px;
+
       @media (max-height: 400px) {
         width: 120px !important;
       }
@@ -146,21 +146,21 @@
 
         div div {
           background-size: 50px !important;
-          width: 50px !important;
           height: 50px !important;
+          width: 50px !important;
         }
       }
 
       .description {
-        margin-top: 0 !important;
-        margin-bottom: 20px;
         font-size: 16px !important;
         line-height: 22px;
+        margin-bottom: 20px;
+        margin-top: 0 !important;
 
         p {
-          margin-top: 15px !important;
-          margin-bottom: 5px !important;
           font-size: 17px !important;
+          margin-bottom: 5px !important;
+          margin-top: 15px !important;
           max-width: 300px !important;
         }
       }
@@ -187,8 +187,8 @@
 
     .arrow {
       background-size: 40px !important;
-      width: 40px !important;
       height: 40px !important;
+      width: 40px !important;
     }
   }
 }
@@ -217,8 +217,8 @@
 
         div div {
           background-size: 50px !important;
-          width: 50px !important;
           height: 50px !important;
+          width: 50px !important;
         }
       }
     }
@@ -228,15 +228,11 @@
 @media (max-height: 650px) and (orientation: landscape) {
   .Pattern {
     .technologies-container .description p {
-
       display: none !important;
-
     }
 
     .logo-container .paragraph {
-
       max-width: none !important;
-
     }
 
     .header {

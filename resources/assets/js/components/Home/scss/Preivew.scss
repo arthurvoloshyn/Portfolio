@@ -1,10 +1,11 @@
 .Preivew {
+  color: #87ceeb;
   margin: 0 auto;
   text-align: center;
-  color: #87ceeb;
   text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
 
   div:nth-child(1) {
+    color: #fff;
     font-family: 'Wire One', Helvetica, Arial, sans-serif; // initial
 
     //font-family: 'Chinese', Helvetica, Arial, sans-serif; // 3/5
@@ -22,12 +23,21 @@
     //font-family: 'Zenzai', Helvetica, Arial, sans-serif; // 1/5
 
     font-size: 100px;
-    color: #ffffff;
-    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 40px #00bfff, 0 0 50px #00bfff, 0 0 60px #00bfff, 0 0 70px #00bfff, 0 0 80px #00bfff, 0 0 90px #00bfff, 0 0 100px #87ceeb;
+    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 40px #00bfff, 0 0 50px #00bfff, 0 0 60px #00bfff, 0 0 70px #00bfff, 0 0 80px #00bfff,
+      0 0 90px #00bfff, 0 0 100px #87ceeb;
 
     @media (max-width: 800px) {
       text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 100px #87ceeb;
     }
+  }
+
+  div:nth-child(2) {
+    font-size: 30px;
+  }
+
+  div:nth-child(3) {
+    font-size: 18px;
+    white-space: nowrap;
   }
 
   @media (max-width: 500px) {
@@ -36,19 +46,10 @@
     }
   }
 
-  div:nth-child(2) {
-    font-size: 30px;
-  }
-
   @media (max-width: 500px) {
     div:nth-child(2) {
       font-size: 20px;
     }
-  }
-
-  div:nth-child(3) {
-    font-size: 18px;
-    white-space: nowrap;
   }
 
   @media (max-width: 500px) {

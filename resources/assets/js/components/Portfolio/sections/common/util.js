@@ -9,8 +9,8 @@ export const randRange = n => n - rand(2 * n);
 export const fadeIn = (t, m) => t / m;
 export const fadeOut = (t, m) => (m - t) / m;
 export const fadeInOut = (t, m) => {
-  let hm = 0.5 * m;
-  return abs((t + hm) % m - hm) / (hm);
+  const hm = 0.5 * m;
+  return abs(((t + hm) % m) - hm) / hm;
 };
 export const dist = (x1, y1, x2, y2) => sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 export const angle = (x1, y1, x2, y2) => atan2(y2 - y1, x2 - x1);

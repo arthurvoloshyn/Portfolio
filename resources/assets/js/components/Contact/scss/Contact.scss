@@ -2,17 +2,17 @@
 @import 'Form';
 
 .contact_page_container {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   flex-direction: row;
 }
 
 @media (max-width: 1320px) {
   .contact_page_container {
-    -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-box-orient: vertical !important;
     flex-direction: column !important;
   }
 }

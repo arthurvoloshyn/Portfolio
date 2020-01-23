@@ -12,15 +12,15 @@ import charming from './charming.min';
 import anime from './anime.min';
 
 // From https://davidwalsh.name/javascript-debounce-function.
-function debounce (func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this; var args = arguments;
-    var later = function () {
+const debounce = (func, wait, immediate) => {
+  let timeout;
+  return (...args) => {
+    const context = this;
+    const later = () => {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
-    var callNow = immediate && !timeout;
+    const callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
@@ -28,17 +28,18 @@ function debounce (func, wait, immediate) {
 };
 
 // From http://snipplr.com/view/37687/random-number-float-generator/
-function randomBetween (minValue, maxValue, precision) {
-  if (typeof (precision) === 'undefined') {
+const randomBetween = (minValue, maxValue, precision) => {
+  if (typeof precision === 'undefined') {
     precision = 2;
   }
-  return parseFloat(Math.min(minValue + (Math.random() * (maxValue - minValue)), maxValue).toFixed(precision));
-}
+  return parseFloat(Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(precision));
+};
 
-let winsize = { width: window.innerWidth, height: window.innerHeight };
+const { innerWidth, innerHeight } = window;
+let winsize = { width: innerWidth, height: innerHeight };
 
 class Shape {
-  constructor (type, letterRect, options) {
+  constructor(type, letterRect, options) {
     this.DOM = {};
     this.options = {
       shapeTypes: ['circle', 'rect', 'polygon'],
@@ -47,85 +48,99 @@ class Shape {
       shapeStrokeWidth: 1
     };
     Object.assign(this.options, options);
-    this.type = type || this.options.shapeTypes[0];
-    if (this.type !== 'random' && !this.options.types.includes(this.type)) return;
-    if (this.type === 'random') this.type = this.options.shapeTypes[randomBetween(0, this.options.shapeTypes.length - 1, 0)];
+
+    const { shapeTypes, types } = this.options;
+
+    this.type = type || shapeTypes[0];
+    if (this.type !== 'random' && !types.includes(this.type)) return;
+    if (this.type === 'random') this.type = shapeTypes[randomBetween(0, shapeTypes.length - 1, 0)];
     this.letterRect = letterRect;
     this.init();
   }
-  init () {
+
+  init = () => {
     this.DOM.el = document.createElementNS('http://www.w3.org/2000/svg', this.type);
     this.DOM.el.style.opacity = 0;
     this.configureShapeType();
 
-    if (this.options.shapeFill) {
-      this.DOM.el.setAttribute('fill', this.options.shapeColors[randomBetween(0, this.options.shapeColors.length - 1, 0)]);
+    const { shapeFill, shapeColors, shapeStrokeWidth } = this.options;
+
+    if (shapeFill) {
+      this.DOM.el.setAttribute('fill', shapeColors[randomBetween(0, shapeColors.length - 1, 0)]);
     } else {
       this.DOM.el.setAttribute('fill', 'none');
-      this.DOM.el.setAttribute('stroke-width', this.options.shapeStrokeWidth);
-      this.DOM.el.setAttribute('stroke', this.options.shapeColors[randomBetween(0, this.options.shapeColors.length - 1, 0)]);
+      this.DOM.el.setAttribute('stroke-width', shapeStrokeWidth);
+      this.DOM.el.setAttribute('stroke', shapeColors[randomBetween(0, shapeColors.length - 1, 0)]);
     }
-  }
-  configureShapeType () {
-    this.DOM.el.style.transformOrigin = `${this.letterRect.left + this.letterRect.width / 2}px ${this.letterRect.top + this.letterRect.height / 2}px`;
+  };
+
+  configureShapeType = () => {
+    const { left, width, top, height, bottom } = this.letterRect;
+
+    this.DOM.el.style.transformOrigin = `${left + width / 2}px ${top + height / 2}px`;
 
     if (this.type === 'circle') {
-      const r = 0.5 * this.letterRect.width;
+      const r = 0.5 * width;
       this.DOM.el.setAttribute('r', r);
-      this.DOM.el.setAttribute('cx', this.letterRect.left + this.letterRect.width / 2);
-      this.DOM.el.setAttribute('cy', this.letterRect.top + this.letterRect.height / 2);
+      this.DOM.el.setAttribute('cx', left + width / 2);
+      this.DOM.el.setAttribute('cy', top + height / 2);
     } else if (this.type === 'rect') {
-      const w = randomBetween(0.05, 0.5, 3) * this.letterRect.width;
-      const h = randomBetween(0.05, 0.5, 3) * this.letterRect.height;
+      const w = randomBetween(0.05, 0.5, 3) * width;
+      const h = randomBetween(0.05, 0.5, 3) * height;
       this.DOM.el.setAttribute('width', w);
       this.DOM.el.setAttribute('height', h);
-      this.DOM.el.setAttribute('x', this.letterRect.left + (this.letterRect.width - w) / 2);
-      this.DOM.el.setAttribute('y', this.letterRect.top + (this.letterRect.height - h) / 2);
+      this.DOM.el.setAttribute('x', left + (width - w) / 2);
+      this.DOM.el.setAttribute('y', top + (height - h) / 2);
     } else if (this.type === 'polygon') {
-      this.DOM.el.setAttribute('points', `${this.letterRect.left} ${this.letterRect.top + this.letterRect.height}, ${this.letterRect.left + this.letterRect.width / 2} ${this.letterRect.bottom - this.letterRect.width}, ${this.letterRect.left + this.letterRect.width} ${this.letterRect.top + this.letterRect.height}`);
+      this.DOM.el.setAttribute('points', `${left} ${top + height}, ${left + width / 2} ${bottom - width}, ${left + width} ${top + height}`);
     }
-  }
-  onResize (letterRect) {
+  };
+
+  onResize = letterRect => {
     this.letterRect = letterRect;
     this.configureShapeType();
-  }
-};
+  };
+}
 
 class Letter {
-  constructor (el, svg, options) {
+  constructor(el, svg, options) {
     this.DOM = {};
     this.DOM.el = el;
     this.DOM.svg = svg;
     this.options = {
       totalShapes: 10
     };
+    const { totalShapes } = this.options;
     Object.assign(this.options, options);
     this.rect = this.DOM.el.getBoundingClientRect();
-    this.totalShapes = this.options.totalShapes;
+    this.totalShapes = totalShapes;
     this.init();
     this.initEvents();
   }
-  init () {
+  init = () => {
     this.shapes = [];
     for (let i = 0; i <= this.totalShapes - 1; ++i) {
       const shape = new Shape('random', this.rect, this.options);
       this.shapes.push(shape);
       this.DOM.svg.appendChild(shape.DOM.el);
     }
-  }
-  initEvents () {
-    window.addEventListener('resize', debounce(() => {
-      this.rect = this.DOM.el.getBoundingClientRect();
-      for (let i = 0; i <= this.totalShapes - 1; ++i) {
-        const shape = this.shapes[i];
-        shape.onResize(this.rect);
-      }
-    }, 20));
-  }
-};
+  };
+  initEvents = () => {
+    window.addEventListener(
+      'resize',
+      debounce(() => {
+        this.rect = this.DOM.el.getBoundingClientRect();
+        for (let i = 0; i <= this.totalShapes - 1; ++i) {
+          const shape = this.shapes[i];
+          shape.onResize(this.rect);
+        }
+      }, 20)
+    );
+  };
+}
 
 class Word {
-  constructor (el, options) {
+  constructor(el, options) {
     this.DOM = {};
     this.DOM.el = el;
     this.options = {
@@ -135,40 +150,46 @@ class Word {
     this.init();
     this.initEvents();
   }
-  init () {
+  init = () => {
     this.createSVG();
     charming(this.DOM.el);
     this.letters = [];
     Array.from(this.DOM.el.querySelectorAll('span')).forEach(letter => this.letters.push(new Letter(letter, this.DOM.svg, this.options)));
-  }
-  initEvents () {
-    window.addEventListener('resize', debounce(() => {
-      winsize = { width: window.innerWidth, height: window.innerHeight };
-      this.DOM.svg.setAttribute('width', `${winsize.width}px`);
-      this.DOM.svg.setAttribute('height', `${winsize.width}px`);
-      this.DOM.svg.setAttribute('viewbox', `0 0 ${winsize.width} ${winsize.height}`);
-    }, 20));
-  }
-  createSVG () {
+  };
+  initEvents = () => {
+    window.addEventListener(
+      'resize',
+      debounce(() => {
+        const { innerWidth, innerHeight } = window;
+
+        winsize = { width: innerWidth, height: innerHeight };
+        const { width, height } = winsize;
+
+        this.DOM.svg.setAttribute('width', `${width}px`);
+        this.DOM.svg.setAttribute('height', `${width}px`);
+        this.DOM.svg.setAttribute('viewbox', `0 0 ${width} ${height}`);
+      }, 20)
+    );
+  };
+  createSVG = () => {
+    const { width, height } = winsize;
+    const { shapesOnTop } = this.options;
+
     this.DOM.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     this.DOM.svg.setAttribute('class', 'shapes');
-    this.DOM.svg.setAttribute('width', `${winsize.width}px`);
-    this.DOM.svg.setAttribute('height', `${winsize.width}px`);
-    this.DOM.svg.setAttribute('viewbox', `0 0 ${winsize.width} ${winsize.height}`);
-    if (this.options.shapesOnTop) {
+    this.DOM.svg.setAttribute('width', `${width}px`);
+    this.DOM.svg.setAttribute('height', `${width}px`);
+    this.DOM.svg.setAttribute('viewbox', `0 0 ${width} ${height}`);
+    if (shapesOnTop) {
       this.DOM.el.parentNode.insertBefore(this.DOM.svg, this.DOM.el.nextSibling);
     } else {
       this.DOM.el.parentNode.insertBefore(this.DOM.svg, this.DOM.el);
     }
-  }
-  show (config) {
-    return this.toggle('show', config);
-  }
-  hide (config) {
-    return this.toggle('hide', config);
-  }
-  toggle (action = 'show', config) {
-    return new Promise((resolve, reject) => {
+  };
+  show = config => this.toggle('show', config);
+  hide = config => this.toggle('hide', config);
+  toggle = (action = 'show', config) =>
+    new Promise((resolve, reject) => {
       const toggleNow = () => {
         for (let i = 0, len = this.letters.length; i <= len - 1; ++i) {
           this.letters[i].DOM.el.style.opacity = action === 'show' ? 1 : 0;
@@ -176,30 +197,33 @@ class Word {
         resolve();
       };
 
+      const { shapesAnimationOpts, lettersAnimationOpts } = config;
+
       if (config && Object.keys(config).length !== 0) {
-        if (config.shapesAnimationOpts) {
+        if (shapesAnimationOpts) {
           for (let i = 0, len = this.letters.length; i <= len - 1; ++i) {
             const letter = this.letters[i];
-            setTimeout((function (letter) {
-              return () => {
-                config.shapesAnimationOpts.targets = letter.shapes.map(shape => shape.DOM.el);
-                anime.remove(config.shapesAnimationOpts.targets);
-                anime(config.shapesAnimationOpts);
-              };
-            }(letter)), config.lettersAnimationOpts && config.lettersAnimationOpts.delay ? config.lettersAnimationOpts.delay(letter.DOM.el, i) : 0);
+            setTimeout(
+              (letter => () => {
+                config.shapesAnimationOpts.targets = letter.shapes.map(({ DOM: { el } }) => el);
+                anime.remove(shapesAnimationOpts.targets);
+                anime(shapesAnimationOpts);
+              })(letter),
+              lettersAnimationOpts && lettersAnimationOpts.delay ? lettersAnimationOpts.delay(letter.DOM.el, i) : 0
+            );
           }
         }
-        if (config.lettersAnimationOpts) {
-          config.lettersAnimationOpts.targets = this.letters.map(letter => letter.DOM.el);
+        if (lettersAnimationOpts) {
+          config.lettersAnimationOpts.targets = this.letters.map(({ DOM: { el } }) => el);
           config.lettersAnimationOpts.complete = () => {
             if (action === 'hide') {
-              for (let i = 0, len = config.lettersAnimationOpts.targets.length; i <= len - 1; ++i) {
+              for (let i = 0, len = lettersAnimationOpts.targets.length; i <= len - 1; ++i) {
                 config.lettersAnimationOpts.targets[i].style.transform = 'none';
               }
             }
             resolve();
           };
-          anime(config.lettersAnimationOpts);
+          anime(lettersAnimationOpts);
         } else {
           toggleNow();
         }
@@ -207,8 +231,7 @@ class Word {
         toggleNow();
       }
     });
-  }
-};
+}
 
 window.Word = Word;
 

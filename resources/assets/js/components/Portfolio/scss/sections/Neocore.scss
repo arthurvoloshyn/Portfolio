@@ -1,81 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 
 $baseColor: #eec60a;
-$secondColor: #000000;
+$secondColor: #000;
 
 .neocore {
+  background: #000;
   a {
-    text-decoration: none;
     color: inherit;
     outline: none;
+    text-decoration: none;
   }
 
   .mt-50 {
     margin-top: 50px !important;
   }
 
-  background: #000000;
-
   .neocore-container {
-
-    width: 100%;
-    height: 100%;
-    z-index: 10000;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100%;
     justify-content: center;
+    width: 100%;
+    z-index: 10000;
 
     .arrow {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      width: 50px;
-      height: 50px;
       cursor: pointer;
+      height: 50px;
+      width: 50px;
     }
 
     .arrow-up {
-      background-image: url("#{$img-path}/neocore/arrow-up.svg");
+      background-image: url('#{$img-path}/neocore/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url("#{$img-path}/neocore/arrow-down.svg");
+      background-image: url('#{$img-path}/neocore/arrow-down.svg');
     }
 
     .description {
-
+      color: $baseColor;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 40px;
+      line-height: 1;
+      margin-bottom: 20px;
+      margin-top: 20px;
       max-width: 400px;
       text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      text-shadow: $secondColor 4px 4px 0;
       z-index: 100;
-
-      color: $baseColor;
-      text-shadow: $secondColor 4px 4px 0px;
-      font-size: 40px;
-      font-family: 'Luckiest Guy', cursive;
-      line-height: 1;
-
     }
 
     .header {
-
-      width: 100%;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      width: 100%;
 
       .logo {
-        background-image: url("#{$img-path}/neocore/logo.svg");
-        background-size: contain;
+        background-image: url('#{$img-path}/neocore/logo.svg');
         background-repeat: no-repeat;
-        width: 200px;
+        background-size: contain;
         height: 200px;
-
+        width: 200px;
       }
-
     }
 
     .d-flex {
@@ -87,19 +79,18 @@ $secondColor: #000000;
     }
 
     .info-container {
-      width: 100%;
-      min-height: 300px;
-      z-index: 10000;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      color: $baseColor;
+      flex-direction: column;
 
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      justify-content: center;
       max-width: 400px;
+      min-height: 300px;
       text-align: justify;
-      color: $baseColor;
-
+      width: 100%;
+      z-index: 10000;
     }
 
     .tzie-small {
@@ -107,35 +98,31 @@ $secondColor: #000000;
     }
 
     .tech-container {
-
-      width: 100%;
-      min-height: 300px;
-      z-index: 10000;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
       justify-content: center;
+      min-height: 300px;
+      width: 100%;
+      z-index: 10000;
 
       .row {
-
+        align-items: center;
         display: flex;
         flex-direction: row;
-        width: 600px;
-        align-items: center;
         justify-content: space-between;
+        width: 600px;
 
         div {
+          background-image: url('#{$img-path}/neocore/neocore_skills.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          width: 100%;
           height: 200px;
-          background-image: url("#{$img-path}/neocore/neocore_skills.png");
+          width: 100%;
         }
-
       }
     }
   }
-
 }
 
 @media (max-width: 650px) {
@@ -146,22 +133,19 @@ $secondColor: #000000;
 
     .description {
       font-size: 32px !important;
-      max-width: 350px !important;
-      margin-top: 20px !important;
       margin-bottom: 20px !important;
+      margin-top: 20px !important;
+      max-width: 350px !important;
     }
 
     .row {
-
       width: 400px !important;
-
     }
 
     .logo {
-      width: 140px !important;
       height: 140px !important;
+      width: 140px !important;
     }
-
   }
 }
 
@@ -169,18 +153,15 @@ $secondColor: #000000;
   .neocore {
     .header {
       .logo {
-
         font-size: 45px !important;
-
       }
     }
 
     .row {
-
       width: 30px !important;
 
       div {
-        background-image: url("#{$img-path}/neocore/neocore_skills_sm.png") !important;
+        background-image: url('#{$img-path}/neocore/neocore_skills_sm.png') !important;
       }
     }
   }
@@ -193,9 +174,7 @@ $secondColor: #000000;
     }
 
     .row {
-
       width: 200px !important;
-
     }
   }
 }

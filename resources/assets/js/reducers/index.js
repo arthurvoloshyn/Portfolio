@@ -1,8 +1,9 @@
+import { combineReducers } from 'redux';
+
 import contactReducer from './contact';
 import menuReducer from './menu';
 import pageReducer from './page';
 import preloaderReducer from './preloader';
-import { combineReducers } from 'redux';
 
 const reducers = combineReducers({
   contact: contactReducer,

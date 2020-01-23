@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import Constants from '../../../constants/constants';
-import Pattern from './../parts/Pattern';
 import { connect } from 'react-redux';
-import { URLS } from '../../../constants/urls';
 import PropTypes from 'prop-types';
 
+import Constants from '../../../constants/constants';
+import { URLS } from '../../../constants/urls';
+
+import Pattern from '../parts/Pattern';
+
 class C2Corner extends Component {
-  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const {
+      page: { page }
+    } = nextProps;
+
     if (page === URLS.c2corner) {
       $('#fp-nav ul li a span').addClass('c2corner-bg');
     } else {
@@ -14,64 +20,48 @@ class C2Corner extends Component {
     }
   }
 
-  render () {
+  render() {
     return (
-
       <Pattern
-
-        classname='C2Corner'
+        classname="C2Corner"
         logo={null}
-        logoText={'C2CORNER'}
+        logoText="C2CORNER"
         url={Constants.c2corner}
-        effectClassIn='zoomIn'
-        effectClassOut='zoomOut'
-        technologies={_ => (
-
-          <div className={'technologies'}>
-          </div>
-        )}
-
-        description={_ => (
-
-          <div className={'description'}>
+        effectClassIn="zoomIn"
+        effectClassOut="zoomOut"
+        technologies={() => <div className="technologies" />}
+        description={() => (
+          <div className="description">
             <p>
-                            My team and I developed this system. The backend is build with Laravel and frontend with
-                            TypeScript;
-                            a lot of components for API communication with marketplaces and payment operations;
-                            development and design of new features
+              My team and I developed this system. The backend is build with Laravel and frontend with TypeScript; a lot of components for API communication with marketplaces and payment operations;
+              development and design of new features
             </p>
           </div>
         )}
-
         figure={() => (
-
           <div>
             <span>View</span>
             <span>C2Corner</span>
           </div>
-
         )}
-
-        logoDescription={() => (
-          <p className={'paragraph'}>
-                        High load platform for wholesales on the largest marketplaces such as
-                        Amazon&nbsp;and&nbsp;Ebay</p>
-        )}
-
+        logoDescription={() => <p className="paragraph">High load platform for wholesales on the largest marketplaces such as Amazon&nbsp;and&nbsp;Ebay</p>}
       />
-
     );
   }
 }
 
-const mapStateToProps = ({ page, preloader }) => ({
-  page,
-  preloader
-});
+const mapStateToProps = ({ page }) => ({ page });
 
 C2Corner.propTypes = {
-  page: PropTypes.object,
-  preloader: PropTypes.object
+  page: PropTypes.shape({
+    page: PropTypes.string
+  })
 };
 
-export default connect(mapStateToProps, {})(C2Corner);
+C2Corner.defaultProps = {
+  page: {
+    page: ''
+  }
+};
+
+export default connect(mapStateToProps)(C2Corner);

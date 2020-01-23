@@ -1,11 +1,11 @@
 .contact-form {
-  min-height: 100vh;
-  width: 50vw;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
   padding-bottom: 30px;
+  width: 50vw;
 
   p {
     color: #87ceeb;
@@ -21,38 +21,26 @@
     font-size: 20px;
   }
 
-  @media (max-width: 460px) {
-    p:nth-child(2) {
-      font-size: 14px;
-    }
-  }
-
   form {
     width: 100%;
 
-    @media (max-width: 450px) {
-      div:nth-child(1) {
-        flex-direction: column;
-      }
-    }
-
     div {
+      align-items: center;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center;
 
       input,
       textarea {
         background-color: #181818;
         border: none;
+        color: #87ceeb;
         height: 50px;
-        padding-left: 15px;
-        outline: none;
+        margin-bottom: 5px;
         margin-left: 5px;
         margin-right: 5px;
-        margin-bottom: 5px;
-        color: #87ceeb;
+        outline: none;
+        padding-left: 15px;
         text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
       }
 
@@ -69,26 +57,29 @@
       }
 
       input[name='subject'] {
-        width: 100%;
-        max-width: 610px;
         margin-top: 5px;
+        max-width: 610px;
+        width: 100%;
       }
 
       textarea[name='body'] {
-        width: 100%;
-        max-width: 610px;
         height: 250px;
         margin-top: 5px;
+        max-height: 500px;
+        max-width: 610px;
+        min-height: 50px;
+        resize: vertical;
+        width: 100%;
       }
 
       input[type='submit'] {
-        width: 150px;
-        height: 40px;
-        margin-top: 5px;
         background: transparent;
         border: 2px solid #00bfff;
         color: #00bfff;
+        height: 40px;
+        margin-top: 5px;
         padding-left: 6px;
+        width: 150px;
       }
 
       input[type='submit']:hover {
@@ -105,9 +96,9 @@
 
         input[name='username'],
         input[name='email'] {
+          margin-top: 5px;
           max-width: 290px;
           width: 100%;
-          margin-top: 5px;
         }
 
         input[name='subject'] {
@@ -119,6 +110,18 @@
         }
       }
     }
+
+    @media (max-width: 450px) {
+      div:nth-child(1) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (max-width: 460px) {
+    p:nth-child(2) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -129,7 +132,7 @@
 }
 
 .badInput {
-  border-bottom: 2px solid #F62619 !important;
+  border-bottom: 2px solid #f62619 !important;
   transition-duration: 1s !important;
 }
 

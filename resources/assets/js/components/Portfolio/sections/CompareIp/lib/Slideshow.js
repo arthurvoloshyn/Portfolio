@@ -1,7 +1,9 @@
 import anime from './anime.min';
 import { randomBetween } from './wordFx';
-const effects = [
 
+const { random } = anime;
+
+const effects = [
   // Effect 6
   {
     options: {
@@ -33,10 +35,10 @@ const effects = [
         duration: 700,
         delay: (t, i) => i * 40,
         easing: 'easeOutExpo',
-        translateX: () => [0, anime.random(-20, 20)],
-        translateY: () => [0, anime.random(-400, 400)],
+        translateX: () => [0, random(-20, 20)],
+        translateY: () => [0, random(-400, 400)],
         scale: () => [randomBetween(0.2, 0.6), randomBetween(0.2, 0.6)],
-        rotate: () => [0, anime.random(-16, 16)],
+        rotate: () => [0, random(-16, 16)],
         opacity: [
           { value: 1, duration: 1, easing: 'linear' },
           { value: 0, duration: 700, easing: 'easeOutQuad' }
@@ -44,11 +46,10 @@ const effects = [
       }
     }
   }
-
 ];
 
 class Slideshow {
-  constructor (el, callback = () => {}) {
+  constructor(el, callback = () => {}) {
     this.DOM = {};
     this.DOM.el = el;
     this.DOM.slides = Array.from(this.DOM.el.querySelectorAll('.slide'));
@@ -61,16 +62,19 @@ class Slideshow {
       this.words.push(new Word(word, effects[pos].options));
     });
     this.isAnimating = true;
-    this.words[this.current].show(effects[this.current].show)
-      .then(() => this.isAnimating = false)
-      .then(_ => callback());
+    this.words[this.current]
+      .show(effects[this.current].show)
+      .then(() => (this.isAnimating = false))
+      .then(() => callback());
   }
-  show (direction) {
+
+  show = direction => {
     if (this.isAnimating) return;
     this.isAnimating = true;
 
     let newPos;
     let currentPos = this.current;
+
     if (direction === 'next') {
       newPos = currentPos < this.slidesTotal - 1 ? currentPos + 1 : 0;
     } else if (direction === 'prev') {
@@ -79,6 +83,7 @@ class Slideshow {
 
     this.DOM.slides[newPos].style.opacity = 1;
     this.DOM.bgs[newPos].style.transform = 'none';
+
     anime({
       targets: this.DOM.bgs[currentPos],
       duration: 600,
@@ -88,7 +93,7 @@ class Slideshow {
         this.DOM.slides[currentPos].classList.remove('slide--current');
         this.DOM.slides[currentPos].style.opacity = 0;
         this.DOM.slides[newPos].classList.add('slide--current');
-        this.words[newPos].show(effects[newPos].show).then(() => this.isAnimating = false);
+        this.words[newPos].show(effects[newPos].show).then(() => (this.isAnimating = false));
       }
     });
 
@@ -96,6 +101,7 @@ class Slideshow {
     this.words[this.current].hide(effects[currentPos].hide).then(() => {
       this.current = newPos;
     });
-  }
+  };
 }
+
 export default Slideshow;

@@ -1,6 +1,5 @@
 .Smoke_Zone {
-
-  background: #000000;
+  background: #000;
 
   .technologies-container {
     .technologies {
@@ -10,53 +9,51 @@
 
       div:nth-child(1) {
         div:nth-child(1) {
-          background-image: url("#{$img-path}/smoke-zone/apache.png");
+          background-image: url('#{$img-path}/smoke-zone/apache.png');
           background-size: 150px;
-          width: 150px;
           height: 150px;
+          width: 150px;
         }
 
         div:nth-child(2) {
-          background-image: url("#{$img-path}/smoke-zone/javascript.svg");
+          background-image: url('#{$img-path}/smoke-zone/javascript.svg');
         }
 
         div:nth-child(3) {
-          background-image: url("#{$img-path}/smoke-zone/jq.svg");
+          background-image: url('#{$img-path}/smoke-zone/jq.svg');
         }
       }
 
       div:nth-child(2) {
         div:nth-child(1) {
-          background-image: url("#{$img-path}/smoke-zone/mvc.svg");
+          background-image: url('#{$img-path}/smoke-zone/mvc.svg');
         }
 
         div:nth-child(2) {
-          background-image: url("#{$img-path}/smoke-zone/mysql.svg");
+          background-image: url('#{$img-path}/smoke-zone/mysql.svg');
         }
 
         div:nth-child(3) {
-          background-image: url("#{$img-path}/smoke-zone/php.svg");
+          background-image: url('#{$img-path}/smoke-zone/php.svg');
         }
       }
     }
 
     .description {
       p {
+        color: #c80085;
         font-family: 'Roboto';
-        max-width: 600px;
         font-size: 18px;
-        margin-top: 20px;
         margin-bottom: 20px;
+        margin-top: 20px;
+        max-width: 600px;
         padding-left: 20px;
         padding-right: 20px;
-        color: #C80085;
         text-align: center;
-
       }
     }
 
     .rotate_button {
-
       //figure {
       //
       //  span {
@@ -75,95 +72,89 @@
       //}
 
       display: none;
-
     }
-
   }
 
   .logo-container {
-
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 
     img {
+      -webkit-filter: drop-shadow(0 0 15px #9937ac);
+      filter: drop-shadow(0 0 15px #9937ac);
       width: 300px;
-      -webkit-filter: drop-shadow(0px 0px 15px #9937AC);
-      filter: drop-shadow(0px 0px 15px #9937AC);
     }
 
     .header {
+      color: #fff;
       font-family: 'OpenSans';
-      text-transform: uppercase;
-      color: #ffffff;
       font-size: 50px;
       font-weight: 600;
-      text-shadow: rgb(153, 55, 172) 5px 5px 8px;
-      z-index: 100;
       margin-bottom: 0;
       text-align: center;
+      text-shadow: rgb(153, 55, 172) 5px 5px 8px;
+      text-transform: uppercase;
+      z-index: 100;
+
       @media (max-height: 400px) {
         font-size: 30px;
       }
     }
 
     .paragraph {
+      color: #c80085;
       font-family: 'Roboto';
       font-size: 20px;
-      color: #C80085;
+      font-weight: 300;
       letter-spacing: 0.62px;
       line-height: 30px;
-      font-weight: 300;
-      z-index: 100;
       margin-top: 0;
       text-align: center;
+      z-index: 100;
     }
   }
 
   .arrow {
-    display: block;
-    background-image: url("#{$img-path}/down-arrow_white.svg");
+    background-image: url('#{$img-path}/down-arrow_white.svg');
     background-position: center;
     background-size: 80px;
-    width: 80px;
+    cursor: pointer;
+    display: block;
+    -webkit-filter: drop-shadow(0 0 15px #9937ac);
+    filter: drop-shadow(0 0 15px #9937ac);
     height: 80px;
     margin: auto;
-    cursor: pointer;
-    -webkit-filter: drop-shadow(0px 0px 15px #9937AC);
-    filter: drop-shadow(0px 0px 15px #9937AC);
+    width: 80px;
   }
 
   .show {
-    background-image: url("#{$img-path}/down-arrow_white.svg");
+    background-image: url('#{$img-path}/down-arrow_white.svg');
   }
 
   .hide {
-    background-image: url("#{$img-path}/cancel_white.svg");
+    background-image: url('#{$img-path}/cancel_white.svg');
   }
 }
+
 @media (max-width: 500px) {
   .Smoke_Zone {
     .logo-container {
       img {
-
         max-width: 200px;
-
       }
 
       .header {
         font-size: 36px !important;
         text-align: center;
       }
-
     }
 
     .technologies-container {
       .description {
         p span {
-
           display: none;
-
         }
       }
 
@@ -172,19 +163,17 @@
         margin-bottom: 50px;
 
         div div {
-          width: 50px !important;
           height: 50px !important;
+          width: 50px !important;
         }
 
         div:nth-child(1) {
           div:nth-child(1) {
-            width: 100px !important;
             height: 100px !important;
+            width: 100px !important;
           }
         }
       }
-
     }
-
   }
 }

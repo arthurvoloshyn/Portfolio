@@ -1,6 +1,9 @@
 import React from 'react';
+
+import { IMGS } from '../../../constants/imgs';
 import Constants from '../../../constants/constants';
-import Pattern from './../parts/Pattern';
+
+import Pattern from '../parts/Pattern';
 
 const style = {
   outter: {
@@ -22,61 +25,44 @@ const { outter, bgLayerStyle } = style;
 export const Smoke_Zone = () => (
   <div style={outter}>
     <div style={bgLayerStyle}>
-      <img src={'../imgs/2.png'}></img>
+      <img src={IMGS.smokeZone} alt="Smoke Zone" />
     </div>
 
     <Pattern
-
-      classname='Smoke_Zone'
-      logo='../imgs/hookah3.svg'
+      classname="Smoke_Zone"
+      logo={IMGS.hookah}
       url={Constants.smokeZone}
-      effectClassIn='flipInX'
-      effectClassOut='flipOutX'
-      technologies={_ => (
-
-        <div className={'technologies'}>
+      effectClassIn="flipInX"
+      effectClassOut="flipOutX"
+      technologies={() => (
+        <div className="technologies">
           <div>
-            <div/>
-            <div/>
-            <div/>
+            <div />
+            <div />
+            <div />
           </div>
           <div>
-            <div/>
-            <div/>
-            <div/>
+            <div />
+            <div />
+            <div />
           </div>
         </div>
       )}
-
       description={() => (
-
-        <div className={'description'}>
+        <div className="description">
           <p>
-                          I have developed the online store, based on the unique MVC
-                          core;
-            <span>
-                                  promotion and support;
-                                 development of a flexible administration panel with content management features
-            </span>
+            I have developed the online store, based on the unique MVC core;
+            <span>promotion and support; development of a flexible administration panel with content management features</span>
           </p>
         </div>
       )}
-
-      figure={() => (
-
-        <div>
-
-        </div>
-      )}
-
+      figure={() => <div />}
       logoDescription={() => (
-        <p className='header-container'>
-          <span className={'header'}>SMOKE-ZONE</span>
-          <span className={'paragraph'}>online shop selling tobacco for hookah</span>
+        <p className="header-container">
+          <span className="header">SMOKE-ZONE</span>
+          <span className="paragraph">online shop selling tobacco for hookah</span>
         </p>
       )}
-
     />
-
   </div>
 );

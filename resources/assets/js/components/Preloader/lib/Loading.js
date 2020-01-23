@@ -1,34 +1,25 @@
-import PathLoader from './PathLoader';
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import { setStatus } from '../../../actions/preloader';
 import { reloadPage, setPage } from '../../../actions/page';
 import { setStatusMenu } from '../../../actions/menu';
-import { withRouter } from 'react-router-dom';
-import { URLS } from './../../../constants/urls';
-import PropTypes from 'prop-types';
 
-function mapStateToProps (state) {
-  return {
-    preloader: state.preloader,
-    page: state.page
-  };
-}
+import { URLS } from '../../../constants/urls';
 
-function matchDispatchToProps (dispatch) {
-  return bindActionCreators({ setStatus, reloadPage, setPage, setStatusMenu }, dispatch);
-}
+import PathLoader from './PathLoader';
 
 class Loading extends Component {
-  componentDidMount () {
+  componentDidMount() {
     this.support = { animations: window.Modernizr.cssanimations };
     this.container = document.getElementById('ip-container');
     this.animEndEventNames = {
-      'WebkitAnimation': 'webkitAnimationEnd',
-      'OAnimation': 'oAnimationEnd',
-      'msAnimation': 'MSAnimationEnd',
-      'animation': 'animationend'
+      WebkitAnimation: 'webkitAnimationEnd',
+      OAnimation: 'oAnimationEnd',
+      msAnimation: 'MSAnimationEnd',
+      animation: 'animationend'
     };
     this.animEndEventName = this.animEndEventNames[window.Modernizr.prefixed('animation')];
     this.header = this.container.querySelector('div.ip-header');
@@ -36,27 +27,37 @@ class Loading extends Component {
     this.init();
   }
 
-  componentDidUpdate () {
-    if (this.props.page.statusReload) {
-      const page = this.props.page.page === URLS.main ? '' : this.props.page.page;
+  componentDidUpdate() {
+    const {
+      page: { statusReload: propsStatusReload, page: propsPage },
+      reloadPage
+    } = this.props;
+
+    if (propsStatusReload) {
+      const page = propsPage === URLS.main ? '' : propsPage;
 
       this.reloading(page);
 
-      this.props.reloadPage(false);
+      reloadPage(false);
     }
   }
 
-  init () {
+  init = () => {
+    const { setStatus } = this.props;
+
     $('#img_loader').removeClass('transparent');
     $('#img_loader').addClass('show');
 
     this.loader = new PathLoader(document.getElementById('ip-loader-circle'));
-    this.props.setStatus(true);
+    setStatus(true);
 
     let self = this;
 
-    function onEndInitialAnimation () {
-      if (self.support.animations) {
+    const onEndInitialAnimation = () => {
+      const { animations } = self.support;
+      const { setStatus: propsSetStatus } = self.props;
+
+      if (animations) {
         self.container.removeEventListener(self.animEndEventName, onEndInitialAnimation);
       }
 
@@ -64,11 +65,11 @@ class Loading extends Component {
 
       self.startLoading();
 
-      setTimeout(_ => {
+      setTimeout(() => {
         $('.for_fade').css('visibility', 'visible');
         $('.for_fade').addClass('animated fadeIn');
 
-        self.props.setStatus(false);
+        propsSetStatus(false);
       }, 1000);
     };
 
@@ -78,54 +79,68 @@ class Loading extends Component {
     // initial animation
     classie.add(this.container, 'loading');
 
-    if (this.support.animations) {
+    const { animations } = self.support;
+
+    if (animations) {
       this.container.addEventListener(this.animEndEventName, onEndInitialAnimation);
     } else {
       onEndInitialAnimation();
     }
-  }
+  };
 
-  reloading (page) {
+  reloading = page => {
     $('html, body').animate({ scrollTop: 0 }, 'slow');
     $('#ip-container').addClass('unloaded');
 
     setTimeout(() => {
+      const {
+        history: { push },
+        setStatusMenu
+      } = this.props;
+
       $('#ip-container').removeClass('loaded unloaded');
 
-      this.props.history.push(page);
-      this.props.setStatusMenu(false);
+      push(page);
+      setStatusMenu(false);
       this.init();
     }, 1000);
-  }
+  };
 
-  startLoading () {
+  startLoading = () => {
     // simulate loading something..
 
     let self = this;
 
-    function simulationFn (instance) {
-      window.loadingFast ? self.progress = 1 : self.progress = 0;
+    const simulationFn = ({ setProgress }) => {
+      window.loadingFast ? (self.progress = 1) : (self.progress = 0);
 
-      var interval = setInterval(function () {
+      const interval = setInterval(() => {
         // self.progress = Math.min(self.progress + Math.random() * 0.1, 1);
         self.progress = 1;
-        instance.setProgress(self.progress);
+        setProgress(self.progress);
 
         // reached the end
         if (self.progress === 1) {
           window.loadingFast = true;
 
-          if (self.props.page.page !== URLS.main || $(window).height() < 500) {
+          const {
+            page: { page }
+          } = self.props;
+
+          if (page !== URLS.main || $(window).height() < 500) {
             $('#img_loader').addClass('transparent');
             $('#img_loader').removeClass('show');
           }
+
           classie.remove(self.container, 'loading');
           classie.add(self.container, 'loaded');
           clearInterval(interval);
 
-          let onEndHeaderAnimation = (ev) => {
-            if (self.support.animations) {
-              if (ev.target !== self.header) return;
+          const onEndHeaderAnimation = ({ target }) => {
+            const { animations } = self.support;
+
+            if (animations) {
+              if (target !== self.header) return;
               window.removeEventListener(self.animEndEventName, onEndHeaderAnimation);
             }
 
@@ -133,7 +148,9 @@ class Loading extends Component {
             window.removeEventListener('scroll', self.noscroll);
           };
 
-          if (self.support.animations) {
+          const { animations } = self.support;
+
+          if (animations) {
             self.header.addEventListener(self.animEndEventName, onEndHeaderAnimation);
           } else {
             onEndHeaderAnimation();
@@ -142,24 +159,48 @@ class Loading extends Component {
       }, 80);
     };
 
-    this.loader.setProgressFn(simulationFn);
-  }
+    const { setProgressFn } = this.loader;
 
-  noscroll () {
+    setProgressFn(simulationFn);
+  };
+
+  noscroll = () => {
     window.scrollTo(0, 0);
-  }
+  };
 
-  render () {
-    return <div></div>;
+  render() {
+    return <div />;
   }
 }
 
+const mapStateToProps = ({ preloader, page }) => ({ preloader, page });
+
+const matchDispatchToProps = { setStatus, reloadPage, setPage, setStatusMenu };
+
 Loading.propTypes = {
-  page: PropTypes.object,
-  history: PropTypes.object,
+  page: PropTypes.shape({
+    page: PropTypes.string,
+    statusReload: PropTypes.bool
+  }),
+  history: PropTypes.shape({
+    push: PropTypes.func
+  }),
   reloadPage: PropTypes.func,
   setStatus: PropTypes.func,
   setStatusMenu: PropTypes.func
+};
+
+Loading.defaultProps = {
+  page: {
+    page: '',
+    statusReload: false
+  },
+  history: {
+    push: () => {}
+  },
+  setStatus: () => {},
+  reloadPage: () => {},
+  setStatusMenu: () => {}
 };
 
 export default withRouter(connect(mapStateToProps, matchDispatchToProps)(Loading));

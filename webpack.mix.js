@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -19,39 +19,40 @@ let mix = require('laravel-mix');
 //     }
 // });
 
-mix.react('resources/assets/js/app.js', 'public/js')
-    .browserSync({
-        proxy: 'portfolio'
-    })
-    .version();
-
+mix
+  .react('resources/assets/js/app.js', 'public/js')
+  .browserSync({
+    proxy: 'portfolio'
+  })
+  .version();
 
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
 mix.webpackConfig({
-    plugins: [
-        new CopyWebpackPlugin([{
-            from: 'resources/assets/imgs',
-            to: 'imgs', // Laravel mix will place this in 'public/img'
-        }]),
-        new ImageminPlugin({
-            test: /\.(jpe?g|png|gif|svg)$/i,
-            optipng: {
-                optimizationLevel: 3
-            },
-            jpegtran: {
-                progressive: false
-            },
-            svgo: {
-            },
-            plugins: [
-                imageminMozjpeg({
-                    quality: 90,
-                    progressive: true
-                })
-            ]
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: 'resources/assets/imgs',
+        to: 'imgs' // Laravel mix will place this in 'public/img'
+      }
+    ]),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      optipng: {
+        optimizationLevel: 3
+      },
+      jpegtran: {
+        progressive: false
+      },
+      svgo: {},
+      plugins: [
+        imageminMozjpeg({
+          quality: 90,
+          progressive: true
         })
-    ]
+      ]
+    })
+  ]
 });

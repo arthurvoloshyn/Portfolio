@@ -1,38 +1,37 @@
 .Arcbazar {
-
   background: #9796f0;
+
   /* fallback for old browsers */
+
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#fbc7d4), to(#9796f0));
   background: linear-gradient(to right, #fbc7d4, #9796f0);
+
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   .technologies-container {
     .technologies {
-
-      width: 700px;
-      height: 100px;
-      background-image: url("#{$img-path}/arcbazar/arcbazar-desktop.png");
-
-      display: block;
+      background-image: url('#{$img-path}/arcbazar/arcbazar-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
 
+      display: block;
+      height: 100px;
+      width: 700px;
     }
 
     .description {
-
+      align-items: center;
+      -webkit-box-align: center;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-box-pack: center;
       display: -webkit-box;
 
       display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      justify-content: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
       flex-direction: column;
+      justify-content: center;
 
       .first {
         margin-top: 40px;
@@ -43,35 +42,33 @@
       }
 
       p {
-
-        padding-top: 5px;
-        padding-bottom: 5px;
+        color: #000;
 
         font-family: 'Hammersmith One', sans-serif;
+        font-size: 18px;
+        font-weight: normal;
         line-height: 28px;
+        margin-bottom: 0;
+
+        margin-top: 0;
 
         max-width: 600px;
-        font-size: 18px;
+        padding-bottom: 5px;
 
         padding-left: 20px;
         padding-right: 20px;
-        color: #000000;
+        padding-top: 5px;
         text-align: center;
-        font-weight: normal;
 
         width: -webkit-fit-content;
 
         width: -moz-fit-content;
 
         width: fit-content;
-
-        margin-top: 0;
-        margin-bottom: 0;
-
       }
 
       a {
-        color: #000000;
+        color: #000;
         text-decoration: none;
       }
     }
@@ -79,125 +76,113 @@
     .rotate_button {
       figure {
         span {
-
-          border: 5px solid #000000;
-
+          border: 5px solid #000;
         }
 
         span:nth-child(1) {
-          color: #000000;
+          color: #000;
         }
 
         span:nth-child(2) {
+          background: #000;
           color: #a696c8;
-          background: #000000;
         }
       }
     }
   }
 
   .logo-container {
-
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
     display: -webkit-box;
 
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     text-align: center;
 
     img {
       width: 400px;
+
       @media (max-height: 400px) {
         width: 180px !important;
       }
     }
 
     .header {
+      color: #000;
       font-family: 'Open Sans', 'Condensed';
-      text-transform: uppercase;
-      color: #000000;
       font-size: 50px;
       font-weight: 600;
-      z-index: 100;
       text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px;
+      text-transform: uppercase;
+      z-index: 100;
     }
 
     .paragraph {
-
-      background: #000000;
-      padding: 5px 20px;
+      background: #000;
+      color: #a696c8;
 
       font-family: 'Hammersmith One', sans-serif;
       font-size: 20px;
-      color: #a696c8;
+      font-weight: 300;
       letter-spacing: 0.62px;
       line-height: 30px;
-      font-weight: 300;
+      padding: 5px 20px;
       z-index: 100;
     }
   }
 
   .arrow {
-    display: block;
     background-position: center;
     background-size: 80px;
-    width: 80px;
+    cursor: pointer;
+    display: block;
     height: 80px;
     margin: auto;
-    cursor: pointer;
     position: relative;
+    width: 80px;
   }
 
   .show {
-    background-image: url("#{$img-path}/down-arrow.svg");
+    background-image: url('#{$img-path}/down-arrow.svg');
   }
 
   .hide {
-    background-image: url("#{$img-path}/cancel.svg");
+    background-image: url('#{$img-path}/cancel.svg');
   }
 
   @media (max-width: 850px) {
     .technologies {
-
-      width: 350px !important;
+      background-image: url('#{$img-path}/arcbazar/arcbazar-mobile.png') !important;
       height: 220px !important;
-      background-image: url("#{$img-path}/arcbazar/arcbazar-mobile.png") !important;
-
+      width: 350px !important;
     }
   }
 
   @media (max-width: 500px) {
     .technologies {
-
-      width: 250px !important;
+      background-image: url('#{$img-path}/arcbazar/arcbazar-mobile.png') !important;
       height: 150px !important;
-      background-image: url("#{$img-path}/arcbazar/arcbazar-mobile.png") !important;
-
+      width: 250px !important;
     }
 
     .technologies-container {
       .description {
         p {
-
-          margin-top: 0 !important;
           margin-bottom: 0 !important;
+          margin-top: 0 !important;
         }
-
       }
-
     }
 
     .logo-container {
       img {
-
-        width: 100%;
         max-width: 300px;
-
+        width: 100%;
       }
     }
   }

@@ -5,73 +5,73 @@
 
   i {
     color: #5f656f !important;
+  }
 
-    &:hover {
-      color: $colorActive !important;
-    }
+  li:hover i {
+    color: $colorActive !important;
   }
 }
 
 .effects-normal {
-  @include effects(#00bfff)
+  @include effects(#00bfff);
 }
 
 .effects-neocore {
-  @include effects(#eec60a)
+  @include effects(#eec60a);
 }
 
 .effects-linkful {
-  @include effects(#3c48fa)
+  @include effects(#3c48fa);
 }
 
 .effects-smsplaza {
-  @include effects(#41B883)
+  @include effects(#41b883);
 }
 
 .effects-abirix {
-  @include effects(#f0ea42)
+  @include effects(#f0ea42);
 }
 
 .effects-houses {
-  @include effects(#ffffff)
+  @include effects(#ffffff);
 }
 
 .effects-welhome {
-  @include effects(#E6E6E6)
+  @include effects(#e6e6e6);
 }
 
 .effects-history24 {
-  @include effects(#E6E6E6)
+  @include effects(#e6e6e6);
 }
 
 .effects-smoke-zone {
-  @include effects(#D40080)
+  @include effects(#d40080);
 }
 
 .effects-yandex {
-  @include effects(#ED2025)
+  @include effects(#ed2025);
 }
 
 .effects-compareIp {
-  @include effects(rgba(237,32,37,0.7))
+  @include effects(rgba(237, 32, 37, 0.7));
 }
 
 .effects-c2corner {
-  @include effects(#003399)
+  @include effects(#003399);
 }
 
 .effects-cherry {
-  @include effects(#E8222D)
+  @include effects(#e8222d);
 }
 
 .effects-house {
-  @include effects(#E6E6E6)
+  @include effects(#e6e6e6);
 }
 
 .effects-arcbazar {
-  @include effects(#8F6AB7)
+  @include effects(#8f6ab7);
 }
 
 .effects-factoringvergelijken {
-  @include effects(#B0576A)
+  @include effects(#b0576a);
 }

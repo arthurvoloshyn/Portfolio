@@ -1,99 +1,115 @@
-import React, { Component } from 'react';
-import Slideshow from './lib/Slideshow';
-import Constants from '../../../../constants/constants';
-import './lib/wordFx';
+import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
-import { URLS } from '../../../../constants/urls';
 import PropTypes from 'prop-types';
 
-const { compareip } = URLS;
+import Constants from '../../../../constants/constants';
+import { URLS } from '../../../../constants/urls';
+
+import Slideshow from './lib/Slideshow';
+import './lib/wordFx';
 
 class CompareIp extends Component {
+  classSlideshow = createRef();
+
   state = {
     visible: 0,
     animateClass: 'hide',
     firstTime: true
   };
 
-  showDescription = _ => {
-    this.setState(
-      {
-        animateClass: 'animated fadeIn'
-      }
-    );
-  };
+  componentDidUpdate(prevProps) {
+    const {
+      preloader: { preloader },
+      page: { page }
+    } = this.props;
+    const { firstTime } = this.state;
+    const {
+      preloader: { preloader: prevPropsPreloader }
+    } = prevProps;
 
-  componentDidUpdate (prevProps) {
-    const { preloader: { preloader }, page: { page } } = this.props;
-
-    if (!preloader && prevProps.preloader.preloader && page === compareip && this.state.firstTime) {
+    if (!preloader && prevPropsPreloader && page === URLS.compareip && firstTime) {
       this.show();
     }
   }
 
-  UNSAFE_componentWillReceiveProps (nextProps) {
-    const { page: { page } } = this.props;
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const { firstTime } = this.state;
+    const {
+      page: { page: nextPropsPage }
+    } = nextProps;
 
-    if (page !== compareip && nextProps.page.page === compareip && this.state.firstTime) {
-      this.show();
-    }
+    if (nextPropsPage === URLS.compareip) {
+      if (firstTime) {
+        this.show();
+      }
 
-    if (page !== compareip && nextProps.page.page === compareip) {
       $('#fp-nav ul li a span').addClass('compareip-bg');
     } else {
       $('#fp-nav ul li a span').removeClass('compareip-bg');
     }
   }
 
-  show () {
-    this.slideshow = new Slideshow(document.querySelector('.slideshow'), this.showDescription);
-    this.setState(
-      {
-        firstTime: false,
-        visible: true
-      }
-    );
-  }
+  showDescription = () => {
+    this.setState({
+      animateClass: 'animated fadeIn'
+    });
+  };
 
-  render () {
+  show = () => {
+    this.slideshow = new Slideshow(this.classSlideshow.current, this.showDescription);
+    this.setState({
+      firstTime: false,
+      visible: true
+    });
+  };
+
+  render() {
     const { visible, animateClass } = this.state;
 
     return (
-      <div className={'CompareIp'}>
-        <div className={'content'}>
-          <div className={'slideshow'}>
-            <div className={'slide slide--current'}>
-              <div className={'slide__bg slide__bg--6'}></div>
-              <h2 style={{ opacity: visible }} className={'word word--6'}>CompareIp</h2>
+      <div className="CompareIp">
+        <div className="content">
+          <div className="slideshow" ref={this.classSlideshow}>
+            <div className="slide slide--current">
+              <div className="slide__bg slide__bg--6" />
+              <h2 style={{ opacity: visible }} className="word word--6">
+                CompareIp
+              </h2>
 
               <div className={'description ' + animateClass}>
-                <p className={'word--6 small-text'}>
-                                    Online service for patenting of inventions
-                </p>
+                <p className="word--6 small-text">Online service for patenting of inventions</p>
 
-                <div className={'img-container'}>
-                </div>
-                <a href={Constants.compareIp} target='_blank' rel='noopener noreferrer'>
-                  <button className='draw-border'>Live</button>
+                <div className="img-container" />
+                <a href={Constants.compareIp} target="_blank" rel="noopener noreferrer">
+                  <button className="draw-border">Live</button>
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     );
   }
 }
 
-const mapStateToProps = ({ page, preloader }) => ({
-  page,
-  preloader
-});
+const mapStateToProps = ({ page, preloader }) => ({ page, preloader });
 
 CompareIp.propTypes = {
-  page: PropTypes.object,
-  preloader: PropTypes.object
+  page: PropTypes.shape({
+    page: PropTypes.string
+  }),
+  preloader: PropTypes.shape({
+    preloader: PropTypes.bool
+  })
 };
 
-export default connect(mapStateToProps, {})(CompareIp);
+CompareIp.defaultProps = {
+  page: {
+    page: ''
+  },
+  preloader: {
+    preloader: false
+  }
+};
+
+export default connect(mapStateToProps)(CompareIp);

@@ -9,13 +9,14 @@ const initialState = {
 
 const contactReducer = (state = initialState, { type, fieldName, value }) => {
   switch (type) {
-    case ACTION_UPDATE_CONTACT : {
-      let newState = { ...state };
+    case ACTION_UPDATE_CONTACT: {
+      const newState = { ...state };
       newState[fieldName] = value;
       return newState;
     }
-    default:
+    default: {
       return state;
+    }
   }
 };
 

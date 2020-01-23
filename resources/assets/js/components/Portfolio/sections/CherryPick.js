@@ -1,6 +1,9 @@
 import React from 'react';
 import ParallaxMousemove from 'react-parallax-mousemove';
-import Pattern from './../parts/Pattern';
+
+import { IMGS } from '../../../constants/imgs';
+
+import Pattern from '../parts/Pattern';
 
 const style = {
   outter: {
@@ -13,56 +16,40 @@ const style = {
 
 export const CherryPick = () => (
   <ParallaxMousemove containerStyle={style.outter}>
-
     <Pattern
-
-      classname='CherryPick'
-      logo='../imgs/cherries.svg'
-      url={''}
-      effectClassIn='jello'
-      effectClassOut='zoomOutUp'
-      technologies={_ => (
-
-        <div className={'technologies'}>
+      classname="CherryPick"
+      logo={IMGS.cherries}
+      url=""
+      effectClassIn="jello"
+      effectClassOut="zoomOutUp"
+      technologies={() => (
+        <div className="technologies">
           <div>
-            <div/>
-            <div/>
-            <div/>
+            <div />
+            <div />
+            <div />
           </div>
           <div>
-            <div/>
-            <div/>
+            <div />
+            <div />
           </div>
         </div>
       )}
-
       description={() => (
-
-        <div className={'description'}>
+        <div className="description">
           <p>
-                          Development of a portal for job search in the French area. Designing and writing the backend
-                          of the project. Building a restful API, with documentation on Swagger. Automatic functional
-                          tests
+            Development of a portal for job search in the French area. Designing and writing the backend of the project. Building a restful API, with documentation on Swagger. Automatic functional
+            tests
           </p>
         </div>
       )}
-
-      figure={() => (
-
-        <div>
-
-        </div>
-      )}
-
+      figure={() => <div />}
       logoDescription={() => (
-        <p className='header-container'>
-          <p className={'header'}>CherryPick</p>
-          <p className={'paragraph'}>
-                          A platform for job search and job posting</p>
+        <p className="header-container">
+          <p className="header">CherryPick</p>
+          <p className="paragraph">A platform for job search and job posting</p>
         </p>
       )}
-
     />
-
   </ParallaxMousemove>
 );

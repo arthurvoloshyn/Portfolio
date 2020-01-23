@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { remove, setup } from './lib/swirl';
-import Constants from '../../../../constants/constants';
-
-import { URLS } from '../../../../constants/urls';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
+import Constants from '../../../../constants/constants';
+import { URLS } from '../../../../constants/urls';
+
+import { remove, setup } from './lib/swirl';
 
 const { portfolio, first_slide, linkful } = URLS;
 
@@ -13,7 +14,11 @@ class Linkful extends Component {
     info: false
   };
 
-  UNSAFE_componentWillReceiveProps ({ page: { page } }) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const {
+      page: { page }
+    } = nextProps;
+
     if (page === portfolio || page === first_slide || page === linkful) {
       setup();
       $('#fp-nav ul li a span').addClass('linkful-bg');
@@ -24,97 +29,73 @@ class Linkful extends Component {
   }
 
   toggle = () => {
-    this.setState({
-      info: !this.state.info
-    });
-  }
+    const { info } = this.state;
 
-  render () {
+    this.setState({
+      info: !info
+    });
+  };
+
+  render() {
     const { info } = this.state;
     const { linksfulUrl } = Constants;
 
     return (
-      <div className='demo-2 linkful'>
-
+      <div className="demo-2 linkful">
         <main>
-          <div className='frame'>
-          </div>
+          <div className="frame" />
 
-          <div className='content content--canvas-linkful'>
-
-            <div className={'linkful-container'}>
-
-              <div className={'header'}>
-
-                <a
-                  target={'_blank'}
-                  href={linksfulUrl}
-                >
-                  <div className={'logo'}></div>
+          <div className="content content--canvas-linkful">
+            <div className="linkful-container">
+              <div className="header">
+                <a target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
+                  <div className="logo" />
                 </a>
 
-                <div className={'description'}>
-
-                  <a
-                    target={'_blank'}
-                    href={linksfulUrl}
-                  >
-                                      LINKFUL - A STUNNING WAY TO CREATE A&nbsp;PERFECT ABOUT&nbsp;ME PAGE!
+                <div className="description">
+                  <a target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
+                    LINKFUL - A STUNNING WAY TO CREATE A&nbsp;PERFECT ABOUT&nbsp;ME PAGE!
                   </a>
                 </div>
-
               </div>
 
               <div className={'tech-container ' + (info ? 'd-none' : 'd-flex')}>
-                <div className={'row'}>
-                  <div className={'techs'}></div>
+                <div className="row">
+                  <div className="techs" />
                 </div>
               </div>
 
               <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
-
-                              I have created, designed and developed this project.
-                              I built the application using the most powerful and popular technologies.
-                              The frontend of the user dashboard was built using React and Redux,
-                              and also used Saga to manage the asynchronous actions.
-                              The administration panel is built with Laravel,
-                              and separate components with Vue were also developed.
-                              The backend is based on Laravel,
-                              the Mysql database for storing statistics.
-                              The system is fully tested.
-
+                I have created, designed and developed this project. I built the application using the most powerful and popular technologies. The frontend of the user dashboard was built using React
+                and Redux, and also used Saga to manage the asynchronous actions. The administration panel is built with Laravel, and separate components with Vue were also developed. The backend is
+                based on Laravel, the Mysql database for storing statistics. The system is fully tested.
               </div>
 
-              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
-                onClick={this.toggle}></div>
+              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
 
-              <a
-                className={'mt-50 description'}
-                target={'_blank'}
-                href={linksfulUrl}
-              >
-                              CHECK IT OUT
+              <a className="mt-50 description" target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
+                CHECK IT OUT
               </a>
-
             </div>
-
           </div>
-
         </main>
-
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ page, preloader }) => ({
-  page,
-  preloader
-});
+const mapStateToProps = ({ page }) => ({ page });
 
 Linkful.propTypes = {
-  page: PropTypes.object,
-  preloader: PropTypes.object
+  page: PropTypes.shape({
+    page: PropTypes.string
+  })
 };
 
-export default connect(mapStateToProps, {})(Linkful);
+Linkful.defaultProps = {
+  page: {
+    page: ''
+  }
+};
+
+export default connect(mapStateToProps)(Linkful);
