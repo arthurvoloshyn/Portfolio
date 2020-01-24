@@ -9,7 +9,7 @@
     {{--THEME--}}
 
     <!-- Web Application Manifest -->
-    <link rel="manifest" href="{{ asset('/favicons/manifest.json') }}">
+    <link rel="manifest" href="{{ asset('favicons/manifest.json') }}">
 
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#0E0D10">
@@ -17,7 +17,7 @@
     <!-- Windows Phone -->
     <meta name="msapplication-navbutton-color" content="#0E0D10">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('/favicons/icons/icon-512x512.png') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('favicons/icons/icon-512x512.png') }}">
     <meta name="msapplication-config" content="{{ asset('favicons/browserconfig.xml') }}">
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -29,22 +29,22 @@
 
     {{--ICONS--}}
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/favicons/favicon-16x16.png') }}">
-    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('/favicons/icons/icon-512x512.png') }}">
-    <link rel="mask-icon" href="{{ asset('/favicons/safari-pinned-tab.svg') }}" color="#65afc4">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('favicons/icons/icon-512x512.png') }}">
+    <link rel="mask-icon" href="{{ asset('favicons/safari-pinned-tab.svg') }}" color="#65afc4">
 
-    <link href="{{ asset('/favicons/icons/splash-640x1136.png') }}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-750x1334.png') }}" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-828x1792.png') }}" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-1125x2436.png') }}" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-1242x2208.png') }}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-1242x2688.png') }}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-1536x2048.png') }}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-1668x2224.png') }}" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-1668x2388.png') }}" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <link href="{{ asset('/favicons/icons/splash-2048x2732.png') }}" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-640x1136.png') }}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-750x1334.png') }}" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-828x1792.png') }}" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-1125x2436.png') }}" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-1242x2208.png') }}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-1242x2688.png') }}" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-1536x2048.png') }}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-1668x2224.png') }}" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-1668x2388.png') }}" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="{{ asset('favicons/icons/splash-2048x2732.png') }}" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
     {{----}}
 
