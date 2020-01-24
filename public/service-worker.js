@@ -1,5 +1,5 @@
-var staticCacheName = `static-cache-v${new Date().getTime()}`;
-var filesToCache = [
+const staticCacheName = `static-cache-v${new Date().getTime()}`;
+const filesToCache = [
   '/offline',
   '/0.js',
   '/1.js',
