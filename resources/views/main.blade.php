@@ -104,19 +104,6 @@
     gtag('config', '{{ env('GOOGLE_ANALYTIC') }}');
 </script>
 
-<!-- Register service worker -->
-<script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register("{{ asset('service-worker.js') }}", {
-                scope: '.'
-            })
-            .then(registration => console.log('ServiceWorker registration successful with scope: ', registration.scope))
-            .catch(err => console.log('ServiceWorker registration failed: ', err));
-        });
-    }
-</script>
-
 </body>
 
 </html>
