@@ -1,5 +1,6 @@
 const staticCacheName = `static-cache-v${new Date().getTime()}`;
 const filesToCache = [
+  '/?utm_source=homescreen',
   '/offline',
   '/0.js',
   '/1.js',
@@ -12,18 +13,7 @@ const filesToCache = [
   '/css/NotFound.css',
   '/js/libraries/NotFound.js',
   '/js/app.js',
-  '/favicons/panda.png',
-  '/favicons/icons/icon-16x16.png',
-  '/favicons/icons/icon-32x32.png',
-  '/favicons/icons/icon-72x72.png',
-  '/favicons/icons/icon-96x96.png',
-  '/favicons/icons/icon-128x128.png',
-  '/favicons/icons/icon-144x144.png',
-  '/favicons/icons/icon-152x152.png',
-  '/favicons/icons/icon-192x192.png',
-  '/favicons/icons/icon-256x256.png',
-  '/favicons/icons/icon-384x384.png',
-  '/favicons/icons/icon-512x512.png'
+  '/favicons/panda.png'
 ];
 
 // Cache on install

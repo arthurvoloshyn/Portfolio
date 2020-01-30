@@ -1,11 +1,11 @@
 {
   "name": "Artur Voloshyn",
   "short_name": "Artur Voloshyn",
-  "start_url": "/",
+  "start_url": "/?utm_source=homescreen",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone",
-  "orientation": "any",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/favicons/icons/icon-16x16.png",
