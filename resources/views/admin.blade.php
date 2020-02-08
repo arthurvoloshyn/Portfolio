@@ -15,8 +15,7 @@
     <link rel="mask-icon" href="{{asset('/favicons/safari-pinned-tab.svg')}}" color="#65afc4">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="{{asset('assets/styles/react-blur-admin.min.css')}}" rel="stylesheet"
-          type="text/css">
+    <link href="{{asset('assets/styles/react-blur-admin.min.css')}}" rel="stylesheet">
 </head>
 <body>
 <div id="admin">

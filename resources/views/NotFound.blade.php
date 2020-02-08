@@ -13,8 +13,7 @@
     <link rel="manifest" href="{{asset('/favicons/manifest.json')}}">
     <link rel="mask-icon" href="{{asset('/favicons/safari-pinned-tab.svg')}}" color="#65afc4">
     <meta name="theme-color" content="#ffffff">
-    <link href="{{asset('css/NotFound.css')}}" rel="stylesheet"
-          type="text/css">
+    <link href="{{asset('css/NotFound.css')}}" rel="stylesheet">
 <body>
 <div class="container">
     <form class="four-oh-four-form">
