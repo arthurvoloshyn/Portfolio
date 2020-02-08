@@ -1,15 +1,12 @@
 {
   "resources/assets/js/**/*.+(js|jsx|yml|yaml|ts|tsx|md|graphql|mdx)": [
-    "prettier --write",
-    "git add"
+    "prettier --write"
   ],
   "resources/assets/js/**/*.+(js|jsx|ts|tsx)": [
-    "eslint --fix --max-warnings=0",
-    "git add"
+    "eslint --fix --max-warnings=0"
   ],
   "resources/assets/js/**/*.+(css|scss|sass|less)": [
     "prettier --parser postcss --write",
-    "stylelint --fix --syntax=scss --max-warnings=0",
-    "git add"
+    "stylelint --fix --syntax=scss --max-warnings=0"
   ]
 }
