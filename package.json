@@ -48,7 +48,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "eslint-plugin-standard": "^4.0.0",
     "file-loader": "^1.1.11",
-    "husky": "^3.0.4",
+    "husky": "^3.0.1",
     "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "^3.6.0",
     "imagemin-mozjpeg": "^6.0.0",
