@@ -24,7 +24,6 @@
               width: 100%;
               font-family: 'Helvetica', 'Verdana', sans-serif;
               font-weight: 400;
-              font-display: optional;
               color: #444;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
