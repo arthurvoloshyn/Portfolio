@@ -11,6 +11,7 @@ https://arturvoloshyn.neosvita.com/
 - libpng
 
 ## Install
+1. composer install (or php composer.phar install)
 1. Copy .env.dist as .env
 2. Replace the database connection string in the .env file
 3. php artisan serv
