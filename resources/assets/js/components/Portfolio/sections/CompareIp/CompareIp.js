@@ -76,12 +76,12 @@ class CompareIp extends Component {
                 CompareIp
               </h2>
 
-              <div className={'description ' + animateClass}>
+              <div className={`description ${animateClass}`}>
                 <p className="word--6 small-text">Online service for patenting of inventions</p>
 
                 <div className="img-container" />
-                <a href={Constants.compareIp} target="_blank" rel="noopener noreferrer">
-                  <button className="draw-border">Live</button>
+                <a href={Constants.compareIp} target="_blank" rel="noopener noreferrer" className="draw-border">
+                  Live
                 </a>
               </div>
             </div>

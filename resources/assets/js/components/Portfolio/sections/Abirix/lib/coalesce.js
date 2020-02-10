@@ -158,20 +158,30 @@ const createCanvas = () => {
 const resize = () => {
   const { innerWidth, innerHeight } = window;
 
-  canvas.a.width = innerWidth;
-  canvas.a.height = innerHeight;
+  if (canvas && canvas.a) {
+    canvas.a.width = innerWidth;
+    canvas.a.height = innerHeight;
+  }
 
-  ctx.a.drawImage(canvas.b, 0, 0);
+  if (ctx && ctx.a) {
+    ctx.a.drawImage(canvas.b, 0, 0);
+  }
 
-  canvas.b.width = innerWidth;
-  canvas.b.height = innerHeight;
+  if (canvas && canvas.b) {
+    canvas.b.width = innerWidth;
+    canvas.b.height = innerHeight;
+  }
 
-  ctx.b.drawImage(canvas.a, 0, 0);
+  if (ctx && ctx.b) {
+    ctx.b.drawImage(canvas.a, 0, 0);
+  }
 
-  const { width, height } = canvas.a;
+  if (canvas && canvas.a) {
+    const { width, height } = canvas.a;
 
-  center[0] = 0.5 * width;
-  center[1] = 0.5 * height;
+    center[0] = 0.5 * width;
+    center[1] = 0.5 * height;
+  }
 };
 
 const renderGlow = () => {

@@ -8,8 +8,8 @@
     "git add"
   ],
   "resources/assets/js/**/*.+(css|scss|sass|less)": [
-    "prettier --parser postcss --write",
-    "stylelint --fix --syntax=scss --max-warnings=0",
+    "prettier --parser scss --write",
+    "stylelint --fix --syntax scss --max-warnings=0",
     "git add"
   ]
 }

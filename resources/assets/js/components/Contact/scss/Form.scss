@@ -118,16 +118,14 @@
     }
   }
 
+  @media (max-width: 1320px) {
+    width: 100%;
+  }
+
   @media (max-width: 460px) {
     p:nth-child(2) {
       font-size: 14px;
     }
-  }
-}
-
-@media (max-width: 1320px) {
-  .contact-form {
-    width: 100%;
   }
 }
 

@@ -9,10 +9,10 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "lint": "./node_modules/.bin/eslint .",
-    "lint:styles": "stylelint --fix --syntax=scss resources/assets/js/**/*.scss",
+    "lint:styles": "stylelint --fix --syntax scss resources/assets/js/**/*.scss",
     "eslint": "./node_modules/eslint/bin/eslint.js resources/assets/js --fix",
     "format": "prettier \"resources/assets/js/**/*.{js,jsx,yml,yaml,ts,tsx,md,graphql,mdx}\" --write",
-    "format:styles": "prettier \"resources/assets/js/**/*.{scss,sass,less,css}\" --parser postcss --write",
+    "format:styles": "prettier \"resources/assets/js/**/*.{scss,sass,less,css}\" --parser scss --write",
     "precommit": "lint-staged",
     "test": "jest --watchAll"
   },

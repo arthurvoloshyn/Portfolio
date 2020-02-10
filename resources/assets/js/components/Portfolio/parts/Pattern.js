@@ -8,8 +8,8 @@ class Pattern extends Component {
     const { effectClassIn, effectClassOut } = this.props;
 
     this.clasess = {
-      show: 'animated ' + effectClassIn + ' flex',
-      hide: 'animated ' + effectClassOut + ' none'
+      show: `animated ${effectClassIn} flex`,
+      hide: `animated ${effectClassOut} none`
     };
 
     this.state = {
@@ -18,11 +18,9 @@ class Pattern extends Component {
   }
 
   clickHandle = () => {
-    const { activeSide } = this.state;
-
-    this.setState({
+    this.setState(({ activeSide }) => ({
       activeSide: !activeSide
-    });
+    }));
   };
 
   render() {
@@ -31,7 +29,7 @@ class Pattern extends Component {
     const { hide, show } = this.clasess;
 
     return (
-      <div className={'Pattern ' + classname}>
+      <div className={`Pattern ${classname}`}>
         <div className={'technologies-container ' + (activeSide ? hide : show)}>
           {technologies()}
           {description()}

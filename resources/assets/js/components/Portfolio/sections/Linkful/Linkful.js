@@ -29,11 +29,9 @@ class Linkful extends Component {
   }
 
   toggle = () => {
-    const { info } = this.state;
-
-    this.setState({
+    this.setState(({ info }) => ({
       info: !info
-    });
+    }));
   };
 
   render() {
@@ -42,14 +40,16 @@ class Linkful extends Component {
 
     return (
       <div className="demo-2 linkful">
-        <main>
+        <section>
           <div className="frame" />
 
           <div className="content content--canvas-linkful">
             <div className="linkful-container">
               <div className="header">
                 <a target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
-                  <div className="logo" />
+                  <h2>
+                    <div className="logo" />
+                  </h2>
                 </a>
 
                 <div className="description">
@@ -78,7 +78,7 @@ class Linkful extends Component {
               </a>
             </div>
           </div>
-        </main>
+        </section>
       </div>
     );
   }

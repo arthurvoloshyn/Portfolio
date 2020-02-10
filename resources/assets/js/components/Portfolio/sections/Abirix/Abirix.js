@@ -26,11 +26,9 @@ class Abirix extends Component {
   }
 
   toggle = () => {
-    const { info } = this.state;
-
-    this.setState({
+    this.setState(({ info }) => ({
       info: !info
-    });
+    }));
   };
 
   render() {
@@ -38,13 +36,13 @@ class Abirix extends Component {
 
     return (
       <div className="demo-4 abirix">
-        <main>
+        <section>
           <div className="frame" />
 
           <div className="content content--canvas-abirix">
             <div className="abirix-container">
               <div className="header">
-                <div className="logo">ABIRIX CRM</div>
+                <h2 className="logo">ABIRIX CRM</h2>
 
                 <div className="description">crm system for sales company</div>
               </div>
@@ -63,7 +61,7 @@ class Abirix extends Component {
               <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
             </div>
           </div>
-        </main>
+        </section>
       </div>
     );
   }

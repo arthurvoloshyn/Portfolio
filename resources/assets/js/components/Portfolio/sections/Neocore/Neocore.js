@@ -26,11 +26,9 @@ class Neocore extends Component {
   }
 
   toggle = () => {
-    const { info } = this.state;
-
-    this.setState({
+    this.setState(({ info }) => ({
       info: !info
-    });
+    }));
   };
 
   render() {
@@ -38,7 +36,7 @@ class Neocore extends Component {
 
     return (
       <div className="demo-4 neocore">
-        <main>
+        <section>
           <div className="frame" />
 
           <div className="content content--canvas-neocore">
@@ -62,7 +60,7 @@ class Neocore extends Component {
               <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
             </div>
           </div>
-        </main>
+        </section>
       </div>
     );
   }

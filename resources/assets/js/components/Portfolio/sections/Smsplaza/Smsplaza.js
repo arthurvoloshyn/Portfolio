@@ -27,11 +27,9 @@ class Smsplaza extends Component {
   }
 
   toggle = () => {
-    const { info } = this.state;
-
-    this.setState({
+    this.setState(({ info }) => ({
       info: !info
-    });
+    }));
   };
 
   render() {
@@ -40,14 +38,14 @@ class Smsplaza extends Component {
 
     return (
       <div className="demo-5 smsplaza">
-        <main>
+        <section>
           <div className="frame" />
 
           <div className="content content--canvas--smsplaza">
             <div className="smspalza-container">
               <div className="header">
                 <a target="_blank" rel="noopener noreferrer" href={smsplaza}>
-                  <div className="logo">SMSPLAZA</div>
+                  <h2 className="logo">SMSPLAZA</h2>
                 </a>
 
                 <div className="description">
@@ -76,7 +74,7 @@ class Smsplaza extends Component {
               </a>
             </div>
           </div>
-        </main>
+        </section>
       </div>
     );
   }
