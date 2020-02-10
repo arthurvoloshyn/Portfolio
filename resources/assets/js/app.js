@@ -24,6 +24,7 @@ render(
         <div id="ip-container" className="ip-container">
           <div>
             <Menu />
+
             <Preloader />
           </div>
 
