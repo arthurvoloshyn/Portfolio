@@ -47,9 +47,7 @@ class Linkful extends Component {
             <div className="linkful-container">
               <div className="header">
                 <a target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
-                  <h2>
-                    <div className="logo" />
-                  </h2>
+                  <div className="logo" />
                 </a>
 
                 <div className="description">
