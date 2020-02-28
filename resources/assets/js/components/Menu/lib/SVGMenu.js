@@ -11,6 +11,28 @@ const ESC = 27;
 /* eslint-enable */
 
 class SVGMenu extends Component {
+  static propTypes = {
+    menu: PropTypes.shape({
+      status: PropTypes.bool
+    }),
+    page: PropTypes.shape({
+      statusReload: PropTypes.bool
+    }),
+    toggleStatus: PropTypes.func,
+    setStatus: PropTypes.func
+  };
+
+  static defaultProps = {
+    menu: {
+      status: false
+    },
+    page: {
+      statusReload: false
+    },
+    toggleStatus: () => {},
+    setStatus: () => {}
+  };
+
   path = window.location.href.split('/')[3].split('#');
   keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
@@ -180,27 +202,5 @@ class SVGMenu extends Component {
 const mapStateToProps = ({ menu, page }) => ({ menu, page });
 
 const matchDispatchToProps = { setStatus: setStatusMenu, toggleStatus };
-
-SVGMenu.propTypes = {
-  menu: PropTypes.shape({
-    status: PropTypes.bool
-  }),
-  page: PropTypes.shape({
-    statusReload: PropTypes.bool
-  }),
-  toggleStatus: PropTypes.func,
-  setStatus: PropTypes.func
-};
-
-SVGMenu.defaultProps = {
-  menu: {
-    status: false
-  },
-  page: {
-    statusReload: false
-  },
-  toggleStatus: () => {},
-  setStatus: () => {}
-};
 
 export default connect(mapStateToProps, matchDispatchToProps)(SVGMenu);

@@ -12,6 +12,32 @@ import { URLS } from '../../../constants/urls';
 import PathLoader from './PathLoader';
 
 class Loading extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string,
+      statusReload: PropTypes.bool
+    }),
+    history: PropTypes.shape({
+      push: PropTypes.func
+    }),
+    reloadPage: PropTypes.func,
+    setStatus: PropTypes.func,
+    setStatusMenu: PropTypes.func
+  };
+
+  static defaultProps = {
+    page: {
+      page: '',
+      statusReload: false
+    },
+    history: {
+      push: () => {}
+    },
+    setStatus: () => {},
+    reloadPage: () => {},
+    setStatusMenu: () => {}
+  };
+
   componentDidMount() {
     this.support = { animations: window.Modernizr.cssanimations };
     this.container = document.getElementById('ip-container');
@@ -176,31 +202,5 @@ class Loading extends Component {
 const mapStateToProps = ({ preloader, page }) => ({ preloader, page });
 
 const matchDispatchToProps = { setStatus, reloadPage, setPage, setStatusMenu };
-
-Loading.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string,
-    statusReload: PropTypes.bool
-  }),
-  history: PropTypes.shape({
-    push: PropTypes.func
-  }),
-  reloadPage: PropTypes.func,
-  setStatus: PropTypes.func,
-  setStatusMenu: PropTypes.func
-};
-
-Loading.defaultProps = {
-  page: {
-    page: '',
-    statusReload: false
-  },
-  history: {
-    push: () => {}
-  },
-  setStatus: () => {},
-  reloadPage: () => {},
-  setStatusMenu: () => {}
-};
 
 export default withRouter(connect(mapStateToProps, matchDispatchToProps)(Loading));

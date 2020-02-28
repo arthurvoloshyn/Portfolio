@@ -10,6 +10,18 @@ import { remove, setup } from './lib/swirl';
 const { portfolio, first_slide, linkful } = URLS;
 
 class Linkful extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   state = {
     info: false
   };
@@ -83,17 +95,5 @@ class Linkful extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-Linkful.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-Linkful.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(Linkful);

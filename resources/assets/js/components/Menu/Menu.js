@@ -64,6 +64,28 @@ const styleClasses = getStylesList('effects', stylesList);
 const styleStroke = getStylesList('stroke', stylesList);
 
 class Menu extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    }),
+    setPage: PropTypes.func,
+    reloadPage: PropTypes.func,
+    menu: PropTypes.shape({
+      status: PropTypes.bool
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    },
+    setPage: () => {},
+    reloadPage: () => {},
+    menu: {
+      status: false
+    }
+  };
+
   constructor(props) {
     super(props);
 
@@ -151,27 +173,5 @@ class Menu extends Component {
 const mapStateToProps = ({ menu, page }) => ({ menu, page });
 
 const matchDispatchToProps = { setPage, reloadPage };
-
-Menu.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  }),
-  setPage: PropTypes.func,
-  reloadPage: PropTypes.func,
-  menu: PropTypes.shape({
-    status: PropTypes.bool
-  })
-};
-
-Menu.defaultProps = {
-  page: {
-    page: ''
-  },
-  setPage: () => {},
-  reloadPage: () => {},
-  menu: {
-    status: false
-  }
-};
 
 export default connect(mapStateToProps, matchDispatchToProps)(Menu);

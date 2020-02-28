@@ -31,6 +31,18 @@ const style = {
 const { outter, bgLayerStyle } = style;
 
 class History24 extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
       page: { page }
@@ -77,17 +89,5 @@ class History24 extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-History24.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-History24.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(History24);

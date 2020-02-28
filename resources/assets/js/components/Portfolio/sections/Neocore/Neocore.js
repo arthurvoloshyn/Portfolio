@@ -7,6 +7,18 @@ import { URLS } from '../../../../constants/urls';
 import { remove, setup } from './lib/shift';
 
 class Neocore extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   state = {
     info: false
   };
@@ -67,17 +79,5 @@ class Neocore extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-Neocore.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-Neocore.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(Neocore);

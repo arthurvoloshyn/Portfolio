@@ -1,15 +1,15 @@
 import { combineReducers } from 'redux';
 
-import contactReducer from './contact';
-import menuReducer from './menu';
-import pageReducer from './page';
-import preloaderReducer from './preloader';
+import contact from './contact';
+import menu from './menu';
+import page from './page';
+import preloader from './preloader';
 
 const reducers = combineReducers({
-  contact: contactReducer,
-  menu: menuReducer,
-  page: pageReducer,
-  preloader: preloaderReducer
+  contact,
+  menu,
+  page,
+  preloader
 });
 
 export default reducers;

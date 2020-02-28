@@ -21,6 +21,26 @@ const configAlert = {
 };
 
 class Form extends Component {
+  static propTypes = {
+    contact: PropTypes.shape({
+      username: PropTypes.string,
+      subject: PropTypes.string,
+      email: PropTypes.string,
+      body: PropTypes.string
+    }),
+    getAction: PropTypes.func
+  };
+
+  static defaultProps = {
+    contact: {
+      username: '',
+      subject: '',
+      email: '',
+      body: ''
+    },
+    getAction: () => {}
+  };
+
   contactForm = createRef();
   username = createRef();
   email = createRef();
@@ -143,25 +163,5 @@ class Form extends Component {
 const mapStateToProps = ({ contact }) => ({ contact });
 
 const matchDispatchToProps = { getAction };
-
-Form.propTypes = {
-  contact: PropTypes.shape({
-    username: PropTypes.string,
-    subject: PropTypes.string,
-    email: PropTypes.string,
-    body: PropTypes.string
-  }),
-  getAction: PropTypes.func
-};
-
-Form.defaultProps = {
-  contact: {
-    username: '',
-    subject: '',
-    email: '',
-    body: ''
-  },
-  getAction: () => {}
-};
 
 export default connect(mapStateToProps, matchDispatchToProps)(Form);

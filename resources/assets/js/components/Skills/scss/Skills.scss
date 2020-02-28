@@ -64,6 +64,7 @@
     -ms-user-select: none;
     user-select: none;
     width: 50px;
+    transition: opacity 0.5s;
 
     &:hover {
       opacity: 1;

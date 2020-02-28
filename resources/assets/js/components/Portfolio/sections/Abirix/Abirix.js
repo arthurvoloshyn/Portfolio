@@ -7,6 +7,18 @@ import { URLS } from '../../../../constants/urls';
 import { remove, setup } from './lib/coalesce';
 
 class Abirix extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   state = {
     info: false
   };
@@ -68,17 +80,5 @@ class Abirix extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-Abirix.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-Abirix.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(Abirix);

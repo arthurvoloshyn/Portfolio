@@ -8,6 +8,18 @@ import { URLS } from '../../../../constants/urls';
 import { setup, remove } from './lib/pipeline';
 
 class Smsplaza extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   state = {
     info: false
   };
@@ -81,17 +93,5 @@ class Smsplaza extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-Smsplaza.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-Smsplaza.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(Smsplaza);

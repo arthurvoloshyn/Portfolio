@@ -8,6 +8,18 @@ import { URLS } from '../../../constants/urls';
 import Pattern from '../parts/Pattern';
 
 class C2Corner extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
       page: { page }
@@ -51,17 +63,5 @@ class C2Corner extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-C2Corner.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-C2Corner.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(C2Corner);

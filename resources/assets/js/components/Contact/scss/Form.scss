@@ -80,12 +80,12 @@
         margin-top: 5px;
         padding-left: 6px;
         width: 150px;
-      }
-
-      input[type='submit']:hover {
-        background: #00bfff;
-        color: #161517;
         transition-duration: 1s;
+
+        &:hover {
+          background: #00bfff;
+          color: #161517;
+        }
       }
 
       @media (max-width: 450px) {

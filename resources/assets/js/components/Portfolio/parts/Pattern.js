@@ -2,6 +2,34 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Pattern extends Component {
+  static propTypes = {
+    classname: PropTypes.string,
+    logo: PropTypes.string,
+    logoText: PropTypes.string,
+    url: PropTypes.string,
+    effectClassIn: PropTypes.string,
+    effectClassOut: PropTypes.string,
+
+    technologies: PropTypes.func,
+    description: PropTypes.func,
+    figure: PropTypes.func,
+    logoDescription: PropTypes.func
+  };
+
+  static defaultProps = {
+    classname: '',
+    logo: '',
+    logoText: '',
+    url: '#',
+    effectClassIn: 'zoomIn',
+    effectClassOut: 'zoomOut',
+
+    technologies: () => {},
+    description: () => {},
+    figure: () => {},
+    logoDescription: () => {}
+  };
+
   constructor(props) {
     super(props);
 
@@ -50,33 +78,5 @@ class Pattern extends Component {
     );
   }
 }
-
-Pattern.propTypes = {
-  classname: PropTypes.string,
-  logo: PropTypes.string,
-  logoText: PropTypes.string,
-  url: PropTypes.string,
-  effectClassIn: PropTypes.string,
-  effectClassOut: PropTypes.string,
-
-  technologies: PropTypes.func,
-  description: PropTypes.func,
-  figure: PropTypes.func,
-  logoDescription: PropTypes.func
-};
-
-Pattern.defaultProps = {
-  classname: '',
-  logo: '',
-  logoText: '',
-  url: '#',
-  effectClassIn: 'zoomIn',
-  effectClassOut: 'zoomOut',
-
-  technologies: () => {},
-  description: () => {},
-  figure: () => {},
-  logoDescription: () => {}
-};
 
 export default Pattern;

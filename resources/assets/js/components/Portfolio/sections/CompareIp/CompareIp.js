@@ -9,6 +9,24 @@ import Slideshow from './lib/Slideshow';
 import './lib/wordFx';
 
 class CompareIp extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    }),
+    preloader: PropTypes.shape({
+      preloader: PropTypes.bool
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    },
+    preloader: {
+      preloader: false
+    }
+  };
+
   classSlideshow = createRef();
 
   state = {
@@ -93,23 +111,5 @@ class CompareIp extends Component {
 }
 
 const mapStateToProps = ({ page, preloader }) => ({ page, preloader });
-
-CompareIp.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  }),
-  preloader: PropTypes.shape({
-    preloader: PropTypes.bool
-  })
-};
-
-CompareIp.defaultProps = {
-  page: {
-    page: ''
-  },
-  preloader: {
-    preloader: false
-  }
-};
 
 export default connect(mapStateToProps)(CompareIp);

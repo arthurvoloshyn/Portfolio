@@ -26,6 +26,18 @@ const style = {
 const { outter, bgLayerStyle } = style;
 
 class Houses extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
       page: { page }
@@ -64,17 +76,5 @@ class Houses extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-Houses.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-Houses.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(Houses);

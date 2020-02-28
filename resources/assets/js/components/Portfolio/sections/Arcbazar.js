@@ -19,6 +19,18 @@ const style = {
 };
 
 class Arcbazar extends Component {
+  static propTypes = {
+    page: PropTypes.shape({
+      page: PropTypes.string
+    })
+  };
+
+  static defaultProps = {
+    page: {
+      page: ''
+    }
+  };
+
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
       page: { page }
@@ -64,17 +76,5 @@ class Arcbazar extends Component {
 }
 
 const mapStateToProps = ({ page }) => ({ page });
-
-Arcbazar.propTypes = {
-  page: PropTypes.shape({
-    page: PropTypes.string
-  })
-};
-
-Arcbazar.defaultProps = {
-  page: {
-    page: ''
-  }
-};
 
 export default connect(mapStateToProps)(Arcbazar);
