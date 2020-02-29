@@ -1,5 +1,5 @@
 {
-  "resources/assets/js/**/*.+(js|jsx|yml|yaml|ts|tsx|md|graphql|mdx)": [
+  "resources/assets/js/**/*.+(js|jsx|yml|yaml|ts|tsx|graphql|mdx)": [
     "prettier --write",
     "git add"
   ],
