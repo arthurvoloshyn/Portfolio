@@ -119,14 +119,11 @@ class Loading extends Component {
     $('#ip-container').addClass('unloaded');
 
     setTimeout(() => {
-      const {
-        history: { push },
-        setStatusMenu
-      } = this.props;
+      const { history, setStatusMenu } = this.props;
 
       $('#ip-container').removeClass('loaded unloaded');
 
-      push(page);
+      history.push(page);
       setStatusMenu(false);
       this.init();
     }, 1000);
