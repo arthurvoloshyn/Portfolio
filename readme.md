@@ -2,7 +2,7 @@
 
 Laravel and React
 
-https://arturvoloshyn.neosvita.com/
+https://arturvoloshyn.herokuapp.com/
 
 ## Requirements
 - PHP 7.2
