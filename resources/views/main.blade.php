@@ -50,7 +50,7 @@
 
     {{--SEO--}}
 
-    <meta name="google-site-verification" content="qUGXOiQNr0vJj8rtxO1g5cBtg2njsZFs7U-P5OHKn2g">
+    <meta name="google-site-verification" content="2lBdB8FJDWyffXnSp1fUecgcozRr7c-hvCTpFQi8klI" />
 
     <meta name="author" content="Artur Voloshyn">
     <meta name="robots" content="all" />
