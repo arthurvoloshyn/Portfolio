@@ -6,7 +6,7 @@ module.exports = {
     node: true
   },
   parser: 'babel-eslint',
-  extends: ['standard', 'plugin:react/recommended', 'react-app', 'prettier', 'prettier/react', 'eslint:recommended', 'plugin:jest/recommended', 'plugin:prettier/recommended', 'plugin:import/errors'],
+  extends: ['standard', 'plugin:react/recommended', 'react-app', 'prettier', 'prettier/react', 'eslint:recommended', 'plugin:jest/recommended', 'plugin:prettier/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
