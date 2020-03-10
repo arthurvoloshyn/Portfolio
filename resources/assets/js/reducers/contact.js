@@ -10,9 +10,10 @@ const initialState = {
 const contactReducer = (state = initialState, { type, fieldName, value }) => {
   switch (type) {
     case ACTION_UPDATE_CONTACT: {
-      const newState = { ...state };
-      newState[fieldName] = value;
-      return newState;
+      return {
+        ...state,
+        [fieldName]: value
+      };
     }
     default: {
       return state;
