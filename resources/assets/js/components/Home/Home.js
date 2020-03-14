@@ -10,7 +10,7 @@ import './scss/Home.scss';
 const Home = ({ preloader: { preloader } }) => {
   const drawReactRotatingText = () => (preloader ? '' : <ReactRotatingText typingInterval={100} items={['ReactJs', 'VueJs', 'NodeJs']} />);
 
-  const { vk, git, telegramm } = Constants;
+  const { linkedin, git, telegramm } = Constants;
 
   return (
     <div className="ip-main for_fade">
@@ -23,7 +23,7 @@ const Home = ({ preloader: { preloader } }) => {
       </div>
 
       <div className="Icons__icon_container">
-        <a href={vk} target="_blank" rel="noopener noreferrer">
+        <a href={linkedin} target="_blank" rel="noopener noreferrer">
           <div />
         </a>
         <a href={git} target="_blank" rel="noopener noreferrer">
