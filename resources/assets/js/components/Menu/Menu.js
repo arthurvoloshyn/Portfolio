@@ -15,48 +15,26 @@ import './scss/Menu.scss';
 
 const ESC = 27;
 
-const {
-  main,
-  contacts,
-  skills,
-  portfolio,
-  linkful,
-  neocore,
-  compareip,
-  c2corner,
-  smsplaza,
-  factoringvergelijken,
-  abirix,
-  arcbazar,
-  yandex,
-  houses,
-  smokezone,
-  history24,
-  welhome,
-  cherryPick,
-  first_slide
-} = URLS;
-
 const stylesList = Array.of(
-  main,
-  contacts,
-  skills,
-  linkful,
-  first_slide,
-  portfolio,
-  neocore,
-  compareip,
-  c2corner,
-  smsplaza,
-  factoringvergelijken,
-  abirix,
-  arcbazar,
-  yandex,
-  houses,
-  smokezone,
-  history24,
-  welhome,
-  cherryPick
+  URLS.main,
+  URLS.contacts,
+  URLS.skills,
+  URLS.linkful,
+  URLS.first_slide,
+  URLS.portfolio,
+  URLS.neocore,
+  URLS.compareip,
+  URLS.c2corner,
+  URLS.smsplaza,
+  URLS.factoringvergelijken,
+  URLS.abirix,
+  URLS.arcbazar,
+  URLS.yandex,
+  URLS.houses,
+  URLS.smokezone,
+  URLS.history24,
+  URLS.welhome,
+  URLS.cherryPick
 );
 
 const styleClasses = getStylesList('effects', stylesList);
@@ -91,7 +69,7 @@ class Menu extends Component {
 
     const {
       page: { page }
-    } = this.props;
+    } = props;
 
     this.state = {
       effectStyle: styleClasses[page],

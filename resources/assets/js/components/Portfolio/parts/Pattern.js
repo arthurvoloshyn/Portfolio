@@ -33,7 +33,7 @@ class Pattern extends Component {
   constructor(props) {
     super(props);
 
-    const { effectClassIn, effectClassOut } = this.props;
+    const { effectClassIn, effectClassOut } = props;
 
     this.clasess = {
       show: `animated ${effectClassIn} flex`,

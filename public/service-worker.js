@@ -1,5 +1,5 @@
 const staticCacheName = `static-cache-v${new Date().getTime()}`;
-const filesToCache = ['/offline', '/css/NotFound.css', '/js/libraries/NotFound.js', '/favicons/panda.png', '/imgs/logo.png'];
+const filesToCache = ['/offline', '/css/NotFound.css', '/js/libraries/NotFound.js', '/favicons/panda.png'];
 
 // Cache on install
 self.addEventListener('install', event => {
