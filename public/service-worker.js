@@ -1,18 +1,8 @@
 const staticCacheName = `static-cache-v${new Date().getTime()}`;
 const filesToCache = [
-  '/?utm_source=homescreen',
   '/offline',
-  '/0.js',
-  '/1.js',
-  '/2.js',
-  '/3.js',
-  '/4.js',
-  '/5.js',
-  '/6.js',
-  '/7.js',
   '/css/NotFound.css',
   '/js/libraries/NotFound.js',
-  '/js/app.js',
   '/favicons/panda.png'
 ];
 
