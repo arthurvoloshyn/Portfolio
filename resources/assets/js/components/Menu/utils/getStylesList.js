@@ -1,7 +1,9 @@
-export const getStylesList = (type, list) => {
+import { linksList } from './linksList';
+
+export const getStylesList = type => {
   const styleClasses = {};
 
-  list.forEach(item => {
+  linksList.forEach(item => {
     let styleClass;
 
     if (item === 'main' || item === 'skills' || item === 'contacts') {

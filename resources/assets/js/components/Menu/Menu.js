@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { URLS } from '../../constants/urls';
-
 import { skillsList } from './utils/menuList';
 import { getStylesList } from './utils/getStylesList';
 
@@ -14,32 +12,8 @@ import SVGMenu from './lib/SVGMenu';
 import './scss/Menu.scss';
 
 const ESC = 27;
-
-const stylesList = Array.of(
-  URLS.main,
-  URLS.contacts,
-  URLS.skills,
-  URLS.linkful,
-  URLS.first_slide,
-  URLS.portfolio,
-  URLS.neocore,
-  URLS.compareip,
-  URLS.c2corner,
-  URLS.smsplaza,
-  URLS.factoringvergelijken,
-  URLS.abirix,
-  URLS.arcbazar,
-  URLS.yandex,
-  URLS.houses,
-  URLS.smokezone,
-  URLS.history24,
-  URLS.welhome,
-  URLS.cherryPick
-);
-
-const styleClasses = getStylesList('effects', stylesList);
-
-const styleStroke = getStylesList('stroke', stylesList);
+const styleClasses = getStylesList('effects');
+const styleStroke = getStylesList('stroke');
 
 class Menu extends Component {
   static propTypes = {
