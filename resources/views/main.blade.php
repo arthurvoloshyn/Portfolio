@@ -34,6 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}" />
     <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('favicons/icons/icon-512x512.png') }}" />
     <link rel="mask-icon" href="{{ asset('favicons/safari-pinned-tab.svg') }}" color="#65afc4" />
+    <link rel="shortcut icon" href="{{ asset('favicons/favicon.ico') }}" type="image/x-icon" />
 
     <link href="{{ asset('favicons/icons/splash-640x1136.png') }}" media="(width: 320px) and (height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
     <link href="{{ asset('favicons/icons/splash-750x1334.png') }}" media="(width: 375px) and (height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
