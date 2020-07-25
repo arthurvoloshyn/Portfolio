@@ -141,14 +141,41 @@ class Form extends Component {
 
         <form onSubmit={this._onSubmit} ref={this.contactForm}>
           <div>
-            <input placeholder="Name" type="text" name={USERNAME} ref={this.username} value={username} onChange={this._onKeyUp} />
-            <input placeholder="Email" type="text" name={EMAIL} ref={this.email} value={email} onChange={this._onKeyUp} />
+            <input
+              placeholder="Name"
+              type="text"
+              name={USERNAME}
+              ref={this.username}
+              value={username}
+              onChange={this._onKeyUp}
+            />
+            <input
+              placeholder="Email"
+              type="text"
+              name={EMAIL}
+              ref={this.email}
+              value={email}
+              onChange={this._onKeyUp}
+            />
           </div>
           <div>
-            <input placeholder="Subject" type="text" name={SUBJECT} ref={this.subject} value={subject} onChange={this._onKeyUp} />
+            <input
+              placeholder="Subject"
+              type="text"
+              name={SUBJECT}
+              ref={this.subject}
+              value={subject}
+              onChange={this._onKeyUp}
+            />
           </div>
           <div>
-            <textarea placeholder="Message" name={BODY} ref={this.body} value={body} onChange={this._onKeyUp} />
+            <textarea
+              placeholder="Message"
+              name={BODY}
+              ref={this.body}
+              value={body}
+              onChange={this._onKeyUp}
+            />
           </div>
           <div>
             <input type="submit" value="Send" />

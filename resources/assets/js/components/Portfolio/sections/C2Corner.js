@@ -45,8 +45,9 @@ class C2Corner extends Component {
         description={() => (
           <div className="description">
             <p>
-              My team and I developed this system. The backend is build with Laravel and frontend with TypeScript; a lot of components for API communication with marketplaces and payment operations;
-              development and design of new features
+              My team and I developed this system. The backend is build with Laravel and frontend
+              with TypeScript; a lot of components for API communication with marketplaces and
+              payment operations; development and design of new features
             </p>
           </div>
         )}
@@ -56,7 +57,12 @@ class C2Corner extends Component {
             <span>C2Corner</span>
           </div>
         )}
-        logoDescription={() => <p className="paragraph">High load platform for wholesales on the largest marketplaces such as Amazon&nbsp;and&nbsp;Ebay</p>}
+        logoDescription={() => (
+          <p className="paragraph">
+            High load platform for wholesales on the largest marketplaces such as
+            Amazon&nbsp;and&nbsp;Ebay
+          </p>
+        )}
       />
     );
   }

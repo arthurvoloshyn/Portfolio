@@ -23,8 +23,9 @@
     //font-family: 'Zenzai', Helvetica, Arial, sans-serif; // 1/5
 
     font-size: 100px;
-    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 40px #00bfff, 0 0 50px #00bfff, 0 0 60px #00bfff, 0 0 70px #00bfff, 0 0 80px #00bfff,
-      0 0 90px #00bfff, 0 0 100px #87ceeb;
+    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 30px #00bfff,
+      0 0 30px #00bfff, 0 0 40px #00bfff, 0 0 50px #00bfff, 0 0 60px #00bfff, 0 0 70px #00bfff,
+      0 0 80px #00bfff, 0 0 90px #00bfff, 0 0 100px #87ceeb;
 
     @media (max-width: 800px) {
       text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 100px #87ceeb;

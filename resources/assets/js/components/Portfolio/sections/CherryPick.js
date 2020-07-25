@@ -38,8 +38,9 @@ export const CherryPick = () => (
       description={() => (
         <div className="description">
           <p>
-            Development of a portal for job search in the French area. Designing and writing the backend of the project. Building a restful API, with documentation on Swagger. Automatic functional
-            tests
+            Development of a portal for job search in the French area. Designing and writing the
+            backend of the project. Building a restful API, with documentation on Swagger. Automatic
+            functional tests
           </p>
         </div>
       )}

@@ -32,7 +32,9 @@ const randomBetween = (minValue, maxValue, precision) => {
   if (typeof precision === 'undefined') {
     precision = 2;
   }
-  return parseFloat(Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(precision));
+  return parseFloat(
+    Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(precision)
+  );
 };
 
 const { innerWidth, innerHeight } = window;
@@ -92,7 +94,11 @@ class Shape {
       this.DOM.el.setAttribute('x', left + (width - w) / 2);
       this.DOM.el.setAttribute('y', top + (height - h) / 2);
     } else if (this.type === 'polygon') {
-      this.DOM.el.setAttribute('points', `${left} ${top + height}, ${left + width / 2} ${bottom - width}, ${left + width} ${top + height}`);
+      this.DOM.el.setAttribute(
+        'points',
+        `${left} ${top + height}, ${left + width / 2} ${bottom - width}, ${left + width} ${top +
+          height}`
+      );
     }
   };
 
@@ -154,7 +160,9 @@ class Word {
     this.createSVG();
     charming(this.DOM.el);
     this.letters = [];
-    Array.from(this.DOM.el.querySelectorAll('span')).forEach(letter => this.letters.push(new Letter(letter, this.DOM.svg, this.options)));
+    Array.from(this.DOM.el.querySelectorAll('span')).forEach(letter =>
+      this.letters.push(new Letter(letter, this.DOM.svg, this.options))
+    );
   };
   initEvents = () => {
     window.addEventListener(
@@ -209,7 +217,9 @@ class Word {
                 anime.remove(shapesAnimationOpts.targets);
                 anime(shapesAnimationOpts);
               })(letter),
-              lettersAnimationOpts && lettersAnimationOpts.delay ? lettersAnimationOpts.delay(letter.DOM.el, i) : 0
+              lettersAnimationOpts && lettersAnimationOpts.delay
+                ? lettersAnimationOpts.delay(letter.DOM.el, i)
+                : 0
             );
           }
         }

@@ -104,7 +104,11 @@ class SVGMenu extends Component {
         classie.remove(this.el, 'menu--open');
       }, 250);
 
-      this.pathEl.stop().animate({ path: status ? close : open }, 350, easeout, () => this.pathEl.stop().animate({ path: reset }, 800, elastic));
+      this.pathEl
+        .stop()
+        .animate({ path: status ? close : open }, 350, easeout, () =>
+          this.pathEl.stop().animate({ path: reset }, 800, elastic)
+        );
 
       toggleStatus(status);
     }
@@ -133,7 +137,11 @@ class SVGMenu extends Component {
         classie.add(this.el, 'menu--open');
       }, 250);
     }
-    this.pathEl.stop().animate({ path: status ? close : open }, 350, easeout, () => this.pathEl.stop().animate({ path: reset }, 800, elastic));
+    this.pathEl
+      .stop()
+      .animate({ path: status ? close : open }, 350, easeout, () =>
+        this.pathEl.stop().animate({ path: reset }, 800, elastic)
+      );
 
     toggleStatus(status);
   };
@@ -153,7 +161,11 @@ class SVGMenu extends Component {
       classie.remove(this.el, 'menu--open');
     }, 250);
 
-    this.pathEl.stop().animate({ path: status ? close : open }, 350, easeout, () => this.pathEl.stop().animate({ path: reset }, 800, elastic));
+    this.pathEl
+      .stop()
+      .animate({ path: status ? close : open }, 350, easeout, () =>
+        this.pathEl.stop().animate({ path: reset }, 800, elastic)
+      );
 
     toggleStatus(status);
   };

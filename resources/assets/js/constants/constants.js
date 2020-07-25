@@ -8,7 +8,8 @@ const Constants = {
   linksful: 'https://linkful.me',
 
   mapUrl: 'https://api.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png',
-  accessToken: '?access_token=pk.eyJ1IjoidmljdG9yYXRzdXRhIiwiYSI6ImNqOW9iNnJjczJnaW8zM3MyeDdrcXBuN3oifQ.gIWOmeqEuCRHKmWb_AMXFQ',
+  accessToken:
+    '?access_token=pk.eyJ1IjoidmljdG9yYXRzdXRhIiwiYSI6ImNqOW9iNnJjczJnaW8zM3MyeDdrcXBuN3oifQ.gIWOmeqEuCRHKmWb_AMXFQ',
 
   fullPageLicenseKey: 'YOUR_KEY_HERE',
 

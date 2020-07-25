@@ -52,7 +52,16 @@ class Pattern extends Component {
   };
 
   render() {
-    const { classname, technologies, description, figure, url, logo, logoText, logoDescription } = this.props;
+    const {
+      classname,
+      technologies,
+      description,
+      figure,
+      url,
+      logo,
+      logoText,
+      logoDescription
+    } = this.props;
     const { activeSide } = this.state;
     const { hide, show } = this.clasess;
 

@@ -74,14 +74,25 @@ class Smsplaza extends Component {
               </div>
 
               <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
-                I have been doing development of the application with external smsbank equipment, design architecture, development and code quality control as well. I used Nuxtjs as a frontend tool to
-                build the interface. I also used Laravel as a backend framework for building the API, Laravel for building administration panel; VueJs for building individual components. I have done
-                complete coverage tests and developed the infrastructure.
+                I have been doing development of the application with external smsbank equipment,
+                design architecture, development and code quality control as well. I used Nuxtjs as
+                a frontend tool to build the interface. I also used Laravel as a backend framework
+                for building the API, Laravel for building administration panel; VueJs for building
+                individual components. I have done complete coverage tests and developed the
+                infrastructure.
               </div>
 
-              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
+              <div
+                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
+                onClick={this.toggle}
+              />
 
-              <a className="mt-50 description" target="_blank" rel="noopener noreferrer" href={smsplaza}>
+              <a
+                className="mt-50 description"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={smsplaza}
+              >
                 CHECK IT OUT
               </a>
             </div>

@@ -98,7 +98,12 @@ class CompareIp extends Component {
                 <p className="word--6 small-text">Online service for patenting of inventions</p>
 
                 <div className="img-container" />
-                <a href={Constants.compareIp} target="_blank" rel="noopener noreferrer" className="draw-border">
+                <a
+                  href={Constants.compareIp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="draw-border"
+                >
                   Live
                 </a>
               </div>

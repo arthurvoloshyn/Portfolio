@@ -39,7 +39,10 @@ export const Factoringvergelijken = () => (
       technologies={() => <div className="technologies" />}
       description={() => (
         <div className="description">
-          <p>My team and I have developed the application build with JS and PHP. Also I have made and designed some parts of the interface; improvement of modules in the administration panel</p>
+          <p>
+            My team and I have developed the application build with JS and PHP. Also I have made and
+            designed some parts of the interface; improvement of modules in the administration panel
+          </p>
         </div>
       )}
       figure={() => (

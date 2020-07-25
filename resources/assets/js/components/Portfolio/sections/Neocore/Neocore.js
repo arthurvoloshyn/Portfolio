@@ -66,10 +66,15 @@ class Neocore extends Component {
               </div>
 
               <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
-                Developed GraphQL API for complex enterprise systems. Created a new various functionality, also covered with tests. Optimized queries to the MongoDB database, added indexes.
+                Developed GraphQL API for complex enterprise systems. Created a new various
+                functionality, also covered with tests. Optimized queries to the MongoDB database,
+                added indexes.
               </div>
 
-              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
+              <div
+                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
+                onClick={this.toggle}
+              />
             </div>
           </div>
         </section>

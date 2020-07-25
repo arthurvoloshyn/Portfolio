@@ -8,7 +8,12 @@ import Constants from '../../constants/constants';
 import './scss/Home.scss';
 
 const Home = ({ preloader: { preloader } }) => {
-  const drawReactRotatingText = () => (preloader ? '' : <ReactRotatingText typingInterval={100} items={['ReactJs', 'VueJs', 'NodeJs']} />);
+  const drawReactRotatingText = () =>
+    preloader ? (
+      ''
+    ) : (
+      <ReactRotatingText typingInterval={100} items={['ReactJs', 'VueJs', 'NodeJs']} />
+    );
 
   const { linkedin, git, telegramm } = Constants;
 

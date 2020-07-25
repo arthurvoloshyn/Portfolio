@@ -214,7 +214,8 @@ table {
   background-color: #000;
   color: #57585c;
   color: var(--color-text);
-  font-family: Didot, 'Didot LT STD', 'Bodoni MT', 'ltc-bodoni-175', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  font-family: Didot, 'Didot LT STD', 'Bodoni MT', 'ltc-bodoni-175', 'Hoefler Text', Garamond,
+    'Times New Roman', serif;
   min-height: 100vh;
   overflow: hidden;
 }

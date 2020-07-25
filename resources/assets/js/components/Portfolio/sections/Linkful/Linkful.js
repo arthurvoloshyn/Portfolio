@@ -76,14 +76,25 @@ class Linkful extends Component {
               </div>
 
               <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
-                I have created, designed and developed this project. I built the application using the most powerful and popular technologies. The frontend of the user dashboard was built using React
-                and Redux, and also used Saga to manage the asynchronous actions. The administration panel is built with Laravel, and separate components with Vue were also developed. The backend is
-                based on Laravel, the Mysql database for storing statistics. The system is fully tested.
+                I have created, designed and developed this project. I built the application using
+                the most powerful and popular technologies. The frontend of the user dashboard was
+                built using React and Redux, and also used Saga to manage the asynchronous actions.
+                The administration panel is built with Laravel, and separate components with Vue
+                were also developed. The backend is based on Laravel, the Mysql database for storing
+                statistics. The system is fully tested.
               </div>
 
-              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
+              <div
+                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
+                onClick={this.toggle}
+              />
 
-              <a className="mt-50 description" target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
+              <a
+                className="mt-50 description"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={linksfulUrl}
+              >
                 CHECK IT OUT
               </a>
             </div>

@@ -39,13 +39,17 @@ export const WellHome = () => (
       description={() => (
         <div className="description">
           <p>
-            I have developed CRM system in order to automate business processes in the company engaged in the sale of real estate -{' '}
+            I have developed CRM system in order to automate business processes in the company
+            engaged in the sale of real estate -{' '}
             <b>
               <a href="http://www.welhome.ru/" target="_blank" rel="noopener noreferrer">
                 Welhome
               </a>
             </b>
-            <span>, based on SugarCRM; designed the database and system architecture; integration with existing enterprise systems</span>
+            <span>
+              , based on SugarCRM; designed the database and system architecture; integration with
+              existing enterprise systems
+            </span>
           </p>
         </div>
       )}

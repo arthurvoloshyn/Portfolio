@@ -190,7 +190,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
     'one-var': ['error', { separateRequires: true, var: 'never', let: 'never' }],
-    'operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'after' } }],
+    'operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before' } }],
     'padded-blocks': ['error', { blocks: 'never', switches: 'never', classes: 'never' }],
     'prefer-promise-reject-errors': 'error',
     quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],

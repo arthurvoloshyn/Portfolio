@@ -66,11 +66,17 @@ class Abirix extends Component {
               </div>
 
               <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
-                I have completed writing the crm system in a team as middle developer, designed and wrote the main system components, developed the database. Used TypeScript as the interface
-                development tool and Laravel as the backend API; Complete test coverage; Development with strict flow based on Agile princes; Transfer data from legacy systems.
+                I have completed writing the crm system in a team as middle developer, designed and
+                wrote the main system components, developed the database. Used TypeScript as the
+                interface development tool and Laravel as the backend API; Complete test coverage;
+                Development with strict flow based on Agile princes; Transfer data from legacy
+                systems.
               </div>
 
-              <div className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')} onClick={this.toggle} />
+              <div
+                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
+                onClick={this.toggle}
+              />
             </div>
           </div>
         </section>

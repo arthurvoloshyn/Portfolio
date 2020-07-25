@@ -18,10 +18,13 @@ class SliderFx {
       easing: 'ease',
       // path definitions
       paths: {
-        rect: 'M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33',
+        rect:
+          'M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33',
         curve: {
-          right: 'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33',
-          left: 'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33'
+          right:
+            'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33',
+          left:
+            'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33'
         }
       }
     };
@@ -46,7 +49,9 @@ class SliderFx {
     let dir = this.old < this.curr ? 'right' : 'left';
 
     // morph svg path on exiting slide to "curved"
-    this.items[this.old].path.stop().animate({ path: dir === 'right' ? pathCurvedLeft : pathCurvedRight }, speed * 0.5, easeout);
+    this.items[this.old].path
+      .stop()
+      .animate({ path: dir === 'right' ? pathCurvedLeft : pathCurvedRight }, speed * 0.5, easeout);
 
     // the slider starts a bit later...
     setTimeout(() => {
@@ -55,7 +60,9 @@ class SliderFx {
 
     // change svg path on entering slide to "curved"
     let currItem = this.items[this.curr];
-    currItem.querySelector('path').setAttribute('d', dir === 'right' ? pathCurvedLeft : pathCurvedRight);
+    currItem
+      .querySelector('path')
+      .setAttribute('d', dir === 'right' ? pathCurvedLeft : pathCurvedRight);
     // morph svg path on entering slide to "rectangle"
     setTimeout(() => {
       currItem.path.stop().animate({ path: pathRectangle }, speed * 3, elastic);
@@ -139,7 +146,9 @@ class SliderFx {
         const {
           paths: { rect }
         } = this.options;
-        const svg = createSvg(`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none"><path d="${rect}"/></svg>`);
+        const svg = createSvg(
+          `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none"><path d="${rect}"/></svg>`
+        );
 
         item.insertBefore(svg, item.childNodes[0]);
 
@@ -190,7 +199,11 @@ class SliderFx {
 
   _navigate = dir => {
     // do nothing if the itemsList is currently moving
-    if (this.isAnimating || (dir === 'next' && this.curr >= this.itemsCount - 1) || (dir === 'prev' && this.curr <= 0)) {
+    if (
+      this.isAnimating ||
+      (dir === 'next' && this.curr >= this.itemsCount - 1) ||
+      (dir === 'prev' && this.curr <= 0)
+    ) {
       return false;
     }
     this.isAnimating = true;

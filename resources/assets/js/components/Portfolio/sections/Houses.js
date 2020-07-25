@@ -64,11 +64,19 @@ class Houses extends Component {
           technologies={() => <div className="technologies" />}
           description={() => (
             <div className="description">
-              <p>I have developed the project, including the development of the backend part on Laravel, and the frontend on VueJs; design of architecture; code review of team members</p>
+              <p>
+                I have developed the project, including the development of the backend part on
+                Laravel, and the frontend on VueJs; design of architecture; code review of team
+                members
+              </p>
             </div>
           )}
           figure={() => <div />}
-          logoDescription={() => <p className="paragraph">The system for design and buying a construction project of building</p>}
+          logoDescription={() => (
+            <p className="paragraph">
+              The system for design and buying a construction project of building
+            </p>
+          )}
         />
       </div>
     );

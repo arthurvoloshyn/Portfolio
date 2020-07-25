@@ -68,7 +68,9 @@ class Arcbazar extends Component {
               <span>Arcbazar</span>
             </div>
           )}
-          logoDescription={() => <p className="paragraph">Create unique interie and landscape design</p>}
+          logoDescription={() => (
+            <p className="paragraph">Create unique interie and landscape design</p>
+          )}
         />
       </ParallaxMousemove>
     );

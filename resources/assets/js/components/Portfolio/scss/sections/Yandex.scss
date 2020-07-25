@@ -6,8 +6,10 @@ $yandex-red: #ed2025;
   font-style: normal;
   font-weight: 300;
   src: url('/fonts/yandex/YandexSansText-Light.eot');
-  src: url('/fonts/yandex/YandexSansText-Light.eot?#iefix') format('embedded-opentype'), url('/fonts/yandex/YandexSansText-Light.woff2') format('woff2'),
-    url('/fonts/yandex/YandexSansText-Light.woff') format('woff'), url('/fonts/yandex/YandexSansText-Light.ttf') format('truetype'),
+  src: url('/fonts/yandex/YandexSansText-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/yandex/YandexSansText-Light.woff2') format('woff2'),
+    url('/fonts/yandex/YandexSansText-Light.woff') format('woff'),
+    url('/fonts/yandex/YandexSansText-Light.ttf') format('truetype'),
     url('/fonts/yandex/YandexSansText-Light.svg#YSText-Light') format('svg');
 }
 
