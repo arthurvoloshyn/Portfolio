@@ -28,7 +28,7 @@ Route::get('/portfolio', function () {
 
     $meta = [
         'title' => 'Artur Voloshyn | Software Engineer - Portfolio',
-        'description' => 'List of developed projects, frontend and backend parts of web applications',
+        'description' => 'List of developed projects, frontend and backend parts of web applications.',
         'keywords' => 'Artur Voloshyn, Voloshyn, official website, portfolio, project list, backend, frontend',
     ];
 
@@ -39,7 +39,7 @@ Route::get('/skills', function () {
 
     $meta = [
         'title' => 'Artur Voloshyn | Software Engineer - Skills',
-        'description' => 'The official site of the professional web developer Artur Voloshyn. List of technologies and skills',
+        'description' => 'The official site of the professional web developer Artur Voloshyn. List of technologies and skills.',
         'keywords' => 'Artur Voloshyn, Voloshyn, official website, web technologies, my skills',
     ];
 
@@ -51,7 +51,7 @@ Route::get('/contacts', function () {
 
     $meta = [
         'title' => 'Artur Voloshyn | Software Engineer - Contact me',
-        'description' => 'The official site of the professional web developer Artur Voloshyn. Contact form with me',
+        'description' => 'The official site of the professional web developer Artur Voloshyn. Contact form with me.',
         'keywords' => 'Artur Voloshyn, Voloshyn, official website, Feedback, contact me',
     ];
 
@@ -62,9 +62,9 @@ Route::get('/contacts', function () {
 Route::get('/offline', function () {
 
     $meta = [
-        'title' => 'Artur Voloshyn | Software Engineer - Contact me',
-        'description' => 'The official site of the professional web developer Artur Voloshyn. Contact form with me',
-        'keywords' => 'Artur Voloshyn, Voloshyn, official website, Feedback, contact me',
+        'title' => 'Artur Voloshyn | Software Engineer - Offline page',
+        'description' => 'The official site of the professional web developer Artur Voloshyn. Offline page.',
+        'keywords' => 'Artur Voloshyn, Voloshyn, official website, offline page',
     ];
 
     return view('offline', ['meta' => $meta]);

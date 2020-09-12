@@ -1,13 +1,15 @@
 {
+  "endOfLine": "lf",
   "useTabs": false,
   "tabWidth": 2,
   "semi": true,
-  "trailingComma": "none",
+  "trailingComma": "all",
   "singleQuote": true,
   "printWidth": 100,
   "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
   "bracketSpacing": true,
   "arrowParens": "avoid",
-  "quoteProps": "as-needed"
+  "quoteProps": "as-needed",
+  "proseWrap": "always"
 }

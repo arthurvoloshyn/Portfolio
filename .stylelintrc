@@ -10,6 +10,7 @@
     "stylelint-prettier"
   ],
   "rules": {
+    "unicode-bom": "never",
     "at-rule-empty-line-before": [
       "always",
       {
@@ -43,9 +44,11 @@
     "unit-blacklist": null,
 
     "order/order": [
+      { "type": "at-rule", "name": "import" },
       "custom-properties",
       "dollar-variables",
       { "type": "at-rule", "name": "extend" },
+      { "type": "at-rule", "name": "include", "hasBlock": false },
       "declarations",
       {
         "type": "at-rule",
@@ -55,6 +58,6 @@
       "rules",
       "at-rules"
     ],
-    "order/properties-alphabetical-order": null
+    "order/properties-alphabetical-order": true
   }
 }

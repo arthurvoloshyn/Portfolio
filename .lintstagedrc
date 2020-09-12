@@ -3,11 +3,10 @@
     "prettier --write",
     "git add"
   ],
-  "resources/assets/js/**/*.+(js|jsx|ts|tsx)": [
-    "eslint --fix --max-warnings=0",
+  "resources/assets/js/**/*.+(js|jsx)": [
     "git add"
   ],
-  "resources/assets/js/**/*.+(css|scss|sass|less)": [
+  "resources/assets/js/**/*.+(scss)": [
     "prettier --parser scss --write",
     "stylelint --fix --syntax scss --max-warnings=0",
     "git add"

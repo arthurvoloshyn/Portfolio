@@ -28,6 +28,8 @@ class SiteMapController extends Controller
 
             $sitemap->add(route('contacts'), '2012-08-25T20:10:00+02:00', '0.5', 'daily');
 
+            $sitemap->add(route('offline'), '2012-08-25T20:10:00+02:00', '0.5', 'daily');
+
         }
 
         // show your sitemap (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')

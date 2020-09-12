@@ -1,13 +1,60 @@
 {
-  "presets": [
-    "env",
-    "react",
-    "stage-2",
-    ["es2016"]
-  ],
-  "plugins": [
-    "react-hot-loader/babel",
-    "babel-plugin-transform-class-properties",
-    "babel-plugin-syntax-dynamic-import"
-  ]
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs",
+            "debug": false
+          }
+        ],
+        "@babel/preset-flow",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-numeric-separator",
+        "@babel/plugin-proposal-throw-expressions",
+        "react-hot-loader/babel"
+      ]
+    },
+    "production": {
+      "presets": [
+        ["@babel/preset-env", { "modules": false }],
+        "@babel/preset-flow",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-numeric-separator",
+        "@babel/plugin-proposal-throw-expressions"
+      ]
+    },
+    "development": {
+      "presets": [
+        ["@babel/preset-env", { "modules": false }],
+        "@babel/preset-flow",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-function-sent",
+        "@babel/plugin-proposal-export-namespace-from",
+        "@babel/plugin-proposal-numeric-separator",
+        "@babel/plugin-proposal-throw-expressions",
+        "react-hot-loader/babel"
+      ]
+    }
+  }
 }
