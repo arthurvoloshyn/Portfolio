@@ -1,46 +1,105 @@
 # Portfolio
 
-Laravel and React
+My own portfolio build on React and Laravel
 
-https://arturvoloshyn.herokuapp.com/
+[Demo](https://arturvoloshyn.herokuapp.com/)
 
-## Requirements
-- PHP 7.2
-- MySQL
-- Composer
-- libpng
+## Back-end
 
-## Installation
-1. `composer install` (or `php composer.phar install`)
-2. Copy `.env.dist` as `.env`
-3. Replace the database and mail connection strings in the `.env` file
-4. `php artisan migrate`
-5. `php artisan serve`
+### Provides
 
-## Available Scripts
+- php 7.x
+- laravel 5.x
+- laravelium/sitemap 3.x
+- filp/whoops 2.x
 
-In the project directory, you can run:
+### To install
 
-### `npm run watch`
+- You'll need to have [php 7.2](https://www.php.net/), [mySQL](https://www.mysql.com/) and [composer](https://getcomposer.org/) installed in
+  your system.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`git clone https://github.com/ArturW1998/Portfolio.git`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Then install the dependencies:
 
-### `npm run test`
+`composer install` / `php composer.phar install`
 
-Launches the test runner in the interactive watch mode.
+- Copy `.env.dist` as `.env`
 
-### `npm run prod`
+- Migrate:
 
-Builds the app for production to the `public` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`php artisan migrate`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Run development server
 
-## Learn More
+- laravel 5.x
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`php artisan serve`
+
+Open the web browser to `http://127.0.0.1:8000/`
+
+### Unit Testing
+
+- phpunit 6.x
+
+To run tests using PHPUnit:
+
+`php artisan test`
+
+## Front-end
+
+### Provides
+
+- react ^16.x
+- prop-types 15.x
+- husky 3.x
+- lint-staged 9.x
+
+### To install
+
+- You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in
+  your system.
+
+`git clone https://github.com/ArturW1998/Portfolio.git`
+
+- Then install the dependencies:
+
+`npm install`
+
+### Run development server
+
+- webpack-dev-server 3.x
+
+`npm run dev`
+
+Open the web browser to `http://localhost:3000/`
+
+### To build the production package
+
+- webpack 4.x
+- babel 7.x
+
+`npm run prod`
+
+### Code Quality
+
+- eslint 6.x
+- stylelint 12.x
+- prettier 1.x
+
+To do the actual linting and formatting, run:
+
+`npm run lint` / `npm run lint:styles` / `npm run format` / `npm run format:styles`
+
+### Unit Testing
+
+- jest 24.x
+- enzyme 3.x
+
+To run tests using Jest and Enzyme:
+
+`npm test`
+
+## Contribute
+
+Please contribute to the project if you know how to make it better, including this README :)
