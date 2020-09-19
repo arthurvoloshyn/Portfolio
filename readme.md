@@ -1,8 +1,15 @@
-# Portfolio
+# Portfolio Application
 
 My own portfolio build on React and Laravel
 
 [Demo](https://arturvoloshyn.herokuapp.com/)
+
+## To clone
+
+- You'll need to have [git](https://git-scm.com/), [node](https://nodejs.org/en/), [php 7.2](https://www.php.net/), [mySQL](https://www.mysql.com/) and [composer](https://getcomposer.org/) installed in
+  your system.
+
+`git clone https://github.com/ArturW1998/Portfolio.git`
 
 ## Back-end
 
@@ -10,15 +17,8 @@ My own portfolio build on React and Laravel
 
 - php 7.x
 - laravel 5.x
-- laravelium/sitemap 3.x
-- filp/whoops 2.x
 
 ### To install
-
-- You'll need to have [php 7.2](https://www.php.net/), [mySQL](https://www.mysql.com/) and [composer](https://getcomposer.org/) installed in
-  your system.
-
-`git clone https://github.com/ArturW1998/Portfolio.git`
 
 - Then install the dependencies:
 
@@ -51,16 +51,10 @@ To run tests using PHPUnit:
 ### Provides
 
 - react ^16.x
-- prop-types 15.x
-- husky 3.x
-- lint-staged 9.x
+- redux 4.x
+- jquery 3.x
 
 ### To install
-
-- You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in
-  your system.
-
-`git clone https://github.com/ArturW1998/Portfolio.git`
 
 - Then install the dependencies:
 
@@ -68,7 +62,9 @@ To run tests using PHPUnit:
 
 ### Run development server
 
-- webpack-dev-server 3.x
+- webpack-dev-server 2.x
+- react-hot-loader 4.x
+- redux-devtools (with browser plugin)
 
 `npm run dev`
 

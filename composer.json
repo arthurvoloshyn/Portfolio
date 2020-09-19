@@ -1,7 +1,13 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "homepage": "https://arturvoloshyn.herokuapp.com",
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "My own portfolio build on React and Laravel",
+    "keywords": [
+        "framework",
+        "laravel",
+        "php"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
