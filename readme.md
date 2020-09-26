@@ -72,8 +72,8 @@ Open the web browser to `http://localhost:3000/`
 
 ### To build the production package
 
-- webpack 4.x
-- babel 7.x
+- webpack 3.x
+- babel 6.x
 
 `npm run prod`
 
@@ -89,7 +89,7 @@ To do the actual linting and formatting, run:
 
 ### Unit Testing
 
-- jest 24.x
+- jest 23.x
 - enzyme 3.x
 
 To run tests using Jest and Enzyme:
