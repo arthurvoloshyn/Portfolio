@@ -15,27 +15,27 @@ class Loading extends Component {
   static propTypes = {
     page: PropTypes.shape({
       page: PropTypes.string,
-      statusReload: PropTypes.bool
+      statusReload: PropTypes.bool,
     }),
     history: PropTypes.shape({
-      push: PropTypes.func
+      push: PropTypes.func,
     }),
     reloadPage: PropTypes.func,
     setStatus: PropTypes.func,
-    setStatusMenu: PropTypes.func
+    setStatusMenu: PropTypes.func,
   };
 
   static defaultProps = {
     page: {
       page: '',
-      statusReload: false
+      statusReload: false,
     },
     history: {
-      push: () => {}
+      push: () => {},
     },
     setStatus: () => {},
     reloadPage: () => {},
-    setStatusMenu: () => {}
+    setStatusMenu: () => {},
   };
 
   componentDidMount() {
@@ -45,7 +45,7 @@ class Loading extends Component {
       WebkitAnimation: 'webkitAnimationEnd',
       OAnimation: 'oAnimationEnd',
       msAnimation: 'MSAnimationEnd',
-      animation: 'animationend'
+      animation: 'animationend',
     };
     this.animEndEventName = this.animEndEventNames[window.Modernizr.prefixed('animation')];
     this.header = this.container.querySelector('div.ip-header');
@@ -56,7 +56,7 @@ class Loading extends Component {
   componentDidUpdate() {
     const {
       page: { statusReload: propsStatusReload, page: propsPage },
-      reloadPage
+      reloadPage,
     } = this.props;
 
     if (propsStatusReload) {
@@ -77,7 +77,7 @@ class Loading extends Component {
     this.loader = new PathLoader(document.getElementById('ip-loader-circle'));
     setStatus(true);
 
-    let self = this;
+    const self = this;
 
     const onEndInitialAnimation = () => {
       const { animations } = self.support;
@@ -132,7 +132,7 @@ class Loading extends Component {
   startLoading = () => {
     // simulate loading something..
 
-    let self = this;
+    const self = this;
 
     const simulationFn = ({ setProgress }) => {
       window.loadingFast ? (self.progress = 1) : (self.progress = 0);
@@ -147,7 +147,7 @@ class Loading extends Component {
           window.loadingFast = true;
 
           const {
-            page: { page }
+            page: { page },
           } = self.props;
 
           if (page !== URLS.main || $(window).height() < 500) {

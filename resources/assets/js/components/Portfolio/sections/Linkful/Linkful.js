@@ -12,23 +12,23 @@ const { portfolio, first_slide, linkful } = URLS;
 class Linkful extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   state = {
-    info: false
+    info: false,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === portfolio || page === first_slide || page === linkful) {
@@ -42,7 +42,7 @@ class Linkful extends Component {
 
   toggle = () => {
     this.setState(({ info }) => ({
-      info: !info
+      info: !info,
     }));
   };
 
@@ -58,24 +58,24 @@ class Linkful extends Component {
           <div className="content content--canvas-linkful">
             <div className="linkful-container">
               <div className="header">
-                <a target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
+                <a href={linksfulUrl} rel="noopener noreferrer" target="_blank">
                   <div className="logo" />
                 </a>
 
                 <div className="description">
-                  <a target="_blank" rel="noopener noreferrer" href={linksfulUrl}>
+                  <a href={linksfulUrl} rel="noopener noreferrer" target="_blank">
                     LINKFUL - A STUNNING WAY TO CREATE A&nbsp;PERFECT ABOUT&nbsp;ME PAGE!
                   </a>
                 </div>
               </div>
 
-              <div className={'tech-container ' + (info ? 'd-none' : 'd-flex')}>
+              <div className={`tech-container ${info ? 'd-none' : 'd-flex'}`}>
                 <div className="row">
                   <div className="techs" />
                 </div>
               </div>
 
-              <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
+              <div className={`info-container tzie-small ${info ? 'd-flex' : 'd-none'}`}>
                 I have created, designed and developed this project. I built the application using
                 the most powerful and popular technologies. The frontend of the user dashboard was
                 built using React and Redux, and also used Saga to manage the asynchronous actions.
@@ -84,16 +84,13 @@ class Linkful extends Component {
                 statistics. The system is fully tested.
               </div>
 
-              <div
-                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
-                onClick={this.toggle}
-              />
+              <div className={`arrow ${info ? 'arrow-up' : 'arrow-down'}`} onClick={this.toggle} />
 
               <a
                 className="mt-50 description"
-                target="_blank"
-                rel="noopener noreferrer"
                 href={linksfulUrl}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 CHECK IT OUT
               </a>

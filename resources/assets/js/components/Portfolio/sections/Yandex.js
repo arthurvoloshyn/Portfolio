@@ -7,31 +7,44 @@ import Pattern from '../parts/Pattern';
 export const Yandex = () => (
   <Pattern
     classname="Yandex"
-    logo={IMGS.yandex}
-    url=""
-    effectClassIn="bounceIn"
-    effectClassOut="bounceOut"
-    technologies={() => <div className="technologies" />}
     description={() => (
       <div className="description">
         <p>
-          <b>I</b> have build the game. This is SPA on jquery and <b>w</b>ebpack
+          <b>I</b> have build the game. This is SPA on jquery and
+          <b>w</b>
+          ebpack
           <br />
-          with Ada<b>p</b>tive <b>I</b>nterface
+          with Ada
+          <b>p</b>
+          tive <b>I</b>
+          nterface
           <br />
-          and <b>o</b>ptimization of perform<b>a</b>nce
+          and
+          <br />
+          and <b>o</b>
+          ptimization of perform
+          <b>a</b>
+          nce
         </p>
       </div>
     )}
+    effectClassIn="bounceIn"
+    effectClassOut="bounceOut"
     figure={() => <div />}
+    logo={IMGS.yandex}
     logoDescription={() => (
       <p>
-        <b>S</b>imple and relaxing game
+        <b>S</b>
+        imple and relaxing game
         <br />
-        In honor of <b>F</b>ebruary 23
+        In honor of <b>F</b>
+        ebruary 23
         <br />
-        For <b>Y</b>andex maps
+        For For <b>Y</b>
+        andex maps
       </p>
     )}
+    technologies={() => <div className="technologies" />}
+    url=""
   />
 );

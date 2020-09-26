@@ -6,7 +6,7 @@ class SliderFx {
       MozTransition: 'transitionend',
       OTransition: 'oTransitionEnd',
       msTransition: 'MSTransitionEnd',
-      transition: 'transitionend'
+      transition: 'transitionend',
     };
     window.transEndEventName = window.transEndEventNames[this.Modernizr.prefixed('transition')];
     this.support = { csstransitions: this.Modernizr.csstransitions };
@@ -24,9 +24,9 @@ class SliderFx {
           right:
             'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33',
           left:
-            'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33'
-        }
-      }
+            'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33',
+        },
+      },
     };
     this.options = this.extend({}, this.optionsDefault);
     this.extend(this.options, options);
@@ -36,17 +36,17 @@ class SliderFx {
     const {
       paths: {
         rect: optionsRect,
-        curve: { left: optionsLeft, right: optionsRight }
+        curve: { left: optionsLeft, right: optionsRight },
       },
-      speed: optionsSpeed
+      speed: optionsSpeed,
     } = this.options;
     const { easeout, elastic } = mina;
 
-    let speed = optionsSpeed;
-    let pathCurvedLeft = optionsLeft;
-    let pathCurvedRight = optionsRight;
-    let pathRectangle = optionsRect;
-    let dir = this.old < this.curr ? 'right' : 'left';
+    const speed = optionsSpeed;
+    const pathCurvedLeft = optionsLeft;
+    const pathCurvedRight = optionsRight;
+    const pathRectangle = optionsRect;
+    const dir = this.old < this.curr ? 'right' : 'left';
 
     // morph svg path on exiting slide to "curved"
     this.items[this.old].path
@@ -59,7 +59,7 @@ class SliderFx {
     }, speed * 0.2);
 
     // change svg path on entering slide to "curved"
-    let currItem = this.items[this.curr];
+    const currItem = this.items[this.curr];
     currItem
       .querySelector('path')
       .setAttribute('d', dir === 'right' ? pathCurvedLeft : pathCurvedRight);
@@ -144,10 +144,10 @@ class SliderFx {
       // add svgs with rectangle path
       this.items.forEach(item => {
         const {
-          paths: { rect }
+          paths: { rect },
         } = this.options;
         const svg = createSvg(
-          `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none"><path d="${rect}"/></svg>`
+          `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none"><path d="${rect}"/></svg>`,
         );
 
         item.insertBefore(svg, item.childNodes[0]);
@@ -220,7 +220,7 @@ class SliderFx {
   };
 
   _slide = () => {
-    let self = this;
+    const self = this;
 
     const startSlider = () => {
       // check which navigation arrows should be shown

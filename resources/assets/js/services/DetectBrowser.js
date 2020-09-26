@@ -9,7 +9,7 @@ export const DetectBrowser = {
   isSafari: () =>
     /constructor/i.test(window.HTMLElement) ||
     (p => p.toString() === '[object SafariRemoteNotification]')(
-      !window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)
+      !window.safari || (typeof safari !== 'undefined' && safari.pushNotification),
     ),
 
   // Internet Explorer 6-11
@@ -22,5 +22,5 @@ export const DetectBrowser = {
   isChrome: () => !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime),
 
   // Blink engine detection
-  isBlink: () => (isChrome || isOpera) && !!window.CSS
+  isBlink: () => (isChrome || isOpera) && !!window.CSS,
 };

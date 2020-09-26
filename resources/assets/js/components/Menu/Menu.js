@@ -18,36 +18,36 @@ const styleStroke = getStylesList('stroke');
 class Menu extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
+      page: PropTypes.string,
     }),
     setPage: PropTypes.func,
     reloadPage: PropTypes.func,
     menu: PropTypes.shape({
-      status: PropTypes.bool
-    })
+      status: PropTypes.bool,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
+      page: '',
     },
     setPage: () => {},
     reloadPage: () => {},
     menu: {
-      status: false
-    }
+      status: false,
+    },
   };
 
   constructor(props) {
     super(props);
 
     const {
-      page: { page }
+      page: { page },
     } = props;
 
     this.state = {
       effectStyle: styleClasses[page],
-      styleStroke: styleStroke[page]
+      styleStroke: styleStroke[page],
     };
   }
 
@@ -74,23 +74,23 @@ class Menu extends Component {
 
   menuStyleHandler = () => {
     const {
-      page: { page }
+      page: { page },
     } = this.props;
 
     this.setState({
       effectStyle: styleClasses[page],
-      styleStroke: styleStroke[page]
+      styleStroke: styleStroke[page],
     });
   };
 
   render() {
     const { effectStyle, styleStroke } = this.state;
     const {
-      menu: { status }
+      menu: { status },
     } = this.props;
 
     return (
-      <nav id="menu" className="menu">
+      <nav className="menu" id="menu">
         <button className="menu__handle" onClick={this.menuStyleHandler}>
           <span>Menu</span>
         </button>
@@ -107,12 +107,12 @@ class Menu extends Component {
           </ul>
         </div>
         <div
-          className={'morph-shape ' + (status ? styleStroke : '')}
-          data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410"
+          className={`morph-shape ${status ? styleStroke : ''}`}
           data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410"
+          data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410"
         >
-          <svg width="100%" height="100%" viewBox="0 0 600 800" preserveAspectRatio="none">
-            <path fill="none" d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410" />
+          <svg height="100%" preserveAspectRatio="none" viewBox="0 0 600 800" width="100%">
+            <path d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410" fill="none" />
           </svg>
         </div>
 

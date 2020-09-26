@@ -9,23 +9,23 @@ import { remove, setup } from './lib/coalesce';
 class Abirix extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   state = {
-    info: false
+    info: false,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === URLS.abirix) {
@@ -39,7 +39,7 @@ class Abirix extends Component {
 
   toggle = () => {
     this.setState(({ info }) => ({
-      info: !info
+      info: !info,
     }));
   };
 
@@ -59,13 +59,13 @@ class Abirix extends Component {
                 <div className="description">crm system for sales company</div>
               </div>
 
-              <div className={'tech-container ' + (info ? 'd-none' : 'd-flex')}>
+              <div className={`tech-container ${info ? 'd-none' : 'd-flex'}`}>
                 <div className="row">
                   <div className="techs" />
                 </div>
               </div>
 
-              <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
+              <div className={`info-container tzie-small ${info ? 'd-flex' : 'd-none'}`}>
                 I have completed writing the crm system in a team as middle developer, designed and
                 wrote the main system components, developed the database. Used TypeScript as the
                 interface development tool and Laravel as the backend API; Complete test coverage;
@@ -73,10 +73,7 @@ class Abirix extends Component {
                 systems.
               </div>
 
-              <div
-                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
-                onClick={this.toggle}
-              />
+              <div className={`arrow ${info ? 'arrow-up' : 'arrow-down'}`} onClick={this.toggle} />
             </div>
           </div>
         </section>

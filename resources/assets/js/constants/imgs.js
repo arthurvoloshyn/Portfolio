@@ -19,5 +19,5 @@ export const IMGS = {
   profilCity: `${imgPath}/profil_city.png`,
   factoringvergelijken: `${imgPath}/logo_f.png`,
   cherries: `${imgPath}/cherries.svg`,
-  arcbazar: `${imgPath}/arcbazar_logo.png`
+  arcbazar: `${imgPath}/arcbazar_logo.png`,
 };

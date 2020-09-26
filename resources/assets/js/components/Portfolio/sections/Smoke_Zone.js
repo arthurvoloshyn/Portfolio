@@ -12,12 +12,12 @@ const style = {
     backgroundSize: 'cover',
     width: '100%',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   bgLayerStyle: {
     position: 'absolute',
-    height: '100%'
-  }
+    height: '100%',
+  },
 };
 
 const { outter, bgLayerStyle } = style;
@@ -25,15 +25,32 @@ const { outter, bgLayerStyle } = style;
 export const Smoke_Zone = () => (
   <div style={outter}>
     <div style={bgLayerStyle}>
-      <img src={IMGS.smokeZone} alt="Smoke Zone" />
+      <img alt="Smoke Zone" src={IMGS.smokeZone} />
     </div>
 
     <Pattern
       classname="Smoke_Zone"
-      logo={IMGS.hookah}
-      url={Constants.smokeZone}
+      description={() => (
+        <div className="description">
+          <p>
+            I have developed the online store, based on the unique MVC core;
+            <span>
+              promotion and support; development of a flexible administration panel with content
+              management features
+            </span>
+          </p>
+        </div>
+      )}
       effectClassIn="flipInX"
       effectClassOut="flipOutX"
+      figure={() => <div />}
+      logo={IMGS.hookah}
+      logoDescription={() => (
+        <p className="header-container">
+          <span className="header">SMOKE-ZONE</span>
+          <span className="paragraph">online shop selling tobacco for hookah</span>
+        </p>
+      )}
       technologies={() => (
         <div className="technologies">
           <div>
@@ -48,24 +65,7 @@ export const Smoke_Zone = () => (
           </div>
         </div>
       )}
-      description={() => (
-        <div className="description">
-          <p>
-            I have developed the online store, based on the unique MVC core;
-            <span>
-              promotion and support; development of a flexible administration panel with content
-              management features
-            </span>
-          </p>
-        </div>
-      )}
-      figure={() => <div />}
-      logoDescription={() => (
-        <p className="header-container">
-          <span className="header">SMOKE-ZONE</span>
-          <span className="paragraph">online shop selling tobacco for hookah</span>
-        </p>
-      )}
+      url={Constants.smokeZone}
     />
   </div>
 );

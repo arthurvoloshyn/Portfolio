@@ -21,5 +21,5 @@ export const URLS = {
   url_skills: '/skills',
   url_contacts: '/contacts',
   url_portfolio: '/portfolio',
-  url_home: '/'
+  url_home: '/',
 };

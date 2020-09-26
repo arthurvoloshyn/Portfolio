@@ -21,7 +21,7 @@ render(
   <Router>
     <div className="global-wrapper">
       <Provider store={store}>
-        <div id="ip-container" className="ip-container">
+        <div className="ip-container" id="ip-container">
           <div>
             <Menu />
             <Preloader />
@@ -32,7 +32,7 @@ render(
       </Provider>
     </div>
   </Router>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
 
 serviceWorker.register();

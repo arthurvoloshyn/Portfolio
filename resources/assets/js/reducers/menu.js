@@ -1,7 +1,7 @@
 import { ACTION_SET_MENU_STATUS, ACTION_TOGGLE_MENU_STATUS } from '../constants/actionTypes';
 
 const initialState = {
-  status: false
+  status: false,
 };
 
 const menuReducer = (state = initialState, { type, status }) => {

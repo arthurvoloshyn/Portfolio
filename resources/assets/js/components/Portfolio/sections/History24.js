@@ -14,7 +14,7 @@ const style = {
     width: '100%',
     position: 'relative',
     overflow: 'hidden',
-    height: '100vh'
+    height: '100vh',
   },
   bgLayerStyle: {
     backgroundImage: `url(${IMGS.history})`,
@@ -24,8 +24,8 @@ const style = {
     position: 'absolute',
     overflow: 'hidden',
     minHeight: '100vh',
-    bottom: '0px'
-  }
+    bottom: '0px',
+  },
 };
 
 const { outter, bgLayerStyle } = style;
@@ -33,19 +33,19 @@ const { outter, bgLayerStyle } = style;
 class History24 extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === URLS.history24) {
@@ -62,11 +62,6 @@ class History24 extends Component {
 
         <Pattern
           classname="History24"
-          logo={IMGS.pantheon}
-          url={Constants.history24}
-          effectClassIn="zoomIn"
-          effectClassOut="zoomOut"
-          technologies={() => <div className="technologies" />}
           description={() => (
             <div className="description">
               <p>
@@ -78,7 +73,10 @@ class History24 extends Component {
               </p>
             </div>
           )}
+          effectClassIn="zoomIn"
+          effectClassOut="zoomOut"
           figure={() => <div />}
+          logo={IMGS.pantheon}
           logoDescription={() => (
             <p className="header-container">
               <span className="header">HISTORY.RF</span>
@@ -87,6 +85,8 @@ class History24 extends Component {
               </span>
             </p>
           )}
+          technologies={() => <div className="technologies" />}
+          url={Constants.history24}
         />
       </div>
     );

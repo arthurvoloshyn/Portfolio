@@ -14,26 +14,26 @@ const style = {
     background: 'white',
     width: '100%',
     position: 'relative',
-    overflow: 'hidden'
-  }
+    overflow: 'hidden',
+  },
 };
 
 class Arcbazar extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === URLS.arcbazar) {
@@ -48,11 +48,6 @@ class Arcbazar extends Component {
       <ParallaxMousemove containerStyle={style.outter}>
         <Pattern
           classname="Arcbazar"
-          logo={IMGS.arcbazar}
-          url={Constants.arcbazr}
-          effectClassIn="flipInY"
-          effectClassOut="zoomOutUp"
-          technologies={() => <div className="technologies" />}
           description={() => (
             <div className="description">
               <p className="first">My team and I have developed new features;</p>
@@ -62,15 +57,20 @@ class Arcbazar extends Component {
               <p className="last">also working with frontend new features</p>
             </div>
           )}
+          effectClassIn="flipInY"
+          effectClassOut="zoomOutUp"
           figure={() => (
             <div>
               <span>View</span>
               <span>Arcbazar</span>
             </div>
           )}
+          logo={IMGS.arcbazar}
           logoDescription={() => (
             <p className="paragraph">Create unique interie and landscape design</p>
           )}
+          technologies={() => <div className="technologies" />}
+          url={Constants.arcbazr}
         />
       </ParallaxMousemove>
     );

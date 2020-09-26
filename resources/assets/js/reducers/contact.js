@@ -4,7 +4,7 @@ const initialState = {
   username: '',
   email: '',
   subject: '',
-  body: ''
+  body: '',
 };
 
 const contactReducer = (state = initialState, { type, fieldName, value }) => {
@@ -12,7 +12,7 @@ const contactReducer = (state = initialState, { type, fieldName, value }) => {
     case ACTION_UPDATE_CONTACT: {
       return {
         ...state,
-        [fieldName]: value
+        [fieldName]: value,
       };
     }
     default: {

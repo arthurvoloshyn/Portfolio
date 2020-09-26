@@ -9,23 +9,23 @@ import { remove, setup } from './lib/shift';
 class Neocore extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   state = {
-    info: false
+    info: false,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === URLS.neocore) {
@@ -39,7 +39,7 @@ class Neocore extends Component {
 
   toggle = () => {
     this.setState(({ info }) => ({
-      info: !info
+      info: !info,
     }));
   };
 
@@ -59,22 +59,19 @@ class Neocore extends Component {
                 <div className="description">online casino network</div>
               </div>
 
-              <div className={'tech-container ' + (info ? 'd-none' : 'd-flex')}>
+              <div className={`tech-container ${info ? 'd-none' : 'd-flex'}`}>
                 <div className="row">
                   <div className="techs" />
                 </div>
               </div>
 
-              <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
+              <div className={`info-container tzie-small ${info ? 'd-flex' : 'd-none'}`}>
                 Developed GraphQL API for complex enterprise systems. Created a new various
                 functionality, also covered with tests. Optimized queries to the MongoDB database,
                 added indexes.
               </div>
 
-              <div
-                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
-                onClick={this.toggle}
-              />
+              <div className={`arrow ${info ? 'arrow-up' : 'arrow-down'}`} onClick={this.toggle} />
             </div>
           </div>
         </section>

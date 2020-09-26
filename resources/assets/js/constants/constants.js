@@ -21,7 +21,7 @@ const Constants = {
   arcbazr: 'https://www.arcbazar.com/',
   factoringvergelijken: 'https://factoringvergelijken.nl/',
   linksfulUrl: 'https://linkful.me/',
-  smsplaza: 'https://smsplaza.io'
+  smsplaza: 'https://smsplaza.io',
 };
 
 export default Constants;

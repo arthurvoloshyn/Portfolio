@@ -6,7 +6,7 @@ const page = path[1] || path[0];
 
 const initialState = {
   page: page || URLS.main,
-  statusReload: false
+  statusReload: false,
 };
 
 const pageReducer = (state = initialState, { type, page, statusReload }) => {

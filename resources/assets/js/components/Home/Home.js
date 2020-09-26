@@ -12,7 +12,7 @@ const Home = ({ preloader: { preloader } }) => {
     preloader ? (
       ''
     ) : (
-      <ReactRotatingText typingInterval={100} items={['ReactJs', 'VueJs', 'NodeJs']} />
+      <ReactRotatingText items={['ReactJs', 'VueJs', 'NodeJs']} typingInterval={100} />
     );
 
   const { linkedin, git, telegramm } = Constants;
@@ -23,18 +23,21 @@ const Home = ({ preloader: { preloader } }) => {
         <div className="Preivew__neon">ARTUR VOLOSHYN</div>
         <div className="Preivew__info">&lt; Software Engineer /&gt;</div>
         <div className="Preivew__info Preivew__label_tech">
-          <p>Working with technologies such as {drawReactRotatingText()}</p>
+          <p>
+            Working with technologies such as
+            {drawReactRotatingText()}
+          </p>
         </div>
       </div>
 
       <div className="Icons__icon_container">
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">
+        <a href={linkedin} rel="noopener noreferrer" target="_blank">
           <div />
         </a>
-        <a href={git} target="_blank" rel="noopener noreferrer">
+        <a href={git} rel="noopener noreferrer" target="_blank">
           <div />
         </a>
-        <a href={telegramm} target="_blank" rel="noopener noreferrer">
+        <a href={telegramm} rel="noopener noreferrer" target="_blank">
           <div />
         </a>
       </div>
@@ -46,14 +49,14 @@ const mapStateToProps = ({ preloader }) => ({ preloader });
 
 Home.propTypes = {
   preloader: PropTypes.shape({
-    preloader: PropTypes.bool
-  })
+    preloader: PropTypes.bool,
+  }),
 };
 
 Home.defaultProps = {
   preloader: {
-    preloader: false
-  }
+    preloader: false,
+  },
 };
 
 export default connect(mapStateToProps)(Home);

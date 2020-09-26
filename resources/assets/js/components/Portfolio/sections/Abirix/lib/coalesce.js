@@ -72,14 +72,14 @@ const drawParticles = () => {
 };
 
 const updateParticle = i => {
-  let i2 = 1 + i;
-  let i3 = 2 + i;
-  let i4 = 3 + i;
-  let i5 = 4 + i;
-  let i6 = 5 + i;
-  let i7 = 6 + i;
-  let i8 = 7 + i;
-  let i9 = 8 + i;
+  const i2 = 1 + i;
+  const i3 = 2 + i;
+  const i4 = 3 + i;
+  const i5 = 4 + i;
+  const i6 = 5 + i;
+  const i7 = 6 + i;
+  const i8 = 7 + i;
+  const i9 = 8 + i;
   let x;
   let y;
   let theta;
@@ -120,8 +120,8 @@ const updateParticle = i => {
 };
 
 const drawParticle = (x, y, theta, life, ttl, size, hue) => {
-  let xRel = x - 0.5 * size;
-  let yRel = y - 0.5 * size;
+  const xRel = x - 0.5 * size;
+  const yRel = y - 0.5 * size;
 
   ctx.a.save();
   ctx.a.lineCap = 'round';
@@ -140,7 +140,7 @@ const createCanvas = () => {
   container = document.querySelector('.content--canvas-abirix');
   canvas = {
     a: document.createElement('canvas'),
-    b: document.createElement('canvas')
+    b: document.createElement('canvas'),
   };
   canvas.b.style = `
 		position: fixed;
@@ -150,7 +150,7 @@ const createCanvas = () => {
   container.appendChild(canvas.b);
   ctx = {
     a: canvas.a.getContext('2d'),
-    b: canvas.b.getContext('2d')
+    b: canvas.b.getContext('2d'),
   };
   center = [];
 };

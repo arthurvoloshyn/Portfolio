@@ -12,15 +12,15 @@ const style = {
     width: '100%',
     position: 'relative',
     overflow: 'hidden',
-    height: '100vh'
+    height: '100vh',
   },
   bgLayerStyle: {
     width: '100vw',
     height: '100vh',
     position: 'absolute',
     overflow: 'hidden',
-    background: 'rgba(0,0,0, 0.4)'
-  }
+    background: 'rgba(0,0,0, 0.4)',
+  },
 };
 
 const { outter, bgLayerStyle } = style;
@@ -28,19 +28,19 @@ const { outter, bgLayerStyle } = style;
 class Houses extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === URLS.houses) {
@@ -56,12 +56,6 @@ class Houses extends Component {
         <div style={bgLayerStyle} />
         <Pattern
           classname="Houses"
-          logo={null}
-          logoText="HOOMES"
-          url=""
-          effectClassIn="zoomIn"
-          effectClassOut="zoomOut"
-          technologies={() => <div className="technologies" />}
           description={() => (
             <div className="description">
               <p>
@@ -71,12 +65,18 @@ class Houses extends Component {
               </p>
             </div>
           )}
+          effectClassIn="zoomIn"
+          effectClassOut="zoomOut"
           figure={() => <div />}
+          logo={null}
           logoDescription={() => (
             <p className="paragraph">
               The system for design and buying a construction project of building
             </p>
           )}
+          logoText="HOOMES"
+          technologies={() => <div className="technologies" />}
+          url=""
         />
       </div>
     );

@@ -13,7 +13,7 @@ class Pattern extends Component {
     technologies: PropTypes.func,
     description: PropTypes.func,
     figure: PropTypes.func,
-    logoDescription: PropTypes.func
+    logoDescription: PropTypes.func,
   };
 
   static defaultProps = {
@@ -27,7 +27,7 @@ class Pattern extends Component {
     technologies: () => {},
     description: () => {},
     figure: () => {},
-    logoDescription: () => {}
+    logoDescription: () => {},
   };
 
   constructor(props) {
@@ -37,17 +37,17 @@ class Pattern extends Component {
 
     this.clasess = {
       show: `animated ${effectClassIn} flex`,
-      hide: `animated ${effectClassOut} none`
+      hide: `animated ${effectClassOut} none`,
     };
 
     this.state = {
-      activeSide: true
+      activeSide: true,
     };
   }
 
   clickHandle = () => {
     this.setState(({ activeSide }) => ({
-      activeSide: !activeSide
+      activeSide: !activeSide,
     }));
   };
 
@@ -60,24 +60,24 @@ class Pattern extends Component {
       url,
       logo,
       logoText,
-      logoDescription
+      logoDescription,
     } = this.props;
     const { activeSide } = this.state;
     const { hide, show } = this.clasess;
 
     return (
       <div className={`Pattern ${classname}`}>
-        <div className={'technologies-container ' + (activeSide ? hide : show)}>
+        <div className={`technologies-container ${activeSide ? hide : show}`}>
           {technologies()}
           {description()}
-          <a href={url} target="_blank" rel="noopener noreferrer" className="rotate_button">
+          <a className="rotate_button" href={url} rel="noopener noreferrer" target="_blank">
             <figure>{figure()}</figure>
           </a>
           <div className="arrow hide" onClick={this.clickHandle} />
         </div>
 
-        <div className={'logo-container ' + (activeSide ? show : hide)}>
-          {logo ? <img src={logo} alt={classname} /> : <p className="logoText"> {logoText}</p>}
+        <div className={`logo-container ${activeSide ? show : hide}`}>
+          {logo ? <img alt={classname} src={logo} /> : <p className="logoText"> {logoText}</p>}
 
           {logoDescription()}
 

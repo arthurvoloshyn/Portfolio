@@ -9,7 +9,7 @@ const reducers = combineReducers({
   contact,
   menu,
   page,
-  preloader
+  preloader,
 });
 
 export default reducers;

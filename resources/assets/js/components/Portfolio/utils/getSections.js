@@ -25,7 +25,7 @@ export const sections = {
   [URLS.yandex]: <Yandex />,
   [URLS.houses]: <Houses />,
   [URLS.history24]: <History24 />,
-  [URLS.welhome]: <WellHome />
+  [URLS.welhome]: <WellHome />,
 };
 
 export const sectionUrls = Object.keys(sections);

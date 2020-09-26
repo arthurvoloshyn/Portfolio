@@ -10,7 +10,7 @@ const style = {
     background: 'white',
     width: '100%',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   bgLayerStyle: {
     backgroundImage: `url(${IMGS.profilCity})`,
@@ -20,8 +20,8 @@ const style = {
     position: 'absolute',
     overflow: 'hidden',
     minHeight: '40vh',
-    bottom: '0px'
-  }
+    bottom: '0px',
+  },
 };
 
 const { outter, bgLayerStyle } = style;
@@ -32,11 +32,6 @@ export const Factoringvergelijken = () => (
 
     <Pattern
       classname="Factoringvergelijken"
-      logo={IMGS.factoringvergelijken}
-      url={Constants.factoringvergelijken}
-      effectClassIn="slideInDown"
-      effectClassOut="zoomOutUp"
-      technologies={() => <div className="technologies" />}
       description={() => (
         <div className="description">
           <p>
@@ -45,17 +40,22 @@ export const Factoringvergelijken = () => (
           </p>
         </div>
       )}
+      effectClassIn="slideInDown"
+      effectClassOut="zoomOutUp"
       figure={() => (
         <div>
           <span>View</span>
           <span>factoring</span>
         </div>
       )}
+      logo={IMGS.factoringvergelijken}
       logoDescription={() => (
         <p className="header-container">
           <span className="paragraph">Online factoring services</span>
         </p>
       )}
+      technologies={() => <div className="technologies" />}
+      url={Constants.factoringvergelijken}
     />
   </div>
 );

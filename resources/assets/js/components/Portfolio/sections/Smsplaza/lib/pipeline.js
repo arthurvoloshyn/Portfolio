@@ -72,13 +72,13 @@ const updatePipes = () => {
 };
 
 const updatePipe = i => {
-  let i2 = 1 + i;
-  let i3 = 2 + i;
-  let i4 = 3 + i;
-  let i5 = 4 + i;
-  let i6 = 5 + i;
-  let i7 = 6 + i;
-  let i8 = 7 + i;
+  const i2 = 1 + i;
+  const i3 = 2 + i;
+  const i4 = 3 + i;
+  const i5 = 4 + i;
+  const i6 = 5 + i;
+  const i7 = 6 + i;
+  const i8 = 7 + i;
   let x;
   let y;
   let direction;
@@ -140,7 +140,7 @@ const createCanvas = () => {
   container = document.querySelector('.content--canvas--smsplaza');
   canvas = {
     a: document.createElement('canvas'),
-    b: document.createElement('canvas')
+    b: document.createElement('canvas'),
   };
   canvas.b.style = `
 		position: fixed;
@@ -150,7 +150,7 @@ const createCanvas = () => {
   container.appendChild(canvas.b);
   ctx = {
     a: canvas.a.getContext('2d'),
-    b: canvas.b.getContext('2d')
+    b: canvas.b.getContext('2d'),
   };
   center = [];
   tick = 0;

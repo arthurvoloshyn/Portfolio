@@ -10,23 +10,23 @@ import { setup, remove } from './lib/pipeline';
 class Smsplaza extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   state = {
-    info: false
+    info: false,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === URLS.smsplaza) {
@@ -40,7 +40,7 @@ class Smsplaza extends Component {
 
   toggle = () => {
     this.setState(({ info }) => ({
-      info: !info
+      info: !info,
     }));
   };
 
@@ -56,24 +56,24 @@ class Smsplaza extends Component {
           <div className="content content--canvas--smsplaza">
             <div className="smspalza-container">
               <div className="header">
-                <a target="_blank" rel="noopener noreferrer" href={smsplaza}>
+                <a href={smsplaza} rel="noopener noreferrer" target="_blank">
                   <h2 className="logo">SMSPLAZA</h2>
                 </a>
 
                 <div className="description">
-                  <a target="_blank" rel="noopener noreferrer" href={smsplaza}>
+                  <a href={smsplaza} rel="noopener noreferrer" target="_blank">
                     Receive SMS Online | Verification Service
                   </a>
                 </div>
               </div>
 
-              <div className={'tech-container ' + (info ? 'd-none' : 'd-flex')}>
+              <div className={`tech-container ${info ? 'd-none' : 'd-flex'}`}>
                 <div className="row">
                   <div className="techs" />
                 </div>
               </div>
 
-              <div className={'info-container tzie-small ' + (info ? 'd-flex' : 'd-none')}>
+              <div className={`info-container tzie-small ${info ? 'd-flex' : 'd-none'}`}>
                 I have been doing development of the application with external smsbank equipment,
                 design architecture, development and code quality control as well. I used Nuxtjs as
                 a frontend tool to build the interface. I also used Laravel as a backend framework
@@ -82,16 +82,13 @@ class Smsplaza extends Component {
                 infrastructure.
               </div>
 
-              <div
-                className={'arrow ' + (info ? 'arrow-up' : 'arrow-down')}
-                onClick={this.toggle}
-              />
+              <div className={`arrow ${info ? 'arrow-up' : 'arrow-down'}`} onClick={this.toggle} />
 
               <a
                 className="mt-50 description"
-                target="_blank"
-                rel="noopener noreferrer"
                 href={smsplaza}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 CHECK IT OUT
               </a>

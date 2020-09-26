@@ -5,21 +5,21 @@ const { portfolio, skills, contacts } = URLS;
 export const skillsList = [
   {
     title: 'Home',
-    icon: 'home'
+    icon: 'home',
   },
   {
     title: 'Portfolio',
     icon: 'trophy',
-    page: portfolio
+    page: portfolio,
   },
   {
     title: 'Skills',
     icon: 'graduation-cap',
-    page: skills
+    page: skills,
   },
   {
     title: 'Contact me',
     icon: 'envelope',
-    page: contacts
-  }
+    page: contacts,
+  },
 ];

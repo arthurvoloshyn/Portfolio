@@ -10,18 +10,33 @@ const style = {
     background: 'white',
     width: '100%',
     position: 'relative',
-    overflow: 'hidden'
-  }
+    overflow: 'hidden',
+  },
 };
 
 export const CherryPick = () => (
   <ParallaxMousemove containerStyle={style.outter}>
     <Pattern
       classname="CherryPick"
-      logo={IMGS.cherries}
-      url=""
+      description={() => (
+        <div className="description">
+          <p>
+            Development of a portal for job search in the French area. Designing and writing the
+            backend of the project. Building a restful API, with documentation on Swagger. Automatic
+            functional tests
+          </p>
+        </div>
+      )}
       effectClassIn="jello"
       effectClassOut="zoomOutUp"
+      figure={() => <div />}
+      logo={IMGS.cherries}
+      logoDescription={() => (
+        <p className="header-container">
+          <p className="header">CherryPick</p>
+          <p className="paragraph">A platform for job search and job posting</p>
+        </p>
+      )}
       technologies={() => (
         <div className="technologies">
           <div>
@@ -35,22 +50,7 @@ export const CherryPick = () => (
           </div>
         </div>
       )}
-      description={() => (
-        <div className="description">
-          <p>
-            Development of a portal for job search in the French area. Designing and writing the
-            backend of the project. Building a restful API, with documentation on Swagger. Automatic
-            functional tests
-          </p>
-        </div>
-      )}
-      figure={() => <div />}
-      logoDescription={() => (
-        <p className="header-container">
-          <p className="header">CherryPick</p>
-          <p className="paragraph">A platform for job search and job posting</p>
-        </p>
-      )}
+      url=""
     />
   </ParallaxMousemove>
 );

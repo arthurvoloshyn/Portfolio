@@ -9,7 +9,7 @@ const style = {
     background: 'white',
     width: '100%',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   bgLayerStyle: {
     backgroundImage: `url(${IMGS.skyline})`,
@@ -19,8 +19,8 @@ const style = {
     position: 'absolute',
     overflow: 'hidden',
     minHeight: '40vh',
-    bottom: '-50px'
-  }
+    bottom: '-50px',
+  },
 };
 
 const { outter, bgLayerStyle } = style;
@@ -31,18 +31,13 @@ export const WellHome = () => (
 
     <Pattern
       classname="WellHome"
-      logo={IMGS.wellHome}
-      url=""
-      effectClassIn="lightSpeedIn"
-      effectClassOut="lightSpeedOut"
-      technologies={() => <div className="technologies" />}
       description={() => (
         <div className="description">
           <p>
             I have developed CRM system in order to automate business processes in the company
             engaged in the sale of real estate -{' '}
             <b>
-              <a href="http://www.welhome.ru/" target="_blank" rel="noopener noreferrer">
+              <a href="http://www.welhome.ru/" rel="noopener noreferrer" target="_blank">
                 Welhome
               </a>
             </b>
@@ -53,12 +48,17 @@ export const WellHome = () => (
           </p>
         </div>
       )}
+      effectClassIn="lightSpeedIn"
+      effectClassOut="lightSpeedOut"
       figure={() => <div />}
+      logo={IMGS.wellHome}
       logoDescription={() => (
         <p className="header-container">
           <span className="paragraph">CRM system for real estate company</span>
         </p>
       )}
+      technologies={() => <div className="technologies" />}
+      url=""
     />
   </div>
 );

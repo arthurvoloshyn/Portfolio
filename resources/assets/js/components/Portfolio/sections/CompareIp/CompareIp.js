@@ -11,20 +11,20 @@ import './lib/wordFx';
 class CompareIp extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
+      page: PropTypes.string,
     }),
     preloader: PropTypes.shape({
-      preloader: PropTypes.bool
-    })
+      preloader: PropTypes.bool,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
+      page: '',
     },
     preloader: {
-      preloader: false
-    }
+      preloader: false,
+    },
   };
 
   classSlideshow = createRef();
@@ -32,17 +32,17 @@ class CompareIp extends Component {
   state = {
     visible: 0,
     animateClass: 'hide',
-    firstTime: true
+    firstTime: true,
   };
 
   componentDidUpdate(prevProps) {
     const {
       preloader: { preloader },
-      page: { page }
+      page: { page },
     } = this.props;
     const { firstTime } = this.state;
     const {
-      preloader: { preloader: prevPropsPreloader }
+      preloader: { preloader: prevPropsPreloader },
     } = prevProps;
 
     if (!preloader && prevPropsPreloader && page === URLS.compareip && firstTime) {
@@ -53,7 +53,7 @@ class CompareIp extends Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     const { firstTime } = this.state;
     const {
-      page: { page: nextPropsPage }
+      page: { page: nextPropsPage },
     } = nextProps;
 
     if (nextPropsPage === URLS.compareip) {
@@ -69,7 +69,7 @@ class CompareIp extends Component {
 
   showDescription = () => {
     this.setState({
-      animateClass: 'animated fadeIn'
+      animateClass: 'animated fadeIn',
     });
   };
 
@@ -77,7 +77,7 @@ class CompareIp extends Component {
     this.slideshow = new Slideshow(this.classSlideshow.current, this.showDescription);
     this.setState({
       firstTime: false,
-      visible: true
+      visible: true,
     });
   };
 
@@ -87,10 +87,10 @@ class CompareIp extends Component {
     return (
       <div className="CompareIp">
         <div className="content">
-          <div className="slideshow" ref={this.classSlideshow}>
+          <div ref={this.classSlideshow} className="slideshow">
             <div className="slide slide--current">
               <div className="slide__bg slide__bg--6" />
-              <h2 style={{ opacity: visible }} className="word word--6">
+              <h2 className="word word--6" style={{ opacity: visible }}>
                 CompareIp
               </h2>
 
@@ -99,10 +99,10 @@ class CompareIp extends Component {
 
                 <div className="img-container" />
                 <a
-                  href={Constants.compareIp}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="draw-border"
+                  href={Constants.compareIp}
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Live
                 </a>

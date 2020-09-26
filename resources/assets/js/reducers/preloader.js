@@ -1,7 +1,7 @@
 import { ACTION_SET_PRELOADER_STATUS } from '../constants/actionTypes';
 
 const initialState = {
-  preloader: false
+  preloader: false,
 };
 
 const preloaderReducer = (state = initialState, { type, preloader }) => {

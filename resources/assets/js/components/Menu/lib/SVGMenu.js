@@ -13,27 +13,28 @@ const ESC = 27;
 class SVGMenu extends Component {
   static propTypes = {
     menu: PropTypes.shape({
-      status: PropTypes.bool
+      status: PropTypes.bool,
     }),
     page: PropTypes.shape({
-      statusReload: PropTypes.bool
+      statusReload: PropTypes.bool,
     }),
     toggleStatus: PropTypes.func,
-    setStatus: PropTypes.func
+    setStatus: PropTypes.func,
   };
 
   static defaultProps = {
     menu: {
-      status: false
+      status: false,
     },
     page: {
-      statusReload: false
+      statusReload: false,
     },
     toggleStatus: () => {},
-    setStatus: () => {}
+    setStatus: () => {},
   };
 
   path = window.location.href.split('/')[3].split('#');
+
   keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
   componentDidMount() {
@@ -53,7 +54,7 @@ class SVGMenu extends Component {
 
   componentDidUpdate(prevProps) {
     const {
-      page: { statusReload }
+      page: { statusReload },
     } = this.props;
 
     if (statusReload) {
@@ -76,7 +77,7 @@ class SVGMenu extends Component {
     this.paths = {
       reset: this.pathEl.attr('d'),
       open: this.shapeEl.getAttribute('data-morph-open'),
-      close: this.shapeEl.getAttribute('data-morph-close')
+      close: this.shapeEl.getAttribute('data-morph-close'),
     };
 
     setStatus(false);
@@ -91,7 +92,7 @@ class SVGMenu extends Component {
   toggleBody = () => {
     const {
       menu: { status },
-      toggleStatus
+      toggleStatus,
     } = this.props;
     const { close, open, reset } = this.paths;
     const { easeout, elastic } = mina;
@@ -107,7 +108,7 @@ class SVGMenu extends Component {
       this.pathEl
         .stop()
         .animate({ path: status ? close : open }, 350, easeout, () =>
-          this.pathEl.stop().animate({ path: reset }, 800, elastic)
+          this.pathEl.stop().animate({ path: reset }, 800, elastic),
         );
 
       toggleStatus(status);
@@ -117,7 +118,7 @@ class SVGMenu extends Component {
   toggle = () => {
     const {
       menu: { status },
-      toggleStatus
+      toggleStatus,
     } = this.props;
     const { close, open, reset } = this.paths;
     const { easeout, elastic } = mina;
@@ -140,7 +141,7 @@ class SVGMenu extends Component {
     this.pathEl
       .stop()
       .animate({ path: status ? close : open }, 350, easeout, () =>
-        this.pathEl.stop().animate({ path: reset }, 800, elastic)
+        this.pathEl.stop().animate({ path: reset }, 800, elastic),
       );
 
     toggleStatus(status);
@@ -149,7 +150,7 @@ class SVGMenu extends Component {
   close = () => {
     const {
       menu: { status },
-      toggleStatus
+      toggleStatus,
     } = this.props;
     const { close, open, reset } = this.paths;
     const { easeout, elastic } = mina;
@@ -164,7 +165,7 @@ class SVGMenu extends Component {
     this.pathEl
       .stop()
       .animate({ path: status ? close : open }, 350, easeout, () =>
-        this.pathEl.stop().animate({ path: reset }, 800, elastic)
+        this.pathEl.stop().animate({ path: reset }, 800, elastic),
       );
 
     toggleStatus(status);

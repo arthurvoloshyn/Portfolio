@@ -5,122 +5,122 @@ const { imgPathBack, imgPathFront, imgPathOther } = IMGS;
 export const skillsList = [
   {
     src: `${imgPathBack}nodejs.png`,
-    alt: 'nodejs'
+    alt: 'nodejs',
   },
   {
     src: `${imgPathBack}php1.png`,
-    alt: 'php'
+    alt: 'php',
   },
   {
     src: `${imgPathBack}nginx1.png`,
-    alt: 'nginx'
+    alt: 'nginx',
   },
   {
     src: `${imgPathBack}mysql1.png`,
-    alt: 'mysql'
+    alt: 'mysql',
   },
   {
     src: `${imgPathBack}laravel3.png`,
-    alt: 'laravel'
+    alt: 'laravel',
   },
   {
     src: `${imgPathBack}git.png`,
-    alt: 'git'
+    alt: 'git',
   },
   {
     src: `${imgPathBack}apache.png`,
-    alt: 'apache'
+    alt: 'apache',
   },
   {
     src: `${imgPathOther}ubuntu.png`,
-    alt: 'ubuntu'
+    alt: 'ubuntu',
   },
   {
     src: `${imgPathFront}js1.png`,
-    alt: 'js'
+    alt: 'js',
   },
   {
     src: `${imgPathFront}vue.png`,
-    alt: 'vue'
+    alt: 'vue',
   },
   {
     src: `${imgPathFront}nuxt.png`,
-    alt: 'nuxt'
+    alt: 'nuxt',
   },
   {
     src: `${imgPathFront}ts.png`,
-    alt: 'ts'
+    alt: 'ts',
   },
   {
     src: `${imgPathFront}vuex.png`,
-    alt: 'vuex'
+    alt: 'vuex',
   },
   {
     src: `${imgPathFront}rxjs.png`,
-    alt: 'rxjs'
+    alt: 'rxjs',
   },
   {
     src: `${imgPathFront}react.png`,
-    alt: 'react'
+    alt: 'react',
   },
   {
     src: `${imgPathFront}redux.png`,
-    alt: 'redux'
+    alt: 'redux',
   },
   {
     src: `${imgPathFront}redux-saga.png`,
-    alt: 'redux-saga'
+    alt: 'redux-saga',
   },
   {
     src: `${imgPathFront}flow.png`,
-    alt: 'flow'
+    alt: 'flow',
   },
   {
     src: `${imgPathFront}sass.png`,
-    alt: 'sass'
+    alt: 'sass',
   },
   {
     src: `${imgPathFront}less.png`,
-    alt: 'less'
+    alt: 'less',
   },
   {
     src: `${imgPathFront}yarn.png`,
-    alt: 'yarn'
+    alt: 'yarn',
   },
   {
     src: `${imgPathFront}webpack.png`,
-    alt: 'webpack'
+    alt: 'webpack',
   },
   {
     src: `${imgPathFront}html2.png`,
-    alt: 'html'
+    alt: 'html',
   },
   {
     src: `${imgPathFront}css2.png`,
-    alt: 'css'
+    alt: 'css',
   },
   {
     src: `${imgPathFront}jquery.png`,
-    alt: 'jquery'
+    alt: 'jquery',
   },
   {
     src: `${imgPathFront}npm.png`,
-    alt: 'npm'
+    alt: 'npm',
   },
   {
     src: `${imgPathFront}bootstrap1.png`,
-    alt: 'bootstrap'
+    alt: 'bootstrap',
   },
   {
     src: `${imgPathFront}eslint.png`,
-    alt: 'eslint'
+    alt: 'eslint',
   },
   {
     src: `${imgPathFront}enzym.png`,
-    alt: 'enzym'
+    alt: 'enzym',
   },
   {
     src: `${imgPathFront}jest.png`,
-    alt: 'jest'
-  }
+    alt: 'jest',
+  },
 ];

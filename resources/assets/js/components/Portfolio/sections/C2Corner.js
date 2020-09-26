@@ -10,19 +10,19 @@ import Pattern from '../parts/Pattern';
 class C2Corner extends Component {
   static propTypes = {
     page: PropTypes.shape({
-      page: PropTypes.string
-    })
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     page: {
-      page: ''
-    }
+      page: '',
+    },
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     const {
-      page: { page }
+      page: { page },
     } = nextProps;
 
     if (page === URLS.c2corner) {
@@ -36,12 +36,6 @@ class C2Corner extends Component {
     return (
       <Pattern
         classname="C2Corner"
-        logo={null}
-        logoText="C2CORNER"
-        url={Constants.c2corner}
-        effectClassIn="zoomIn"
-        effectClassOut="zoomOut"
-        technologies={() => <div className="technologies" />}
         description={() => (
           <div className="description">
             <p>
@@ -51,18 +45,24 @@ class C2Corner extends Component {
             </p>
           </div>
         )}
+        effectClassIn="zoomIn"
+        effectClassOut="zoomOut"
         figure={() => (
           <div>
             <span>View</span>
             <span>C2Corner</span>
           </div>
         )}
+        logo={null}
         logoDescription={() => (
           <p className="paragraph">
             High load platform for wholesales on the largest marketplaces such as
             Amazon&nbsp;and&nbsp;Ebay
           </p>
         )}
+        logoText="C2CORNER"
+        technologies={() => <div className="technologies" />}
+        url={Constants.c2corner}
       />
     );
   }

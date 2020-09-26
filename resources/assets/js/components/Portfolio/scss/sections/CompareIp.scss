@@ -296,20 +296,19 @@
   }
 
   .draw-border {
-    margin-top: 40px;
+    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
     background: none;
     border: none;
     cursor: pointer;
-    line-height: 1.5;
     font: 700 1.2rem 'Roboto Slab', sans-serif;
-    padding: 1em 2em;
     letter-spacing: 0.05rem;
+    line-height: 1.5;
+    margin-top: 40px;
+    padding: 1em 2em;
 
     &:focus {
       outline: 2px dotted #dc2e2e;
     }
-
-    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
   }
 
   @media screen and (max-width: 40em) {

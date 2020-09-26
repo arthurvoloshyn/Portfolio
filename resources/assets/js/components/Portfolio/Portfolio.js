@@ -15,10 +15,10 @@ import './scss/Portfolio.scss';
 const Portfolio = ({ setPage }) => (
   <div>
     <ReactFullpage
-      navigation={true}
-      keyboardScrolling={true}
-      licenseKey={Constants.fullPageLicenseKey}
       anchors={sectionUrls}
+      keyboardScrolling
+      licenseKey={Constants.fullPageLicenseKey}
+      navigation
       onLeave={(origin, { anchor }, direction) => {
         setPage(anchor);
       }}
@@ -38,11 +38,11 @@ const Portfolio = ({ setPage }) => (
 const matchDispatchToProps = { setPage };
 
 Portfolio.propTypes = {
-  setPage: PropTypes.func
+  setPage: PropTypes.func,
 };
 
 Portfolio.defaultProps = {
-  setPage: () => {}
+  setPage: () => {},
 };
 
 export default connect(null, matchDispatchToProps)(Portfolio);

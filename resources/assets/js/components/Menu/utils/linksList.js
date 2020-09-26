@@ -19,5 +19,5 @@ export const linksList = [
   URLS.smokezone,
   URLS.history24,
   URLS.welhome,
-  URLS.cherryPick
+  URLS.cherryPick,
 ];

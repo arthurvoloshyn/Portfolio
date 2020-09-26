@@ -17,7 +17,7 @@ const Portfolio = lazy(
   () =>
     new Promise(resolve => {
       setTimeout(() => resolve(import('../Portfolio/Portfolio')), 3000);
-    })
+    }),
 );
 const Home = lazy(() => import('../Home/Home'));
 
@@ -26,12 +26,12 @@ const Loading = <LoadingPage />;
 const { url_skills, url_contacts, url_portfolio, url_home } = URLS;
 
 const Content = ({ menu: { status } }) => (
-  <div id="main_container" className={status ? 'main-light' : 'main-dark'}>
+  <div className={status ? 'main-light' : 'main-dark'} id="main_container">
     <Suspense fallback={Loading}>
-      <Route exact path={url_skills} component={Skills} />
-      <Route exact path={url_contacts} component={Contact} />
-      <Route exact path={url_portfolio} component={Portfolio} />
-      <Route exact path={url_home} component={Home} />
+      <Route component={Skills} exact path={url_skills} />
+      <Route component={Contact} exact path={url_contacts} />
+      <Route component={Portfolio} exact path={url_portfolio} />
+      <Route component={Home} exact path={url_home} />
     </Suspense>
   </div>
 );
@@ -40,14 +40,14 @@ const mapStateToProps = ({ menu }) => ({ menu });
 
 Content.propTypes = {
   menu: PropTypes.shape({
-    status: PropTypes.bool
-  })
+    status: PropTypes.bool,
+  }),
 };
 
 Content.defaultProps = {
   menu: {
-    status: false
-  }
+    status: false,
+  },
 };
 
 export default connect(mapStateToProps)(Content);

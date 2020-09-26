@@ -7,7 +7,7 @@ const effects = [
   // Effect 6
   {
     options: {
-      shapeColors: ['#fff', '#dedede', '#8c8c8c', '#545454', '#000', '#dc2e2e']
+      shapeColors: ['#fff', '#dedede', '#8c8c8c', '#545454', '#000', '#dc2e2e'],
     },
     hide: {
       lettersAnimationOpts: {
@@ -18,10 +18,10 @@ const effects = [
           value: [1, 0],
           duration: 100,
           delay: (t, i, total) => (total - i - 1) * 20,
-          easing: 'linear'
+          easing: 'linear',
         },
-        scale: [1, 0]
-      }
+        scale: [1, 0],
+      },
     },
     show: {
       lettersAnimationOpts: {
@@ -29,7 +29,7 @@ const effects = [
         delay: (t, i) => i * 60,
         easing: 'easeInExpo',
         opacity: [0, 1],
-        scale: [0, 1]
+        scale: [0, 1],
       },
       shapesAnimationOpts: {
         duration: 700,
@@ -41,11 +41,11 @@ const effects = [
         rotate: () => [0, random(-16, 16)],
         opacity: [
           { value: 1, duration: 1, easing: 'linear' },
-          { value: 0, duration: 700, easing: 'easeOutQuad' }
-        ]
-      }
-    }
-  }
+          { value: 0, duration: 700, easing: 'easeOutQuad' },
+        ],
+      },
+    },
+  },
 ];
 
 class Slideshow {
@@ -73,7 +73,7 @@ class Slideshow {
     this.isAnimating = true;
 
     let newPos;
-    let currentPos = this.current;
+    const currentPos = this.current;
 
     if (direction === 'next') {
       newPos = currentPos < this.slidesTotal - 1 ? currentPos + 1 : 0;
@@ -94,7 +94,7 @@ class Slideshow {
         this.DOM.slides[currentPos].style.opacity = 0;
         this.DOM.slides[newPos].classList.add('slide--current');
         this.words[newPos].show(effects[newPos].show).then(() => (this.isAnimating = false));
-      }
+      },
     });
 
     this.words[newPos].hide();

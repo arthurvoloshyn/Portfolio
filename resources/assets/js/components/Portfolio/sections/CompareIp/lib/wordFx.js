@@ -33,7 +33,7 @@ const randomBetween = (minValue, maxValue, precision) => {
     precision = 2;
   }
   return parseFloat(
-    Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(precision)
+    Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(precision),
   );
 };
 
@@ -47,7 +47,7 @@ class Shape {
       shapeTypes: ['circle', 'rect', 'polygon'],
       shapeColors: ['#e07272', '#0805b5', '#49c6ff', '#8bc34a', '#1e1e21', '#e24e81', '#e0cd24'],
       shapeFill: true,
-      shapeStrokeWidth: 1
+      shapeStrokeWidth: 1,
     };
     Object.assign(this.options, options);
 
@@ -97,7 +97,7 @@ class Shape {
       this.DOM.el.setAttribute(
         'points',
         `${left} ${top + height}, ${left + width / 2} ${bottom - width}, ${left + width} ${top +
-          height}`
+          height}`,
       );
     }
   };
@@ -114,7 +114,7 @@ class Letter {
     this.DOM.el = el;
     this.DOM.svg = svg;
     this.options = {
-      totalShapes: 10
+      totalShapes: 10,
     };
     const { totalShapes } = this.options;
     Object.assign(this.options, options);
@@ -123,6 +123,7 @@ class Letter {
     this.init();
     this.initEvents();
   }
+
   init = () => {
     this.shapes = [];
     for (let i = 0; i <= this.totalShapes - 1; ++i) {
@@ -131,6 +132,7 @@ class Letter {
       this.DOM.svg.appendChild(shape.DOM.el);
     }
   };
+
   initEvents = () => {
     window.addEventListener(
       'resize',
@@ -140,7 +142,7 @@ class Letter {
           const shape = this.shapes[i];
           shape.onResize(this.rect);
         }
-      }, 20)
+      }, 20),
     );
   };
 }
@@ -150,20 +152,22 @@ class Word {
     this.DOM = {};
     this.DOM.el = el;
     this.options = {
-      shapesOnTop: false
+      shapesOnTop: false,
     };
     Object.assign(this.options, options);
     this.init();
     this.initEvents();
   }
+
   init = () => {
     this.createSVG();
     charming(this.DOM.el);
     this.letters = [];
     Array.from(this.DOM.el.querySelectorAll('span')).forEach(letter =>
-      this.letters.push(new Letter(letter, this.DOM.svg, this.options))
+      this.letters.push(new Letter(letter, this.DOM.svg, this.options)),
     );
   };
+
   initEvents = () => {
     window.addEventListener(
       'resize',
@@ -176,9 +180,10 @@ class Word {
         this.DOM.svg.setAttribute('width', `${width}px`);
         this.DOM.svg.setAttribute('height', `${width}px`);
         this.DOM.svg.setAttribute('viewbox', `0 0 ${width} ${height}`);
-      }, 20)
+      }, 20),
     );
   };
+
   createSVG = () => {
     const { width, height } = winsize;
     const { shapesOnTop } = this.options;
@@ -194,8 +199,11 @@ class Word {
       this.DOM.el.parentNode.insertBefore(this.DOM.svg, this.DOM.el);
     }
   };
+
   show = config => this.toggle('show', config);
+
   hide = config => this.toggle('hide', config);
+
   toggle = (action = 'show', config) =>
     new Promise((resolve, reject) => {
       const toggleNow = () => {
@@ -219,7 +227,7 @@ class Word {
               })(letter),
               lettersAnimationOpts && lettersAnimationOpts.delay
                 ? lettersAnimationOpts.delay(letter.DOM.el, i)
-                : 0
+                : 0,
             );
           }
         }

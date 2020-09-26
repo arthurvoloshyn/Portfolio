@@ -17,7 +17,7 @@ const configAlert = {
   position: 'top-right',
   effect: 'scale',
   beep: false,
-  timeout: 2000
+  timeout: 2000,
 };
 
 class Form extends Component {
@@ -26,9 +26,9 @@ class Form extends Component {
       username: PropTypes.string,
       subject: PropTypes.string,
       email: PropTypes.string,
-      body: PropTypes.string
+      body: PropTypes.string,
     }),
-    getAction: PropTypes.func
+    getAction: PropTypes.func,
   };
 
   static defaultProps = {
@@ -36,20 +36,24 @@ class Form extends Component {
       username: '',
       subject: '',
       email: '',
-      body: ''
+      body: '',
     },
-    getAction: () => {}
+    getAction: () => {},
   };
 
   contactForm = createRef();
+
   username = createRef();
+
   email = createRef();
+
   subject = createRef();
+
   body = createRef();
 
   _send = () => {
     const {
-      contact: { username, subject, email, body }
+      contact: { username, subject, email, body },
     } = this.props;
 
     Alert.info('Message is Sent', configAlert);
@@ -59,7 +63,7 @@ class Form extends Component {
         username,
         subject,
         email,
-        body
+        body,
       })
       .then(() => Alert.success('Message Sent', configAlert))
       .catch(() => Alert.error('Error(', configAlert));
@@ -131,7 +135,7 @@ class Form extends Component {
 
   render() {
     const {
-      contact: { username, subject, email, body }
+      contact: { username, subject, email, body },
     } = this.props;
 
     return (
@@ -139,42 +143,42 @@ class Form extends Component {
         <p>Contact me</p>
         <p>If you have any question, use form below ...</p>
 
-        <form onSubmit={this._onSubmit} ref={this.contactForm}>
+        <form ref={this.contactForm} onSubmit={this._onSubmit}>
           <div>
             <input
+              ref={this.username}
+              name={USERNAME}
+              onChange={this._onKeyUp}
               placeholder="Name"
               type="text"
-              name={USERNAME}
-              ref={this.username}
               value={username}
-              onChange={this._onKeyUp}
             />
             <input
+              ref={this.email}
+              name={EMAIL}
+              onChange={this._onKeyUp}
               placeholder="Email"
               type="text"
-              name={EMAIL}
-              ref={this.email}
               value={email}
-              onChange={this._onKeyUp}
             />
           </div>
           <div>
             <input
+              ref={this.subject}
+              name={SUBJECT}
+              onChange={this._onKeyUp}
               placeholder="Subject"
               type="text"
-              name={SUBJECT}
-              ref={this.subject}
               value={subject}
-              onChange={this._onKeyUp}
             />
           </div>
           <div>
             <textarea
-              placeholder="Message"
-              name={BODY}
               ref={this.body}
-              value={body}
+              name={BODY}
               onChange={this._onKeyUp}
+              placeholder="Message"
+              value={body}
             />
           </div>
           <div>
