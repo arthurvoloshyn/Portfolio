@@ -77,7 +77,7 @@ class Pattern extends Component {
         </div>
 
         <div className={`logo-container ${activeSide ? show : hide}`}>
-          {logo ? <img alt={classname} src={logo} /> : <p className="logoText"> {logoText}</p>}
+          {logo ? <img alt={classname} src={logo} /> : <p className="logoText">{logoText}</p>}
 
           {logoDescription()}
 

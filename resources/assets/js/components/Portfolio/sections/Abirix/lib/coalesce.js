@@ -1,4 +1,4 @@
-import { DetectBrowser } from '../../../../../services/DetectBrowser';
+import DetectBrowser from '../../../../../services/DetectBrowser';
 
 import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../common/util';
 

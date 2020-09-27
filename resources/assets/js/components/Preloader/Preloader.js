@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { URLS } from '../../constants/urls';
-import { IMGS } from '../../constants/imgs';
+import URLS from '../../constants/urls';
+import IMGS from '../../constants/imgs';
 
 import Loading from './lib/Loading';
 

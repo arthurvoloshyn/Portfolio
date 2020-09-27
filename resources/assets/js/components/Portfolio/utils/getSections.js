@@ -1,5 +1,5 @@
 import React from 'react';
-import { URLS } from '../../../constants/urls';
+import URLS from '../../../constants/urls';
 import Linkful from '../sections/Linkful/Linkful';
 import CompareIp from '../sections/CompareIp/CompareIp';
 import Smsplaza from '../sections/Smsplaza/Smsplaza';

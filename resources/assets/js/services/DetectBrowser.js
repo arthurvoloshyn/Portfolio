@@ -1,4 +1,4 @@
-export const DetectBrowser = {
+const DetectBrowser = {
   isOpera: () =>
     (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
 
@@ -24,3 +24,5 @@ export const DetectBrowser = {
   // Blink engine detection
   isBlink: () => (isChrome || isOpera) && !!window.CSS,
 };
+
+export default DetectBrowser;

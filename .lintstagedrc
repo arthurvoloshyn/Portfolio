@@ -4,7 +4,6 @@
     "git add"
   ],
   "resources/assets/js/**/*.+(js|jsx)": [
-    "eslint --fix --max-warnings=0",
     "git add"
   ],
   "resources/assets/js/**/*.+(scss)": [

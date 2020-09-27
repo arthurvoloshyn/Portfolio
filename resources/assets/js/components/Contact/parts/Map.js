@@ -2,7 +2,7 @@ import React from 'react';
 import { Map, Marker, TileLayer } from 'react-leaflet';
 
 import Constants from '../../../constants/constants';
-import { IMGS } from '../../../constants/imgs';
+import IMGS from '../../../constants/imgs';
 
 const coordinates = {
   lat: 48.921501,

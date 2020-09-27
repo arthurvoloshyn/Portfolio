@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { URLS } from '../../constants/urls';
+import URLS from '../../constants/urls';
 
 import LoadingPage from '../LoadingPage';
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Constants from '../../../constants/constants';
-import { URLS } from '../../../constants/urls';
+import URLS from '../../../constants/urls';
 
 import Pattern from '../parts/Pattern';
 

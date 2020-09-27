@@ -1,4 +1,4 @@
-import { URLS } from '../constants/urls';
+import URLS from '../constants/urls';
 import { ACTION_RELOAD_PAGE, ACTION_SET_PAGE } from '../constants/actionTypes';
 
 const path = window.location.href.split('/')[3].split('#');

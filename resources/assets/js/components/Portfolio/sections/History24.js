@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Constants from '../../../constants/constants';
-import { URLS } from '../../../constants/urls';
-import { IMGS } from '../../../constants/imgs';
+import URLS from '../../../constants/urls';
+import IMGS from '../../../constants/imgs';
 
 import Pattern from '../parts/Pattern';
 

@@ -1,4 +1,4 @@
-export const URLS = {
+const URLS = {
   main: 'main',
   skills: 'skills',
   portfolio: 'portfolio',
@@ -23,3 +23,5 @@ export const URLS = {
   url_portfolio: '/portfolio',
   url_home: '/',
 };
+
+export default URLS;

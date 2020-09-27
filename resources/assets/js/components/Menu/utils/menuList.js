@@ -1,4 +1,4 @@
-import { URLS } from '../../../constants/urls';
+import URLS from '../../../constants/urls';
 
 const { portfolio, skills, contacts } = URLS;
 

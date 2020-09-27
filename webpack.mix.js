@@ -20,7 +20,7 @@ const mix = require('laravel-mix');
 // });
 
 mix
-  .react('resources/assets/js/app.js', 'public/js')
+  .react('resources/assets/js/index.js', 'public/js')
   .browserSync({
     proxy: 'portfolio'
   })

@@ -1,4 +1,4 @@
-import { IMGS } from '../../../constants/imgs';
+import IMGS from '../../../constants/imgs';
 
 const { imgPathBack, imgPathFront, imgPathOther } = IMGS;
 

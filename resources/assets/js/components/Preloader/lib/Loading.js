@@ -7,7 +7,7 @@ import { setStatus } from '../../../actions/preloader';
 import { reloadPage, setPage } from '../../../actions/page';
 import { setStatusMenu } from '../../../actions/menu';
 
-import { URLS } from '../../../constants/urls';
+import URLS from '../../../constants/urls';
 
 import PathLoader from './PathLoader';
 

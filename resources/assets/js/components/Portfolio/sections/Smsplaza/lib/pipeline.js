@@ -1,4 +1,4 @@
-import { DetectBrowser } from '../../../../../services/DetectBrowser';
+import DetectBrowser from '../../../../../services/DetectBrowser';
 
 import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../common/util';
 

@@ -25,7 +25,7 @@
     <meta name="apple-mobile-web-app-title" content="{{ $meta['title'] }}" />
     <meta name="theme-color" content="#ffffff" />
 
-    <link rel="preload" href="{{ mix('js/app.js') }}" as="script" />
+    <link rel="preload" href="{{ mix('js/index.js') }}" as="script" />
 
     {{--ICONS--}}
 
@@ -93,7 +93,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js" integrity="sha256-6O5DljdGA6AiaEVC/Zn8pNLNbQGparYTI9091fGX64k=" crossorigin="anonymous"></script>
 
-<script src="{{ mix('js/app.js') }}"></script>
+<script src="{{ mix('js/index.js') }}"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GOOGLE_ANALYTIC') }}"></script>

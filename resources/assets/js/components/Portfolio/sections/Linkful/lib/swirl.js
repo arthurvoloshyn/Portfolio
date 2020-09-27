@@ -1,6 +1,6 @@
 import SimplexNoise from 'simplex-noise';
 
-import { DetectBrowser } from '../../../../../services/DetectBrowser';
+import DetectBrowser from '../../../../../services/DetectBrowser';
 
 import { cos, fadeInOut, lerp, rand, randRange, sin, TAU } from '../../common/util';
 

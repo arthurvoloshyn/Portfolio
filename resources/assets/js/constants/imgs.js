@@ -1,6 +1,6 @@
 const imgPath = '../imgs';
 
-export const IMGS = {
+const IMGS = {
   preloader: `${imgPath}/logo.png`,
 
   location: `${imgPath}/location-pin.png`,
@@ -21,3 +21,5 @@ export const IMGS = {
   cherries: `${imgPath}/cherries.svg`,
   arcbazar: `${imgPath}/arcbazar_logo.png`,
 };
+
+export default IMGS;

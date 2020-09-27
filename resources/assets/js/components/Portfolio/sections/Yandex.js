@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IMGS } from '../../../constants/imgs';
+import IMGS from '../../../constants/imgs';
 
 import Pattern from '../parts/Pattern';
 
