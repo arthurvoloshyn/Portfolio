@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars no-multi-assign */
 window._ = require('lodash');
 
 /**
@@ -52,3 +53,4 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+/* eslint-enable */

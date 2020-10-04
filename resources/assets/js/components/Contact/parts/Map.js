@@ -17,8 +17,8 @@ const Icon = L.icon({
   iconSize: [38, 38], // size of the icon
   iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
 });
-const { mapUrl, accessToken, accessTokenParam } = Constants;
-const URL = `${mapUrl}?${accessTokenParam}${accessToken}`;
+const { mapUrl, accessToken, accessTokenParam, accessTokenType } = Constants;
+const URL = `${mapUrl}?${accessTokenType}.${accessTokenParam}${accessToken}`;
 
 const MapLeaflet = () => (
   <Map center={position} className="map-container" id="mapid" zoom={zoom} zoomControl={false}>

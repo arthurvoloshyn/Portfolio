@@ -10,7 +10,8 @@ const Constants = {
   mapUrl: 'https://api.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png',
   accessTokenParam: 'access_token=',
   accessToken:
-    'pk.eyJ1IjoidmljdG9yYXRzdXRhIiwiYSI6ImNqOW9iNnJjczJnaW8zM3MyeDdrcXBuN3oifQ.gIWOmeqEuCRHKmWb_AMXFQ',
+    'eyJ1IjoidmljdG9yYXRzdXRhIiwiYSI6ImNqOW9iNnJjczJnaW8zM3MyeDdrcXBuN3oifQ.gIWOmeqEuCRHKmWb_AMXFQ',
+  accessTokenType: 'pk',
 
   fullPageLicenseKey: 'YOUR_KEY_HERE',
 
