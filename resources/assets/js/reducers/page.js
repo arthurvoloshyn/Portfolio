@@ -1,7 +1,8 @@
 import URLS from '../constants/urls';
 import { ACTION_RELOAD_PAGE, ACTION_SET_PAGE } from '../constants/actionTypes';
 
-const path = window.location.href.split('/')[3].split('#');
+const { href } = window.location;
+const path = href.split('/')[3].split('#');
 const page = path[1] || path[0];
 
 const initialState = {
