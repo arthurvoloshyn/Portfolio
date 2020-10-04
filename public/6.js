@@ -6169,7 +6169,7 @@ var Linkful = function (_Component) {
                   'a',
                   {
                     target: '_blank',
-                    href: _constants2.default.linksfulUrl
+                    href: _constants2.default.linkfulUrl
                   },
                   _react2.default.createElement('div', { className: 'logo' })
                 ),
@@ -6180,7 +6180,7 @@ var Linkful = function (_Component) {
                     'a',
                     {
                       target: '_blank',
-                      href: _constants2.default.linksfulUrl
+                      href: _constants2.default.linkfulUrl
                     },
                     'LINKFUL - A STUNNING WAY TO CREATE A\xA0PERFECT ABOUT\xA0ME PAGE!'
                   )
@@ -6207,7 +6207,7 @@ var Linkful = function (_Component) {
                 {
                   className: 'mt-50 description',
                   target: '_blank',
-                  href: _constants2.default.linksfulUrl
+                  href: _constants2.default.linkfulUrl
                 },
                 'CHECK IT OUT'
               )
