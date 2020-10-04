@@ -15,7 +15,7 @@ const Home = ({ preloader: { preloader } }) => {
       <ReactRotatingText items={['ReactJs', 'VueJs', 'NodeJs']} typingInterval={100} />
     );
 
-  const { linkedin, git, telegramm } = Constants;
+  const { linkedin, git, telegram } = Constants;
 
   return (
     <div className="ip-main for_fade">
@@ -37,7 +37,7 @@ const Home = ({ preloader: { preloader } }) => {
         <a href={git} rel="noopener noreferrer" target="_blank">
           <div />
         </a>
-        <a href={telegramm} rel="noopener noreferrer" target="_blank">
+        <a href={telegram} rel="noopener noreferrer" target="_blank">
           <div />
         </a>
       </div>

@@ -1,11 +1,11 @@
-import { ACTION_SET_MENU_STATUS, ACTION_TOGGLE_MENU_STATUS } from '../constants/actionTypes';
+import ACTION_TYPES from '../constants/actionTypes';
 
 export const toggleStatus = status => ({
-  type: ACTION_TOGGLE_MENU_STATUS,
+  type: ACTION_TYPES.TOGGLE_MENU_STATUS,
   status,
 });
 
 export const setStatusMenu = status => ({
-  type: ACTION_SET_MENU_STATUS,
+  type: ACTION_TYPES.SET_MENU_STATUS,
   status,
 });

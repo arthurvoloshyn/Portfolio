@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { setStatus } from '../../../actions/preloader';
+import setStatus from '../../../actions/preloader';
 import { reloadPage, setPage } from '../../../actions/page';
 import { setStatusMenu } from '../../../actions/menu';
 

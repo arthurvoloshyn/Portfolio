@@ -1,4 +1,4 @@
-import { ACTION_UPDATE_CONTACT } from '../constants/actionTypes';
+import ACTION_TYPES from '../constants/actionTypes';
 
 const initialState = {
   username: '',
@@ -9,7 +9,7 @@ const initialState = {
 
 const contactReducer = (state = initialState, { type, fieldName, value }) => {
   switch (type) {
-    case ACTION_UPDATE_CONTACT: {
+    case ACTION_TYPES.UPDATE_CONTACT: {
       return {
         ...state,
         [fieldName]: value,

@@ -1,6 +1,8 @@
-import { ACTION_SET_PRELOADER_STATUS } from '../constants/actionTypes';
+import ACTION_TYPES from '../constants/actionTypes';
 
-export const setStatus = preloader => ({
-  type: ACTION_SET_PRELOADER_STATUS,
+const setStatus = preloader => ({
+  type: ACTION_TYPES.SET_PRELOADER_STATUS,
   preloader,
 });
+
+export default setStatus;

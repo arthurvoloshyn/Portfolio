@@ -1,11 +1,11 @@
-import { ACTION_RELOAD_PAGE, ACTION_SET_PAGE } from '../constants/actionTypes';
+import ACTION_TYPES from '../constants/actionTypes';
 
 export const setPage = page => ({
-  type: ACTION_SET_PAGE,
+  type: ACTION_TYPES.SET_PAGE,
   page,
 });
 
 export const reloadPage = statusReload => ({
-  type: ACTION_RELOAD_PAGE,
+  type: ACTION_TYPES.RELOAD_PAGE,
   statusReload,
 });

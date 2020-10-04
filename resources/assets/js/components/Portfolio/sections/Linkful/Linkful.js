@@ -48,7 +48,7 @@ class Linkful extends Component {
 
   render() {
     const { info } = this.state;
-    const { linksfulUrl } = Constants;
+    const { linkfulUrl } = Constants;
 
     return (
       <div className="demo-2 linkful">
@@ -58,12 +58,12 @@ class Linkful extends Component {
           <div className="content content--canvas-linkful">
             <div className="linkful-container">
               <div className="header">
-                <a href={linksfulUrl} rel="noopener noreferrer" target="_blank">
+                <a href={linkfulUrl} rel="noopener noreferrer" target="_blank">
                   <div className="logo" />
                 </a>
 
                 <div className="description">
-                  <a href={linksfulUrl} rel="noopener noreferrer" target="_blank">
+                  <a href={linkfulUrl} rel="noopener noreferrer" target="_blank">
                     LINKFUL - A STUNNING WAY TO CREATE A&nbsp;PERFECT ABOUT&nbsp;ME PAGE!
                   </a>
                 </div>
@@ -88,7 +88,7 @@ class Linkful extends Component {
 
               <a
                 className="mt-50 description"
-                href={linksfulUrl}
+                href={linkfulUrl}
                 rel="noopener noreferrer"
                 target="_blank"
               >

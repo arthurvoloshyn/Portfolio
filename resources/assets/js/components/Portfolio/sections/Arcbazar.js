@@ -70,7 +70,7 @@ class Arcbazar extends Component {
             <p className="paragraph">Create unique interie and landscape design</p>
           )}
           technologies={() => <div className="technologies" />}
-          url={Constants.arcbazr}
+          url={Constants.arcbazar}
         />
       </ParallaxMousemove>
     );

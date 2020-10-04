@@ -1,17 +1,18 @@
 const imgPath = '../imgs';
+const skillsPath = '/skills';
 
 const IMGS = {
   preloader: `${imgPath}/logo.png`,
 
   location: `${imgPath}/location-pin.png`,
 
-  imgPathBack: `${imgPath}/skills/backand/`,
-  imgPathFront: `${imgPath}/skills/frontend/`,
-  imgPathOther: `${imgPath}/skills/other/`,
+  imgPathBack: `${imgPath}${skillsPath}/backand/`,
+  imgPathFront: `${imgPath}${skillsPath}/frontend/`,
+  imgPathOther: `${imgPath}${skillsPath}/other/`,
 
   yandex: `${imgPath}/yandex/logo.png`,
   wellHome: `${imgPath}/wh.jpg`,
-  smokeZone: `${imgPath}/2.png`,
+  smokeZone: `${imgPath}/smoke_zone.png`,
   hookah: `${imgPath}/hookah3.svg`,
   skyline: `${imgPath}/Skyline.png`,
   history: `${imgPath}/history.jpg`,

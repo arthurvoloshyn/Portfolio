@@ -1,7 +1,9 @@
-import { ACTION_UPDATE_CONTACT } from '../constants/actionTypes';
+import ACTION_TYPES from '../constants/actionTypes';
 
-export default (fieldName, value) => ({
-  type: ACTION_UPDATE_CONTACT,
+const updateContact = (fieldName, value) => ({
+  type: ACTION_TYPES.UPDATE_CONTACT,
   fieldName,
   value,
 });
+
+export default updateContact;
