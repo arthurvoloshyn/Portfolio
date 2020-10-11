@@ -26,6 +26,8 @@ My own portfolio build on React and Laravel
 
 - Copy `.env.dist` as `.env`
 
+- Replace the database and mail connection strings in the .env file
+
 - Migrate:
 
 `php artisan migrate`
