@@ -6,7 +6,7 @@ My own portfolio build on React and Laravel
 
 ## To clone
 
-- You'll need to have [git](https://git-scm.com/), [node](https://nodejs.org/en/), [php 7.2](https://www.php.net/), [mySQL](https://www.mysql.com/) and [composer](https://getcomposer.org/) installed in
+- You'll need to have [git](https://git-scm.com/), [node](https://nodejs.org/en/), [php 7.2](https://www.php.net/), [mySQL](https://www.mysql.com/), [composer](https://getcomposer.org/) and [libpng](http://www.libpng.org/pub/png/libpng.html) installed in
   your system.
 
 `git clone https://github.com/ArturW1998/Portfolio.git`
