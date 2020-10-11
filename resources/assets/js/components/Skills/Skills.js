@@ -1,33 +1,39 @@
 import React, { Component, createRef } from 'react';
 
-import { getSkills } from './utils/getSkills';
-
+import getSkills from '../../utils/skills';
 import SliderFx from './lib/SliderFx';
 
 import './scss/Skills.scss';
 
-const skillsList = getSkills();
-
 class Skills extends Component {
   slideshow = createRef();
 
+  SliderFx = null;
+
   componentDidMount() {
-    this.SliderFx = new SliderFx(this.slideshow.current, {
+    const { current } = this.slideshow;
+
+    this.SliderFx = new SliderFx(current, {
       easing: 'cubic-bezier(.8,0,.2,1)',
     });
-    this.SliderFx.init();
+
+    const { init } = this.SliderFx;
+
+    init();
   }
 
   render() {
+    const skillsList = getSkills();
+
     return (
       <div ref={this.slideshow} className="for_fade" id="Skills_slideshow">
         <ul>
           {skillsList.map((slide, i) => (
-            <li key={i}>
+            <li key={`skillSlide_${i}`}>
               <div className="slide">
                 <div>
                   {slide.map((skills, index) => (
-                    <div key={index}>
+                    <div key={`skillRow_${index}`}>
                       {skills.map(({ src, alt }) => (
                         <img key={alt} alt={alt} src={src} />
                       ))}

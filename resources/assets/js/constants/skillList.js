@@ -1,8 +1,8 @@
-import IMGS from '../../../constants/imgs';
+import IMGS from './imgs';
 
 const { imgPathBack, imgPathFront, imgPathOther } = IMGS;
 
-export const skillsList = [
+const skillList = [
   {
     src: `${imgPathBack}nodejs.png`,
     alt: 'nodejs',
@@ -26,6 +26,10 @@ export const skillsList = [
   {
     src: `${imgPathBack}git.png`,
     alt: 'git',
+  },
+  {
+    src: `${imgPathOther}docker.svg`,
+    alt: 'docker',
   },
   {
     src: `${imgPathBack}apache.png`,
@@ -62,6 +66,14 @@ export const skillsList = [
   {
     src: `${imgPathFront}react.png`,
     alt: 'react',
+  },
+  {
+    src: `${imgPathFront}react-native.png`,
+    alt: 'React Native',
+  },
+  {
+    src: `${imgPathFront}pwa.png`,
+    alt: 'Progressive Web Applications (PWA)',
   },
   {
     src: `${imgPathFront}redux.png`,
@@ -116,6 +128,14 @@ export const skillsList = [
     alt: 'eslint',
   },
   {
+    src: `${imgPathFront}prettier.png`,
+    alt: 'Prettier',
+  },
+  {
+    src: `${imgPathFront}stylelint.svg`,
+    alt: 'Stylelint',
+  },
+  {
     src: `${imgPathFront}enzym.png`,
     alt: 'enzym',
   },
@@ -123,4 +143,10 @@ export const skillsList = [
     src: `${imgPathFront}jest.png`,
     alt: 'jest',
   },
+  {
+    src: `${imgPathFront}nextjs.svg`,
+    alt: 'Next.js',
+  },
 ];
+
+export default skillList;
