@@ -1,3 +1,10 @@
+const pathsRect =
+  'M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33';
+const pathsCurveRight =
+  'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33';
+const pathsCurveLeft =
+  'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33';
+
 class SliderFx {
   constructor(el, options) {
     this.Modernizr = window.Modernizr;
@@ -18,13 +25,10 @@ class SliderFx {
       easing: 'ease',
       // path definitions
       paths: {
-        rect:
-          'M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33',
+        rect: pathsRect,
         curve: {
-          right:
-            'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33',
-          left:
-            'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33',
+          right: pathsCurveRight,
+          left: pathsCurveLeft,
         },
       },
     };
@@ -35,47 +39,46 @@ class SliderFx {
   _morphSVGs = callback => {
     const {
       paths: {
-        rect: optionsRect,
-        curve: { left: optionsLeft, right: optionsRight },
+        rect: pathRectangle,
+        curve: { left: pathCurvedLeft, right: pathCurvedRight },
       },
-      speed: optionsSpeed,
+      speed,
     } = this.options;
     const { easeout, elastic } = mina;
 
-    const speed = optionsSpeed;
-    const pathCurvedLeft = optionsLeft;
-    const pathCurvedRight = optionsRight;
-    const pathRectangle = optionsRect;
     const dir = this.old < this.curr ? 'right' : 'left';
 
+    const {
+      [this.old]: { path },
+      [this.curr]: currItem,
+    } = this.items;
+
     // morph svg path on exiting slide to "curved"
-    this.items[this.old].path
+    path
       .stop()
       .animate({ path: dir === 'right' ? pathCurvedLeft : pathCurvedRight }, speed * 0.5, easeout);
 
     // the slider starts a bit later...
-    setTimeout(() => {
-      callback.call();
-    }, speed * 0.2);
+    setTimeout(() => callback.call(), speed * 0.2);
 
     // change svg path on entering slide to "curved"
-    const currItem = this.items[this.curr];
     currItem
       .querySelector('path')
       .setAttribute('d', dir === 'right' ? pathCurvedLeft : pathCurvedRight);
+
     // morph svg path on entering slide to "rectangle"
-    setTimeout(() => {
-      currItem.path.stop().animate({ path: pathRectangle }, speed * 3, elastic);
-    }, speed * 0.5);
+    setTimeout(
+      () => currItem.path.stop().animate({ path: pathRectangle }, speed * 3, elastic),
+      speed * 0.5,
+    );
   };
 
   extend = (a, b) => {
-    for (const key in b) {
-      if (Object.prototype.hasOwnProperty.call(b, key)) {
-        a[key] = b[key];
-      }
-    }
-    return a;
+    const keys = Object.keys(b);
+    const newObj = a;
+
+    keys.forEach(key => Object.prototype.hasOwnProperty.call(b, key) && (newObj[key] = b[key]));
+    return newObj;
   };
 
   init = () => {
@@ -83,6 +86,7 @@ class SliderFx {
     this._initEvents();
   };
 
+  /* eslint-disable no-param-reassign */
   _init = () => {
     // the list of items
     this.itemsList = this.el.querySelector('ul');
@@ -99,13 +103,16 @@ class SliderFx {
     // apply the transition
     if (this.support) {
       const { speed, easing } = this.options;
+
       this.itemsList.style.WebkitTransition = `-webkit-transform ${speed}ms ${easing}`;
       this.itemsList.style.transition = `transform ${speed}ms ${easing}`;
     }
+
     this.items.forEach(item => {
       // each item will have a width of 100 / itemsCount
       item.style.width = `${100 / this.itemsCount}%`;
     });
+
     // add navigation arrows if there is more than 1 item
     if (this.itemsCount > 1) {
       // add navigation arrows (the previous arrow is not shown initially):
@@ -116,9 +123,7 @@ class SliderFx {
         el.className = c;
         el.innerHTML = content;
 
-        if (disabled) {
-          classie.add(el, 'disabled');
-        }
+        disabled && classie.add(el, 'disabled');
 
         nav.appendChild(el);
 
@@ -141,22 +146,33 @@ class SliderFx {
       this.navNext = addArrow('next', '&gt;');
       this.el.appendChild(nav);
 
-      // add svgs with rectangle path
+      // add SVGs with rectangle path
       this.items.forEach(item => {
         const {
           paths: { rect },
         } = this.options;
+
         const svg = createSvg(
-          `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none"><path d="${rect}"/></svg>`,
+          `<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 80 60"
+            preserveAspectRatio="none"
+          >
+            <path d="${rect}" />
+          </svg>`,
         );
 
         item.insertBefore(svg, item.childNodes[0]);
 
         const s = Snap(item.querySelector('svg'));
+
         item.path = s.select('path');
       });
     }
   };
+  /* eslint-enable */
 
   _initEvents = () => {
     if (this.itemsCount > 1) {
@@ -167,15 +183,11 @@ class SliderFx {
         this._navigate('next');
       });
 
-      const transitionendfn = () => {
-        this.isAnimating = false;
-      };
+      const transitionendfn = () => (this.isAnimating = false);
 
-      if (this.support) {
-        this.itemsList.addEventListener(transEndEventName, transitionendfn);
-      } else {
-        transitionendfn.call();
-      }
+      this.support
+        ? this.itemsList.addEventListener(transEndEventName, transitionendfn)
+        : transitionendfn.call();
 
       // keyboard navigation events
       document.addEventListener('keydown', ({ keyCode: evKeyCode, which: evWhich }) => {
@@ -206,10 +218,13 @@ class SliderFx {
     ) {
       return false;
     }
+
     this.isAnimating = true;
     this.direction = dir;
+
     // update old and current values
     this.old = this.curr;
+
     if (dir === 'next' && this.curr < this.itemsCount - 1) {
       ++this.curr;
     } else if (dir === 'prev' && this.curr > 0) {
@@ -220,15 +235,14 @@ class SliderFx {
   };
 
   _slide = () => {
-    const self = this;
-
     const startSlider = () => {
       // check which navigation arrows should be shown
-      self._toggleNavControls();
+      this._toggleNavControls();
+
       // translate value
-      const translateVal = (-1 * self.curr * 100) / self.itemsCount;
-      self.itemsList.style.WebkitTransform = `translate3d(${translateVal}%,0,0)`;
-      self.itemsList.style.transform = `translate3d(${translateVal}%,0,0)`;
+      const translateVal = (-1 * this.curr * 100) / this.itemsCount;
+      this.itemsList.style.WebkitTransform = `translate3d(${translateVal}%,0,0)`;
+      this.itemsList.style.transform = `translate3d(${translateVal}%,0,0)`;
     };
 
     this._morphSVGs(startSlider);
