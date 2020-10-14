@@ -101,21 +101,21 @@ var Skills = function (_Component) {
                   null,
                   _react2.default.createElement('img', { src: imgPathBack + 'python1.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'nodejs.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'php1.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'nginx1.png' })
+                  _react2.default.createElement('img', { src: imgPathBack + 'php.png' }),
+                  _react2.default.createElement('img', { src: imgPathBack + 'nginx.png' })
                 ),
                 _react2.default.createElement(
                   'div',
                   null,
                   _react2.default.createElement('img', { src: imgPathBack + 'graphql .jpeg' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'mongo.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'mysql1.png' }),
+                  _react2.default.createElement('img', { src: imgPathBack + 'mysql.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'symfony.png' })
                 ),
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathBack + 'laravel3.png' }),
+                  _react2.default.createElement('img', { src: imgPathBack + 'laravel.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'lumen-logo.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'yii2.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'express1.png' })
@@ -143,7 +143,7 @@ var Skills = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'js1.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'js.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'vue.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'nuxt.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'vuex.png' })
@@ -187,16 +187,16 @@ var Skills = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'html2.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'css2.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'html.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'css.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'jquery.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'npm.png' })
                 ),
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'bootstrap1.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'enzym.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'bootstrap.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'enzyme.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'jest.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'eslint.png' })
                 ),

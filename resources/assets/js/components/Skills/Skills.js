@@ -5,6 +5,8 @@ import SliderFx from './lib/SliderFx';
 
 import './scss/Skills.scss';
 
+const skillsList = getSkills();
+
 class Skills extends Component {
   slideshow = createRef();
 
@@ -23,8 +25,6 @@ class Skills extends Component {
   }
 
   render() {
-    const skillsList = getSkills();
-
     return (
       <div ref={this.slideshow} className="for_fade" id="Skills_slideshow">
         <ul>
@@ -35,7 +35,7 @@ class Skills extends Component {
                   {slide.map((skills, index) => (
                     <div key={`skillRow_${index}`}>
                       {skills.map(({ src, alt }) => (
-                        <img key={alt} alt={alt} src={src} />
+                        <img key={alt} alt={alt} src={src} title={alt} />
                       ))}
                     </div>
                   ))}

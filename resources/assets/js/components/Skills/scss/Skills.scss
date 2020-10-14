@@ -28,19 +28,6 @@
         position: relative;
         z-index: -1;
       }
-
-      &:nth-child(2) > svg,
-      &:nth-child(3) > svg {
-        fill: #161517;
-      }
-
-      &:nth-child(4) > svg {
-        fill: #9d9e94;
-      }
-
-      &:nth-child(6) > svg {
-        fill: #e5b8ad;
-      }
     }
   }
 
