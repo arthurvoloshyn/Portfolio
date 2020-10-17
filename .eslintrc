@@ -318,6 +318,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/state-in-constructor": "off",
+    "react/static-property-placement": "off",
     "react/button-has-type": "off",
     "react/prop-types": "error",
 

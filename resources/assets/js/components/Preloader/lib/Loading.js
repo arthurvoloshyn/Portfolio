@@ -6,9 +6,7 @@ import PropTypes from 'prop-types';
 import setStatus from '../../../actions/preloader';
 import { reloadPage, setPage } from '../../../actions/page';
 import { setStatusMenu } from '../../../actions/menu';
-
 import URLS from '../../../constants/urls';
-
 import PathLoader from './PathLoader';
 
 class Loading extends Component {
@@ -70,26 +68,24 @@ class Loading extends Component {
 
   init = () => {
     const { setStatus } = this.props;
+    const ipLoaderCircle = document.getElementById('ip-loader-circle');
 
     $('#img_loader').removeClass('transparent');
     $('#img_loader').addClass('show');
 
-    this.loader = new PathLoader(document.getElementById('ip-loader-circle'));
+    this.loader = new PathLoader(ipLoaderCircle);
     setStatus(true);
 
-    const self = this;
-
     const onEndInitialAnimation = () => {
-      const { animations } = self.support;
-      const { setStatus: propsSetStatus } = self.props;
+      const { animations } = this.support;
+      const { setStatus: propsSetStatus } = this.props;
 
-      if (animations) {
-        self.container.removeEventListener(self.animEndEventName, onEndInitialAnimation);
-      }
+      animations &&
+        this.container.removeEventListener(this.animEndEventName, onEndInitialAnimation);
 
       $('.for_fade').css('visibility', 'hidden');
 
-      self.startLoading();
+      this.startLoading();
 
       setTimeout(() => {
         $('.for_fade').css('visibility', 'visible');
@@ -105,13 +101,11 @@ class Loading extends Component {
     // initial animation
     classie.add(this.container, 'loading');
 
-    const { animations } = self.support;
+    const { animations } = this.support;
 
-    if (animations) {
-      this.container.addEventListener(this.animEndEventName, onEndInitialAnimation);
-    } else {
-      onEndInitialAnimation();
-    }
+    animations
+      ? this.container.addEventListener(this.animEndEventName, onEndInitialAnimation)
+      : onEndInitialAnimation();
   };
 
   reloading = page => {
@@ -131,55 +125,49 @@ class Loading extends Component {
 
   startLoading = () => {
     // simulate loading something..
-
-    const self = this;
-
     const simulationFn = ({ setProgress }) => {
-      window.loadingFast ? (self.progress = 1) : (self.progress = 0);
+      window.loadingFast ? (this.progress = 1) : (this.progress = 0);
 
       const interval = setInterval(() => {
-        // self.progress = Math.min(self.progress + Math.random() * 0.1, 1);
-        self.progress = 1;
-        setProgress(self.progress);
+        this.progress = Math.min(this.progress + Math.random() * 0.1, 1);
+        setProgress(this.progress);
 
         // reached the end
-        if (self.progress === 1) {
+        if (this.progress === 1) {
           window.loadingFast = true;
 
           const {
             page: { page },
-          } = self.props;
+          } = this.props;
 
           if (page !== URLS.main || $(window).height() < 500) {
             $('#img_loader').addClass('transparent');
             $('#img_loader').removeClass('show');
           }
 
-          classie.remove(self.container, 'loading');
-          classie.add(self.container, 'loaded');
+          classie.remove(this.container, 'loading');
+          classie.add(this.container, 'loaded');
           clearInterval(interval);
 
           const onEndHeaderAnimation = ({ target }) => {
-            const { animations } = self.support;
+            const { animations } = this.support;
 
             if (animations) {
-              if (target !== self.header) return;
-              window.removeEventListener(self.animEndEventName, onEndHeaderAnimation);
+              if (target !== this.header) return;
+              window.removeEventListener(this.animEndEventName, onEndHeaderAnimation);
             }
 
             classie.add(document.body, 'layout-switch');
-            window.removeEventListener('scroll', self.noscroll);
+            window.removeEventListener('scroll', this.noscroll);
           };
 
-          const { animations } = self.support;
+          const { animations } = this.support;
 
-          if (animations) {
-            self.header.addEventListener(self.animEndEventName, onEndHeaderAnimation);
-          } else {
-            onEndHeaderAnimation();
-          }
+          animations
+            ? this.header.addEventListener(this.animEndEventName, onEndHeaderAnimation)
+            : onEndHeaderAnimation();
         }
-      }, 80);
+      }, 10);
     };
 
     const { setProgressFn } = this.loader;
@@ -187,9 +175,7 @@ class Loading extends Component {
     setProgressFn(simulationFn);
   };
 
-  noscroll = () => {
-    window.scrollTo(0, 0);
-  };
+  noscroll = () => window.scrollTo(0, 0);
 
   render() {
     return <div />;

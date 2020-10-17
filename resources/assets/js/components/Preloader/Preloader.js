@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 import URLS from '../../constants/urls';
 import IMGS from '../../constants/imgs';
-
 import Loading from './lib/Loading';
 
 import './scss/Preloader.scss';
 
+/* eslint-disable max-len */
 const Preloader = ({ page: { page }, menu: { status } }) => (
   <div className="ip-header" id="preloader_container">
     <h1 className="ip-logo">
@@ -35,6 +35,7 @@ const Preloader = ({ page: { page }, menu: { status } }) => (
     <Loading />
   </div>
 );
+/* eslint-enable */
 
 const mapStateToProps = ({ page, menu }) => ({ page, menu });
 
