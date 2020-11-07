@@ -1,4 +1,5 @@
 export const { PI, cos, sin, abs, sqrt, pow, round, random, atan2 } = Math;
+
 export const HALF_PI = 0.5 * PI;
 export const TAU = 2 * PI;
 export const TO_RAD = PI / 180;

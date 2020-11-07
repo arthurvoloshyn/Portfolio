@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import Constants from '../../../constants/constants';
 import URLS from '../../../constants/urls';
-
 import Pattern from '../parts/Pattern';
 
 class C2Corner extends Component {
@@ -25,11 +24,11 @@ class C2Corner extends Component {
       page: { page },
     } = nextProps;
 
-    if (page === URLS.c2corner) {
-      $('#fp-nav ul li a span').addClass('c2corner-bg');
-    } else {
-      $('#fp-nav ul li a span').removeClass('c2corner-bg');
-    }
+    const menuItems = $('#fp-nav ul li a span');
+
+    page === URLS.c2corner
+      ? menuItems.addClass('c2corner-bg')
+      : menuItems.removeClass('c2corner-bg');
   }
 
   render() {
@@ -53,7 +52,6 @@ class C2Corner extends Component {
             <span>C2Corner</span>
           </div>
         )}
-        logo={null}
         logoDescription={() => (
           <p className="paragraph">
             High load platform for wholesales on the largest marketplaces such as

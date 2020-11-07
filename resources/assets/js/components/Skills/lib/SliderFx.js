@@ -1,9 +1,11 @@
-const pathsRect =
-  'M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33';
-const pathsCurveRight =
-  'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33';
-const pathsCurveLeft =
-  'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33';
+const defaultPathsOptions = {
+  rect:
+    'M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33',
+  curveRight:
+    'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33',
+  curveLeft:
+    'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33',
+};
 
 class SliderFx {
   constructor(el, options) {
@@ -25,10 +27,10 @@ class SliderFx {
       easing: 'ease',
       // path definitions
       paths: {
-        rect: pathsRect,
+        rect: defaultPathsOptions.rect,
         curve: {
-          right: pathsCurveRight,
-          left: pathsCurveLeft,
+          right: defaultPathsOptions.curveRight,
+          left: defaultPathsOptions.curveLeft,
         },
       },
     };

@@ -5,30 +5,7 @@ import PropTypes from 'prop-types';
 import Constants from '../../../constants/constants';
 import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
-
 import Pattern from '../parts/Pattern';
-
-const style = {
-  outter: {
-    backgroundPosition: 'center',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden',
-    height: '100vh',
-  },
-  bgLayerStyle: {
-    backgroundImage: `url(${IMGS.history})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    width: '100vw',
-    position: 'absolute',
-    overflow: 'hidden',
-    minHeight: '100vh',
-    bottom: '0px',
-  },
-};
-
-const { outter, bgLayerStyle } = style;
 
 class History24 extends Component {
   static propTypes = {
@@ -48,17 +25,17 @@ class History24 extends Component {
       page: { page },
     } = nextProps;
 
-    if (page === URLS.history24) {
-      $('#fp-nav ul li a span').addClass('history24-bg');
-    } else {
-      $('#fp-nav ul li a span').removeClass('history24-bg');
-    }
+    const menuItems = $('#fp-nav ul li a span');
+
+    page === URLS.c2corner
+      ? menuItems.addClass('history24-bg')
+      : menuItems.removeClass('history24-bg');
   }
 
   render() {
     return (
-      <div style={outter}>
-        <div style={bgLayerStyle} />
+      <div className="history24-bg_outer">
+        <div className="history24-bg_layer" />
 
         <Pattern
           classname="History24"
@@ -75,7 +52,6 @@ class History24 extends Component {
           )}
           effectClassIn="zoomIn"
           effectClassOut="zoomOut"
-          figure={() => <div />}
           logo={IMGS.pantheon}
           logoDescription={() => (
             <p className="header-container">

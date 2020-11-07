@@ -2,33 +2,12 @@ import React from 'react';
 
 import Constants from '../../../constants/constants';
 import IMGS from '../../../constants/imgs';
-
+import sectionStyles from '../../../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
 
-const style = {
-  outter: {
-    background: 'white',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden',
-  },
-  bgLayerStyle: {
-    backgroundImage: `url(${IMGS.profilCity})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    width: '110%',
-    position: 'absolute',
-    overflow: 'hidden',
-    minHeight: '40vh',
-    bottom: '0px',
-  },
-};
-
-const { outter, bgLayerStyle } = style;
-
-export const Factoringvergelijken = () => (
-  <div style={outter}>
-    <div style={bgLayerStyle} />
+const Factoringvergelijken = () => (
+  <div style={sectionStyles.outer}>
+    <div className="factoringvergelijken-bg_layer" />
 
     <Pattern
       classname="Factoringvergelijken"
@@ -59,3 +38,5 @@ export const Factoringvergelijken = () => (
     />
   </div>
 );
+
+export default Factoringvergelijken;

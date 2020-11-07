@@ -2,29 +2,11 @@ import React from 'react';
 
 import IMGS from '../../../constants/imgs';
 import Constants from '../../../constants/constants';
-
 import Pattern from '../parts/Pattern';
 
-const style = {
-  outter: {
-    background: '#000000',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden',
-  },
-  bgLayerStyle: {
-    position: 'absolute',
-    height: '100%',
-  },
-};
-
-const { outter, bgLayerStyle } = style;
-
-export const Smoke_Zone = () => (
-  <div style={outter}>
-    <div style={bgLayerStyle}>
+const Smoke_Zone = () => (
+  <div className="smoke-zone-bg_outer">
+    <div className="smoke-zone-bg_layer">
       <img alt="Smoke Zone" src={IMGS.smokeZone} />
     </div>
 
@@ -43,7 +25,6 @@ export const Smoke_Zone = () => (
       )}
       effectClassIn="flipInX"
       effectClassOut="flipOutX"
-      figure={() => <div />}
       logo={IMGS.hookah}
       logoDescription={() => (
         <p className="header-container">
@@ -69,3 +50,5 @@ export const Smoke_Zone = () => (
     />
   </div>
 );
+
+export default Smoke_Zone;

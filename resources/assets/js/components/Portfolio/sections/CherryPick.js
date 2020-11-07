@@ -2,20 +2,11 @@ import React from 'react';
 import ParallaxMousemove from 'react-parallax-mousemove';
 
 import IMGS from '../../../constants/imgs';
-
+import sectionStyles from '../../../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
 
-const style = {
-  outter: {
-    background: 'white',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden',
-  },
-};
-
-export const CherryPick = () => (
-  <ParallaxMousemove containerStyle={style.outter}>
+const CherryPick = () => (
+  <ParallaxMousemove containerStyle={sectionStyles.outer}>
     <Pattern
       classname="CherryPick"
       description={() => (
@@ -29,7 +20,6 @@ export const CherryPick = () => (
       )}
       effectClassIn="jello"
       effectClassOut="zoomOutUp"
-      figure={() => <div />}
       logo={IMGS.cherries}
       logoDescription={() => (
         <p className="header-container">
@@ -50,7 +40,8 @@ export const CherryPick = () => (
           </div>
         </div>
       )}
-      url=""
     />
   </ParallaxMousemove>
 );
+
+export default CherryPick;

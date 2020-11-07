@@ -1,33 +1,12 @@
 import React from 'react';
 
 import IMGS from '../../../constants/imgs';
-
+import sectionStyles from '../../../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
 
-const style = {
-  outter: {
-    background: 'white',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden',
-  },
-  bgLayerStyle: {
-    backgroundImage: `url(${IMGS.skyline})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    width: '110%',
-    position: 'absolute',
-    overflow: 'hidden',
-    minHeight: '40vh',
-    bottom: '-50px',
-  },
-};
-
-const { outter, bgLayerStyle } = style;
-
-export const WellHome = () => (
-  <div style={outter}>
-    <div style={bgLayerStyle} />
+const WellHome = () => (
+  <div style={sectionStyles.outer}>
+    <div className="welhome-bg_layer" />
 
     <Pattern
       classname="WellHome"
@@ -50,7 +29,6 @@ export const WellHome = () => (
       )}
       effectClassIn="lightSpeedIn"
       effectClassOut="lightSpeedOut"
-      figure={() => <div />}
       logo={IMGS.wellHome}
       logoDescription={() => (
         <p className="header-container">
@@ -58,7 +36,8 @@ export const WellHome = () => (
         </p>
       )}
       technologies={() => <div className="technologies" />}
-      url=""
     />
   </div>
 );
+
+export default WellHome;

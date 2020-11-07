@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 
-import getSkills from '../../utils/skills';
+import getSkills from '../../utils/getSkills';
 import SliderFx from './lib/SliderFx';
 
 import './scss/Skills.scss';

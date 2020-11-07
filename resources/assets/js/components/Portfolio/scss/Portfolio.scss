@@ -40,18 +40,76 @@ $img-path: '/imgs';
 
 .houses-bg {
   background: #fff !important;
+
+  &_outer {
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &_layer {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+  }
 }
 
 .welhome-bg {
   background: #e6e6e6 !important;
+
+  &_layer {
+    background-image: url('#{$img-path}/Skyline.png');
+    background-position: center;
+    background-size: cover;
+    bottom: -50px;
+    min-height: 40vh;
+    overflow: hidden;
+    position: absolute;
+    width: 110%;
+  }
 }
 
 .history24-bg {
   background: #e6e6e6 !important;
+
+  &_outer {
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &_layer {
+    background-image: url('#{$img-path}/history.jpg');
+    background-position: center;
+    background-size: cover;
+    bottom: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+  }
 }
 
 .smoke-zone-bg {
   background: #d40080 !important;
+
+  &_outer {
+    background: center / cover #000;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &_layer {
+    height: 100%;
+    position: absolute;
+  }
 }
 
 .yandex-bg {
@@ -68,4 +126,15 @@ $img-path: '/imgs';
 
 .factoringvergelijken-bg {
   background: #000 !important;
+
+  &_layer {
+    background-image: url('#{$img-path}/profil_city.png');
+    background-position: center;
+    background-size: cover;
+    bottom: 0;
+    min-height: 40vh;
+    overflow: hidden;
+    position: absolute;
+    width: 110%;
+  }
 }

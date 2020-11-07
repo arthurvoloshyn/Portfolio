@@ -9,7 +9,6 @@ class Pattern extends Component {
     url: PropTypes.string,
     effectClassIn: PropTypes.string,
     effectClassOut: PropTypes.string,
-
     technologies: PropTypes.func,
     description: PropTypes.func,
     figure: PropTypes.func,
@@ -20,13 +19,12 @@ class Pattern extends Component {
     classname: '',
     logo: '',
     logoText: '',
-    url: '#',
+    url: '',
     effectClassIn: 'zoomIn',
     effectClassOut: 'zoomOut',
-
+    figure: () => <div />,
     technologies: () => {},
     description: () => {},
-    figure: () => {},
     logoDescription: () => {},
   };
 
@@ -45,11 +43,10 @@ class Pattern extends Component {
     };
   }
 
-  clickHandle = () => {
+  clickHandle = () =>
     this.setState(({ activeSide }) => ({
       activeSide: !activeSide,
     }));
-  };
 
   render() {
     const {
@@ -70,9 +67,11 @@ class Pattern extends Component {
         <div className={`technologies-container ${activeSide ? hide : show}`}>
           {technologies()}
           {description()}
-          <a className="rotate_button" href={url} rel="noopener noreferrer" target="_blank">
-            <figure>{figure()}</figure>
-          </a>
+          {url && (
+            <a className="rotate_button" href={url} rel="noopener noreferrer" target="_blank">
+              <figure>{figure()}</figure>
+            </a>
+          )}
           <div className="arrow hide" onClick={this.clickHandle} />
         </div>
 

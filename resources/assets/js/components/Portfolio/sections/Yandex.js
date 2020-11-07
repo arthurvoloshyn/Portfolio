@@ -1,10 +1,9 @@
 import React from 'react';
 
 import IMGS from '../../../constants/imgs';
-
 import Pattern from '../parts/Pattern';
 
-export const Yandex = () => (
+const Yandex = () => (
   <Pattern
     classname="Yandex"
     description={() => (
@@ -30,7 +29,6 @@ export const Yandex = () => (
     )}
     effectClassIn="bounceIn"
     effectClassOut="bounceOut"
-    figure={() => <div />}
     logo={IMGS.yandex}
     logoDescription={() => (
       <p>
@@ -45,6 +43,7 @@ export const Yandex = () => (
       </p>
     )}
     technologies={() => <div className="technologies" />}
-    url=""
   />
 );
+
+export default Yandex;

@@ -3,27 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../constants/urls';
-
 import Pattern from '../parts/Pattern';
-
-const style = {
-  outter: {
-    backgroundPosition: 'center',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden',
-    height: '100vh',
-  },
-  bgLayerStyle: {
-    width: '100vw',
-    height: '100vh',
-    position: 'absolute',
-    overflow: 'hidden',
-    background: 'rgba(0,0,0, 0.4)',
-  },
-};
-
-const { outter, bgLayerStyle } = style;
 
 class Houses extends Component {
   static propTypes = {
@@ -43,17 +23,15 @@ class Houses extends Component {
       page: { page },
     } = nextProps;
 
-    if (page === URLS.houses) {
-      $('#fp-nav ul li a span').addClass('houses-bg');
-    } else {
-      $('#fp-nav ul li a span').removeClass('houses-bg');
-    }
+    const menuItems = $('#fp-nav ul li a span');
+
+    page === URLS.c2corner ? menuItems.addClass('houses-bg') : menuItems.removeClass('houses-bg');
   }
 
   render() {
     return (
-      <div style={outter}>
-        <div style={bgLayerStyle} />
+      <div className="houses-bg_outer">
+        <div className="houses-bg_layer" />
         <Pattern
           classname="Houses"
           description={() => (
@@ -67,8 +45,6 @@ class Houses extends Component {
           )}
           effectClassIn="zoomIn"
           effectClassOut="zoomOut"
-          figure={() => <div />}
-          logo={null}
           logoDescription={() => (
             <p className="paragraph">
               The system for design and buying a construction project of building
@@ -76,7 +52,6 @@ class Houses extends Component {
           )}
           logoText="HOOMES"
           technologies={() => <div className="technologies" />}
-          url=""
         />
       </div>
     );

@@ -6,17 +6,8 @@ import ParallaxMousemove from 'react-parallax-mousemove';
 import Constants from '../../../constants/constants';
 import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
-
+import sectionStyles from '../../../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
-
-const style = {
-  outter: {
-    background: 'white',
-    width: '100%',
-    position: 'relative',
-    overflow: 'hidden',
-  },
-};
 
 class Arcbazar extends Component {
   static propTypes = {
@@ -36,16 +27,16 @@ class Arcbazar extends Component {
       page: { page },
     } = nextProps;
 
-    if (page === URLS.arcbazar) {
-      $('#fp-nav ul li a span').addClass('arcbazar-bg');
-    } else {
-      $('#fp-nav ul li a span').removeClass('arcbazar-bg');
-    }
+    const menuItems = $('#fp-nav ul li a span');
+
+    page === URLS.arcbazar
+      ? menuItems.addClass('arcbazar-bg')
+      : menuItems.removeClass('arcbazar-bg');
   }
 
   render() {
     return (
-      <ParallaxMousemove containerStyle={style.outter}>
+      <ParallaxMousemove containerStyle={sectionStyles.outer}>
         <Pattern
           classname="Arcbazar"
           description={() => (
