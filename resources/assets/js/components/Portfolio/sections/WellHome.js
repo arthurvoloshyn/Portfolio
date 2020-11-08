@@ -35,7 +35,6 @@ const WellHome = () => (
           <span className="paragraph">CRM system for real estate company</span>
         </p>
       )}
-      technologies={() => <div className="technologies" />}
     />
   </div>
 );

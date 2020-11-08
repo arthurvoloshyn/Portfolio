@@ -1,5 +1,4 @@
 import DetectBrowser from '../../../../../services/DetectBrowser';
-
 import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../common/util';
 
 const particleCount = 75;
@@ -13,7 +12,7 @@ const baseSize = 2;
 const rangeSize = 10;
 const baseHue = 10;
 const rangeHue = 100;
-const backgroundColor = 'hsla(60,50%,3%,1)';
+const backgroundColor = 'hsla(60, 50%, 3%, 1)';
 
 /* eslint-disable no-unused-vars */
 let container;
@@ -28,9 +27,7 @@ const initParticles = () => {
   tick = 0;
   particleProps = new Float32Array(particlePropsLength);
 
-  let i;
-
-  for (i = 0; i < particlePropsLength; i += particlePropCount) {
+  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
     initParticle(i);
   }
 };
@@ -51,10 +48,14 @@ const initParticle = i => {
 
   x = rand(width);
   y = rand(height);
+
   theta = angle(x, y, center[0], center[1]);
+
   vx = cos(theta) * 6;
   vy = sin(theta) * 6;
+
   life = 0;
+
   ttl = baseTTL + rand(rangeTTL);
   speed = baseSpeed + rand(rangeSpeed);
   size = baseSize + rand(rangeSize);
@@ -64,9 +65,7 @@ const initParticle = i => {
 };
 
 const drawParticles = () => {
-  let i;
-
-  for (i = 0; i < particlePropsLength; i += particlePropCount) {
+  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
     updateParticle(i);
   }
 };
@@ -80,6 +79,7 @@ const updateParticle = i => {
   const i7 = 6 + i;
   const i8 = 7 + i;
   const i9 = 8 + i;
+
   let x;
   let y;
   let theta;
@@ -95,12 +95,16 @@ const updateParticle = i => {
 
   x = particleProps[i];
   y = particleProps[i2];
+
   theta = angle(x, y, center[0], center[1]) + 0.75 * HALF_PI;
+
   vx = lerp(particleProps[i3], 2 * cos(theta), 0.05);
   vy = lerp(particleProps[i4], 2 * sin(theta), 0.05);
+
   life = particleProps[i5];
   ttl = particleProps[i6];
   speed = particleProps[i7];
+
   x2 = x + vx * speed;
   y2 = y + vy * speed;
   size = particleProps[i8];
@@ -124,9 +128,11 @@ const drawParticle = (x, y, theta, life, ttl, size, hue) => {
   const yRel = y - 0.5 * size;
 
   ctx.a.save();
+
   ctx.a.lineCap = 'round';
   ctx.a.lineWidth = 1;
-  ctx.a.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+  ctx.a.strokeStyle = `hsla(${hue}, 100%, 60%, ${fadeInOut(life, ttl)})`;
+
   ctx.a.beginPath();
   ctx.a.translate(xRel, yRel);
   ctx.a.rotate(theta);
@@ -142,12 +148,15 @@ const createCanvas = () => {
     a: document.createElement('canvas'),
     b: document.createElement('canvas'),
   };
+
   canvas.b.style = `
 		position: fixed;
 		left: 0;
 		width: 100%;
 	`;
+
   container.appendChild(canvas.b);
+
   ctx = {
     a: canvas.a.getContext('2d'),
     b: canvas.b.getContext('2d'),
@@ -163,18 +172,14 @@ const resize = () => {
     canvas.a.height = innerHeight;
   }
 
-  if (ctx && ctx.a) {
-    ctx.a.drawImage(canvas.b, 0, 0);
-  }
+  ctx && ctx.a && ctx.a.drawImage(canvas.b, 0, 0);
 
   if (canvas && canvas.b) {
     canvas.b.width = innerWidth;
     canvas.b.height = innerHeight;
   }
 
-  if (ctx && ctx.b) {
-    ctx.b.drawImage(canvas.a, 0, 0);
-  }
+  ctx && ctx.b && ctx.b.drawImage(canvas.a, 0, 0);
 
   if (canvas && canvas.a) {
     const { width, height } = canvas.a;
@@ -187,34 +192,34 @@ const resize = () => {
 const renderGlow = () => {
   ctx.b.save();
 
-  if (!DetectBrowser.isFirefox()) {
-    ctx.b.filter = 'blur(8px) brightness(200%)';
-  }
+  !DetectBrowser.isFirefox() && (ctx.b.filter = 'blur(8px) brightness(200%)');
 
   ctx.b.globalCompositeOperation = 'lighter';
+
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
-
   ctx.b.save();
-  if (!DetectBrowser.isFirefox()) {
-    ctx.b.filter = 'blur(4px) brightness(200%)';
-  }
+
+  !DetectBrowser.isFirefox() && (ctx.b.filter = 'blur(4px) brightness(200%)');
+
   ctx.b.globalCompositeOperation = 'lighter';
+
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 };
 
 const render = () => {
   ctx.b.save();
+
   ctx.b.globalCompositeOperation = 'lighter';
+
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 };
 
 const draw = () => {
-  if (!ctx) {
-    return;
-  }
+  if (!ctx) return;
+
   tick++;
 
   const { width, height } = canvas.a;
@@ -234,9 +239,9 @@ const draw = () => {
 window.addEventListener('resize', resize);
 
 export const setup = () => {
-  if (document.querySelector('.content--canvas-abirix canvas')) {
-    return;
-  }
+  const contentCanvas = document.querySelector('.content--canvas-abirix canvas');
+
+  if (contentCanvas) return;
 
   createCanvas();
   resize();
@@ -245,9 +250,10 @@ export const setup = () => {
 };
 
 export const remove = () => {
-  if (document.querySelector('.content--canvas-abirix canvas')) {
-    document.querySelector('.content--canvas-abirix canvas').remove();
-  }
+  const contentCanvas = document.querySelector('.content--canvas-abirix canvas');
+
+  contentCanvas && contentCanvas.remove();
+
   container = null;
   canvas = null;
   ctx = null;

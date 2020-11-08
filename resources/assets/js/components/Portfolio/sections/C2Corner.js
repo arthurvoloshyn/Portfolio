@@ -59,7 +59,6 @@ class C2Corner extends Component {
           </p>
         )}
         logoText="C2CORNER"
-        technologies={() => <div className="technologies" />}
         url={Constants.c2corner}
       />
     );

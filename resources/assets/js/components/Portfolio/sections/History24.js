@@ -61,7 +61,6 @@ class History24 extends Component {
               </span>
             </p>
           )}
-          technologies={() => <div className="technologies" />}
           url={Constants.history24}
         />
       </div>

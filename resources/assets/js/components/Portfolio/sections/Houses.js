@@ -51,7 +51,6 @@ class Houses extends Component {
             </p>
           )}
           logoText="HOOMES"
-          technologies={() => <div className="technologies" />}
         />
       </div>
     );

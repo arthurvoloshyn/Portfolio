@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
-
 import { remove, setup } from './lib/shift';
 
 class Neocore extends Component {
@@ -28,20 +27,21 @@ class Neocore extends Component {
       page: { page },
     } = nextProps;
 
+    const menuItems = $('#fp-nav ul li a span');
+
     if (page === URLS.neocore) {
       setup();
-      $('#fp-nav ul li a span').addClass('neocore-bg');
+      menuItems.addClass('neocore-bg');
     } else {
       remove();
-      $('#fp-nav ul li a span').removeClass('neocore-bg');
+      menuItems.removeClass('neocore-bg');
     }
   }
 
-  toggle = () => {
+  toggle = () =>
     this.setState(({ info }) => ({
       info: !info,
     }));
-  };
 
   render() {
     const { info } = this.state;

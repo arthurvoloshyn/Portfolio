@@ -4,7 +4,7 @@ import IMGS from '../../../constants/imgs';
 import Constants from '../../../constants/constants';
 import Pattern from '../parts/Pattern';
 
-const Smoke_Zone = () => (
+const SmokeZone = () => (
   <div className="smoke-zone-bg_outer">
     <div className="smoke-zone-bg_layer">
       <img alt="Smoke Zone" src={IMGS.smokeZone} />
@@ -51,4 +51,4 @@ const Smoke_Zone = () => (
   </div>
 );
 
-export default Smoke_Zone;
+export default SmokeZone;

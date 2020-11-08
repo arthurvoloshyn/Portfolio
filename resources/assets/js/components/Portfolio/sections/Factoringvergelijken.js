@@ -33,7 +33,6 @@ const Factoringvergelijken = () => (
           <span className="paragraph">Online factoring services</span>
         </p>
       )}
-      technologies={() => <div className="technologies" />}
       url={Constants.factoringvergelijken}
     />
   </div>

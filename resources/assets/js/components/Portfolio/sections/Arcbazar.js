@@ -60,7 +60,6 @@ class Arcbazar extends Component {
           logoDescription={() => (
             <p className="paragraph">Create unique interie and landscape design</p>
           )}
-          technologies={() => <div className="technologies" />}
           url={Constants.arcbazar}
         />
       </ParallaxMousemove>

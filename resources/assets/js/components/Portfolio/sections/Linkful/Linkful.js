@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 
 import Constants from '../../../../constants/constants';
 import URLS from '../../../../constants/urls';
-
 import { remove, setup } from './lib/swirl';
-
-const { portfolio, first_slide, linkful } = URLS;
 
 class Linkful extends Component {
   static propTypes = {
@@ -27,24 +24,26 @@ class Linkful extends Component {
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
+    const { portfolio: portfolioUrl, first_slide: firstSlideUrl, linkful: linkfulUrl } = URLS;
     const {
       page: { page },
     } = nextProps;
 
-    if (page === portfolio || page === first_slide || page === linkful) {
+    const menuItems = $('#fp-nav ul li a span');
+
+    if (page === portfolioUrl || page === firstSlideUrl || page === linkfulUrl) {
       setup();
-      $('#fp-nav ul li a span').addClass('linkful-bg');
+      menuItems.addClass('linkful-bg');
     } else {
       remove();
-      $('#fp-nav ul li a span').removeClass('linkful-bg');
+      menuItems.removeClass('linkful-bg');
     }
   }
 
-  toggle = () => {
+  toggle = () =>
     this.setState(({ info }) => ({
       info: !info,
     }));
-  };
 
   render() {
     const { info } = this.state;

@@ -8,37 +8,39 @@
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
-import charming from './charming.min';
-import anime from './anime.min';
+import charming from '../common/charming.min';
+import anime from '../common/anime.min';
 
 // From https://davidwalsh.name/javascript-debounce-function.
 const debounce = (func, wait, immediate) => {
   let timeout;
+
   return (...args) => {
-    const context = this;
     const later = () => {
       timeout = null;
-      if (!immediate) func.apply(context, args);
+      !immediate && func.apply(this, args);
     };
+
     const callNow = immediate && !timeout;
+
     clearTimeout(timeout);
+
     timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
+    callNow && func.apply(this, args);
   };
 };
 
 // From http://snipplr.com/view/37687/random-number-float-generator/
 const randomBetween = (minValue, maxValue, precision) => {
-  if (typeof precision === 'undefined') {
-    precision = 2;
-  }
+  typeof precision === 'undefined' && (precision = 2);
+
   return parseFloat(
     Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(precision),
   );
 };
 
 const { innerWidth, innerHeight } = window;
-let winsize = { width: innerWidth, height: innerHeight };
+let winSize = { width: innerWidth, height: innerHeight };
 
 class Shape {
   constructor(type, letterRect, options) {
@@ -49,6 +51,7 @@ class Shape {
       shapeFill: true,
       shapeStrokeWidth: 1,
     };
+
     Object.assign(this.options, options);
 
     const { shapeTypes, types } = this.options;
@@ -63,16 +66,18 @@ class Shape {
   init = () => {
     this.DOM.el = document.createElementNS('http://www.w3.org/2000/svg', this.type);
     this.DOM.el.style.opacity = 0;
+
     this.configureShapeType();
 
     const { shapeFill, shapeColors, shapeStrokeWidth } = this.options;
+    const randomNumber = randomBetween(0, shapeColors.length - 1, 0);
 
     if (shapeFill) {
-      this.DOM.el.setAttribute('fill', shapeColors[randomBetween(0, shapeColors.length - 1, 0)]);
+      this.DOM.el.setAttribute('fill', shapeColors[randomNumber]);
     } else {
       this.DOM.el.setAttribute('fill', 'none');
       this.DOM.el.setAttribute('stroke-width', shapeStrokeWidth);
-      this.DOM.el.setAttribute('stroke', shapeColors[randomBetween(0, shapeColors.length - 1, 0)]);
+      this.DOM.el.setAttribute('stroke', shapeColors[randomNumber]);
     }
   };
 
@@ -83,14 +88,17 @@ class Shape {
 
     if (this.type === 'circle') {
       const r = 0.5 * width;
+
       this.DOM.el.setAttribute('r', r);
       this.DOM.el.setAttribute('cx', left + width / 2);
       this.DOM.el.setAttribute('cy', top + height / 2);
     } else if (this.type === 'rect') {
       const w = randomBetween(0.05, 0.5, 3) * width;
       const h = randomBetween(0.05, 0.5, 3) * height;
+
       this.DOM.el.setAttribute('width', w);
       this.DOM.el.setAttribute('height', h);
+
       this.DOM.el.setAttribute('x', left + (width - w) / 2);
       this.DOM.el.setAttribute('y', top + (height - h) / 2);
     } else if (this.type === 'polygon') {
@@ -116,8 +124,10 @@ class Letter {
     this.options = {
       totalShapes: 10,
     };
+
     const { totalShapes } = this.options;
     Object.assign(this.options, options);
+
     this.rect = this.DOM.el.getBoundingClientRect();
     this.totalShapes = totalShapes;
     this.init();
@@ -126,8 +136,10 @@ class Letter {
 
   init = () => {
     this.shapes = [];
+
     for (let i = 0; i <= this.totalShapes - 1; ++i) {
       const shape = new Shape('random', this.rect, this.options);
+
       this.shapes.push(shape);
       this.DOM.svg.appendChild(shape.DOM.el);
     }
@@ -154,7 +166,9 @@ class Word {
     this.options = {
       shapesOnTop: false,
     };
+
     Object.assign(this.options, options);
+
     this.init();
     this.initEvents();
   }
@@ -163,7 +177,10 @@ class Word {
     this.createSVG();
     charming(this.DOM.el);
     this.letters = [];
-    Array.from(this.DOM.el.querySelectorAll('span')).forEach(letter =>
+
+    const spanEl = this.DOM.el.querySelectorAll('span');
+
+    Array.from(spanEl).forEach(letter =>
       this.letters.push(new Letter(letter, this.DOM.svg, this.options)),
     );
   };
@@ -174,8 +191,8 @@ class Word {
       debounce(() => {
         const { innerWidth, innerHeight } = window;
 
-        winsize = { width: innerWidth, height: innerHeight };
-        const { width, height } = winsize;
+        winSize = { width: innerWidth, height: innerHeight };
+        const { width, height } = winSize;
 
         this.DOM.svg.setAttribute('width', `${width}px`);
         this.DOM.svg.setAttribute('height', `${width}px`);
@@ -185,19 +202,19 @@ class Word {
   };
 
   createSVG = () => {
-    const { width, height } = winsize;
+    const { width, height } = winSize;
     const { shapesOnTop } = this.options;
 
     this.DOM.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+
     this.DOM.svg.setAttribute('class', 'shapes');
     this.DOM.svg.setAttribute('width', `${width}px`);
     this.DOM.svg.setAttribute('height', `${width}px`);
     this.DOM.svg.setAttribute('viewbox', `0 0 ${width} ${height}`);
-    if (shapesOnTop) {
-      this.DOM.el.parentNode.insertBefore(this.DOM.svg, this.DOM.el.nextSibling);
-    } else {
-      this.DOM.el.parentNode.insertBefore(this.DOM.svg, this.DOM.el);
-    }
+
+    shapesOnTop
+      ? this.DOM.el.parentNode.insertBefore(this.DOM.svg, this.DOM.el.nextSibling)
+      : this.DOM.el.parentNode.insertBefore(this.DOM.svg, this.DOM.el);
   };
 
   show = config => this.toggle('show', config);
@@ -205,7 +222,7 @@ class Word {
   hide = config => this.toggle('hide', config);
 
   toggle = (action = 'show', config) =>
-    new Promise((resolve, reject) => {
+    new Promise(resolve => {
       const toggleNow = () => {
         for (let i = 0, len = this.letters.length; i <= len - 1; ++i) {
           this.letters[i].DOM.el.style.opacity = action === 'show' ? 1 : 0;

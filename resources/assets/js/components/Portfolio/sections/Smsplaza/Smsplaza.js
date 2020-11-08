@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import Constants from '../../../../constants/constants';
 import URLS from '../../../../constants/urls';
-
 import { setup, remove } from './lib/pipeline';
 
 class Smsplaza extends Component {
@@ -29,24 +28,24 @@ class Smsplaza extends Component {
       page: { page },
     } = nextProps;
 
+    const menuItems = $('#fp-nav ul li a span');
+
     if (page === URLS.smsplaza) {
       setup();
-      $('#fp-nav ul li a span').addClass('smsplaza-bg');
+      menuItems.addClass('smsplaza-bg');
     } else {
       remove();
-      $('#fp-nav ul li a span').removeClass('smsplaza-bg');
+      menuItems.removeClass('smsplaza-bg');
     }
   }
 
-  toggle = () => {
+  toggle = () =>
     this.setState(({ info }) => ({
       info: !info,
     }));
-  };
 
   render() {
     const { info } = this.state;
-    const { smsplaza } = Constants;
 
     return (
       <div className="demo-5 smsplaza">
@@ -56,12 +55,12 @@ class Smsplaza extends Component {
           <div className="content content--canvas--smsplaza">
             <div className="smspalza-container">
               <div className="header">
-                <a href={smsplaza} rel="noopener noreferrer" target="_blank">
+                <a href={Constants.smsplaza} rel="noopener noreferrer" target="_blank">
                   <h2 className="logo">SMSPLAZA</h2>
                 </a>
 
                 <div className="description">
-                  <a href={smsplaza} rel="noopener noreferrer" target="_blank">
+                  <a href={Constants.smsplaza} rel="noopener noreferrer" target="_blank">
                     Receive SMS Online | Verification Service
                   </a>
                 </div>
@@ -86,7 +85,7 @@ class Smsplaza extends Component {
 
               <a
                 className="mt-50 description"
-                href={smsplaza}
+                href={Constants.smsplaza}
                 rel="noopener noreferrer"
                 target="_blank"
               >

@@ -23,7 +23,7 @@ class Pattern extends Component {
     effectClassIn: 'zoomIn',
     effectClassOut: 'zoomOut',
     figure: () => <div />,
-    technologies: () => {},
+    technologies: () => <div className="technologies" />,
     description: () => {},
     logoDescription: () => {},
   };

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
-
 import { remove, setup } from './lib/coalesce';
 
 class Abirix extends Component {
@@ -28,20 +27,21 @@ class Abirix extends Component {
       page: { page },
     } = nextProps;
 
+    const menuItems = $('#fp-nav ul li a span');
+
     if (page === URLS.abirix) {
       setup();
-      $('#fp-nav ul li a span').addClass('abirix-bg');
+      menuItems.addClass('abirix-bg');
     } else {
       remove();
-      $('#fp-nav ul li a span').removeClass('abirix-bg');
+      menuItems.removeClass('abirix-bg');
     }
   }
 
-  toggle = () => {
+  toggle = () =>
     this.setState(({ info }) => ({
       info: !info,
     }));
-  };
 
   render() {
     const { info } = this.state;

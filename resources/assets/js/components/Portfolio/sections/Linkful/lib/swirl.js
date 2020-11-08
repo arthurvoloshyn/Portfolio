@@ -1,7 +1,6 @@
 import SimplexNoise from 'simplex-noise';
 
 import DetectBrowser from '../../../../../services/DetectBrowser';
-
 import { cos, fadeInOut, lerp, rand, randRange, sin, TAU } from '../../common/util';
 
 const particleCount = 400;
@@ -20,7 +19,7 @@ const noiseSteps = 8;
 const xOff = 0.00125;
 const yOff = 0.00125;
 const zOff = 0.0005;
-const backgroundColor = 'hsla(260,40%,5%,1)';
+const backgroundColor = 'hsla(260, 40%, 5%, 1)';
 
 let container;
 let canvas;
@@ -32,12 +31,11 @@ let particleProps;
 
 const initParticles = () => {
   tick = 0;
+
   simplex = new SimplexNoise();
   particleProps = new Float32Array(particlePropsLength);
 
-  let i;
-
-  for (i = 0; i < particlePropsLength; i += particlePropCount) {
+  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
     initParticle(i);
   }
 };
@@ -53,11 +51,16 @@ const initParticle = i => {
   let radius;
   let hue;
 
-  x = rand(canvas.a.width);
+  const { width } = canvas.a;
+
+  x = rand(width);
   y = center[1] + randRange(rangeY);
+
   vx = 0;
   vy = 0;
+
   life = 0;
+
   ttl = baseTTL + rand(rangeTTL);
   speed = baseSpeed + rand(rangeSpeed);
   radius = baseRadius + rand(rangeRadius);
@@ -67,9 +70,7 @@ const initParticle = i => {
 };
 
 const drawParticles = () => {
-  let i;
-
-  for (i = 0; i < particlePropsLength; i += particlePropCount) {
+  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
     updateParticle(i);
   }
 };
@@ -83,6 +84,7 @@ const updateParticle = i => {
   const i7 = 6 + i;
   const i8 = 7 + i;
   const i9 = 8 + i;
+
   let n;
   let x;
   let y;
@@ -98,14 +100,19 @@ const updateParticle = i => {
 
   x = particleProps[i];
   y = particleProps[i2];
+
   n = simplex.noise3D(x * xOff, y * yOff, tick * zOff) * noiseSteps * TAU;
+
   vx = lerp(particleProps[i3], cos(n), 0.5);
   vy = lerp(particleProps[i4], sin(n), 0.5);
+
   life = particleProps[i5];
   ttl = particleProps[i6];
   speed = particleProps[i7];
+
   x2 = x + vx * speed;
   y2 = y + vy * speed;
+
   radius = particleProps[i8];
   hue = particleProps[i9];
 
@@ -124,9 +131,11 @@ const updateParticle = i => {
 
 const drawParticle = (x, y, x2, y2, life, ttl, radius, hue) => {
   ctx.a.save();
+
   ctx.a.lineCap = 'round';
   ctx.a.lineWidth = radius;
-  ctx.a.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+  ctx.a.strokeStyle = `hsla(${hue}, 100%, 60%, ${fadeInOut(life, ttl)})`;
+
   ctx.a.beginPath();
   ctx.a.moveTo(x, y);
   ctx.a.lineTo(x2, y2);
@@ -147,12 +156,15 @@ const createCanvas = () => {
     a: document.createElement('canvas'),
     b: document.createElement('canvas'),
   };
+
   canvas.b.style = `
 		position: fixed;
 		left: 0;
 		width: 100%;
 	`;
+
   container.appendChild(canvas.b);
+
   ctx = {
     a: canvas.a.getContext('2d'),
     b: canvas.b.getContext('2d'),
@@ -168,18 +180,14 @@ const resize = () => {
     canvas.a.height = innerHeight;
   }
 
-  if (ctx && ctx.a) {
-    ctx.a.drawImage(canvas.b, 0, 0);
-  }
+  ctx && ctx.a && ctx.a.drawImage(canvas.b, 0, 0);
 
   if (canvas && canvas.b) {
     canvas.b.width = innerWidth;
     canvas.b.height = innerHeight;
   }
 
-  if (ctx && ctx.b) {
-    ctx.b.drawImage(canvas.a, 0, 0);
-  }
+  ctx && ctx.b && ctx.b.drawImage(canvas.a, 0, 0);
 
   if (canvas && canvas.a) {
     const { width, height } = canvas.a;
@@ -191,33 +199,34 @@ const resize = () => {
 
 const renderGlow = () => {
   ctx.b.save();
-  if (!DetectBrowser.isFirefox()) {
-    ctx.b.filter = 'blur(8px) brightness(200%)';
-  }
+
+  !DetectBrowser.isFirefox() && (ctx.b.filter = 'blur(8px) brightness(200%)');
+
   ctx.b.globalCompositeOperation = 'lighter';
+
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
-
   ctx.b.save();
-  if (!DetectBrowser.isFirefox()) {
-    ctx.b.filter = 'blur(4px) brightness(200%)';
-  }
+
+  !DetectBrowser.isFirefox() && (ctx.b.filter = 'blur(4px) brightness(200%)');
+
   ctx.b.globalCompositeOperation = 'lighter';
+
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 };
 
 const renderToScreen = () => {
   ctx.b.save();
+
   ctx.b.globalCompositeOperation = 'lighter';
+
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 };
 
 const draw = () => {
-  if (!ctx) {
-    return;
-  }
+  if (!ctx) return;
 
   const { width, height } = canvas.a;
 
@@ -236,9 +245,10 @@ const draw = () => {
 };
 
 export const remove = () => {
-  if (document.querySelector('.content--canvas-linkful canvas')) {
-    document.querySelector('.content--canvas-linkful canvas').remove();
-  }
+  const contentCanvas = document.querySelector('.content--canvas-linkful canvas');
+
+  contentCanvas && contentCanvas.remove();
+
   container = null;
   canvas = null;
   ctx = null;
@@ -249,9 +259,9 @@ export const remove = () => {
 };
 
 export const setup = () => {
-  if (document.querySelector('.content--canvas-linkful canvas')) {
-    return;
-  }
+  const contentCanvas = document.querySelector('.content--canvas-linkful canvas');
+
+  if (contentCanvas) return;
 
   createCanvas();
   resize();

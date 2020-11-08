@@ -1,10 +1,9 @@
-import anime from './anime.min';
+import anime from '../common/anime.min';
 import { randomBetween } from './wordFx';
 
 const { random } = anime;
 
 const effects = [
-  // Effect 6
   {
     options: {
       shapeColors: ['#fff', '#dedede', '#8c8c8c', '#545454', '#000', '#dc2e2e'],
@@ -58,9 +57,7 @@ class Slideshow {
     this.slidesTotal = this.DOM.slides.length;
     this.current = 0;
     this.words = [];
-    this.DOM.words.forEach((word, pos) => {
-      this.words.push(new Word(word, effects[pos].options));
-    });
+    this.DOM.words.forEach((word, pos) => this.words.push(new Word(word, effects[pos].options)));
     this.isAnimating = true;
     this.words[this.current]
       .show(effects[this.current].show)
@@ -98,9 +95,7 @@ class Slideshow {
     });
 
     this.words[newPos].hide();
-    this.words[this.current].hide(effects[currentPos].hide).then(() => {
-      this.current = newPos;
-    });
+    this.words[this.current].hide(effects[currentPos].hide).then(() => (this.current = newPos));
   };
 }
 

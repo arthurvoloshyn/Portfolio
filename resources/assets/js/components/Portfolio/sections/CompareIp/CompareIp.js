@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import Constants from '../../../../constants/constants';
 import URLS from '../../../../constants/urls';
-
 import Slideshow from './lib/Slideshow';
+
 import './lib/wordFx';
 
 class CompareIp extends Component {
@@ -42,10 +42,10 @@ class CompareIp extends Component {
     } = this.props;
     const { firstTime } = this.state;
     const {
-      preloader: { preloader: prevPropsPreloader },
+      preloader: { preloader: prevPreloader },
     } = prevProps;
 
-    if (!preloader && prevPropsPreloader && page === URLS.compareip && firstTime) {
+    if (!preloader && prevPreloader && page === URLS.compareip && firstTime) {
       this.show();
     }
   }
@@ -53,28 +53,30 @@ class CompareIp extends Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     const { firstTime } = this.state;
     const {
-      page: { page: nextPropsPage },
+      page: { page },
     } = nextProps;
 
-    if (nextPropsPage === URLS.compareip) {
-      if (firstTime) {
-        this.show();
-      }
+    const menuItems = $('#fp-nav ul li a span');
 
-      $('#fp-nav ul li a span').addClass('compareip-bg');
+    if (page === URLS.compareip) {
+      firstTime && this.show();
+
+      menuItems.addClass('compareip-bg');
     } else {
-      $('#fp-nav ul li a span').removeClass('compareip-bg');
+      menuItems.removeClass('compareip-bg');
     }
   }
 
-  showDescription = () => {
+  showDescription = () =>
     this.setState({
       animateClass: 'animated fadeIn',
     });
-  };
 
   show = () => {
-    this.slideshow = new Slideshow(this.classSlideshow.current, this.showDescription);
+    const { current } = this.classSlideshow;
+
+    this.slideshow = new Slideshow(current, this.showDescription);
+
     this.setState({
       firstTime: false,
       visible: true,
