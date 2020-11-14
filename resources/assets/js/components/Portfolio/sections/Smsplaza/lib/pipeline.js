@@ -85,8 +85,10 @@ const updatePipe = i => {
 
   let x = pipeProps[i];
   let y = pipeProps[i2];
+
   let direction = pipeProps[i3];
   const speed = pipeProps[i4];
+
   let life = pipeProps[i5];
   const ttl = pipeProps[i6];
   const width = pipeProps[i7];

@@ -27,6 +27,29 @@ let simplex;
 let baseHue;
 /* eslint-enable */
 
+const initCircle = i => {
+  const { width, height } = canvas.a;
+
+  const x = rand(width);
+  const y = rand(height);
+
+  const n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
+
+  const t = rand(TAU);
+  const speed = baseSpeed + rand(rangeSpeed);
+
+  const vx = speed * cos(t);
+  const vy = speed * sin(t);
+
+  const life = 0;
+
+  const ttl = baseTTL + rand(rangeTTL);
+  const radius = baseRadius + rand(rangeRadius);
+  const hue = baseHue + n * rangeHue;
+
+  circleProps.set([x, y, vx, vy, life, ttl, radius, hue], i);
+};
+
 const initCircles = () => {
   circleProps = new Float32Array(circlePropsLength);
   simplex = new SimplexNoise();
@@ -38,89 +61,6 @@ const initCircles = () => {
   for (let i = 0; i < circlePropsLength; i += circlePropCount) {
     initCircle(i);
   }
-};
-
-const initCircle = i => {
-  const { width, height } = canvas.a;
-
-  let x;
-  let y;
-  let n;
-  let t;
-  let speed;
-  let vx;
-  let vy;
-  let life;
-  let ttl;
-  let radius;
-  let hue;
-
-  x = rand(width);
-  y = rand(height);
-
-  n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
-
-  t = rand(TAU);
-  speed = baseSpeed + rand(rangeSpeed);
-
-  vx = speed * cos(t);
-  vy = speed * sin(t);
-
-  life = 0;
-
-  ttl = baseTTL + rand(rangeTTL);
-  radius = baseRadius + rand(rangeRadius);
-  hue = baseHue + n * rangeHue;
-
-  circleProps.set([x, y, vx, vy, life, ttl, radius, hue], i);
-};
-
-const updateCircles = () => {
-  baseHue++;
-
-  for (let i = 0; i < circlePropsLength; i += circlePropCount) {
-    updateCircle(i);
-  }
-};
-
-const updateCircle = i => {
-  const i2 = 1 + i;
-  const i3 = 2 + i;
-  const i4 = 3 + i;
-  const i5 = 4 + i;
-  const i6 = 5 + i;
-  const i7 = 6 + i;
-  const i8 = 7 + i;
-
-  let x;
-  let y;
-  let vx;
-  let vy;
-  let life;
-  let ttl;
-  let radius;
-  let hue;
-
-  x = circleProps[i];
-  y = circleProps[i2];
-
-  vx = circleProps[i3];
-  vy = circleProps[i4];
-
-  life = circleProps[i5];
-  ttl = circleProps[i6];
-  radius = circleProps[i7];
-  hue = circleProps[i8];
-
-  drawCircle(x, y, life, ttl, radius, hue);
-
-  life++;
-
-  circleProps[i] = x + vx;
-  circleProps[i2] = y + vy;
-  circleProps[i5] = life;
-
-  (checkBounds(x, y, radius) || life > ttl) && initCircle(i);
 };
 
 const drawCircle = (x, y, life, ttl, radius, hue) => {
@@ -139,6 +79,45 @@ const checkBounds = (x, y, radius) => {
   const { width, height } = canvas.a;
 
   return x < -radius || x > width + radius || y < -radius || y > height + radius;
+};
+
+const updateCircle = i => {
+  const i2 = 1 + i;
+  const i3 = 2 + i;
+  const i4 = 3 + i;
+  const i5 = 4 + i;
+  const i6 = 5 + i;
+  const i7 = 6 + i;
+  const i8 = 7 + i;
+
+  const x = circleProps[i];
+  const y = circleProps[i2];
+
+  const vx = circleProps[i3];
+  const vy = circleProps[i4];
+
+  let life = circleProps[i5];
+  const ttl = circleProps[i6];
+  const radius = circleProps[i7];
+  const hue = circleProps[i8];
+
+  drawCircle(x, y, life, ttl, radius, hue);
+
+  life++;
+
+  circleProps[i] = x + vx;
+  circleProps[i2] = y + vy;
+  circleProps[i5] = life;
+
+  (checkBounds(x, y, radius) || life > ttl) && initCircle(i);
+};
+
+const updateCircles = () => {
+  baseHue++;
+
+  for (let i = 0; i < circlePropsLength; i += circlePropCount) {
+    updateCircle(i);
+  }
 };
 
 const createCanvas = () => {

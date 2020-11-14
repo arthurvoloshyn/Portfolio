@@ -23,6 +23,27 @@ let tick;
 let particleProps;
 /* eslint-enable */
 
+const initParticle = i => {
+  const { width, height } = canvas.a;
+
+  const x = rand(width);
+  const y = rand(height);
+
+  const theta = angle(x, y, center[0], center[1]);
+
+  const vx = cos(theta) * 6;
+  const vy = sin(theta) * 6;
+
+  const life = 0;
+
+  const ttl = baseTTL + rand(rangeTTL);
+  const speed = baseSpeed + rand(rangeSpeed);
+  const size = baseSize + rand(rangeSize);
+  const hue = baseHue + rand(rangeHue);
+
+  particleProps.set([x, y, vx, vy, life, ttl, speed, size, hue], i);
+};
+
 const initParticles = () => {
   tick = 0;
   particleProps = new Float32Array(particlePropsLength);
@@ -30,97 +51,6 @@ const initParticles = () => {
   for (let i = 0; i < particlePropsLength; i += particlePropCount) {
     initParticle(i);
   }
-};
-
-const initParticle = i => {
-  let theta;
-  let x;
-  let y;
-  let vx;
-  let vy;
-  let life;
-  let ttl;
-  let speed;
-  let size;
-  let hue;
-
-  const { width, height } = canvas.a;
-
-  x = rand(width);
-  y = rand(height);
-
-  theta = angle(x, y, center[0], center[1]);
-
-  vx = cos(theta) * 6;
-  vy = sin(theta) * 6;
-
-  life = 0;
-
-  ttl = baseTTL + rand(rangeTTL);
-  speed = baseSpeed + rand(rangeSpeed);
-  size = baseSize + rand(rangeSize);
-  hue = baseHue + rand(rangeHue);
-
-  particleProps.set([x, y, vx, vy, life, ttl, speed, size, hue], i);
-};
-
-const drawParticles = () => {
-  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
-    updateParticle(i);
-  }
-};
-
-const updateParticle = i => {
-  const i2 = 1 + i;
-  const i3 = 2 + i;
-  const i4 = 3 + i;
-  const i5 = 4 + i;
-  const i6 = 5 + i;
-  const i7 = 6 + i;
-  const i8 = 7 + i;
-  const i9 = 8 + i;
-
-  let x;
-  let y;
-  let theta;
-  let vx;
-  let vy;
-  let life;
-  let ttl;
-  let speed;
-  let x2;
-  let y2;
-  let size;
-  let hue;
-
-  x = particleProps[i];
-  y = particleProps[i2];
-
-  theta = angle(x, y, center[0], center[1]) + 0.75 * HALF_PI;
-
-  vx = lerp(particleProps[i3], 2 * cos(theta), 0.05);
-  vy = lerp(particleProps[i4], 2 * sin(theta), 0.05);
-
-  life = particleProps[i5];
-  ttl = particleProps[i6];
-  speed = particleProps[i7];
-
-  x2 = x + vx * speed;
-  y2 = y + vy * speed;
-  size = particleProps[i8];
-  hue = particleProps[i9];
-
-  drawParticle(x, y, theta, life, ttl, size, hue);
-
-  life++;
-
-  particleProps[i] = x2;
-  particleProps[i2] = y2;
-  particleProps[i3] = vx;
-  particleProps[i4] = vy;
-  particleProps[i5] = life;
-
-  life > ttl && initParticle(i);
 };
 
 const drawParticle = (x, y, theta, life, ttl, size, hue) => {
@@ -140,6 +70,52 @@ const drawParticle = (x, y, theta, life, ttl, size, hue) => {
   ctx.a.strokeRect(xRel, yRel, size, size);
   ctx.a.closePath();
   ctx.a.restore();
+};
+
+const updateParticle = i => {
+  const i2 = 1 + i;
+  const i3 = 2 + i;
+  const i4 = 3 + i;
+  const i5 = 4 + i;
+  const i6 = 5 + i;
+  const i7 = 6 + i;
+  const i8 = 7 + i;
+  const i9 = 8 + i;
+
+  const x = particleProps[i];
+  const y = particleProps[i2];
+
+  const theta = angle(x, y, center[0], center[1]) + 0.75 * HALF_PI;
+
+  const vx = lerp(particleProps[i3], 2 * cos(theta), 0.05);
+  const vy = lerp(particleProps[i4], 2 * sin(theta), 0.05);
+
+  let life = particleProps[i5];
+  const ttl = particleProps[i6];
+  const speed = particleProps[i7];
+
+  const x2 = x + vx * speed;
+  const y2 = y + vy * speed;
+  const size = particleProps[i8];
+  const hue = particleProps[i9];
+
+  drawParticle(x, y, theta, life, ttl, size, hue);
+
+  life++;
+
+  particleProps[i] = x2;
+  particleProps[i2] = y2;
+  particleProps[i3] = vx;
+  particleProps[i4] = vy;
+  particleProps[i5] = life;
+
+  life > ttl && initParticle(i);
+};
+
+const drawParticles = () => {
+  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
+    updateParticle(i);
+  }
 };
 
 const createCanvas = () => {

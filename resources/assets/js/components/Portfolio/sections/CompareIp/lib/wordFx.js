@@ -32,10 +32,10 @@ const debounce = (func, wait, immediate) => {
 
 // From http://snipplr.com/view/37687/random-number-float-generator/
 const randomBetween = (minValue, maxValue, precision) => {
-  typeof precision === 'undefined' && (precision = 2);
+  const newPrecision = typeof precision === 'undefined' ? 2 : precision;
 
   return parseFloat(
-    Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(precision),
+    Math.min(minValue + Math.random() * (maxValue - minValue), maxValue).toFixed(newPrecision),
   );
 };
 
@@ -232,6 +232,7 @@ class Word {
 
       const { shapesAnimationOpts, lettersAnimationOpts } = config;
 
+      /* eslint-disable no-param-reassign */
       if (config && Object.keys(config).length !== 0) {
         if (shapesAnimationOpts) {
           for (let i = 0, len = this.letters.length; i <= len - 1; ++i) {
@@ -265,9 +266,10 @@ class Word {
       } else {
         toggleNow();
       }
+      /* eslint-enable */
     });
 }
 
 window.Word = Word;
 
-export { randomBetween };
+export default randomBetween;

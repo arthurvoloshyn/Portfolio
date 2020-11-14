@@ -35,21 +35,6 @@ class CompareIp extends Component {
     firstTime: true,
   };
 
-  componentDidUpdate(prevProps) {
-    const {
-      preloader: { preloader },
-      page: { page },
-    } = this.props;
-    const { firstTime } = this.state;
-    const {
-      preloader: { preloader: prevPreloader },
-    } = prevProps;
-
-    if (!preloader && prevPreloader && page === URLS.compareip && firstTime) {
-      this.show();
-    }
-  }
-
   UNSAFE_componentWillReceiveProps(nextProps) {
     const { firstTime } = this.state;
     const {
@@ -64,6 +49,21 @@ class CompareIp extends Component {
       menuItems.addClass('compareip-bg');
     } else {
       menuItems.removeClass('compareip-bg');
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    const {
+      preloader: { preloader },
+      page: { page },
+    } = this.props;
+    const { firstTime } = this.state;
+    const {
+      preloader: { preloader: prevPreloader },
+    } = prevProps;
+
+    if (!preloader && prevPreloader && page === URLS.compareip && firstTime) {
+      this.show();
     }
   }
 
