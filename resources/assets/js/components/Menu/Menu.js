@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import { skillsList } from './utils/menuList';
-import { getStylesList } from './utils/getStylesList';
-
+import menuList from '../../constants/menuList';
+import getStylesList from './common/getStylesList';
 import { reloadPage, setPage } from '../../actions/page';
-
 import SVGMenu from './lib/SVGMenu';
 
 import './scss/Menu.scss';
 
-const ESC = 27;
 const styleClasses = getStylesList('effects');
 const styleStroke = getStylesList('stroke');
 
@@ -43,7 +41,7 @@ class Menu extends Component {
 
     const {
       page: { page },
-    } = props;
+    } = this.props;
 
     this.state = {
       effectStyle: styleClasses[page],
@@ -66,11 +64,7 @@ class Menu extends Component {
     reloadPage(true);
   };
 
-  escFunction = ({ keyCode }) => {
-    if (keyCode === ESC) {
-      this.menuStyleHandler();
-    }
-  };
+  escFunction = ({ key }) => key === 'ESC' && this.menuStyleHandler();
 
   menuStyleHandler = () => {
     const {
@@ -89,6 +83,8 @@ class Menu extends Component {
       menu: { status },
     } = this.props;
 
+    const morphShapeClasses = classNames('morph-shape', { [styleStroke]: status });
+
     return (
       <nav className="menu" id="menu">
         <button className="menu__handle" onClick={this.menuStyleHandler}>
@@ -96,18 +92,22 @@ class Menu extends Component {
         </button>
         <div className="inner">
           <ul className={effectStyle}>
-            {skillsList.map(({ title, icon, page }) => (
-              <li key={title} onClick={() => this.clickHandler(page)}>
-                <a>
-                  <i className={`icon fas fa-${icon}`} />
-                  <span>{title}</span>
-                </a>
-              </li>
-            ))}
+            {menuList.map(({ title, icon, page }) => {
+              const menuHandler = () => this.clickHandler(page);
+
+              return (
+                <li key={title}>
+                  <a onClick={menuHandler}>
+                    <i className={`icon fas fa-${icon}`} />
+                    <span>{title}</span>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div
-          className={`morph-shape ${status ? styleStroke : ''}`}
+          className={morphShapeClasses}
           data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410"
           data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410"
         >

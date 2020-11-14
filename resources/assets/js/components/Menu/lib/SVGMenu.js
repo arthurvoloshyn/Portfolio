@@ -4,12 +4,7 @@ import PropTypes from 'prop-types';
 
 import { toggleStatus, setStatusMenu } from '../../../actions/menu';
 
-/* eslint-disable no-unused-vars */
-const UP = 38;
-const DOWN = 40;
-const ESC = 27;
-/* eslint-enable */
-
+/* eslint-disable react/sort-comp */
 class SVGMenu extends Component {
   static propTypes = {
     menu: PropTypes.shape({
@@ -46,22 +41,14 @@ class SVGMenu extends Component {
     document.removeEventListener('keydown', this.escFunction, false);
   }
 
-  escFunction = ({ keyCode }) => {
-    if (keyCode === ESC) {
-      this.toggle();
-    }
-  };
+  escFunction = ({ key }) => key === 'ESC' && this.toggle();
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     const {
       page: { statusReload },
     } = this.props;
 
-    if (statusReload) {
-      setTimeout(() => {
-        this.close();
-      }, 500);
-    }
+    statusReload && setTimeout(() => this.close(), 500);
   }
 
   init = () => {
@@ -73,6 +60,7 @@ class SVGMenu extends Component {
     this.shapeEl = this.el.querySelector('div.morph-shape');
 
     const s = Snap(this.shapeEl.querySelector('svg'));
+
     this.pathEl = s.select('path');
     this.paths = {
       reset: this.pathEl.attr('d'),
@@ -138,6 +126,7 @@ class SVGMenu extends Component {
         classie.add(this.el, 'menu--open');
       }, 250);
     }
+
     this.pathEl
       .stop()
       .animate({ path: status ? close : open }, 350, easeout, () =>
@@ -171,13 +160,15 @@ class SVGMenu extends Component {
     toggleStatus(status);
   };
 
+  /* eslint-disable no-param-reassign */
   preventDefault = e => {
     e = e || window.event;
-    if (e.preventDefault) {
-      e.preventDefault();
-    }
+
+    e.preventDefault && e.preventDefault();
+
     e.returnValue = false;
   };
+  /* eslint-enable */
 
   preventDefaultForScrollKeys = e => {
     if (this.keys[e.keyCode]) {
@@ -198,9 +189,9 @@ class SVGMenu extends Component {
   };
 
   enableScroll = () => {
-    if (window.removeEventListener) {
+    window.removeEventListener &&
       window.removeEventListener('DOMMouseScroll', this.preventDefault, false);
-    }
+
     window.onmousewheel = document.onmousewheel = null;
     window.onwheel = null;
     window.ontouchmove = null;
@@ -211,6 +202,7 @@ class SVGMenu extends Component {
     return <div />;
   }
 }
+/* eslint-enable */
 
 const mapStateToProps = ({ menu, page }) => ({ menu, page });
 

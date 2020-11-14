@@ -90,8 +90,15 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "bootstrap-sass": "^3.4.1",
+    "classnames": "^2.2.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "jquery": "^3.3.1",
     "leaflet": "^1.4.0",
+    "lodash": "^4.17.11",
     "modernizr": "^3.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
@@ -104,13 +111,7 @@
     "react-router-dom": "^5.1.2",
     "react-s-alert": "^1.4.1",
     "redux": "^4.0.1",
-    "simplex-noise": "^2.4.0",
-    "lodash": "^4.17.11",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.5.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.6.0"
+    "simplex-noise": "^2.4.0"
   },
   "husky": {
     "hooks": {

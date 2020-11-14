@@ -1,6 +1,6 @@
-import URLS from '../../../constants/urls';
+import URLS from './urls';
 
-export const linksList = [
+const linkList = [
   URLS.main,
   URLS.contacts,
   URLS.skills,
@@ -21,3 +21,5 @@ export const linksList = [
   URLS.welhome,
   URLS.cherryPick,
 ];
+
+export default linkList;

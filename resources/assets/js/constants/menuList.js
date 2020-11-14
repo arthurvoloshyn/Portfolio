@@ -1,8 +1,8 @@
-import URLS from '../../../constants/urls';
+import URLS from './urls';
 
 const { portfolio, skills, contacts } = URLS;
 
-export const skillsList = [
+const menuList = [
   {
     title: 'Home',
     icon: 'home',
@@ -23,3 +23,5 @@ export const skillsList = [
     page: contacts,
   },
 ];
+
+export default menuList;
