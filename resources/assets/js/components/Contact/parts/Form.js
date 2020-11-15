@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 
+import RegExps from '../../../constants/regExps';
 import getAction from '../../../actions/contact';
 
 import 'react-s-alert/dist/s-alert-default.css';
@@ -19,6 +20,7 @@ const configAlert = {
   beep: false,
   timeout: 2000,
 };
+const stackAlert = { limit: 3 };
 
 class Form extends Component {
   static propTypes = {
@@ -97,6 +99,7 @@ class Form extends Component {
 
   _onKeyUp = ({ target: { name, value } }) => {
     const { getAction } = this.props;
+
     const actionResult = getAction(name, value);
     const { fieldName } = actionResult;
 
@@ -105,7 +108,7 @@ class Form extends Component {
 
   _validate = (name = null) => {
     let resultValidation = true;
-    const ruleEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const ruleEmail = RegExps.email;
 
     this.addError = fieldName => {
       this[fieldName].current.classList.remove('goodInput');
@@ -185,7 +188,7 @@ class Form extends Component {
             <input type="submit" value="Send" />
           </div>
         </form>
-        <Alert stack={{ limit: 3 }} />
+        <Alert stack={stackAlert} />
       </div>
     );
   }

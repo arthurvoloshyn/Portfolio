@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ReactRotatingText from 'react-rotating-text';
 import PropTypes from 'prop-types';
 
-import Constants from '../../constants/constants';
+import socialNetworkList from '../../constants/socialNetworkList';
 
 import './scss/Home.scss';
 
@@ -14,8 +14,6 @@ const Home = ({ preloader: { preloader } }) => {
     ) : (
       <ReactRotatingText items={['ReactJs', 'VueJs', 'NodeJs']} typingInterval={100} />
     );
-
-  const { linkedin, git, telegram } = Constants;
 
   return (
     <div className="ip-main for_fade">
@@ -31,15 +29,11 @@ const Home = ({ preloader: { preloader } }) => {
       </div>
 
       <div className="Icons__icon_container">
-        <a href={linkedin} rel="noopener noreferrer" target="_blank">
-          <div />
-        </a>
-        <a href={git} rel="noopener noreferrer" target="_blank">
-          <div />
-        </a>
-        <a href={telegram} rel="noopener noreferrer" target="_blank">
-          <div />
-        </a>
+        {socialNetworkList.map(({ label, link }) => (
+          <a key={label} className={label} href={link} rel="noopener noreferrer" target="_blank">
+            <div />
+          </a>
+        ))}
       </div>
     </div>
   );

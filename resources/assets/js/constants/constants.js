@@ -1,12 +1,4 @@
 const Constants = {
-  git: 'https://github.com/ArturW1998',
-  linkedin: 'https://www.linkedin.com/in/artur-voloshyn-4439b61a4/',
-  vk: 'https://vk.com/great_legendary_hero',
-  telegram: 'tg://resolve?domain=Great_legendary_hero',
-  codewars: 'https://www.codewars.com',
-  instagram: 'https://www.instagram.com/',
-  linkful: 'https://linkful.me',
-
   mapUrl: 'https://api.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png',
   accessTokenParam: 'access_token=',
   accessToken:

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import URLS from '../../constants/urls';
-
 import LoadingPage from '../LoadingPage/LoadingPage';
 
 import 'leaflet/dist/leaflet.css';
@@ -13,13 +12,13 @@ import './scss/Content.scss';
 
 const Skills = lazy(() => import('../Skills/Skills'));
 const Contact = lazy(() => import('../Contact/Contact'));
+const Home = lazy(() => import('../Home/Home'));
 const Portfolio = lazy(
   () =>
     new Promise(resolve => {
       setTimeout(() => resolve(import('../Portfolio/Portfolio')), 3000);
     }),
 );
-const Home = lazy(() => import('../Home/Home'));
 
 const Loading = <LoadingPage />;
 

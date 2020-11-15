@@ -13,18 +13,18 @@
     width: 40px;
   }
 
-  a:nth-child(1) div {
+  a.linkedin div {
     background-image: url('#{$img-path}/main_page/linkedin.png');
   }
 
-  a:nth-child(2) div {
+  a.git div {
     background-image: url('#{$img-path}/main_page/git.png');
     max-height: 256px;
     max-width: 256px;
   }
 
-  a:nth-child(3) div {
-    background-image: url('#{$img-path}/main_page/telegram.png');
+  a.skype div {
+    background-image: url('#{$img-path}/main_page/skype.png');
   }
 
   a {
