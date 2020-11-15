@@ -21,10 +21,7 @@ const Home = ({ preloader: { preloader } }) => {
         <div className="Preivew__neon">ARTUR VOLOSHYN</div>
         <div className="Preivew__info">&lt; Software Engineer /&gt;</div>
         <div className="Preivew__info Preivew__label_tech">
-          <p>
-            Working with technologies such as
-            {drawReactRotatingText()}
-          </p>
+          <p>Working with technologies such as {drawReactRotatingText()}</p>
         </div>
       </div>
 

@@ -41,7 +41,7 @@ class SVGMenu extends Component {
     document.removeEventListener('keydown', this.escFunction, false);
   }
 
-  escFunction = ({ key }) => key === 'ESC' && this.toggle();
+  escFunction = ({ key }) => key === 'Escape' && this.toggle();
 
   componentDidUpdate() {
     const {

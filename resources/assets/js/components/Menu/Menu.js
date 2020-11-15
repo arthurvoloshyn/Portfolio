@@ -64,7 +64,7 @@ class Menu extends Component {
     reloadPage(true);
   };
 
-  escFunction = ({ key }) => key === 'ESC' && this.menuStyleHandler();
+  escFunction = ({ key }) => key === 'Escape' && this.menuStyleHandler();
 
   menuStyleHandler = () => {
     const {

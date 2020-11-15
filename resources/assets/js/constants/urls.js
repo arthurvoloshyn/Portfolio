@@ -3,6 +3,7 @@ const URLS = {
   skills: 'skills',
   portfolio: 'portfolio',
   contacts: 'contacts',
+
   welhome: 'welhome',
   history24: 'history24',
   smokezone: 'smoke-zone',
@@ -18,10 +19,11 @@ const URLS = {
   neocore: 'casino',
   arcbazar: 'arcbazar',
   factoringvergelijken: 'factoringvergelijken',
-  url_skills: '/skills',
-  url_contacts: '/contacts',
-  url_portfolio: '/portfolio',
-  url_home: '/',
+
+  urlSkills: '/skills',
+  urlContacts: '/contacts',
+  urlPortfolio: '/portfolio',
+  urlHome: '/',
 };
 
 export default URLS;

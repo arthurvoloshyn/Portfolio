@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./resources/assets/js/components/Skills/scss/Skills.scss":
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./resources/assets/js/components/Home/scss/Home.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
@@ -8,14 +8,1142 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "/* Set everything to take full height */\n/* Main slideshow wrapper */\n#Skills_slideshow {\n  margin: 0;\n  padding: 0;\n  position: relative;\n  overflow: hidden;\n  height: 100vh; }\n  #Skills_slideshow ul {\n    margin: 0;\n    padding: 0;\n    list-style-type: none; }\n    #Skills_slideshow ul li {\n      -webkit-transform: translateZ(0);\n      transform: translateZ(0);\n      float: left;\n      display: block;\n      margin: 0;\n      position: relative;\n      height: 100vh !important; }\n      #Skills_slideshow ul li > svg {\n        position: relative;\n        fill: #161517;\n        z-index: -1; }\n      #Skills_slideshow ul li:nth-child(2) > svg, #Skills_slideshow ul li:nth-child(3) > svg {\n        fill: #161517; }\n      #Skills_slideshow ul li:nth-child(4) > svg {\n        fill: #9D9E94; }\n      #Skills_slideshow ul li:nth-child(6) > svg {\n        fill: #E5B8AD; }\n  #Skills_slideshow > nav span {\n    position: absolute;\n    width: 50px;\n    height: 50px;\n    color: #fff;\n    border-radius: 50%;\n    font-size: 50px;\n    text-align: center;\n    line-height: 47px;\n    cursor: pointer;\n    font-weight: normal;\n    bottom: 30px;\n    opacity: 0.8;\n    font-family: 'Flamenco', Arial, sans-serif;\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none; }\n    #Skills_slideshow > nav span:hover {\n      opacity: 1; }\n    #Skills_slideshow > nav span.disabled {\n      opacity: 0.2;\n      cursor: default; }\n      #Skills_slideshow > nav span.disabled:hover {\n        opacity: 0.2;\n        cursor: default; }\n    #Skills_slideshow > nav span.next {\n      right: 50%;\n      -webkit-transform: translateX(120%);\n      transform: translateX(120%); }\n    #Skills_slideshow > nav span.prev {\n      left: 50%;\n      -webkit-transform: translateX(-120%);\n      transform: translateX(-120%); }\n\n.slide {\n  position: absolute;\n  top: 0;\n  left: 16%;\n  right: 16%;\n  padding: 1em;\n  white-space: initial;\n  text-align: center; }\n  .slide div {\n    width: 100%;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .slide div div {\n      width: 100%;\n      height: 25vh;\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      justify-content: space-between; }\n      .slide div div img {\n        width: 15%; }\n  .slide h1, .slide blockquote {\n    margin: 0;\n    font-weight: 400;\n    font-size: 3em;\n    font-size: 3vw;\n    padding-top: 3%;\n    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n    font-family: 'Flamenco', Arial, sans-serif; }\n  .slide h1 {\n    margin-bottom: 4%; }\n  .slide > p {\n    line-height: 1.5;\n    font-size: 0.85em;\n    font-weight: bold; }\n  .slide blockquote {\n    position: relative;\n    margin: 0;\n    padding: 1em 10% 0; }\n    .slide blockquote::before {\n      content: '\\201C';\n      display: block;\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: 100%;\n      font-size: 3em;\n      color: rgba(43, 65, 77, 0.1);\n      z-index: -1; }\n    .slide blockquote p {\n      margin: 0;\n      line-height: 1.2; }\n    .slide blockquote + p {\n      color: rgba(43, 65, 77, 0.3); }\n\n.icon {\n  display: block;\n  padding-top: 3%;\n  position: relative;\n  margin: 0 auto 50px;\n  width: 50%;\n  max-width: 160px; }\n\n@media screen and (max-width: 32em) {\n  .slide h1, .slide blockquote {\n    font-size: 2em; } }\n\n@media screen and (max-width: 650px) and (orientation: portrait) {\n  .slide {\n    left: 6% !important;\n    right: 6% !important; }\n    .slide div div img {\n      width: 23% !important; } }\n\n@media screen and (max-height: 500px) and (orientation: landscape) {\n  .slide {\n    left: 16%;\n    right: 16%; }\n    .slide div div img {\n      width: 18%; }\n  #Skills_slideshow > nav span {\n    background: none;\n    top: 50%;\n    margin-top: -25px; }\n    #Skills_slideshow > nav span.next {\n      right: 10px;\n      -webkit-transform: translateX(0);\n      transform: translateX(0); }\n    #Skills_slideshow > nav span.prev {\n      left: 10px;\n      -webkit-transform: translateX(0);\n      transform: translateX(0); } }\n", ""]);
+exports.push([module.i, ".ip-main {\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  justify-content: center;\n  margin: 0 auto;\n  max-width: 1100px;\n  overflow: hidden;\n  padding: 160px 0 10em;\n  width: 90%; }\n  .ip-main h2 {\n    color: #be4856;\n    font-size: 4.25em;\n    font-size: 4vw;\n    line-height: 1;\n    margin: 0;\n    padding: 0.5em 0 1em;\n    text-align: center; }\n\n@media screen and (max-width: 45em) {\n  .ip-main h2 {\n    font-size: 2.25em;\n    font-size: 10vw; } }\n\n.Icons__icon_container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-top: 100px;\n  width: 300px; }\n  .Icons__icon_container div {\n    background-size: 40px;\n    height: 40px;\n    position: relative;\n    width: 40px; }\n  .Icons__icon_container a.linkedin div {\n    background-image: url(\"/imgs/main_page/linkedin.png\"); }\n  .Icons__icon_container a.git div {\n    background-image: url(\"/imgs/main_page/git.png\");\n    max-height: 256px;\n    max-width: 256px; }\n  .Icons__icon_container a.skype div {\n    background-image: url(\"/imgs/main_page/skype.png\"); }\n  .Icons__icon_container a {\n    outline: none; }\n  @media (max-height: 500px) {\n    .Icons__icon_container {\n      margin-top: 30px; } }\n  @media (max-width: 500px) {\n    .Icons__icon_container {\n      margin-top: 30px; } }\n\n.react-rotating-text-cursor {\n  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite; }\n\n@keyframes blinking-cursor {\n  0% {\n    opacity: 0; }\n  50% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\n.Preivew {\n  color: #87ceeb;\n  margin: 0 auto;\n  text-align: center;\n  text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb; }\n  .Preivew div:nth-child(1) {\n    color: #fff;\n    font-family: 'Wire One', Helvetica, Arial, sans-serif;\n    font-size: 100px;\n    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 30px #00bfff, 0 0 40px #00bfff, 0 0 50px #00bfff, 0 0 60px #00bfff, 0 0 70px #00bfff, 0 0 80px #00bfff, 0 0 90px #00bfff, 0 0 100px #87ceeb; }\n    @media (max-width: 800px) {\n      .Preivew div:nth-child(1) {\n        text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb, 0 0 30px #00bfff, 0 0 100px #87ceeb; } }\n  .Preivew div:nth-child(2) {\n    font-size: 30px; }\n  .Preivew div:nth-child(3) {\n    font-size: 18px;\n    white-space: nowrap; }\n  @media (max-width: 500px) {\n    .Preivew div:nth-child(1) {\n      font-size: 80px; } }\n  @media (max-width: 500px) {\n    .Preivew div:nth-child(2) {\n      font-size: 20px; } }\n  @media (max-width: 500px) {\n    .Preivew div:nth-child(3) {\n      font-size: 14px; } }\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./resources/assets/js/components/Skills/Skills.js":
+/***/ "./node_modules/lodash.toarray/index.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    weakMapTag = '[object WeakMap]';
+
+var dataViewTag = '[object DataView]';
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to compose unicode character classes. */
+var rsAstralRange = '\\ud800-\\udfff',
+    rsComboMarksRange = '\\u0300-\\u036f\\ufe20-\\ufe23',
+    rsComboSymbolsRange = '\\u20d0-\\u20f0',
+    rsVarRange = '\\ufe0e\\ufe0f';
+
+/** Used to compose unicode capture groups. */
+var rsAstral = '[' + rsAstralRange + ']',
+    rsCombo = '[' + rsComboMarksRange + rsComboSymbolsRange + ']',
+    rsFitz = '\\ud83c[\\udffb-\\udfff]',
+    rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')',
+    rsNonAstral = '[^' + rsAstralRange + ']',
+    rsRegional = '(?:\\ud83c[\\udde6-\\uddff]){2}',
+    rsSurrPair = '[\\ud800-\\udbff][\\udc00-\\udfff]',
+    rsZWJ = '\\u200d';
+
+/** Used to compose unicode regexes. */
+var reOptMod = rsModifier + '?',
+    rsOptVar = '[' + rsVarRange + ']?',
+    rsOptJoin = '(?:' + rsZWJ + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*',
+    rsSeq = rsOptVar + reOptMod + rsOptJoin,
+    rsSymbol = '(?:' + [rsNonAstral + rsCombo + '?', rsCombo, rsRegional, rsSurrPair, rsAstral].join('|') + ')';
+
+/** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */
+var reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
+
+/** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
+var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboMarksRange + rsComboSymbolsRange + rsVarRange + ']');
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */
+function arrayMap(array, iteratee) {
+  var index = -1,
+      length = array ? array.length : 0,
+      result = Array(length);
+
+  while (++index < length) {
+    result[index] = iteratee(array[index], index, array);
+  }
+  return result;
+}
+
+/**
+ * Converts an ASCII `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function asciiToArray(string) {
+  return string.split('');
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.values` and `_.valuesIn` which creates an
+ * array of `object` property values corresponding to the property names
+ * of `props`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} props The property names to get values for.
+ * @returns {Object} Returns the array of property values.
+ */
+function baseValues(object, props) {
+  return arrayMap(props, function(key) {
+    return object[key];
+  });
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Checks if `string` contains Unicode symbols.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {boolean} Returns `true` if a symbol is found, else `false`.
+ */
+function hasUnicode(string) {
+  return reHasUnicode.test(string);
+}
+
+/**
+ * Checks if `value` is a host object in IE < 9.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+ */
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
+}
+
+/**
+ * Converts `iterator` to an array.
+ *
+ * @private
+ * @param {Object} iterator The iterator to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function iteratorToArray(iterator) {
+  var data,
+      result = [];
+
+  while (!(data = iterator.next()).done) {
+    result.push(data.value);
+  }
+  return result;
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/**
+ * Converts `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function stringToArray(string) {
+  return hasUnicode(string)
+    ? unicodeToArray(string)
+    : asciiToArray(string);
+}
+
+/**
+ * Converts a Unicode `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function unicodeToArray(string) {
+  return string.match(reUnicode) || [];
+}
+
+/** Used for built-in method references. */
+var funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Symbol = root.Symbol,
+    iteratorSymbol = Symbol ? Symbol.iterator : undefined,
+    propertyIsEnumerable = objectProto.propertyIsEnumerable;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  // Safari 9 makes `arguments.length` enumerable in strict mode.
+  var result = (isArray(value) || isArguments(value))
+    ? baseTimes(value.length, String)
+    : [];
+
+  var length = result.length,
+      skipIndexes = !!length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `getTag`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  return objectToString.call(value);
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */
+function copyArray(source, array) {
+  var index = -1,
+      length = source.length;
+
+  array || (array = Array(length));
+  while (++index < length) {
+    array[index] = source[index];
+  }
+  return array;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11,
+// for data views in Edge < 14, and promises in Node.js.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = objectToString.call(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : undefined;
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to process.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+function isArguments(value) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+}
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * This method is like `_.isArrayLike` except that it also checks if `value`
+ * is an object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array-like object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArrayLikeObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLikeObject(document.body.children);
+ * // => true
+ *
+ * _.isArrayLikeObject('abc');
+ * // => false
+ *
+ * _.isArrayLikeObject(_.noop);
+ * // => false
+ */
+function isArrayLikeObject(value) {
+  return isObjectLike(value) && isArrayLike(value);
+}
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `String` primitive or object.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a string, else `false`.
+ * @example
+ *
+ * _.isString('abc');
+ * // => true
+ *
+ * _.isString(1);
+ * // => false
+ */
+function isString(value) {
+  return typeof value == 'string' ||
+    (!isArray(value) && isObjectLike(value) && objectToString.call(value) == stringTag);
+}
+
+/**
+ * Converts `value` to an array.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {Array} Returns the converted array.
+ * @example
+ *
+ * _.toArray({ 'a': 1, 'b': 2 });
+ * // => [1, 2]
+ *
+ * _.toArray('abc');
+ * // => ['a', 'b', 'c']
+ *
+ * _.toArray(1);
+ * // => []
+ *
+ * _.toArray(null);
+ * // => []
+ */
+function toArray(value) {
+  if (!value) {
+    return [];
+  }
+  if (isArrayLike(value)) {
+    return isString(value) ? stringToArray(value) : copyArray(value);
+  }
+  if (iteratorSymbol && value[iteratorSymbol]) {
+    return iteratorToArray(value[iteratorSymbol]());
+  }
+  var tag = getTag(value),
+      func = tag == mapTag ? mapToArray : (tag == setTag ? setToArray : values);
+
+  return func(value);
+}
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * Creates an array of the own enumerable string keyed property values of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property values.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.values(new Foo);
+ * // => [1, 2] (iteration order is not guaranteed)
+ *
+ * _.values('hi');
+ * // => ['h', 'i']
+ */
+function values(object) {
+  return object ? baseValues(object, keys(object)) : [];
+}
+
+module.exports = toArray;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/react-rotating-text/lib/ReactRotatingText.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__("./node_modules/react/index.js");
+var PropTypes = __webpack_require__("./node_modules/prop-types/index.js");
+var toArray = __webpack_require__("./node_modules/lodash.toarray/index.js");
+
+var ReactRotatingText = (function (_React$Component) {
+  _inherits(ReactRotatingText, _React$Component);
+
+  function ReactRotatingText(props) {
+    _classCallCheck(this, ReactRotatingText);
+
+    _get(Object.getPrototypeOf(ReactRotatingText.prototype), 'constructor', this).call(this, props);
+    var _props = this.props;
+    var items = _props.items;
+    var random = _props.random;
+
+    this.state = {
+      index: random ? Math.floor(Math.random() * Math.floor(items.length)) : 0,
+      output: '',
+      substrLength: 0
+    };
+    this.timeouts = [];
+  }
+
+  _createClass(ReactRotatingText, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this._animate.bind(this)(); // begin the animation loop
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.timeouts.map(function (x) {
+        return clearTimeout(x);
+      }); // stop all the loops
+    }
+  }, {
+    key: '_loop',
+    value: function _loop(loopingFunc, pause) {
+      // save the timeouts so we can stop on unmount
+      var timeout = setTimeout(loopingFunc, pause);
+      this.timeouts.push(timeout);
+
+      // prevent memory leak
+      var maxTimeouts = 100;
+      if (this.timeouts.length > maxTimeouts) {
+        clearTimeout(this.timeouts[0]);
+        this.timeouts.shift();
+      }
+    }
+  }, {
+    key: '_type',
+    value: function _type(text, callback) {
+      var output = this.state.output;
+      var typingInterval = this.props.typingInterval;
+
+      var loopingFunc = this._type.bind(this, text, callback);
+      var word = toArray(text);
+
+      // set the string one character longer
+      this.setState({ output: word.slice(0, toArray(output).length + 1).join('') });
+
+      // if we're still not done, recursively loop again
+      if (output.length < word.length) {
+        this._loop(loopingFunc, typingInterval);
+      } else {
+        if (typeof this.props.onTypingEnd == 'function') {
+          this.props.onTypingEnd();
+        }
+        callback();
+      }
+    }
+  }, {
+    key: '_erase',
+    value: function _erase(callback) {
+      var output = this.state.output;
+      var deletingInterval = this.props.deletingInterval;
+
+      var loopingFunc = this._erase.bind(this, callback);
+      var word = toArray(output);
+
+      if (typeof this.props.onDeletingStart == 'function') {
+        this.props.onDeletingStart();
+      }
+      // set the string one character shorter
+      this.setState({ output: word.slice(0, word.length - 1).join('') });
+
+      // if we're still not done, recursively loop again
+      if (word.length !== 0) {
+        this._loop(loopingFunc, deletingInterval);
+      } else {
+        if (typeof this.props.onDeletingEnd == 'function') {
+          this.props.onDeletingEnd();
+        }
+        callback();
+      }
+    }
+  }, {
+    key: '_overwrite',
+    value: function _overwrite(text, callback) {
+      var _state = this.state;
+      var output = _state.output;
+      var substrLength = _state.substrLength;
+      var deletingInterval = this.props.deletingInterval;
+
+      var loopingFunc = this._overwrite.bind(this, text, callback);
+      var word = toArray(text);
+      var out = toArray(output);
+
+      this.setState({
+        output: word.slice(0, substrLength).concat(out.slice(substrLength)),
+        substrLength: substrLength + 1
+      });
+
+      if (word.length !== substrLength) {
+        this._loop(loopingFunc, deletingInterval);
+      } else {
+        this.setState({
+          output: text,
+          substrLength: 0
+        });
+        callback();
+      }
+    }
+  }, {
+    key: '_animate',
+    value: function _animate() {
+      var _this = this;
+
+      var index = this.state.index;
+      var _props2 = this.props;
+      var items = _props2.items;
+      var pause = _props2.pause;
+      var emptyPause = _props2.emptyPause;
+      var eraseMode = _props2.eraseMode;
+      var random = _props2.random;
+
+      var type = this._type;
+      var erase = this._erase;
+      var overwrite = this._overwrite;
+      var loopingFunc = this._animate.bind(this);
+      var nextIndex = undefined;
+      if (random) {
+        nextIndex = Math.floor(Math.random() * Math.floor(items.length));
+      } else {
+        nextIndex = index === items.length - 1 ? 0 : index + 1;
+      }
+
+      var nextWord = function nextWord() {
+        _this.setState({ index: nextIndex });
+        _this._loop(loopingFunc, emptyPause);
+      };
+
+      if (typeof this.props.onTypingStart == 'function') {
+        this.props.onTypingStart();
+      }
+
+      type.bind(this)(items[index], function () {
+        if (eraseMode === 'overwrite') {
+          _this._loop(overwrite.bind(_this, items[nextIndex], nextWord), pause);
+        } else {
+          _this._loop(erase.bind(_this, nextWord), pause);
+        }
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props3 = this.props;
+      var color = _props3.color;
+      var cursor = _props3.cursor;
+      var deletingInterval = _props3.deletingInterval;
+      var emptyPause = _props3.emptyPause;
+      var items = _props3.items;
+      var pause = _props3.pause;
+      var eraseMode = _props3.eraseMode;
+      var typingInterval = _props3.typingInterval;
+      var random = _props3.random;
+
+      var other = _objectWithoutProperties(_props3, ['color', 'cursor', 'deletingInterval', 'emptyPause', 'items', 'pause', 'eraseMode', 'typingInterval', 'random']);
+
+      return React.createElement(
+        'span',
+        _extends({ style: { color: color } }, other),
+        this.state.output,
+        cursor ? React.createElement(
+          'span',
+          { className: 'react-rotating-text-cursor' },
+          '|'
+        ) : null
+      );
+    }
+  }]);
+
+  return ReactRotatingText;
+})(React.Component);
+
+ReactRotatingText.propTypes = {
+  color: PropTypes.string,
+  cursor: PropTypes.bool,
+  deletingInterval: PropTypes.number,
+  emptyPause: PropTypes.number,
+  eraseMode: PropTypes.string,
+  items: PropTypes.array,
+  pause: PropTypes.number,
+  typingInterval: PropTypes.number,
+  random: PropTypes.bool,
+  onTypingStart: PropTypes.func,
+  onTypingEnd: PropTypes.func,
+  onDeletingStart: PropTypes.func,
+  onDeletingEnd: PropTypes.func
+};
+
+ReactRotatingText.defaultProps = {
+  color: 'inherit',
+  cursor: true,
+  deletingInterval: 50,
+  emptyPause: 1000,
+  eraseMode: 'erase',
+  items: ['first', 'second', 'third', 'fourth', 'fifth'],
+  pause: 1500,
+  typingInterval: 50,
+  random: false
+};
+
+exports['default'] = ReactRotatingText;
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/Home/Home.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25,11 +1153,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
-
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
   enterModule && enterModule(module);
 })();
 
@@ -37,553 +1162,160 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SliderFx = __webpack_require__("./resources/assets/js/components/Skills/lib/SliderFx.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
 
-var _SliderFx2 = _interopRequireDefault(_SliderFx);
+var _reactRotatingText = __webpack_require__("./node_modules/react-rotating-text/lib/ReactRotatingText.js");
 
-__webpack_require__("./resources/assets/js/components/Skills/scss/Skills.scss");
+var _reactRotatingText2 = _interopRequireDefault(_reactRotatingText);
+
+var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _socialNetworkList = __webpack_require__("./resources/assets/js/constants/socialNetworkList.js");
+
+var _socialNetworkList2 = _interopRequireDefault(_socialNetworkList);
+
+__webpack_require__("./resources/assets/js/components/Home/scss/Home.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
-
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
   enterModule && enterModule(module);
 })();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+var Home = function Home(_ref) {
+  var preloader = _ref.preloader.preloader;
 
-var imgPathBack = '../imgs/skills/backand/';
-var imgPathFront = '../imgs/skills/frontend/';
-var imgPathOther = '../imgs/skills/other/';
+  var drawReactRotatingText = function drawReactRotatingText() {
+    return preloader ? '' : _react2.default.createElement(_reactRotatingText2.default, { items: ['ReactJs', 'VueJs', 'NodeJs'], typingInterval: 100 });
+  };
 
-var Skills = function (_Component) {
-  _inherits(Skills, _Component);
-
-  function Skills() {
-    _classCallCheck(this, Skills);
-
-    return _possibleConstructorReturn(this, (Skills.__proto__ || Object.getPrototypeOf(Skills)).apply(this, arguments));
-  }
-
-  _createClass(Skills, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.SliderFx = new _SliderFx2.default(document.getElementById('Skills_slideshow'), {
-        easing: 'cubic-bezier(.8,0,.2,1)'
-      });
-      this.SliderFx.init();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
+  return _react2.default.createElement(
+    'div',
+    { className: 'ip-main for_fade' },
+    _react2.default.createElement(
+      'div',
+      { className: 'Preivew' },
+      _react2.default.createElement(
         'div',
-        { id: 'Skills_slideshow', className: 'for_fade' },
+        { className: 'Preivew__neon' },
+        'ARTUR VOLOSHYN'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'Preivew__info' },
+        '< Software Engineer />'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'Preivew__info Preivew__label_tech' },
         _react2.default.createElement(
-          'ul',
+          'p',
           null,
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { className: 'slide' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathBack + 'python1.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'nodejs.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'php.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'nginx.png' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathBack + 'graphql .jpeg' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'mongo.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'mysql.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'symfony.png' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathBack + 'laravel.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'lumen-logo.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'yii2.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'express1.png' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathBack + 'git.png' }),
-                  _react2.default.createElement('img', { src: imgPathOther + 'ubuntu.png' }),
-                  _react2.default.createElement('img', { src: imgPathOther + 'docker.svg' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'apache.png' })
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { className: 'slide' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'js.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'vue.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'nuxt.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'vuex.png' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'ts.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'angular.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'rxjs.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'clarity.png' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'react.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'redux.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'redux-saga.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'flow.png' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'sass.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'less.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'yarn.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'webpack.png' })
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { className: 'slide' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'html.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'css.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'jquery.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'npm.png' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'bootstrap.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'enzyme.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'jest.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'eslint.png' })
-                ),
-                _react2.default.createElement('div', null),
-                _react2.default.createElement('div', null)
-              )
-            )
-          )
+          'Working with technologies such as ',
+          drawReactRotatingText()
         )
-      );
-    }
-  }, {
-    key: '__reactstandin__regenerateByEval',
-    // @ts-ignore
-    value: function __reactstandin__regenerateByEval(key, code) {
-      // @ts-ignore
-      this[key] = eval(code);
-    }
-  }]);
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'Icons__icon_container' },
+      _socialNetworkList2.default.map(function (_ref2) {
+        var label = _ref2.label,
+            link = _ref2.link;
+        return _react2.default.createElement(
+          'a',
+          { key: label, className: label, href: link, rel: 'noopener noreferrer', target: '_blank' },
+          _react2.default.createElement('div', null)
+        );
+      })
+    )
+  );
+};
 
-  return Skills;
-}(_react.Component);
+var mapStateToProps = function mapStateToProps(_ref3) {
+  var preloader = _ref3.preloader;
+  return { preloader: preloader };
+};
 
-var _default = Skills;
+Home.propTypes = {
+  preloader: _propTypes2.default.shape({
+    preloader: _propTypes2.default.bool
+  })
+};
+
+Home.defaultProps = {
+  preloader: {
+    preloader: false
+  }
+};
+
+var _default = (0, _reactRedux.connect)(mapStateToProps)(Home);
+
 var _default2 = _default;
 exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(imgPathBack, 'imgPathBack', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(imgPathFront, 'imgPathFront', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(imgPathOther, 'imgPathOther', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(Skills, 'Skills', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  leaveModule(module);
+  reactHotLoader.register(Home, 'Home', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/components/Home/Home.js');
+  reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/components/Home/Home.js');
+  reactHotLoader.register(_default, 'default', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/components/Home/Home.js');
 })();
 
-;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(imgPathBack, 'imgPathBack', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(imgPathFront, 'imgPathFront', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(imgPathOther, 'imgPathOther', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(Skills, 'Skills', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/Skills.js');
-  leaveModule(module);
+  reactHotLoader.register(Home, 'Home', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/components/Home/Home.js');
+  reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/components/Home/Home.js');
+  reactHotLoader.register(_default2, 'default', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/components/Home/Home.js');
 })();
 
 ;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
-/***/ "./resources/assets/js/components/Skills/lib/SliderFx.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SliderFx = function () {
-  _createClass(SliderFx, [{
-    key: '_morphSVGs',
-    value: function _morphSVGs(callback) {
-      var speed = this.options.speed;
-      var pathCurvedLeft = this.options.paths.curve.left;
-      var pathCurvedRight = this.options.paths.curve.right;
-      var pathRectangle = this.options.paths.rect;
-      var dir = this.old < this.curr ? 'right' : 'left';
-
-      // morph svg path on exiting slide to "curved"
-      this.items[this.old].path.stop().animate({ 'path': dir === 'right' ? pathCurvedLeft : pathCurvedRight }, speed * 0.5, mina.easeout);
-
-      // the slider starts a bit later...
-      setTimeout(function () {
-        callback.call();
-      }, speed * 0.2);
-
-      // change svg path on entering slide to "curved"
-      var currItem = this.items[this.curr];
-      currItem.querySelector('path').setAttribute('d', dir === 'right' ? pathCurvedLeft : pathCurvedRight);
-      // morph svg path on entering slide to "rectangle"
-      setTimeout(function () {
-        currItem.path.stop().animate({ 'path': pathRectangle }, speed * 3, mina.elastic);
-      }, speed * 0.5);
-    }
-  }]);
-
-  function SliderFx(el, options) {
-    _classCallCheck(this, SliderFx);
-
-    this.Modernizr = window.Modernizr;
-    window.transEndEventNames = {
-      'WebkitTransition': 'webkitTransitionEnd',
-      'MozTransition': 'transitionend',
-      'OTransition': 'oTransitionEnd',
-      'msTransition': 'MSTransitionEnd',
-      'transition': 'transitionend'
-    };
-    window.transEndEventName = window.transEndEventNames[this.Modernizr.prefixed('transition')];
-    this.support = { csstransitions: this.Modernizr.csstransitions };
-    this.el = el;
-    this.optionsDefault = {
-      // default transition speed (ms)
-      speed: 500,
-      // default transition easing
-      easing: 'ease',
-      // path definitions
-      paths: {
-        rect: 'M33,0h41c0,0,0,9.871,0,29.871C74,49.871,74,60,74,60H32.666h-0.125H6c0,0,0-10,0-30S6,0,6,0H33',
-        curve: {
-          right: 'M33,0h41c0,0,5,9.871,5,29.871C79,49.871,74,60,74,60H32.666h-0.125H6c0,0,5-10,5-30S6,0,6,0H33',
-          left: 'M33,0h41c0,0-5,9.871-5,29.871C69,49.871,74,60,74,60H32.666h-0.125H6c0,0-5-10-5-30S6,0,6,0H33'
-        }
-      }
-    };
-    this.options = this.extend({}, this.optionsDefault);
-    this.extend(this.options, options);
-  }
-
-  _createClass(SliderFx, [{
-    key: 'extend',
-    value: function extend(a, b) {
-      for (var key in b) {
-        if (b.hasOwnProperty(key)) {
-          a[key] = b[key];
-        }
-      }
-      return a;
-    }
-  }, {
-    key: 'init',
-    value: function init() {
-      this._init();
-      this._initEvents();
-    }
-  }, {
-    key: '_init',
-    value: function _init() {
-      var _this = this;
-
-      // the list of items
-      this.itemsList = this.el.querySelector('ul');
-      // the items (li elements)
-      this.items = [].slice.call(this.itemsList.querySelectorAll('li'));
-      // total number of items
-      this.itemsCount = this.items.length;
-      // current and old item´s index
-      this.curr = this.old = 0;
-      // check if it's currently animating
-      this.isAnimating = false;
-      // the itemsList (ul) will have a width of 100% x itemsCount
-      this.itemsList.style.width = 100 * this.itemsCount + '%';
-      // apply the transition
-      if (this.support) {
-        this.itemsList.style.WebkitTransition = '-webkit-transform ' + this.options.speed + 'ms ' + this.options.easing;
-        this.itemsList.style.transition = 'transform ' + this.options.speed + 'ms ' + this.options.easing;
-      }
-      this.items.forEach(function (item) {
-        // each item will have a width of 100 / itemsCount
-        item.style.width = 100 / _this.itemsCount + '%';
-      });
-      // add navigation arrows if there is more than 1 item
-      if (this.itemsCount > 1) {
-        // add navigation arrows (the previous arrow is not shown initially):
-        var nav = document.createElement('nav');
-        var addArrow = function addArrow(c, content, disabled) {
-          var el = document.createElement('span');
-          el.className = c;
-          el.innerHTML = content;
-          if (disabled) {
-            classie.add(el, 'disabled');
-          }
-          nav.appendChild(el);
-          return el;
-        };
-        var createSvg = function createSvg(html) {
-          var frag = document.createDocumentFragment();
-          var temp = document.createElement('div');
-          temp.innerHTML = html;
-          while (temp.firstChild) {
-            frag.appendChild(temp.firstChild);
-          }
-          return frag;
-        };
-
-        this.navPrev = addArrow('prev', '&lt;', true);
-        this.navNext = addArrow('next', '&gt;');
-        this.el.appendChild(nav);
-
-        // add svgs with rectangle path
-        this.items.forEach(function (item) {
-          var svg = createSvg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none"><path d="' + _this.options.paths.rect + '"/></svg>');
-          item.insertBefore(svg, item.childNodes[0]);
-
-          var s = Snap(item.querySelector('svg'));
-          item.path = s.select('path');
-        });
-      }
-    }
-  }, {
-    key: '_initEvents',
-    value: function _initEvents() {
-      var _this2 = this;
-
-      if (this.itemsCount > 1) {
-        this.navPrev.addEventListener('click', function () {
-          _this2._navigate('prev');
-        });
-        this.navNext.addEventListener('click', function () {
-          _this2._navigate('next');
-        });
-
-        var transitionendfn = function transitionendfn() {
-          _this2.isAnimating = false;
-        };
-        if (this.support) {
-          this.itemsList.addEventListener(transEndEventName, transitionendfn);
-        } else {
-          transitionendfn.call();
-        }
-
-        // keyboard navigation events
-        document.addEventListener('keydown', function (ev) {
-          var keyCode = ev.keyCode || ev.which;
-          switch (keyCode) {
-            // left key
-            case 37:
-              _this2._navigate('prev');
-              break;
-            // right key
-            case 39:
-              _this2._navigate('next');
-              break;
-          }
-        });
-      }
-    }
-  }, {
-    key: '_navigate',
-    value: function _navigate(dir) {
-      // do nothing if the itemsList is currently moving
-      if (this.isAnimating || dir === 'next' && this.curr >= this.itemsCount - 1 || dir === 'prev' && this.curr <= 0) {
-        return false;
-      }
-      this.isAnimating = true;
-      this.direction = dir;
-      // update old and current values
-      this.old = this.curr;
-      if (dir === 'next' && this.curr < this.itemsCount - 1) {
-        ++this.curr;
-      } else if (dir === 'prev' && this.curr > 0) {
-        --this.curr;
-      }
-      // slide
-      this._slide();
-    }
-  }, {
-    key: '_slide',
-    value: function _slide() {
-      var self = this;
-
-      function startSlider() {
-        // check which navigation arrows should be shown
-        self._toggleNavControls();
-        // translate value
-        var translateVal = -1 * self.curr * 100 / self.itemsCount;
-        self.itemsList.style.WebkitTransform = 'translate3d(' + translateVal + '%,0,0)';
-        self.itemsList.style.transform = 'translate3d(' + translateVal + '%,0,0)';
-      }
-
-      this._morphSVGs(startSlider);
-    }
-  }, {
-    key: '_toggleNavControls',
-    value: function _toggleNavControls() {
-      switch (this.curr) {
-        case 0:
-          classie.remove(this.navNext, 'disabled');
-          classie.add(this.navPrev, 'disabled');
-          break;
-        case this.itemsCount - 1:
-          classie.add(this.navNext, 'disabled');
-          classie.remove(this.navPrev, 'disabled');
-          break;
-        default:
-          classie.remove(this.navNext, 'disabled');
-          classie.remove(this.navPrev, 'disabled');
-          break;
-      }
-    }
-  }, {
-    key: '__reactstandin__regenerateByEval',
-    // @ts-ignore
-    value: function __reactstandin__regenerateByEval(key, code) {
-      // @ts-ignore
-      this[key] = eval(code);
-    }
-  }]);
-
-  return SliderFx;
-}();
-
-var _default = SliderFx;
-var _default2 = _default;
-exports.default = _default2;
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  leaveModule(module);
-})();
-
-;
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/module.js")(module)))
-
-/***/ }),
-
-/***/ "./resources/assets/js/components/Skills/scss/Skills.scss":
+/***/ "./resources/assets/js/components/Home/scss/Home.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./resources/assets/js/components/Skills/scss/Skills.scss");
+var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./resources/assets/js/components/Home/scss/Home.scss");
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -597,8 +1329,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Home.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Home.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -606,6 +1338,91 @@ if(false) {
 	// When the module is disposed, remove the <style> tags
 	module.hot.dispose(function() { update(); });
 }
+
+/***/ }),
+
+/***/ "./resources/assets/js/constants/socialNetworkList.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+var socialNetworkList = [{
+  label: 'git',
+  link: 'https://github.com/ArturW1998'
+}, {
+  label: 'linkedin',
+  link: 'https://www.linkedin.com/in/artur-voloshyn-4439b61a4/'
+}, {
+  label: 'skype',
+  link: 'skype:live:32d04c9d781e2d24?chat'
+}];
+
+var _default = socialNetworkList;
+var _default2 = _default;
+exports.default = _default2;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(socialNetworkList, 'socialNetworkList', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/constants/socialNetworkList.js');
+  reactHotLoader.register(_default, 'default', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/constants/socialNetworkList.js');
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(socialNetworkList, 'socialNetworkList', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/constants/socialNetworkList.js');
+  reactHotLoader.register(_default2, 'default', '/Users/arturvoloshyn/WebstormProjects/Portfolio/resources/assets/js/constants/socialNetworkList.js');
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ })
 
