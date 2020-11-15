@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import URLS from '../../constants/urls';
 
-import LoadingPage from '../LoadingPage';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 import 'leaflet/dist/leaflet.css';
 

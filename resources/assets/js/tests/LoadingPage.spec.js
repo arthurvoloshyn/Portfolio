@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoadingPage from '../components/LoadingPage';
+import LoadingPage from '../components/LoadingPage/LoadingPage';
 
 describe('LoadingPage', () => {
   const wrapper = shallow(<LoadingPage />);

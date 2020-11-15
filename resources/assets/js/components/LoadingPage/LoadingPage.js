@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './LoadingPage.scss';
+import './scss/LoadingPage.scss';
 
 const LoadingPage = () => (
   <div className="loading_page for_fade">

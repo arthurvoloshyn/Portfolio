@@ -1030,9 +1030,9 @@ var es6_regexp_match = __webpack_require__(77);
 var external_react_ = __webpack_require__(2);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// CONCATENATED MODULE: ./components/Wrapper/index.js
+// CONCATENATED MODULE: ./components/Wrapper/LoadingPage.js
 /* eslint-disable import/no-extraneous-dependencies */var Wrapper_Wrapper=function Wrapper(_ref){var children=_ref.children;return external_react_default.a.createElement(external_react_["Fragment"],null,children);};/* harmony default export */ var components_Wrapper = (Wrapper_Wrapper);
-// CONCATENATED MODULE: ./components/index.js
+// CONCATENATED MODULE: ./components/LoadingPage.js
 /* eslint-disable */var windowExists=function windowExists(){if(typeof window==='undefined'){return false;}try{var env="production".toLowerCase();return!env.match(/test/);}catch(e){return true;}};/* harmony default export */ var components = __webpack_exports__["default"] = ((function(){var exported;if(windowExists()){exported=__webpack_require__(75).default;}else{// NOTE: SSR support
 exported=__webpack_require__(48).default;}exported.Wrapper=components_Wrapper;return exported;})());
 
@@ -2824,7 +2824,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -2833,7 +2833,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _reactFullpage = __webpack_require__("./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js");
 
@@ -2896,7 +2896,7 @@ var _Neocore2 = _interopRequireDefault(_Neocore);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -3013,9 +3013,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -3034,9 +3034,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -3069,7 +3069,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3085,7 +3085,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3189,9 +3189,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3206,9 +3206,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3244,8 +3244,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Portfolio.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Portfolio.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Portfolio.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Portfolio.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -3269,7 +3269,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3282,7 +3282,7 @@ var _coalesce = __webpack_require__("./resources/assets/js/components/Portfolio/
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -3291,7 +3291,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3414,9 +3414,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3432,9 +3432,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3463,7 +3463,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -3476,7 +3476,7 @@ var _util = __webpack_require__("./resources/assets/js/components/Portfolio/sect
 var _DetectBrowser = __webpack_require__("./resources/assets/js/services/DetectBrowser.js");
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -3722,9 +3722,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -3768,9 +3768,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -3828,7 +3828,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3851,7 +3851,7 @@ var _constants2 = _interopRequireDefault(_constants);
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -3860,7 +3860,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3995,9 +3995,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4014,9 +4014,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4047,7 +4047,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4064,7 +4064,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -4075,7 +4075,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4188,9 +4188,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4206,9 +4206,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4238,7 +4238,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4257,7 +4257,7 @@ var _constants2 = _interopRequireDefault(_constants);
 
 __webpack_require__("./resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -4268,7 +4268,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4405,9 +4405,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4423,9 +4423,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4455,7 +4455,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4469,7 +4469,7 @@ var _wordFx = __webpack_require__("./resources/assets/js/components/Portfolio/se
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4617,9 +4617,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4635,9 +4635,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4663,13 +4663,13 @@ exports.default = _default2;
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5050,9 +5050,9 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5067,9 +5067,9 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5137,7 +5137,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5153,7 +5153,7 @@ var _anime2 = _interopRequireDefault(_anime);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5449,9 +5449,9 @@ exports.randomBetween = randomBetween;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5470,9 +5470,9 @@ exports.randomBetween = randomBetween;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5504,7 +5504,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Factoringvergelijken = undefined;
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5524,7 +5524,7 @@ var _constants2 = _interopRequireDefault(_constants);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5612,9 +5612,9 @@ var Factoringvergelijken = exports.Factoringvergelijken = function Factoringverg
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5629,9 +5629,9 @@ var Factoringvergelijken = exports.Factoringvergelijken = function Factoringverg
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5660,7 +5660,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5677,7 +5677,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -5688,7 +5688,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5827,9 +5827,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5846,9 +5846,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5879,7 +5879,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5892,7 +5892,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -5903,7 +5903,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6026,9 +6026,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6045,9 +6045,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6078,7 +6078,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6095,7 +6095,7 @@ var _constants2 = _interopRequireDefault(_constants);
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -6104,7 +6104,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6247,9 +6247,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6265,9 +6265,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6295,7 +6295,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -6314,7 +6314,7 @@ var _DetectBrowser = __webpack_require__("./resources/assets/js/services/DetectB
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -6562,9 +6562,9 @@ window.addEventListener('resize', resize);
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -6614,9 +6614,9 @@ window.addEventListener('resize', resize);
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -6680,7 +6680,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6693,7 +6693,7 @@ var _shift = __webpack_require__("./resources/assets/js/components/Portfolio/sec
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -6702,7 +6702,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6821,9 +6821,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6839,9 +6839,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6871,7 +6871,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -6888,7 +6888,7 @@ var _simplexNoise2 = _interopRequireDefault(_simplexNoise);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -7100,9 +7100,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -7149,9 +7149,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -7212,7 +7212,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7240,7 +7240,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7385,9 +7385,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7403,9 +7403,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7433,7 +7433,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7446,7 +7446,7 @@ var _util = __webpack_require__("./resources/assets/js/components/Portfolio/sect
 var _DetectBrowser = __webpack_require__("./resources/assets/js/services/DetectBrowser.js");
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7675,9 +7675,9 @@ function remove() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7723,9 +7723,9 @@ function remove() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7784,7 +7784,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.WellHome = undefined;
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7800,7 +7800,7 @@ var _Pattern2 = _interopRequireDefault(_Pattern);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7889,9 +7889,9 @@ var WellHome = exports.WellHome = function WellHome() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7906,9 +7906,9 @@ var WellHome = exports.WellHome = function WellHome() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7936,7 +7936,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Yandex = undefined;
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7956,7 +7956,7 @@ var _Pattern2 = _interopRequireDefault(_Pattern);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -8074,9 +8074,9 @@ var Yandex = exports.Yandex = function Yandex() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -8090,9 +8090,9 @@ var Yandex = exports.Yandex = function Yandex() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -8118,13 +8118,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -8184,9 +8184,9 @@ var lerp = exports.lerp = function lerp(n1, n2, speed) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -8221,9 +8221,9 @@ var lerp = exports.lerp = function lerp(n1, n2, speed) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -8270,13 +8270,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -8323,9 +8323,9 @@ var DetectBrowser = exports.DetectBrowser = {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -8339,9 +8339,9 @@ var DetectBrowser = exports.DetectBrowser = {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;

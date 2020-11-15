@@ -28,7 +28,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -46,7 +46,7 @@ __webpack_require__("./resources/assets/js/components/Skills/scss/Skills.scss");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -226,9 +226,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -246,9 +246,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -280,13 +280,13 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -542,9 +542,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -559,9 +559,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -597,8 +597,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
