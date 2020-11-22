@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Constants from '../../../../constants/constants';
+import portfolioLinksList from '../../../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
 import { remove, setup } from './lib/swirl';
 
@@ -47,7 +47,7 @@ class Linkful extends Component {
 
   render() {
     const { info } = this.state;
-    const { linkfulUrl } = Constants;
+    const { linkfulUrl } = portfolioLinksList;
 
     return (
       <div className="demo-2 linkful">

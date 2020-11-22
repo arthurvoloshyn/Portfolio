@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Constants from '../../../constants/constants';
 import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import Pattern from '../parts/Pattern';
@@ -61,7 +60,6 @@ class History24 extends Component {
               </span>
             </p>
           )}
-          url={Constants.history24}
         />
       </div>
     );

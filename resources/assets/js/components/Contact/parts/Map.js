@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map, Marker, TileLayer } from 'react-leaflet';
 
-import Constants from '../../../constants/constants';
+import mapApiPaths from '../../../constants/mapApiPaths';
 import IMGS from '../../../constants/imgs';
 
 const coordinates = {
@@ -17,12 +17,23 @@ const Icon = L.icon({
   iconSize: [38, 38], // size of the icon
   iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
 });
-const { mapUrl, accessToken, accessTokenParam, accessTokenType } = Constants;
-const URL = `${mapUrl}?${accessTokenType}.${accessTokenParam}${accessToken}`;
+
+const {
+  basePath,
+  usernamePath,
+  styleIdPath,
+  tilesPath,
+  accessTokenParam,
+  accessToken,
+} = mapApiPaths;
+
+/* eslint-disable */
+const tileLayerUrl = `${basePath}${usernamePath}${styleIdPath}${tilesPath}?${accessTokenParam}${accessToken}`;
+/* eslint-enable */
 
 const MapLeaflet = () => (
   <Map center={position} className="map-container" id="mapid" zoom={zoom} zoomControl={false}>
-    <TileLayer url={URL} />
+    <TileLayer url={tileLayerUrl} />
     <Marker icon={Icon} position={position} />
   </Map>
 );

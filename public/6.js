@@ -3845,7 +3845,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -4056,7 +4056,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -4251,7 +4251,7 @@ var _Slideshow = __webpack_require__("./resources/assets/js/components/Portfolio
 
 var _Slideshow2 = _interopRequireDefault(_Slideshow);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -5517,7 +5517,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -5669,7 +5669,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -6089,7 +6089,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _swirl = __webpack_require__("./resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js");
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -7223,7 +7223,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _pipeline = __webpack_require__("./resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js");
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -7945,7 +7945,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 

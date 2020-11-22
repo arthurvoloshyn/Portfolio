@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Constants from '../../../../constants/constants';
+import portfolioLinksList from '../../../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
 import { setup, remove } from './lib/pipeline';
 
@@ -55,12 +55,12 @@ class Smsplaza extends Component {
           <div className="content content--canvas--smsplaza">
             <div className="smspalza-container">
               <div className="header">
-                <a href={Constants.smsplaza} rel="noopener noreferrer" target="_blank">
+                <a href={portfolioLinksList.smsplaza} rel="noopener noreferrer" target="_blank">
                   <h2 className="logo">SMSPLAZA</h2>
                 </a>
 
                 <div className="description">
-                  <a href={Constants.smsplaza} rel="noopener noreferrer" target="_blank">
+                  <a href={portfolioLinksList.smsplaza} rel="noopener noreferrer" target="_blank">
                     Receive SMS Online | Verification Service
                   </a>
                 </div>
@@ -85,7 +85,7 @@ class Smsplaza extends Component {
 
               <a
                 className="mt-50 description"
-                href={Constants.smsplaza}
+                href={portfolioLinksList.smsplaza}
                 rel="noopener noreferrer"
                 target="_blank"
               >

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ParallaxMousemove from 'react-parallax-mousemove';
 
-import Constants from '../../../constants/constants';
+import portfolioLinksList from '../../../constants/portfolioLinksList';
 import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import sectionStyles from '../../../constants/sectionStyles';
@@ -60,7 +60,7 @@ class Arcbazar extends Component {
           logoDescription={() => (
             <p className="paragraph">Create unique interie and landscape design</p>
           )}
-          url={Constants.arcbazar}
+          url={portfolioLinksList.arcbazar}
         />
       </ParallaxMousemove>
     );

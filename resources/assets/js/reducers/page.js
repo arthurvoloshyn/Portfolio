@@ -2,7 +2,8 @@ import URLS from '../constants/urls';
 import ACTION_TYPES from '../constants/actionTypes';
 
 const { href } = window.location;
-const path = href.split('/')[3].split('#');
+const pathName = href.split('/')[3];
+const path = pathName.split('#');
 const page = path[1] || path[0];
 
 const initialState = {

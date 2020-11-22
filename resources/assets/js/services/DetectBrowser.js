@@ -1,6 +1,7 @@
 import RegExps from '../constants/regExps';
 
 const { userAgent } = navigator;
+const { webstore: chromeWebstore, runtime: chromeRuntime } = window.chrome;
 const { constructor: constructorRegExps } = RegExps;
 
 const DetectBrowser = {
@@ -23,7 +24,7 @@ const DetectBrowser = {
   isEdge: () => !isIE && !!window.StyleMedia,
 
   // Chrome 1 - 71
-  isChrome: () => !!window.chrome && !!(window.chrome.webstore || window.chrome.runtime),
+  isChrome: () => !!window.chrome && !!(chromeWebstore || chromeRuntime),
 
   // Blink engine detection
   isBlink: () => (isChrome || isOpera) && !!window.CSS,

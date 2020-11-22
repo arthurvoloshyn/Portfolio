@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Constants from '../../../constants/constants';
+import portfolioLinksList from '../../../constants/portfolioLinksList';
 import URLS from '../../../constants/urls';
 import Pattern from '../parts/Pattern';
 
@@ -59,7 +59,7 @@ class C2Corner extends Component {
           </p>
         )}
         logoText="C2CORNER"
-        url={Constants.c2corner}
+        url={portfolioLinksList.c2corner}
       />
     );
   }

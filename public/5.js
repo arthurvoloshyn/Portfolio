@@ -25116,7 +25116,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactLeaflet = __webpack_require__("./node_modules/react-leaflet/es/index.js");
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 

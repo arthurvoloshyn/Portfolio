@@ -7,9 +7,9 @@ const Contact = lazy(() => import('../components/Contact/Contact'));
 const Home = lazy(() => import('../components/Home/Home'));
 const Portfolio = lazy(
   () =>
-    new Promise(resolve => {
-      setTimeout(() => resolve(import('../components/Portfolio/Portfolio')), 3000);
-    }),
+    new Promise(resolve =>
+      setTimeout(() => resolve(import('../components/Portfolio/Portfolio')), 3000),
+    ),
 );
 
 const { urlSkills, urlContacts, urlPortfolio, urlHome } = URLS;

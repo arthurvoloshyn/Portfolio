@@ -1,7 +1,6 @@
 import React from 'react';
 
 import IMGS from '../../../constants/imgs';
-import Constants from '../../../constants/constants';
 import Pattern from '../parts/Pattern';
 
 const SmokeZone = () => (
@@ -46,7 +45,6 @@ const SmokeZone = () => (
           </div>
         </div>
       )}
-      url={Constants.smokeZone}
     />
   </div>
 );

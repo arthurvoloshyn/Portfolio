@@ -65,9 +65,11 @@
       textarea[name='body'] {
         height: 250px;
         margin-top: 5px;
-        max-height: 500px;
+        max-height: 345px;
         max-width: 610px;
         min-height: 50px;
+        padding-bottom: 15px;
+        padding-top: 15px;
         resize: vertical;
         width: 100%;
       }

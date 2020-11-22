@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Constants from '../../../../constants/constants';
+import portfolioLinksList from '../../../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
 import Slideshow from './lib/Slideshow';
 
@@ -102,7 +102,7 @@ class CompareIp extends Component {
                 <div className="img-container" />
                 <a
                   className="draw-border"
-                  href={Constants.compareIp}
+                  href={portfolioLinksList.compareIp}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
