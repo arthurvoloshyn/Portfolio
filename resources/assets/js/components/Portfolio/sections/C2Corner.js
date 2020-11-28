@@ -24,11 +24,13 @@ class C2Corner extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    page === URLS.c2corner
-      ? menuItems.addClass('c2corner-bg')
-      : menuItems.removeClass('c2corner-bg');
+    menuItems.forEach(menuItem =>
+      page === URLS.c2corner
+        ? menuItem.classList.add('c2corner-bg')
+        : menuItem.classList.remove('c2corner-bg'),
+    );
   }
 
   render() {

@@ -28,15 +28,17 @@ class Smsplaza extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    if (page === URLS.smsplaza) {
-      setup();
-      menuItems.addClass('smsplaza-bg');
-    } else {
-      remove();
-      menuItems.removeClass('smsplaza-bg');
-    }
+    menuItems.forEach(menuItem => {
+      if (page === URLS.smsplaza) {
+        setup();
+        menuItem.classList.add('smsplaza-bg');
+      } else {
+        remove();
+        menuItem.classList.remove('smsplaza-bg');
+      }
+    });
   }
 
   toggle = () =>

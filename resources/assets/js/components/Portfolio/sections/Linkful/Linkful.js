@@ -29,15 +29,17 @@ class Linkful extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    if (page === portfolioUrl || page === firstSlideUrl || page === linkfulUrl) {
-      setup();
-      menuItems.addClass('linkful-bg');
-    } else {
-      remove();
-      menuItems.removeClass('linkful-bg');
-    }
+    menuItems.forEach(menuItem => {
+      if (page === portfolioUrl || page === firstSlideUrl || page === linkfulUrl) {
+        setup();
+        menuItem.classList.add('linkful-bg');
+      } else {
+        remove();
+        menuItem.classList.remove('linkful-bg');
+      }
+    });
   }
 
   toggle = () =>

@@ -24,11 +24,13 @@ class History24 extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    page === URLS.c2corner
-      ? menuItems.addClass('history24-bg')
-      : menuItems.removeClass('history24-bg');
+    menuItems.forEach(menuItem =>
+      page === URLS.c2corner
+        ? menuItem.classList.add('history24-bg')
+        : menuItem.classList.remove('history24-bg'),
+    );
   }
 
   render() {

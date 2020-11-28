@@ -41,15 +41,17 @@ class CompareIp extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    if (page === URLS.compareip) {
-      firstTime && this.show();
+    menuItems.forEach(menuItem => {
+      if (page === URLS.compareip) {
+        firstTime && this.show();
 
-      menuItems.addClass('compareip-bg');
-    } else {
-      menuItems.removeClass('compareip-bg');
-    }
+        menuItem.classList.add('compareip-bg');
+      } else {
+        menuItem.classList.add('compareip-bg');
+      }
+    });
   }
 
   componentDidUpdate(prevProps) {

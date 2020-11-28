@@ -27,15 +27,17 @@ class Neocore extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    if (page === URLS.neocore) {
-      setup();
-      menuItems.addClass('neocore-bg');
-    } else {
-      remove();
-      menuItems.removeClass('neocore-bg');
-    }
+    menuItems.forEach(menuItem => {
+      if (page === URLS.neocore) {
+        setup();
+        menuItem.classList.add('neocore-bg');
+      } else {
+        remove();
+        menuItem.classList.remove('neocore-bg');
+      }
+    });
   }
 
   toggle = () =>

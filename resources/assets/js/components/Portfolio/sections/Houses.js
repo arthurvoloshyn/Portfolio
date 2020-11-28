@@ -23,9 +23,13 @@ class Houses extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    page === URLS.c2corner ? menuItems.addClass('houses-bg') : menuItems.removeClass('houses-bg');
+    menuItems.forEach(menuItem =>
+      page === URLS.c2corner
+        ? menuItem.classList.add('houses-bg')
+        : menuItem.classList.remove('houses-bg'),
+    );
   }
 
   render() {

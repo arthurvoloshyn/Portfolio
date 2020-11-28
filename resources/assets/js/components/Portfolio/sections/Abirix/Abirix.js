@@ -27,15 +27,17 @@ class Abirix extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    if (page === URLS.abirix) {
-      setup();
-      menuItems.addClass('abirix-bg');
-    } else {
-      remove();
-      menuItems.removeClass('abirix-bg');
-    }
+    menuItems.forEach(menuItem => {
+      if (page === URLS.abirix) {
+        setup();
+        menuItem.classList.add('abirix-bg');
+      } else {
+        remove();
+        menuItem.classList.remove('abirix-bg');
+      }
+    });
   }
 
   toggle = () =>

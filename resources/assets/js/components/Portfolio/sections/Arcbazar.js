@@ -27,11 +27,13 @@ class Arcbazar extends Component {
       page: { page },
     } = nextProps;
 
-    const menuItems = $('#fp-nav ul li a span');
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
-    page === URLS.arcbazar
-      ? menuItems.addClass('arcbazar-bg')
-      : menuItems.removeClass('arcbazar-bg');
+    menuItems.forEach(menuItem =>
+      page === URLS.arcbazar
+        ? menuItem.classList.add('arcbazar-bg')
+        : menuItem.classList.remove('arcbazar-bg'),
+    );
   }
 
   render() {

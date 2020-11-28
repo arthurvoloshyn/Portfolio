@@ -69,9 +69,10 @@ class Loading extends Component {
   init = () => {
     const { setStatus } = this.props;
     const ipLoaderCircle = document.getElementById('ip-loader-circle');
+    const imgLoader = document.getElementById('img_loader');
 
-    $('#img_loader').removeClass('transparent');
-    $('#img_loader').addClass('show');
+    imgLoader.classList.remove('transparent');
+    imgLoader.classList.add('show');
 
     this.loader = new PathLoader(ipLoaderCircle);
     setStatus(true);
@@ -80,16 +81,18 @@ class Loading extends Component {
       const { animations } = this.support;
       const { setStatus: propsSetStatus } = this.props;
 
+      const forFade = document.querySelector('.for_fade');
+
       animations &&
         this.container.removeEventListener(this.animEndEventName, onEndInitialAnimation);
 
-      $('.for_fade').css('visibility', 'hidden');
+      forFade.style.visibility = 'hidden';
 
       this.startLoading();
 
       setTimeout(() => {
-        $('.for_fade').css('visibility', 'visible');
-        $('.for_fade').addClass('animated fadeIn');
+        forFade.style.visibility = 'visible';
+        forFade.classList.add('animated', 'fadeIn');
 
         propsSetStatus(false);
       }, 1000);
@@ -109,13 +112,15 @@ class Loading extends Component {
   };
 
   reloading = page => {
-    $('html, body').animate({ scrollTop: 0 }, 'slow');
-    $('#ip-container').addClass('unloaded');
+    const ipContainer = document.getElementById('ip-container');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    ipContainer.classList.add('unloaded');
 
     setTimeout(() => {
       const { history, setStatusMenu } = this.props;
 
-      $('#ip-container').removeClass('loaded unloaded');
+      ipContainer.classList.remove('loaded', 'unloaded');
 
       history.push(page);
       setStatusMenu(false);
@@ -140,9 +145,11 @@ class Loading extends Component {
             page: { page },
           } = this.props;
 
-          if (page !== URLS.main || $(window).height() < 500) {
-            $('#img_loader').addClass('transparent');
-            $('#img_loader').removeClass('show');
+          const imgLoader = document.getElementById('img_loader');
+
+          if (page !== URLS.main || window.innerHeight < 500) {
+            imgLoader.classList.add('transparent');
+            imgLoader.classList.remove('show');
           }
 
           classie.remove(this.container, 'loading');
