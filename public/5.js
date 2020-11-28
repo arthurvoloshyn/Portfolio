@@ -1092,7 +1092,7 @@ Bounds.prototype = {
 
 	// @method intersects(otherBounds: Bounds): Boolean
 	// Returns `true` if the rectangle intersects the given bounds. Two bounds
-	// intersect if they have at least one point in common.
+	// intersect if they have at least one point in utils.
 	intersects: function (bounds) { // (Bounds) -> Boolean
 		bounds = toBounds(bounds);
 
@@ -1320,7 +1320,7 @@ LatLngBounds.prototype = {
 	},
 
 	// @method intersects(otherBounds: LatLngBounds): Boolean
-	// Returns `true` if the rectangle intersects the given bounds. Two bounds intersect if they have at least one point in common.
+	// Returns `true` if the rectangle intersects the given bounds. Two bounds intersect if they have at least one point in utils.
 	intersects: function (bounds) {
 		bounds = toLatLngBounds(bounds);
 
@@ -1693,7 +1693,7 @@ var Earth = extend({}, CRS, {
  * @namespace Projection
  * @projection L.Projection.SphericalMercator
  *
- * Spherical Mercator projection — the most common projection for online maps,
+ * Spherical Mercator projection — the most utils projection for online maps,
  * used by almost all free and commercial tile providers. Assumes that Earth is
  * a sphere. Used by the `EPSG:3857` CRS.
  */
@@ -1809,7 +1809,7 @@ function toTransformation(a, b, c, d) {
  * @namespace CRS
  * @crs L.CRS.EPSG3857
  *
- * The most common CRS for online maps, used by almost all free and commercial
+ * The most utils CRS for online maps, used by almost all free and commercial
  * tile providers. Uses Spherical Mercator projection. Set in by default in
  * Map's `crs` option.
  */
@@ -6471,7 +6471,7 @@ var EPSG3395 = extend({}, Earth, {
  * @namespace CRS
  * @crs L.CRS.EPSG4326
  *
- * A common CRS among GIS enthusiasts. Uses simple Equirectangular projection.
+ * A utils CRS among GIS enthusiasts. Uses simple Equirectangular projection.
  *
  * Leaflet 1.0.x complies with the [TMS coordinate scheme for EPSG:4326](https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification#global-geodetic),
  * which is a breaking change from 0.7.x behaviour.  If you are using a `TileLayer`
@@ -7430,7 +7430,7 @@ var Marker = Layer.extend({
 		// @option icon: Icon = *
 		// Icon instance to use for rendering the marker.
 		// See [Icon documentation](#L.Icon) for details on how to customize the marker icon.
-		// If not specified, a common instance of `L.Icon.Default` is used.
+		// If not specified, a utils instance of `L.Icon.Default` is used.
 		icon: new IconDefault(),
 
 		// Option inherited from "Interactive layer" abstract class
@@ -25220,8 +25220,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Contact.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Contact.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Contact.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Contact.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

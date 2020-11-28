@@ -550,8 +550,8 @@ exports.default = _default2;
     return;
   }
 
-  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
+  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
+  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
   leaveModule(module);
 })();
 
@@ -567,8 +567,8 @@ exports.default = _default2;
     return;
   }
 
-  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
+  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
+  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
   leaveModule(module);
 })();
 
@@ -597,8 +597,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Skills.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Skills.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
