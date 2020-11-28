@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import portfolioLinksList from '../../../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
-import Slideshow from './lib/Slideshow';
+import Slideshow from './common/Slideshow';
 
-import './lib/wordFx';
+import './common/wordFx';
 
 class CompareIp extends Component {
   static propTypes = {

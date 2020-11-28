@@ -1,4 +1,4 @@
-import anime from '../common/anime.min';
+import anime from '../libs/anime.min';
 import randomBetween from './wordFx';
 
 const { random } = anime;

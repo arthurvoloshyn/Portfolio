@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
-import { remove, setup } from './lib/coalesce';
+import { remove, setup } from './common/coalesce';
 
 class Abirix extends Component {
   static propTypes = {

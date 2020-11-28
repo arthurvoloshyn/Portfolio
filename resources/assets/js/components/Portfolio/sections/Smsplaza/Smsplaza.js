@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import portfolioLinksList from '../../../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
-import { setup, remove } from './lib/pipeline';
+import { setup, remove } from './common/pipeline';
 
 class Smsplaza extends Component {
   static propTypes = {

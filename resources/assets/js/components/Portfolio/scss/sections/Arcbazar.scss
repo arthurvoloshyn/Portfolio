@@ -1,13 +1,12 @@
 .Arcbazar {
-  background: #9796f0;
-
   /* fallback for old browsers */
+  background: #9796f0;
 
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#fbc7d4), to(#9796f0));
-  background: linear-gradient(to right, #fbc7d4, #9796f0);
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #fbc7d4, #9796f0);
 
   .technologies-container {
     .technologies {

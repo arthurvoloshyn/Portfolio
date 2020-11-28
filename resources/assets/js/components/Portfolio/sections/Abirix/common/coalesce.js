@@ -1,5 +1,5 @@
 import DetectBrowser from '../../../../../services/DetectBrowser';
-import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../common/util';
+import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../utils/utils';
 
 const particleCount = 75;
 const particlePropCount = 9;

@@ -1,6 +1,6 @@
 import SimplexNoise from 'simplex-noise';
 
-import { cos, fadeInOut, rand, sin, TAU } from '../../common/util';
+import { cos, fadeInOut, rand, sin, TAU } from '../../utils/utils';
 
 const circleCount = 10;
 const circlePropCount = 8;

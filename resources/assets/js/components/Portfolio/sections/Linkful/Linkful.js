@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import portfolioLinksList from '../../../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
-import { remove, setup } from './lib/swirl';
+import { remove, setup } from './common/swirl';
 
 class Linkful extends Component {
   static propTypes = {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import URLS from '../../constants/urls';
 import IMGS from '../../constants/imgs';
-import Loading from './lib/Loading';
+import Loading from './common/Loading';
 
 import './scss/Preloader.scss';
 

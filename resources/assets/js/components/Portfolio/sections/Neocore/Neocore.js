@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
-import { remove, setup } from './lib/shift';
+import { remove, setup } from './common/shift';
 
 class Neocore extends Component {
   static propTypes = {

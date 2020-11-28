@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import menuList from '../../constants/menuList';
-import getStylesList from './common/getStylesList';
+import getStylesList from './utils/getStylesList';
 import { reloadPage, setPage } from '../../actions/page';
-import SVGMenu from './lib/SVGMenu';
+import SVGMenu from './common/SVGMenu';
 
 import './scss/Menu.scss';
 

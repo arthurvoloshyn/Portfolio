@@ -1,17 +1,6 @@
-/**
- * wordFx.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2017, Codrops
- * http://www.codrops.com
- */
-import charming from '../common/charming.min';
-import anime from '../common/anime.min';
+import charming from '../libs/charming.min';
+import anime from '../libs/anime.min';
 
-// From https://davidwalsh.name/javascript-debounce-function.
 const debounce = (func, wait, immediate) => {
   let timeout;
 
