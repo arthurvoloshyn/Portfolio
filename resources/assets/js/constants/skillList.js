@@ -16,8 +16,8 @@ const skillList = [
     alt: 'JavaScript',
   },
   {
-    src: `${imgPathFront}jquery.png`,
-    alt: 'jQuery',
+    src: `${imgPathFront}ts.png`,
+    alt: 'TypeScript',
   },
   {
     src: `${imgPathFront}react.png`,
@@ -36,16 +36,16 @@ const skillList = [
     alt: 'Redux-Thunk',
   },
   {
+    src: `${imgPathFront}jquery.png`,
+    alt: 'jQuery',
+  },
+  {
     src: `${imgPathFront}next.svg`,
     alt: 'Next.js',
   },
   {
     src: `${imgPathFront}react_native.png`,
     alt: 'React Native',
-  },
-  {
-    src: `${imgPathFront}ts.png`,
-    alt: 'TypeScript',
   },
   {
     src: `${imgPathFront}flow.png`,
@@ -56,6 +56,10 @@ const skillList = [
     alt: 'Bootstrap',
   },
   {
+    src: `${imgPathFront}pug.png`,
+    alt: 'Pug',
+  },
+  {
     src: `${imgPathFront}sass.png`,
     alt: 'Syntactically Awesome Style Sheets',
   },
@@ -64,24 +68,12 @@ const skillList = [
     alt: 'Leaner Style Sheets',
   },
   {
-    src: `${imgPathFront}postCSS.png`,
-    alt: 'PostCSS',
-  },
-  {
-    src: `${imgPathFront}pug.png`,
-    alt: 'Pug',
-  },
-  {
     src: `${imgPathFront}webpack.png`,
     alt: 'Webpack',
   },
   {
     src: `${imgPathFront}gulp.svg`,
     alt: 'Gulp',
-  },
-  {
-    src: `${imgPathFront}pwa.png`,
-    alt: 'Progressive Web Applications',
   },
   {
     src: `${imgPathFront}npm.png`,
@@ -108,6 +100,10 @@ const skillList = [
     alt: 'Cypress',
   },
   {
+    src: `${imgPathFront}pwa.png`,
+    alt: 'Progressive Web Applications',
+  },
+  {
     src: `${imgPathFront}eslint.png`,
     alt: 'ESLint',
   },
@@ -118,6 +114,10 @@ const skillList = [
   {
     src: `${imgPathFront}prettier.png`,
     alt: 'Prettier',
+  },
+  {
+    src: `${imgPathFront}postCSS.png`,
+    alt: 'PostCSS',
   },
   {
     src: `${imgPathFront}styled-components.png`,
@@ -172,12 +172,16 @@ const skillList = [
     alt: 'Figma',
   },
   {
-    src: `${imgPathOther}adobe_photoshop.png`,
-    alt: 'Adobe Photoshop',
+    src: `${imgPathOther}principle.svg`,
+    alt: 'Principle',
   },
   {
     src: `${imgPathOther}sketch.png`,
     alt: 'Sketch',
+  },
+  {
+    src: `${imgPathOther}adobe_photoshop.png`,
+    alt: 'Adobe Photoshop',
   },
   {
     src: `${imgPathOther}adobe_in_design.png`,
@@ -186,10 +190,6 @@ const skillList = [
   {
     src: `${imgPathOther}adobe_after_effects.png`,
     alt: 'Adobe After Effects',
-  },
-  {
-    src: `${imgPathOther}principle.svg`,
-    alt: 'Principle',
   },
   {
     src: `${imgPathOther}webStorm.png`,
@@ -206,6 +206,10 @@ const skillList = [
   {
     src: `${imgPathBack}mysql.png`,
     alt: 'MySQL',
+  },
+  {
+    src: `${imgPathBack}Postgresql_elephant.svg`,
+    alt: 'PostgreSQL',
   },
   {
     src: `${imgPathBack}laravel.png`,

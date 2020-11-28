@@ -22,7 +22,7 @@ const mix = require('laravel-mix');
 mix
   .react('resources/assets/js/index.js', 'public/js')
   .browserSync({
-    proxy: 'portfolio'
+    proxy: 'portfolio',
   })
   .version();
 
@@ -34,29 +34,29 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 mix.webpackConfig({
   plugins: [
     new webpack.EnvironmentPlugin({
-      PUBLIC_URL: ''
+      PUBLIC_URL: '',
     }),
     new CopyWebpackPlugin([
       {
         from: 'resources/assets/imgs',
-        to: 'imgs' // Laravel mix will place this in 'public/img'
-      }
+        to: 'imgs', // Laravel mix will place this in 'public/img'
+      },
     ]),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
       optipng: {
-        optimizationLevel: 3
+        optimizationLevel: 3,
       },
       jpegtran: {
-        progressive: false
+        progressive: false,
       },
       svgo: {},
       plugins: [
         imageminMozjpeg({
           quality: 90,
-          progressive: true
-        })
-      ]
-    })
-  ]
+          progressive: true,
+        }),
+      ],
+    }),
+  ],
 });
