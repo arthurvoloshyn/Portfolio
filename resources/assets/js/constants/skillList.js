@@ -36,8 +36,12 @@ const skillList = [
     alt: 'Redux-Thunk',
   },
   {
-    src: `${imgPathFront}jquery.png`,
-    alt: 'jQuery',
+    src: `${imgPathFront}mobx.png`,
+    alt: 'MobX',
+  },
+  {
+    src: `${imgPathFront}graphql.jpeg`,
+    alt: 'GraphQL',
   },
   {
     src: `${imgPathFront}next.svg`,
@@ -48,16 +52,44 @@ const skillList = [
     alt: 'React Native',
   },
   {
+    src: `${imgPathFront}vue.png`,
+    alt: 'Vue.js',
+  },
+  {
+    src: `${imgPathFront}nuxt.png`,
+    alt: 'Nuxt.js',
+  },
+  {
+    src: `${imgPathFront}vuex.png`,
+    alt: 'Vuex',
+  },
+  {
+    src: `${imgPathFront}rxjs.png`,
+    alt: 'RxJS',
+  },
+  {
+    src: `${imgPathFront}jquery.png`,
+    alt: 'jQuery',
+  },
+  {
     src: `${imgPathFront}flow.png`,
     alt: 'Flow',
+  },
+  {
+    src: `${imgPathFront}pug.png`,
+    alt: 'Pug',
   },
   {
     src: `${imgPathFront}bootstrap.png`,
     alt: 'Bootstrap',
   },
   {
-    src: `${imgPathFront}pug.png`,
-    alt: 'Pug',
+    src: `${imgPathFront}materialize.svg`,
+    alt: 'Materialize',
+  },
+  {
+    src: `${imgPathFront}tailwind.png`,
+    alt: 'Tailwind CSS',
   },
   {
     src: `${imgPathFront}sass.png`,
@@ -68,12 +100,24 @@ const skillList = [
     alt: 'Leaner Style Sheets',
   },
   {
+    src: `${imgPathFront}postCSS.png`,
+    alt: 'PostCSS',
+  },
+  {
+    src: `${imgPathFront}stylus.svg`,
+    alt: 'Stylus',
+  },
+  {
     src: `${imgPathFront}webpack.png`,
     alt: 'Webpack',
   },
   {
     src: `${imgPathFront}gulp.svg`,
     alt: 'Gulp',
+  },
+  {
+    src: `${imgPathFront}parcel.png`,
+    alt: 'Parcel.js',
   },
   {
     src: `${imgPathFront}npm.png`,
@@ -100,6 +144,14 @@ const skillList = [
     alt: 'Cypress',
   },
   {
+    src: `${imgPathFront}mocha.png`,
+    alt: 'Mocha',
+  },
+  {
+    src: `${imgPathFront}karma.png`,
+    alt: 'Karma',
+  },
+  {
     src: `${imgPathFront}pwa.png`,
     alt: 'Progressive Web Applications',
   },
@@ -114,10 +166,6 @@ const skillList = [
   {
     src: `${imgPathFront}prettier.png`,
     alt: 'Prettier',
-  },
-  {
-    src: `${imgPathFront}postCSS.png`,
-    alt: 'PostCSS',
   },
   {
     src: `${imgPathFront}styled-components.png`,
@@ -164,44 +212,16 @@ const skillList = [
     alt: 'Linux',
   },
   {
-    src: `${imgPathOther}jira.png`,
-    alt: 'Jira',
-  },
-  {
-    src: `${imgPathOther}figma.png`,
-    alt: 'Figma',
-  },
-  {
-    src: `${imgPathOther}principle.svg`,
-    alt: 'Principle',
-  },
-  {
-    src: `${imgPathOther}sketch.png`,
-    alt: 'Sketch',
-  },
-  {
-    src: `${imgPathOther}adobe_photoshop.png`,
-    alt: 'Adobe Photoshop',
-  },
-  {
-    src: `${imgPathOther}adobe_in_design.png`,
-    alt: 'Adobe InDesign',
-  },
-  {
-    src: `${imgPathOther}adobe_after_effects.png`,
-    alt: 'Adobe After Effects',
-  },
-  {
-    src: `${imgPathOther}webStorm.png`,
-    alt: 'WebStorm',
-  },
-  {
     src: `${imgPathBack}nodejs.png`,
     alt: 'Node.js',
   },
   {
     src: `${imgPathBack}php.png`,
     alt: 'Hypertext Preprocessor',
+  },
+  {
+    src: `${imgPathBack}laravel.png`,
+    alt: 'Laravel',
   },
   {
     src: `${imgPathBack}mysql.png`,
@@ -212,8 +232,8 @@ const skillList = [
     alt: 'PostgreSQL',
   },
   {
-    src: `${imgPathBack}laravel.png`,
-    alt: 'Laravel',
+    src: `${imgPathBack}mongo.png`,
+    alt: 'MongoDB',
   },
   {
     src: `${imgPathBack}nginx.png`,

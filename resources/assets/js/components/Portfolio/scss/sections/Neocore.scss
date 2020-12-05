@@ -158,11 +158,7 @@ $secondColor: #000;
     }
 
     .row {
-      width: 30px !important;
-
-      div {
-        background-image: url('#{$img-path}/neocore/neocore_skills_sm.png') !important;
-      }
+      width: 300px !important;
     }
   }
 }
