@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 
 import RegExps from '../../../constants/regExps';
+import Api from '../../../services/Api';
 import getAction from '../../../actions/contact';
 
 import 'react-s-alert/dist/s-alert-default.css';
@@ -53,22 +54,26 @@ class Form extends Component {
 
   body = createRef();
 
-  _send = () => {
+  _send = async () => {
     const {
       contact: { username, subject, email, body },
     } = this.props;
 
     Alert.info('Message is Sent', configAlert);
 
-    axios
-      .post('/mail', {
-        username,
-        subject,
-        email,
-        body,
-      })
-      .then(() => Alert.success('Message Sent', configAlert))
-      .catch(() => Alert.error('Error(', configAlert));
+    const responseData = {
+      username,
+      subject,
+      email,
+      body,
+    };
+
+    try {
+      await Api.sendMail(responseData);
+      await Alert.success('Message Sent', configAlert);
+    } catch (e) {
+      Alert.error('Error(', configAlert);
+    }
   };
 
   _onSubmit = e => {
@@ -86,15 +91,11 @@ class Form extends Component {
     this._send();
 
     this.contactForm.current.reset();
-    this.username.current.classList.remove('goodInput');
-    this.email.current.classList.remove('goodInput');
-    this.subject.current.classList.remove('goodInput');
-    this.body.current.classList.remove('goodInput');
 
-    getAction(USERNAME, '');
-    getAction(EMAIL, '');
-    getAction(SUBJECT, '');
-    getAction(BODY, '');
+    [USERNAME, EMAIL, SUBJECT, BODY].forEach(fieldName => {
+      this[fieldName].current.classList.remove('goodInput');
+      getAction(fieldName, '');
+    });
   };
 
   _onKeyUp = ({ target: { name, value } }) => {
