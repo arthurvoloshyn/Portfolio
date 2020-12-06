@@ -5,6 +5,11 @@ import IMGS from '../../../constants/imgs';
 import sectionStyles from '../../../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
 
+const technologiesList = [
+  [{ id: 'angular' }, { id: 'laravel' }, { id: 'mysql' }],
+  [{ id: 'php' }, { id: 'js' }],
+];
+
 const CherryPick = () => (
   <ParallaxMousemove containerStyle={sectionStyles.outer}>
     <Pattern
@@ -29,15 +34,13 @@ const CherryPick = () => (
       )}
       technologies={() => (
         <div className="technologies">
-          <div>
-            <div />
-            <div />
-            <div />
-          </div>
-          <div>
-            <div />
-            <div />
-          </div>
+          {technologiesList.map((technologiesRow, i) => (
+            <div key={`technologiesRow_${i}`}>
+              {technologiesRow.map(({ id }) => (
+                <div key={id} />
+              ))}
+            </div>
+          ))}
         </div>
       )}
     />

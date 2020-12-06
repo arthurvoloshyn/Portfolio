@@ -3,6 +3,11 @@ import React from 'react';
 import IMGS from '../../../constants/imgs';
 import Pattern from '../parts/Pattern';
 
+const technologiesList = [
+  [{ id: 'apache' }, { id: 'javascript' }, { id: 'jq' }],
+  [{ id: 'mvc' }, { id: 'mysql' }, { id: 'php' }],
+];
+
 const SmokeZone = () => (
   <div className="smoke-zone-bg_outer">
     <div className="smoke-zone-bg_layer">
@@ -33,16 +38,13 @@ const SmokeZone = () => (
       )}
       technologies={() => (
         <div className="technologies">
-          <div>
-            <div />
-            <div />
-            <div />
-          </div>
-          <div>
-            <div />
-            <div />
-            <div />
-          </div>
+          {technologiesList.map((technologiesRow, i) => (
+            <div key={`technologiesRow_${i}`}>
+              {technologiesRow.map(({ id }) => (
+                <div key={id} />
+              ))}
+            </div>
+          ))}
         </div>
       )}
     />
