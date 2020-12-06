@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import GetPath from '../../../services/GetPath';
 import { toggleStatus, setStatusMenu } from '../../../actions/menu';
 
 /* eslint-disable react/sort-comp */
@@ -28,9 +29,9 @@ class SVGMenu extends Component {
     setStatus: () => {},
   };
 
-  path = window.location.href.split('/')[3].split('#');
+  path = GetPath();
 
-  keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+  scrollKeys = ['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown'];
 
   componentDidMount() {
     this.init();
@@ -59,7 +60,8 @@ class SVGMenu extends Component {
     this.triggerBody = document.getElementById('main_container');
     this.shapeEl = this.el.querySelector('div.morph-shape');
 
-    const s = Snap(this.shapeEl.querySelector('svg'));
+    const svg = this.shapeEl.querySelector('svg');
+    const s = Snap(svg);
 
     this.pathEl = s.select('path');
     this.paths = {
@@ -80,81 +82,52 @@ class SVGMenu extends Component {
   toggleBody = () => {
     const {
       menu: { status },
-      toggleStatus,
     } = this.props;
-    const { close, open, reset } = this.paths;
-    const { easeout, elastic } = mina;
 
-    if (status) {
-      this.enableScroll();
-
-      classie.remove(this.el, 'menu--anim');
-      setTimeout(() => {
-        classie.remove(this.el, 'menu--open');
-      }, 250);
-
-      this.pathEl
-        .stop()
-        .animate({ path: status ? close : open }, 350, easeout, () =>
-          this.pathEl.stop().animate({ path: reset }, 800, elastic),
-        );
-
-      toggleStatus(status);
-    }
+    status && this.close();
   };
 
   toggle = () => {
     const {
       menu: { status },
-      toggleStatus,
     } = this.props;
-    const { close, open, reset } = this.paths;
-    const { easeout, elastic } = mina;
 
-    if (status) {
-      this.enableScroll();
+    status ? this.removeClass() : this.addClass();
 
-      classie.remove(this.el, 'menu--anim');
-      setTimeout(() => {
-        classie.remove(this.el, 'menu--open');
-      }, 250);
-    } else {
-      this.disableScroll();
-
-      classie.add(this.el, 'menu--anim');
-      setTimeout(() => {
-        classie.add(this.el, 'menu--open');
-      }, 250);
-    }
-
-    this.pathEl
-      .stop()
-      .animate({ path: status ? close : open }, 350, easeout, () =>
-        this.pathEl.stop().animate({ path: reset }, 800, elastic),
-      );
-
-    toggleStatus(status);
+    this.animatePath();
   };
 
   close = () => {
+    this.removeClass();
+
+    this.animatePath();
+  };
+
+  removeClass = () => {
+    this.enableScroll();
+
+    classie.remove(this.el, 'menu--anim');
+    setTimeout(() => classie.remove(this.el, 'menu--open'), 250);
+  };
+
+  addClass = () => {
+    this.disableScroll();
+
+    classie.add(this.el, 'menu--anim');
+    setTimeout(() => classie.add(this.el, 'menu--open'), 250);
+  };
+
+  animatePath = () => {
     const {
       menu: { status },
       toggleStatus,
     } = this.props;
     const { close, open, reset } = this.paths;
-    const { easeout, elastic } = mina;
-
-    this.enableScroll();
-
-    classie.remove(this.el, 'menu--anim');
-    setTimeout(() => {
-      classie.remove(this.el, 'menu--open');
-    }, 250);
 
     this.pathEl
       .stop()
-      .animate({ path: status ? close : open }, 350, easeout, () =>
-        this.pathEl.stop().animate({ path: reset }, 800, elastic),
+      .animate({ path: status ? close : open }, 350, mina.easeout, () =>
+        this.pathEl.stop().animate({ path: reset }, 800, mina.elastic),
       );
 
     toggleStatus(status);
@@ -171,7 +144,9 @@ class SVGMenu extends Component {
   /* eslint-enable */
 
   preventDefaultForScrollKeys = e => {
-    if (this.keys[e.keyCode]) {
+    const scrollKeysArr = this.scrollKeys;
+
+    if (scrollKeysArr.includes(e.key)) {
       this.preventDefault(e);
       return false;
     }

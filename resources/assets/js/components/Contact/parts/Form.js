@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 
 import RegExps from '../../../constants/regExps';
-import contactApi from '../utils/contactApi';
 import getAction from '../../../actions/contact';
+import contactApi from '../utils/contactApi';
 
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/scale.css';
@@ -14,6 +14,7 @@ const USERNAME = 'username';
 const EMAIL = 'email';
 const SUBJECT = 'subject';
 const BODY = 'body';
+const fieldNames = [USERNAME, EMAIL, SUBJECT, BODY];
 
 const configAlert = {
   position: 'top-right',
@@ -55,21 +56,12 @@ class Form extends Component {
   body = createRef();
 
   _send = async () => {
-    const {
-      contact: { username, subject, email, body },
-    } = this.props;
+    const { contact: contactData } = this.props;
 
     Alert.info('Message is Sent', configAlert);
 
-    const responseData = {
-      username,
-      subject,
-      email,
-      body,
-    };
-
     try {
-      await contactApi.sendMail(responseData);
+      await contactApi.sendMail(contactData);
       await Alert.success('Message Sent', configAlert);
     } catch (e) {
       Alert.error('Error(', configAlert);
@@ -92,7 +84,7 @@ class Form extends Component {
 
     this.contactForm.current.reset();
 
-    [USERNAME, EMAIL, SUBJECT, BODY].forEach(fieldName => {
+    fieldNames.forEach(fieldName => {
       this[fieldName].current.classList.remove('goodInput');
       getAction(fieldName, '');
     });
@@ -127,7 +119,8 @@ class Form extends Component {
       emailField && ruleEmail.test(emailField) ? this.removeError(EMAIL) : this.addError(EMAIL);
     }
 
-    [USERNAME, SUBJECT, BODY].forEach(fieldName => {
+    const fieldNamesWithoutEmail = fieldNames.filter(fieldName => fieldName !== EMAIL);
+    fieldNamesWithoutEmail.forEach(fieldName => {
       if (name == null || name === fieldName) {
         const currentField = this[fieldName].current.value;
         currentField ? this.removeError(fieldName) : this.addError(fieldName);

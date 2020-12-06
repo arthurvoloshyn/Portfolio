@@ -1,9 +1,8 @@
 import URLS from '../constants/urls';
 import ACTION_TYPES from '../constants/actionTypes';
+import GetPath from '../services/GetPath';
 
-const { href } = window.location;
-const pathName = href.split('/')[3];
-const path = pathName.split('#');
+const path = GetPath();
 const page = path[1] || path[0];
 
 const initialState = {

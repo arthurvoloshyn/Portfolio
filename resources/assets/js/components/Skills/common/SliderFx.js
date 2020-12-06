@@ -17,8 +17,13 @@ class SliderFx {
       msTransition: 'MSTransitionEnd',
       transition: 'transitionend',
     };
-    window.transEndEventName = window.transEndEventNames[this.Modernizr.prefixed('transition')];
-    this.support = { csstransitions: this.Modernizr.csstransitions };
+
+    const { cssanimations, prefixed } = window.Modernizr;
+    const transEndEventName = prefixed('transition');
+
+    window.transEndEventName = window.transEndEventNames[transEndEventName];
+
+    this.support = { cssanimations };
     this.el = el;
     this.optionsDefault = {
       // default transition speed (ms)
@@ -46,7 +51,6 @@ class SliderFx {
       },
       speed,
     } = this.options;
-    const { easeout, elastic } = mina;
 
     const dir = this.old < this.curr ? 'right' : 'left';
 
@@ -58,7 +62,11 @@ class SliderFx {
     // morph svg path on exiting slide to "curved"
     path
       .stop()
-      .animate({ path: dir === 'right' ? pathCurvedLeft : pathCurvedRight }, speed * 0.5, easeout);
+      .animate(
+        { path: dir === 'right' ? pathCurvedLeft : pathCurvedRight },
+        speed * 0.5,
+        mina.easeout,
+      );
 
     // the slider starts a bit later...
     setTimeout(() => callback.call(), speed * 0.2);
@@ -70,7 +78,7 @@ class SliderFx {
 
     // morph svg path on entering slide to "rectangle"
     setTimeout(
-      () => currItem.path.stop().animate({ path: pathRectangle }, speed * 3, elastic),
+      () => currItem.path.stop().animate({ path: pathRectangle }, speed * 3, mina.elastic),
       speed * 0.5,
     );
   };
@@ -93,7 +101,8 @@ class SliderFx {
     // the list of items
     this.itemsList = this.el.querySelector('ul');
     // the items (li elements)
-    this.items = [].slice.call(this.itemsList.querySelectorAll('li'));
+    const listItems = this.itemsList.querySelectorAll('li');
+    this.items = [].slice.call(listItems);
     // total number of items
     this.itemsCount = this.items.length;
     // current and old item´s index
@@ -166,9 +175,11 @@ class SliderFx {
           </svg>`,
         );
 
-        item.insertBefore(svg, item.childNodes[0]);
+        const referenceElement = item.childNodes[0];
+        item.insertBefore(svg, referenceElement);
+        const svgEl = item.querySelector('svg');
 
-        const s = Snap(item.querySelector('svg'));
+        const s = Snap(svgEl);
 
         item.path = s.select('path');
       });
@@ -185,23 +196,23 @@ class SliderFx {
         this._navigate('next');
       });
 
-      const transitionendfn = () => (this.isAnimating = false);
+      const transitionEndFn = () => (this.isAnimating = false);
 
       this.support
-        ? this.itemsList.addEventListener(transEndEventName, transitionendfn)
-        : transitionendfn.call();
+        ? this.itemsList.addEventListener(transEndEventName, transitionEndFn)
+        : transitionEndFn.call();
 
       // keyboard navigation events
-      document.addEventListener('keydown', ({ keyCode: evKeyCode, which: evWhich }) => {
-        const keyCode = evKeyCode || evWhich;
+      document.addEventListener('keydown', ({ key: evKey, code: evCode }) => {
+        const key = evKey || evCode;
 
-        switch (keyCode) {
+        switch (key) {
           // left key
-          case 37:
+          case 'ArrowLeft':
             this._navigate('prev');
             break;
           // right key
-          case 39:
+          case 'ArrowRight':
             this._navigate('next');
             break;
           default:

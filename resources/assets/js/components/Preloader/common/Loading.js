@@ -37,16 +37,23 @@ class Loading extends Component {
   };
 
   componentDidMount() {
-    this.support = { animations: window.Modernizr.cssanimations };
-    this.container = document.getElementById('ip-container');
+    const { cssanimations: animations, prefixed } = window.Modernizr;
+    const container = document.getElementById('ip-container');
+
+    this.support = { animations };
+    this.container = container;
     this.animEndEventNames = {
       WebkitAnimation: 'webkitAnimationEnd',
       OAnimation: 'oAnimationEnd',
       msAnimation: 'MSAnimationEnd',
       animation: 'animationend',
     };
-    this.animEndEventName = this.animEndEventNames[window.Modernizr.prefixed('animation')];
-    this.header = this.container.querySelector('div.ip-header');
+
+    const animEndEventName = prefixed('animation');
+    const header = this.container.querySelector('div.ip-header');
+
+    this.animEndEventName = this.animEndEventNames[animEndEventName];
+    this.header = header;
 
     this.init();
   }
@@ -99,7 +106,7 @@ class Loading extends Component {
     };
 
     // disable scrolling
-    window.addEventListener('scroll', this.noscroll);
+    window.addEventListener('scroll', this.noScroll);
 
     // initial animation
     classie.add(this.container, 'loading');
@@ -129,7 +136,7 @@ class Loading extends Component {
   };
 
   startLoading = () => {
-    // simulate loading something..
+    // simulate loading something...
     const simulationFn = ({ setProgress }) => {
       window.loadingFast ? (this.progress = 1) : (this.progress = 0);
 
@@ -165,7 +172,7 @@ class Loading extends Component {
             }
 
             classie.add(document.body, 'layout-switch');
-            window.removeEventListener('scroll', this.noscroll);
+            window.removeEventListener('scroll', this.noScroll);
           };
 
           const { animations } = this.support;
@@ -182,7 +189,7 @@ class Loading extends Component {
     setProgressFn(simulationFn);
   };
 
-  noscroll = () => window.scrollTo(0, 0);
+  noScroll = () => window.scrollTo(0, 0);
 
   render() {
     return <div />;
