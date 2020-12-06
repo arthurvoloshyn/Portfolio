@@ -22,7 +22,7 @@ const sections = {
   [URLS.abirix]: <Abirix />,
   [URLS.c2corner]: <C2Corner />,
   [URLS.neocore]: <Neocore />,
-  [URLS.arcbazar]: <Arcbazar />,
+  [URLS.arcbazar]: <Arcbazar sectionClassName="arcbazar-bg" sectionPage={URLS.arcbazar} />,
   [URLS.yandex]: <Yandex />,
   [URLS.houses]: <Houses />,
   [URLS.history24]: <History24 />,

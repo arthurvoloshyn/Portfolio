@@ -295,6 +295,7 @@
     "react/jsx-no-undef": "error",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-pascal-case": "error",
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-sort-props": "error",
     "react/no-array-index-key": "off",
     "react/no-danger": "error",
