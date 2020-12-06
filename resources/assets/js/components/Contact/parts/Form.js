@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 
 import RegExps from '../../../constants/regExps';
-import Api from '../../../services/Api';
+import contactApi from '../utils/contactApi';
 import getAction from '../../../actions/contact';
 
 import 'react-s-alert/dist/s-alert-default.css';
@@ -69,7 +69,7 @@ class Form extends Component {
     };
 
     try {
-      await Api.sendMail(responseData);
+      await contactApi.sendMail(responseData);
       await Alert.success('Message Sent', configAlert);
     } catch (e) {
       Alert.error('Error(', configAlert);

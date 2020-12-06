@@ -1,5 +1,5 @@
 import DetectBrowser from '../../../../../services/DetectBrowser';
-import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../utils/utils';
+import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../../utils/utils';
 
 const pipeCount = 15;
 const pipePropCount = 8;

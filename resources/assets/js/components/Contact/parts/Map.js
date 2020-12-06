@@ -2,7 +2,7 @@ import React from 'react';
 import { Map, Marker, TileLayer } from 'react-leaflet';
 
 import IMGS from '../../../constants/imgs';
-import Api from '../../../services/Api';
+import contactApi from '../utils/contactApi';
 
 const coordinates = {
   lat: 48.921501,
@@ -18,7 +18,7 @@ const Icon = L.icon({
   iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
 });
 
-const tileLayerUrl = Api.getTileLayerUrl();
+const tileLayerUrl = contactApi.getTileLayerUrl();
 
 const MapLeaflet = () => (
   <Map center={position} className="map-container" id="mapid" zoom={zoom} zoomControl={false}>

@@ -1,7 +1,7 @@
 import SimplexNoise from 'simplex-noise';
 
 import DetectBrowser from '../../../../../services/DetectBrowser';
-import { cos, fadeInOut, lerp, rand, randRange, sin, TAU } from '../../utils/utils';
+import { cos, fadeInOut, lerp, rand, randRange, sin, TAU } from '../../../utils/utils';
 
 const particleCount = 400;
 const particlePropCount = 9;

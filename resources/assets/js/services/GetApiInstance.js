@@ -1,4 +1,4 @@
-const getApiInstance = async (url, method = 'GET', data = null) => {
+const GetApiInstance = async (url, method = 'GET', data = null) => {
   const token = document.head.querySelector('meta[name="csrf-token"]');
 
   const initOptions = {
@@ -25,4 +25,4 @@ const getApiInstance = async (url, method = 'GET', data = null) => {
   }
 };
 
-export default getApiInstance;
+export default GetApiInstance;
