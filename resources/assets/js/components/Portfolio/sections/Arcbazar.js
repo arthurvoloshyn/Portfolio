@@ -45,9 +45,9 @@ class Arcbazar extends Component {
             <div className="description">
               <p className="first">My team and I have developed new features;</p>
 
-              <p>writing backend with PHP, Elasticsearch and MySQL;</p>
+              <p>writing backend with PHP, Elasticsearch, and MySQL;</p>
 
-              <p className="last">also working with frontend new features</p>
+              <p className="last">also working with frontend new features.</p>
             </div>
           )}
           effectClassIn="flipInY"
@@ -60,7 +60,7 @@ class Arcbazar extends Component {
           )}
           logo={IMGS.arcbazar}
           logoDescription={() => (
-            <p className="paragraph">Create unique interie and landscape design</p>
+            <p className="paragraph">Create unique interior and landscape design</p>
           )}
           url={portfolioLinksList.arcbazar}
         />

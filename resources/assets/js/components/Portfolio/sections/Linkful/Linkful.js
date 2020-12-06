@@ -74,7 +74,7 @@ class Linkful extends Component {
                 I have created, designed, and developed this project. I built the application using
                 the most powerful and popular technologies. The frontend of the user dashboard was
                 built using React and Redux and also used Saga to manage the asynchronous actions.
-                The administration panel is built with Laravel, and separate components with Vue
+                The administration panel is built with Laravel, and separate components with Vue.js
                 were also developed. The backend is based on Laravel, the MySQL, and Mongo databases
                 for storing statistics. The system is fully tested. Infrastructure works on the
                 basis of Docker and Continues Delivery.

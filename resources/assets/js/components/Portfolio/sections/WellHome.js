@@ -13,7 +13,7 @@ const WellHome = () => (
       description={() => (
         <div className="description">
           <p>
-            I have developed CRM system in order to automate business processes in the company
+            I have developed a CRM system in order to automate business processes in the company
             engaged in the sale of real estate -{' '}
             <b>
               <a href="http://www.welhome.ru/" rel="noopener noreferrer" target="_blank">
@@ -22,7 +22,7 @@ const WellHome = () => (
             </b>
             <span>
               , based on SugarCRM; designed the database and system architecture; integration with
-              existing enterprise systems
+              existing enterprise systems.
             </span>
           </p>
         </div>

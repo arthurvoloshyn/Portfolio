@@ -42,8 +42,8 @@ class Houses extends Component {
             <div className="description">
               <p>
                 I have developed the project, including the development of the backend part on
-                Laravel, and the frontend on VueJs; design of architecture; code review of team
-                members
+                Laravel, and the frontend on Vue.js; design of architecture; code review of team
+                members.
               </p>
             </div>
           )}
@@ -51,7 +51,7 @@ class Houses extends Component {
           effectClassOut="zoomOut"
           logoDescription={() => (
             <p className="paragraph">
-              The system for design and buying a construction project of building
+              TThe system for the design and buying a construction project of building
             </p>
           )}
           logoText="HOOMES"

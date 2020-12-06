@@ -43,10 +43,10 @@ class History24 extends Component {
           description={() => (
             <div className="description">
               <p>
-                I have build the educational platform, based on the PHP framework - Laravel;
+                I have built the educational platform, based on the PHP framework - Laravel;{' '}
                 <span>
                   designed the architecture of the system, wrote the frontend using Bootstrap, Gulp,
-                  Jquery and other libraries
+                  jQuery, and other libraries.
                 </span>
               </p>
             </div>

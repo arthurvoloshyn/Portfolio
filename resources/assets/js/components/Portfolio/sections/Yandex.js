@@ -9,7 +9,7 @@ const Yandex = () => (
     description={() => (
       <div className="description">
         <p>
-          <b>I</b> have build the game. This is SPA on jquery and <b>w</b>
+          <b>I</b> have build the game. This is a SPA on jQuery and <b>W</b>
           ebpack
           <br />
           with Ada
@@ -20,7 +20,7 @@ const Yandex = () => (
           and <b>o</b>
           ptimization of perform
           <b>a</b>
-          nce
+          nce.
         </p>
       </div>
     )}
@@ -35,7 +35,7 @@ const Yandex = () => (
         In honor of <b>F</b>
         ebruary 23
         <br />
-        For For <b>Y</b>
+        For <b>Y</b>
         andex maps
       </p>
     )}

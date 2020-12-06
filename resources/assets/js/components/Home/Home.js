@@ -12,7 +12,7 @@ const Home = ({ preloader: { preloader } }) => {
     preloader ? (
       ''
     ) : (
-      <ReactRotatingText items={['ReactJs', 'VueJs', 'NodeJs']} typingInterval={100} />
+      <ReactRotatingText items={['React.js', 'Vue.js', 'Node.js']} typingInterval={100} />
     );
 
   return (
