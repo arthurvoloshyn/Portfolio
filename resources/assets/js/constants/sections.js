@@ -20,12 +20,12 @@ const sections = {
   [URLS.smsplaza]: <Smsplaza />,
   [URLS.factoringvergelijken]: <Factoringvergelijken />,
   [URLS.abirix]: <Abirix />,
-  [URLS.c2corner]: <C2Corner />,
+  [URLS.c2corner]: <C2Corner sectionClassName="c2corner-bg" sectionPage={URLS.c2corner} />,
   [URLS.neocore]: <Neocore />,
   [URLS.arcbazar]: <Arcbazar sectionClassName="arcbazar-bg" sectionPage={URLS.arcbazar} />,
   [URLS.yandex]: <Yandex />,
-  [URLS.houses]: <Houses />,
-  [URLS.history24]: <History24 />,
+  [URLS.houses]: <Houses sectionClassName="houses-bg" sectionPage={URLS.houses} />,
+  [URLS.history24]: <History24 sectionClassName="history24-bg" sectionPage={URLS.history24} />,
   [URLS.welhome]: <WellHome />,
 };
 

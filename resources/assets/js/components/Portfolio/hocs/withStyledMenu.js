@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import environment from '../../../constants/environment';
 import GetDisplayName from '../../../services/GetDisplayName';
-
-const { NODE_ENV } = process.env;
 
 const withStyledMenu = View => {
   class WithStyledMenu extends Component {
@@ -44,8 +43,7 @@ const withStyledMenu = View => {
     }
   }
 
-  NODE_ENV !== 'production' &&
-    (WithStyledMenu.displayName = `withStyledMenu(${GetDisplayName(View)})`);
+  !environment.isProd && (WithStyledMenu.displayName = `withStyledMenu(${GetDisplayName(View)})`);
 
   const mapStateToProps = ({ page }) => ({ page });
 
