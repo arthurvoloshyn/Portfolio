@@ -1,6 +1,7 @@
 import React from 'react';
 import ParallaxMousemove from 'react-parallax-mousemove';
 
+import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import portfolioLinksList from '../../../constants/portfolioLinksList';
 import sectionStyles from '../../../constants/sectionStyles';
@@ -37,4 +38,9 @@ const Arcbazar = () => (
   </ParallaxMousemove>
 );
 
-export default withStyledMenu(Arcbazar);
+const sectionData = {
+  sectionClassName: 'arcbazar-bg',
+  sectionPage: URLS.arcbazar,
+};
+
+export default withStyledMenu(sectionData)(Arcbazar);

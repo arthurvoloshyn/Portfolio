@@ -5,26 +5,21 @@ import PropTypes from 'prop-types';
 import environment from '../../../constants/environment';
 import GetDisplayName from '../../../services/GetDisplayName';
 
-const withStyledMenu = View => {
+const withStyledMenu = ({ sectionPage, sectionClassName }) => WrappedComponent => {
   class WithStyledMenu extends Component {
     static propTypes = {
       page: PropTypes.shape({
         page: PropTypes.string,
       }),
-      sectionPage: PropTypes.string,
-      sectionClassName: PropTypes.string,
     };
 
     static defaultProps = {
       page: {
         page: '',
       },
-      sectionPage: '',
-      sectionClassName: '',
     };
 
     UNSAFE_componentWillReceiveProps(nextProps) {
-      const { sectionPage, sectionClassName } = this.props;
       const {
         page: { page },
       } = nextProps;
@@ -39,11 +34,12 @@ const withStyledMenu = View => {
     }
 
     render() {
-      return <View {...this.props} />;
+      return <WrappedComponent {...this.props} />;
     }
   }
 
-  !environment.isProd && (WithStyledMenu.displayName = `withStyledMenu(${GetDisplayName(View)})`);
+  !environment.isProd &&
+    (WithStyledMenu.displayName = `withStyledMenu(${GetDisplayName(WrappedComponent)})`);
 
   const mapStateToProps = ({ page }) => ({ page });
 

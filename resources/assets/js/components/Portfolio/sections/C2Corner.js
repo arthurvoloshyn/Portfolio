@@ -1,5 +1,6 @@
 import React from 'react';
 
+import URLS from '../../../constants/urls';
 import portfolioLinksList from '../../../constants/portfolioLinksList';
 import withStyledMenu from '../hocs/withStyledMenu';
 import Pattern from '../parts/Pattern';
@@ -35,4 +36,9 @@ const C2Corner = () => (
   />
 );
 
-export default withStyledMenu(C2Corner);
+const sectionData = {
+  sectionClassName: 'c2corner-bg',
+  sectionPage: URLS.c2corner,
+};
+
+export default withStyledMenu(sectionData)(C2Corner);

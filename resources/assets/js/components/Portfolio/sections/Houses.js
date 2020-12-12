@@ -1,5 +1,6 @@
 import React from 'react';
 
+import URLS from '../../../constants/urls';
 import withStyledMenu from '../hocs/withStyledMenu';
 import Pattern from '../parts/Pattern';
 
@@ -28,4 +29,9 @@ const Houses = () => (
   </div>
 );
 
-export default withStyledMenu(Houses);
+const sectionData = {
+  sectionClassName: 'houses-bg',
+  sectionPage: URLS.houses,
+};
+
+export default withStyledMenu(sectionData)(Houses);

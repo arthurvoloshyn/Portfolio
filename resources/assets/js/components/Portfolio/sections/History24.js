@@ -1,5 +1,6 @@
 import React from 'react';
 
+import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import withStyledMenu from '../hocs/withStyledMenu';
 import Pattern from '../parts/Pattern';
@@ -36,4 +37,9 @@ const History24 = () => (
   </div>
 );
 
-export default withStyledMenu(History24);
+const sectionData = {
+  sectionClassName: 'history24-bg',
+  sectionPage: URLS.history24,
+};
+
+export default withStyledMenu(sectionData)(History24);
