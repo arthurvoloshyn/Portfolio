@@ -3,8 +3,8 @@ import ParallaxMousemove from 'react-parallax-mousemove';
 
 import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
-import portfolioLinksList from '../../../constants/portfolioLinksList';
-import sectionStyles from '../../../constants/sectionStyles';
+import portfolioLinksList from '../constants/portfolioLinksList';
+import sectionStyles from '../constants/sectionStyles';
 import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 

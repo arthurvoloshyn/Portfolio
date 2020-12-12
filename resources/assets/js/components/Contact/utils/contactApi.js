@@ -1,5 +1,5 @@
-import { mapApiPaths, formApiPaths } from '../../../constants/apiPaths';
-import GetApiInstance from '../../../services/GetApiInstance';
+import { mapApiPaths, formApiPaths } from '../constants/apiPaths';
+import getApiInstance from './getApiInstance';
 
 const {
   basePath,
@@ -14,7 +14,7 @@ const { mailPath } = formApiPaths;
 const contactApi = {
   getTileLayerUrl: () =>
     `${basePath}${usernamePath}${styleIdPath}${tilesPath}?${accessTokenParam}${accessToken}`,
-  sendMail: data => GetApiInstance(mailPath, 'POST', data),
+  sendMail: data => getApiInstance(mailPath, 'POST', data),
 };
 
 export default contactApi;

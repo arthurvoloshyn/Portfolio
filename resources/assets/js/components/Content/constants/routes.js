@@ -1,15 +1,13 @@
 import { lazy } from 'react';
 
-import URLS from './urls';
+import URLS from '../../../constants/urls';
 
-const Skills = lazy(() => import('../components/Skills/Skills'));
-const Contact = lazy(() => import('../components/Contact/Contact'));
-const Home = lazy(() => import('../components/Home/Home'));
+const Skills = lazy(() => import('../../Skills/Skills'));
+const Contact = lazy(() => import('../../Contact/Contact'));
+const Home = lazy(() => import('../../Home/Home'));
 const Portfolio = lazy(
   () =>
-    new Promise(resolve =>
-      setTimeout(() => resolve(import('../components/Portfolio/Portfolio')), 3000),
-    ),
+    new Promise(resolve => setTimeout(() => resolve(import('../../Portfolio/Portfolio')), 3000)),
 );
 
 const { urlSkills, urlContacts, urlPortfolio, urlHome } = URLS;

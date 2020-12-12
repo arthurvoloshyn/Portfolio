@@ -1,7 +1,7 @@
 import React from 'react';
 
 import URLS from '../../../constants/urls';
-import portfolioLinksList from '../../../constants/portfolioLinksList';
+import portfolioLinksList from '../constants/portfolioLinksList';
 import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 

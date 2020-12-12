@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import environment from '../../../constants/environment';
-import GetDisplayName from '../../../services/GetDisplayName';
+import getDisplayName from '../utils/getDisplayName';
 
 const withSectionData = ({
   sectionPage,
@@ -62,7 +62,7 @@ const withSectionData = ({
   }
 
   !environment.isProd &&
-    (WithSectionData.displayName = `WithSectionData(${GetDisplayName(WrappedComponent)})`);
+    (WithSectionData.displayName = `WithSectionData(${getDisplayName(WrappedComponent)})`);
 
   const mapStateToProps = ({ page }) => ({ page });
 

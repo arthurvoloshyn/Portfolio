@@ -1,4 +1,4 @@
-import linkList from '../../../constants/linkList';
+import linkList from '../constants/linkList';
 
 const getStylesList = type => {
   const styleClasses = {};

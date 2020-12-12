@@ -1,4 +1,4 @@
-import URLS from './urls';
+import URLS from '../../../constants/urls';
 
 const linkList = [
   URLS.main,

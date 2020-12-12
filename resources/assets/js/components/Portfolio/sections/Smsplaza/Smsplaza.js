@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
-import portfolioLinksList from '../../../../constants/portfolioLinksList';
+import portfolioLinksList from '../../constants/portfolioLinksList';
 import withSectionData from '../../hocs/withSectionData';
 import { setup, remove } from './common/pipeline';
 

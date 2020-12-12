@@ -1,7 +1,7 @@
 import React from 'react';
 
 import IMGS from '../../../constants/imgs';
-import sectionStyles from '../../../constants/sectionStyles';
+import sectionStyles from '../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
 
 const WellHome = () => (

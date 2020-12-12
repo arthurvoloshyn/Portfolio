@@ -2,13 +2,9 @@ import React from 'react';
 import ParallaxMousemove from 'react-parallax-mousemove';
 
 import IMGS from '../../../constants/imgs';
-import sectionStyles from '../../../constants/sectionStyles';
+import portfolioTechnologiesList from '../constants/portfolioTechnologiesList';
+import sectionStyles from '../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
-
-const technologiesList = [
-  [{ id: 'angular' }, { id: 'laravel' }, { id: 'mysql' }],
-  [{ id: 'php' }, { id: 'js' }],
-];
 
 const CherryPick = () => (
   <ParallaxMousemove containerStyle={sectionStyles.outer}>
@@ -32,17 +28,7 @@ const CherryPick = () => (
           <p className="paragraph">A platform for job search and job posting</p>
         </p>
       )}
-      technologies={() => (
-        <div className="technologies">
-          {technologiesList.map((technologiesRow, i) => (
-            <div key={`technologiesRow_${i}`}>
-              {technologiesRow.map(({ id }) => (
-                <div key={id} />
-              ))}
-            </div>
-          ))}
-        </div>
-      )}
+      technologies={portfolioTechnologiesList.cherryPick}
     />
   </ParallaxMousemove>
 );

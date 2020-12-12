@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ReactRotatingText from 'react-rotating-text';
 import PropTypes from 'prop-types';
 
-import socialNetworkList from '../../constants/socialNetworkList';
+import socialNetworkList from './constants/socialNetworkList';
 
 import './scss/Home.scss';
 

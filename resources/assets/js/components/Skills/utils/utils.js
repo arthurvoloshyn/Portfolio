@@ -1,4 +1,4 @@
-import skillList from '../../../constants/skillList';
+import skillList from '../constants/skillList';
 
 export const chunkArray = (myArray, chunkSize) => {
   const results = [];

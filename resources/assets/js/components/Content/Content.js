@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import routes from '../../constants/routes';
+import routes from './constants/routes';
 import LoadingPage from '../LoadingPage/LoadingPage';
 
 import 'leaflet/dist/leaflet.css';

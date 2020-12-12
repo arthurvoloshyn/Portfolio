@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import portfolioLinksList from '../../../../constants/portfolioLinksList';
+import portfolioLinksList from '../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
 import Slideshow from './common/Slideshow';
 

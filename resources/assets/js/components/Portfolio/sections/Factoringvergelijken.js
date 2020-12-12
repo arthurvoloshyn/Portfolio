@@ -1,8 +1,8 @@
 import React from 'react';
 
-import portfolioLinksList from '../../../constants/portfolioLinksList';
+import portfolioLinksList from '../constants/portfolioLinksList';
 import IMGS from '../../../constants/imgs';
-import sectionStyles from '../../../constants/sectionStyles';
+import sectionStyles from '../constants/sectionStyles';
 import Pattern from '../parts/Pattern';
 
 const Factoringvergelijken = () => (
