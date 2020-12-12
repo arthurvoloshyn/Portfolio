@@ -2,7 +2,7 @@ import React from 'react';
 
 import URLS from '../../../constants/urls';
 import portfolioLinksList from '../../../constants/portfolioLinksList';
-import withStyledMenu from '../hocs/withStyledMenu';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const C2Corner = () => (
@@ -41,4 +41,4 @@ const sectionData = {
   sectionPage: URLS.c2corner,
 };
 
-export default withStyledMenu(sectionData)(C2Corner);
+export default withSectionData(sectionData)(C2Corner);

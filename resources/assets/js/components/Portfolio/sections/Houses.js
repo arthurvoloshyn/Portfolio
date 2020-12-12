@@ -1,7 +1,7 @@
 import React from 'react';
 
 import URLS from '../../../constants/urls';
-import withStyledMenu from '../hocs/withStyledMenu';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const Houses = () => (
@@ -34,4 +34,4 @@ const sectionData = {
   sectionPage: URLS.houses,
 };
 
-export default withStyledMenu(sectionData)(Houses);
+export default withSectionData(sectionData)(Houses);

@@ -5,7 +5,7 @@ import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import portfolioLinksList from '../../../constants/portfolioLinksList';
 import sectionStyles from '../../../constants/sectionStyles';
-import withStyledMenu from '../hocs/withStyledMenu';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const Arcbazar = () => (
@@ -43,4 +43,4 @@ const sectionData = {
   sectionPage: URLS.arcbazar,
 };
 
-export default withStyledMenu(sectionData)(Arcbazar);
+export default withSectionData(sectionData)(Arcbazar);
