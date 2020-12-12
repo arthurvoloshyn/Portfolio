@@ -51,16 +51,27 @@ class Slideshow {
   constructor(el, callback = () => {}) {
     this.DOM = {};
     this.DOM.el = el;
-    this.DOM.slides = Array.from(this.DOM.el.querySelectorAll('.slide'));
-    this.DOM.bgs = Array.from(this.DOM.el.querySelectorAll('.slide__bg'));
-    this.DOM.words = Array.from(this.DOM.el.querySelectorAll('.word'));
-    this.slidesTotal = this.DOM.slides.length;
+
+    const slide = this.DOM.el.querySelectorAll('.slide');
+    const slideBg = this.DOM.el.querySelectorAll('.slide__bg');
+    const word = this.DOM.el.querySelectorAll('.word');
+
+    this.DOM.slides = Array.from(slide);
+    this.DOM.bgs = Array.from(slideBg);
+    this.DOM.words = Array.from(word);
+
+    const { slides } = this.DOM;
+    this.slidesTotal = slides.length;
+
     this.current = 0;
     this.words = [];
     this.DOM.words.forEach((word, pos) => this.words.push(new Word(word, effects[pos].options)));
     this.isAnimating = true;
+
+    const { show } = effects[this.current];
+
     this.words[this.current]
-      .show(effects[this.current].show)
+      .show(show)
       .then(() => (this.isAnimating = false))
       .then(() => callback());
   }
@@ -81,8 +92,10 @@ class Slideshow {
     this.DOM.slides[newPos].style.opacity = 1;
     this.DOM.bgs[newPos].style.transform = 'none';
 
+    const { bgs } = this.DOM;
+
     anime({
-      targets: this.DOM.bgs[currentPos],
+      targets: bgs[currentPos],
       duration: 600,
       easing: [0.2, 1, 0.3, 1],
       translateY: ['0%', direction === 'next' ? '-100%' : '100%'],
@@ -90,12 +103,16 @@ class Slideshow {
         this.DOM.slides[currentPos].classList.remove('slide--current');
         this.DOM.slides[currentPos].style.opacity = 0;
         this.DOM.slides[newPos].classList.add('slide--current');
-        this.words[newPos].show(effects[newPos].show).then(() => (this.isAnimating = false));
+
+        const { show } = effects[newPos];
+        this.words[newPos].show(show).then(() => (this.isAnimating = false));
       },
     });
 
     this.words[newPos].hide();
-    this.words[this.current].hide(effects[currentPos].hide).then(() => (this.current = newPos));
+
+    const { hide } = effects[currentPos];
+    this.words[this.current].hide(hide).then(() => (this.current = newPos));
   };
 }
 

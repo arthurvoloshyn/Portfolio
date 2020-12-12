@@ -19,3 +19,21 @@ export const fadeInOut = (t, m) => {
 export const dist = (x1, y1, x2, y2) => sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 export const angle = (x1, y1, x2, y2) => atan2(y2 - y1, x2 - x1);
 export const lerp = (n1, n2, speed) => (1 - speed) * n1 + speed * n2;
+
+export const debounce = (func, wait, immediate) => {
+  let timeout;
+
+  return (...args) => {
+    const later = () => {
+      timeout = null;
+      !immediate && func.apply(this, args);
+    };
+
+    const callNow = immediate && !timeout;
+
+    clearTimeout(timeout);
+
+    timeout = setTimeout(later, wait);
+    callNow && func.apply(this, args);
+  };
+};
