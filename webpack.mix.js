@@ -35,6 +35,7 @@ mix.webpackConfig({
   plugins: [
     new webpack.EnvironmentPlugin({
       PUBLIC_URL: '',
+      FULL_PAGE_LICENSE_KEY: 'YOUR_LICENSE_KEY_HERE',
     }),
     new CopyWebpackPlugin([
       {
