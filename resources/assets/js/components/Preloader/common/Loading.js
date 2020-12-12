@@ -7,6 +7,7 @@ import URLS from '../../../constants/urls';
 import setStatus from '../../../actions/preloader';
 import { reloadPage, setPage } from '../../../actions/page';
 import { setStatusMenu } from '../../../actions/menu';
+import compose from '../utils/compose';
 import PathLoader from './PathLoader';
 
 class Loading extends Component {
@@ -200,4 +201,6 @@ const mapStateToProps = ({ preloader, page }) => ({ preloader, page });
 
 const matchDispatchToProps = { setStatus, reloadPage, setPage, setStatusMenu };
 
-export default withRouter(connect(mapStateToProps, matchDispatchToProps)(Loading));
+const enhance = compose(withRouter, connect(mapStateToProps, matchDispatchToProps));
+
+export default enhance(Loading);
