@@ -1,5 +1,6 @@
 import DetectBrowser from '../../../../../services/DetectBrowser';
 import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../../utils/utils';
+import { createSectionCanvas } from '../../../utils/common';
 
 const pipeCount = 15;
 const pipePropCount = 8;
@@ -127,24 +128,18 @@ const updatePipes = () => {
 };
 
 const createCanvas = () => {
-  container = document.querySelector('.content--canvas--smsplaza');
-  canvas = {
-    a: document.createElement('canvas'),
-    b: document.createElement('canvas'),
-  };
+  const selector = '.content--canvas--smsplaza';
+  const { container: newContainer, canvas: newCanvas, ctx: newCtx } = createSectionCanvas(
+    selector,
+    container,
+    canvas,
+    ctx,
+  );
 
-  canvas.b.style = `
-		position: fixed;
-		left: 0;
-		width: 100%;
-	`;
+  container = newContainer;
+  canvas = newCanvas;
+  ctx = newCtx;
 
-  container.appendChild(canvas.b);
-
-  ctx = {
-    a: canvas.a.getContext('2d'),
-    b: canvas.b.getContext('2d'),
-  };
   center = [];
   tick = 0;
 };

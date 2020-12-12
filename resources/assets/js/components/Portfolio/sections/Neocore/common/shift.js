@@ -1,6 +1,7 @@
 import SimplexNoise from 'simplex-noise';
 
 import { cos, fadeInOut, rand, sin, TAU } from '../../../utils/utils';
+import { createSectionCanvas } from '../../../utils/common';
 
 const circleCount = 10;
 const circlePropCount = 8;
@@ -121,24 +122,17 @@ const updateCircles = () => {
 };
 
 const createCanvas = () => {
-  container = document.querySelector('.content--canvas-neocore');
-  canvas = {
-    a: document.createElement('canvas'),
-    b: document.createElement('canvas'),
-  };
+  const selector = '.content--canvas-neocore';
+  const { container: newContainer, canvas: newCanvas, ctx: newCtx } = createSectionCanvas(
+    selector,
+    container,
+    canvas,
+    ctx,
+  );
 
-  canvas.b.style = `
-		position: fixed;
-		left: 0;
-		width: 100%;
-	`;
-
-  container.appendChild(canvas.b);
-
-  ctx = {
-    a: canvas.a.getContext('2d'),
-    b: canvas.b.getContext('2d'),
-  };
+  container = newContainer;
+  canvas = newCanvas;
+  ctx = newCtx;
 };
 
 const resize = () => {

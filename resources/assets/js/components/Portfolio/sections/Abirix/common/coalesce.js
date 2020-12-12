@@ -1,5 +1,6 @@
 import DetectBrowser from '../../../../../services/DetectBrowser';
 import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../../utils/utils';
+import { createSectionCanvas, getParticleProps, setParticleProps } from '../../../utils/common';
 
 const particleCount = 75;
 const particlePropCount = 9;
@@ -34,14 +35,22 @@ const initParticle = i => {
   const vx = cos(theta) * 6;
   const vy = sin(theta) * 6;
 
-  const life = 0;
-
-  const ttl = baseTTL + rand(rangeTTL);
-  const speed = baseSpeed + rand(rangeSpeed);
-  const size = baseSize + rand(rangeSize);
-  const hue = baseHue + rand(rangeHue);
-
-  particleProps.set([x, y, vx, vy, life, ttl, speed, size, hue], i);
+  particleProps = setParticleProps(
+    particleProps,
+    x,
+    y,
+    vx,
+    vy,
+    baseTTL,
+    rangeTTL,
+    baseSpeed,
+    rangeSpeed,
+    baseSize,
+    rangeSize,
+    baseHue,
+    rangeHue,
+    i,
+  );
 };
 
 const initParticles = () => {
@@ -73,17 +82,7 @@ const drawParticle = (x, y, theta, life, ttl, size, hue) => {
 };
 
 const updateParticle = i => {
-  const i2 = 1 + i;
-  const i3 = 2 + i;
-  const i4 = 3 + i;
-  const i5 = 4 + i;
-  const i6 = 5 + i;
-  const i7 = 6 + i;
-  const i8 = 7 + i;
-  const i9 = 8 + i;
-
-  const x = particleProps[i];
-  const y = particleProps[i2];
+  const { i2, i3, i4, i5, i6, i7, i8, i9, x, y } = getParticleProps(particleProps, i);
 
   const theta = angle(x, y, center[0], center[1]) + 0.75 * HALF_PI;
 
@@ -119,24 +118,18 @@ const drawParticles = () => {
 };
 
 const createCanvas = () => {
-  container = document.querySelector('.content--canvas-abirix');
-  canvas = {
-    a: document.createElement('canvas'),
-    b: document.createElement('canvas'),
-  };
+  const selector = '.content--canvas-abirix';
+  const { container: newContainer, canvas: newCanvas, ctx: newCtx } = createSectionCanvas(
+    selector,
+    container,
+    canvas,
+    ctx,
+  );
 
-  canvas.b.style = `
-		position: fixed;
-		left: 0;
-		width: 100%;
-	`;
+  container = newContainer;
+  canvas = newCanvas;
+  ctx = newCtx;
 
-  container.appendChild(canvas.b);
-
-  ctx = {
-    a: canvas.a.getContext('2d'),
-    b: canvas.b.getContext('2d'),
-  };
   center = [];
 };
 
