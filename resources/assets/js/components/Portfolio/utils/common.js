@@ -183,14 +183,6 @@ export const renderToScreen = (ctx, canvas) => {
 
   return ctx;
 };
-
-export const removeCanvas = (selector, ...args) => {
-  const contentCanvas = document.querySelector(selector);
-
-  contentCanvas && contentCanvas.remove();
-
-  return new Array(args.length).fill(null);
-};
 /* eslint-enable */
 
 export const updateFigure = (figureProps, i) => {
@@ -230,4 +222,12 @@ export const updateFigure = (figureProps, i) => {
     i7,
     i8,
   };
+};
+
+export const removeCanvas = (selector, ...args) => {
+  const contentCanvas = document.querySelector(selector);
+
+  contentCanvas && contentCanvas.remove();
+
+  return new Array(args.length).fill(null);
 };
