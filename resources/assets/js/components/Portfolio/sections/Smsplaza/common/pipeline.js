@@ -1,6 +1,11 @@
 import DetectBrowser from '../../../../../services/DetectBrowser';
 import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../../utils/utils';
-import { createSectionCanvas } from '../../../utils/common';
+import {
+  createSectionCanvas,
+  removeCanvas,
+  resizeCanvas,
+  updateFigure,
+} from '../../../utils/common';
 
 const pipeCount = 15;
 const pipePropCount = 8;
@@ -76,24 +81,26 @@ const checkBounds = (x, y) => {
 };
 
 const updatePipe = i => {
-  const i2 = 1 + i;
-  const i3 = 2 + i;
-  const i4 = 3 + i;
-  const i5 = 4 + i;
-  const i6 = 5 + i;
-  const i7 = 6 + i;
-  const i8 = 7 + i;
+  const {
+    x: xProp,
+    y: yProp,
+    vx: directionProp,
+    vy: speed,
+    life: lifeProp,
+    ttl,
+    radiusWidth: width,
+    hue,
+    i2,
+    i3,
+    i5,
+  } = updateFigure(pipeProps, i);
 
-  let x = pipeProps[i];
-  let y = pipeProps[i2];
+  let x = xProp;
+  let y = yProp;
 
-  let direction = pipeProps[i3];
-  const speed = pipeProps[i4];
+  let direction = directionProp;
 
-  let life = pipeProps[i5];
-  const ttl = pipeProps[i6];
-  const width = pipeProps[i7];
-  const hue = pipeProps[i8];
+  let life = lifeProp;
 
   drawPipe(x, y, life, ttl, width, hue);
 
@@ -145,28 +152,11 @@ const createCanvas = () => {
 };
 
 const resize = () => {
-  const { innerWidth, innerHeight } = window;
+  const { canvas: newCanvas, ctx: newCtx, center: newCenter } = resizeCanvas(canvas, ctx, center);
 
-  if (canvas && canvas.a) {
-    canvas.a.width = innerWidth;
-    canvas.a.height = innerHeight;
-  }
-
-  ctx && ctx.a && ctx.a.drawImage(canvas.b, 0, 0);
-
-  if (canvas && canvas.b) {
-    canvas.b.width = innerWidth;
-    canvas.b.height = innerHeight;
-  }
-
-  ctx && ctx.b && ctx.b.drawImage(canvas.a, 0, 0);
-
-  if (canvas && canvas.a) {
-    const { width, height } = canvas.a;
-
-    center[0] = 0.5 * width;
-    center[1] = 0.5 * height;
-  }
+  canvas = newCanvas;
+  ctx = newCtx;
+  center = newCenter;
 };
 
 const render = () => {
@@ -213,14 +203,21 @@ export const setup = () => {
 };
 
 export const remove = () => {
-  const contentCanvas = document.querySelector('.content--canvas--smsplaza canvas');
+  const selector = '.content--canvas--smsplaza canvas';
+  const [newContainer, newCanvas, newCtx, newCenter, newTick, newPipeProps] = removeCanvas(
+    selector,
+    container,
+    canvas,
+    ctx,
+    center,
+    tick,
+    pipeProps,
+  );
 
-  contentCanvas && contentCanvas.remove();
-
-  container = null;
-  canvas = null;
-  ctx = null;
-  center = null;
-  tick = null;
-  pipeProps = null;
+  container = newContainer;
+  canvas = newCanvas;
+  ctx = newCtx;
+  center = newCenter;
+  tick = newTick;
+  pipeProps = newPipeProps;
 };

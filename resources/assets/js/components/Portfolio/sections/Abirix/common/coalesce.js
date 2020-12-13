@@ -1,6 +1,15 @@
-import DetectBrowser from '../../../../../services/DetectBrowser';
 import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../../utils/utils';
-import { createSectionCanvas, getParticleProps, setParticleProps } from '../../../utils/common';
+import {
+  createSectionCanvas,
+  getParticleProps,
+  getDrawParticleProps,
+  setParticleProps,
+  drawParticlePreparation,
+  resizeCanvas,
+  renderGlow,
+  renderToScreen,
+  removeCanvas,
+} from '../../../utils/common';
 
 const particleCount = 75;
 const particlePropCount = 9;
@@ -89,14 +98,20 @@ const updateParticle = i => {
   const vx = lerp(particleProps[i3], 2 * cos(theta), 0.05);
   const vy = lerp(particleProps[i4], 2 * sin(theta), 0.05);
 
-  let life = particleProps[i5];
-  const ttl = particleProps[i6];
-  const speed = particleProps[i7];
+  const { life: lifeProp, ttl, x2, y2, radiusSize: size, hue } = getDrawParticleProps(
+    particleProps,
+    x,
+    y,
+    vx,
+    vy,
+    i5,
+    i6,
+    i7,
+    i8,
+    i9,
+  );
 
-  const x2 = x + vx * speed;
-  const y2 = y + vy * speed;
-  const size = particleProps[i8];
-  const hue = particleProps[i9];
+  let life = lifeProp;
 
   drawParticle(x, y, theta, life, ttl, size, hue);
 
@@ -134,73 +149,30 @@ const createCanvas = () => {
 };
 
 const resize = () => {
-  const { innerWidth, innerHeight } = window;
+  const { canvas: newCanvas, ctx: newCtx, center: newCenter } = resizeCanvas(canvas, ctx, center);
 
-  if (canvas && canvas.a) {
-    canvas.a.width = innerWidth;
-    canvas.a.height = innerHeight;
-  }
-
-  ctx && ctx.a && ctx.a.drawImage(canvas.b, 0, 0);
-
-  if (canvas && canvas.b) {
-    canvas.b.width = innerWidth;
-    canvas.b.height = innerHeight;
-  }
-
-  ctx && ctx.b && ctx.b.drawImage(canvas.a, 0, 0);
-
-  if (canvas && canvas.a) {
-    const { width, height } = canvas.a;
-
-    center[0] = 0.5 * width;
-    center[1] = 0.5 * height;
-  }
-};
-
-const renderGlow = () => {
-  ctx.b.save();
-
-  !DetectBrowser.isFirefox() && (ctx.b.filter = 'blur(8px) brightness(200%)');
-
-  ctx.b.globalCompositeOperation = 'lighter';
-
-  ctx.b.drawImage(canvas.a, 0, 0);
-  ctx.b.restore();
-  ctx.b.save();
-
-  !DetectBrowser.isFirefox() && (ctx.b.filter = 'blur(4px) brightness(200%)');
-
-  ctx.b.globalCompositeOperation = 'lighter';
-
-  ctx.b.drawImage(canvas.a, 0, 0);
-  ctx.b.restore();
-};
-
-const render = () => {
-  ctx.b.save();
-
-  ctx.b.globalCompositeOperation = 'lighter';
-
-  ctx.b.drawImage(canvas.a, 0, 0);
-  ctx.b.restore();
+  canvas = newCanvas;
+  ctx = newCtx;
+  center = newCenter;
 };
 
 const draw = () => {
   if (!ctx) return;
 
-  tick++;
+  const { tick: newTick, ctx: newCtx } = drawParticlePreparation(
+    tick,
+    canvas,
+    ctx,
+    backgroundColor,
+  );
 
-  const { width, height } = canvas.a;
-
-  ctx.a.clearRect(0, 0, width, height);
-
-  ctx.b.fillStyle = backgroundColor;
-  ctx.b.fillRect(0, 0, width, height);
+  tick = newTick;
+  ctx = newCtx;
 
   drawParticles();
-  renderGlow();
-  render();
+
+  ctx = renderGlow(ctx, canvas);
+  ctx = renderToScreen(ctx, canvas);
 
   window.requestAnimationFrame(draw);
 };
@@ -219,16 +191,23 @@ export const setup = () => {
 };
 
 export const remove = () => {
-  const contentCanvas = document.querySelector('.content--canvas-abirix canvas');
+  const selector = '.content--canvas-abirix canvas';
+  const [newContainer, newCanvas, newCtx, newCenter, newTick, newParticleProps] = removeCanvas(
+    selector,
+    container,
+    canvas,
+    ctx,
+    center,
+    tick,
+    particleProps,
+  );
 
-  contentCanvas && contentCanvas.remove();
-
-  container = null;
-  canvas = null;
-  ctx = null;
-  center = null;
-  tick = null;
-  particleProps = null;
+  container = newContainer;
+  canvas = newCanvas;
+  ctx = newCtx;
+  center = newCenter;
+  tick = newTick;
+  particleProps = newParticleProps;
 };
 
 export default setup;

@@ -1,7 +1,12 @@
 import SimplexNoise from 'simplex-noise';
 
 import { cos, fadeInOut, rand, sin, TAU } from '../../../utils/utils';
-import { createSectionCanvas } from '../../../utils/common';
+import {
+  createSectionCanvas,
+  resizeCanvas,
+  updateFigure,
+  removeCanvas,
+} from '../../../utils/common';
 
 const circleCount = 10;
 const circlePropCount = 8;
@@ -83,24 +88,12 @@ const checkBounds = (x, y, radius) => {
 };
 
 const updateCircle = i => {
-  const i2 = 1 + i;
-  const i3 = 2 + i;
-  const i4 = 3 + i;
-  const i5 = 4 + i;
-  const i6 = 5 + i;
-  const i7 = 6 + i;
-  const i8 = 7 + i;
+  const { x, y, vx, vy, life: lifeProp, ttl, radiusWidth: radius, hue, i2, i5 } = updateFigure(
+    circleProps,
+    i,
+  );
 
-  const x = circleProps[i];
-  const y = circleProps[i2];
-
-  const vx = circleProps[i3];
-  const vy = circleProps[i4];
-
-  let life = circleProps[i5];
-  const ttl = circleProps[i6];
-  const radius = circleProps[i7];
-  const hue = circleProps[i8];
+  let life = lifeProp;
 
   drawCircle(x, y, life, ttl, radius, hue);
 
@@ -136,21 +129,10 @@ const createCanvas = () => {
 };
 
 const resize = () => {
-  const { innerWidth, innerHeight } = window;
+  const { canvas: newCanvas, ctx: newCtx } = resizeCanvas(canvas, ctx);
 
-  if (canvas && canvas.a) {
-    canvas.a.width = innerWidth;
-    canvas.a.height = innerHeight;
-  }
-
-  ctx && ctx.a && ctx.a.drawImage(canvas.b, 0, 0);
-
-  if (canvas && canvas.b) {
-    canvas.b.width = innerWidth;
-    canvas.b.height = innerHeight;
-  }
-
-  ctx && ctx.b && ctx.b.drawImage(canvas.a, 0, 0);
+  canvas = newCanvas;
+  ctx = newCtx;
 };
 
 const render = () => {
@@ -192,17 +174,24 @@ export const setup = () => {
 };
 
 export const remove = () => {
-  const contentCanvas = document.querySelector('.content--canvas-neocore canvas');
+  const selector = '.content--canvas-neocore canvas';
+  const [
+    newContainer,
+    newCanvas,
+    newCtx,
+    newCircles,
+    newCircleProps,
+    newSimplex,
+    newBaseHue,
+  ] = removeCanvas(selector, container, canvas, ctx, circles, circleProps, simplex, baseHue);
 
-  contentCanvas && contentCanvas.remove();
-
-  container = null;
-  canvas = null;
-  ctx = null;
-  circles = null;
-  circleProps = null;
-  simplex = null;
-  baseHue = null;
+  container = newContainer;
+  canvas = newCanvas;
+  ctx = newCtx;
+  circles = newCircles;
+  circleProps = newCircleProps;
+  simplex = newSimplex;
+  baseHue = newBaseHue;
 };
 
 export default setup;
