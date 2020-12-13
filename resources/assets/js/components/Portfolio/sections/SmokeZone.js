@@ -17,8 +17,8 @@ const SmokeZone = () => (
           <p>
             I have developed the online store, based on the unique MVC core;
             <span>
-              promotion and support; development of a flexible administration panel with content
-              management features
+              promotion, and support; development of a flexible administration panel with content
+              management features.
             </span>
           </p>
         </div>
@@ -29,7 +29,7 @@ const SmokeZone = () => (
       logoDescription={() => (
         <p className="header-container">
           <span className="header">SMOKE-ZONE</span>
-          <span className="paragraph">online shop selling tobacco for hookah</span>
+          <span className="paragraph">Online shop selling tobacco for hookah</span>
         </p>
       )}
       technologies={portfolioTechnologiesList.smokeZone}

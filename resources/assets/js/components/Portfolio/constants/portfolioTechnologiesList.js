@@ -1,6 +1,6 @@
 const portfolioTechnologiesList = {
   cherryPick: [
-    [{ id: 'angular' }, { id: 'laravel' }, { id: 'mysql' }],
+    [{ id: 'typescript' }, { id: 'laravel' }, { id: 'mysql' }],
     [{ id: 'php' }, { id: 'js' }],
   ],
   smokeZone: [

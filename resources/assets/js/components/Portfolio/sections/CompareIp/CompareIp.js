@@ -49,7 +49,7 @@ class CompareIp extends Component {
 
         menuItem.classList.add('compareip-bg');
       } else {
-        menuItem.classList.add('compareip-bg');
+        menuItem.classList.remove('compareip-bg');
       }
     });
   }

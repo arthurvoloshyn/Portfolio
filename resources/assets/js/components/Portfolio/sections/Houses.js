@@ -21,7 +21,7 @@ const Houses = () => (
       effectClassOut="zoomOut"
       logoDescription={() => (
         <p className="paragraph">
-          TThe system for the design and buying a construction project of building
+          The system for the design and buying a construction project of building
         </p>
       )}
       logoText="HOOMES"

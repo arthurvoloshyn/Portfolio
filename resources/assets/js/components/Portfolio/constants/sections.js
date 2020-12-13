@@ -13,6 +13,8 @@ import Yandex from '../sections/Yandex';
 import Houses from '../sections/Houses';
 import History24 from '../sections/History24';
 import WellHome from '../sections/WellHome';
+import SmokeZone from '../sections/SmokeZone';
+import CherryPick from '../sections/CherryPick';
 
 const sections = {
   [URLS.linkful]: <Linkful />,
@@ -27,6 +29,8 @@ const sections = {
   [URLS.houses]: <Houses />,
   [URLS.history24]: <History24 />,
   [URLS.welhome]: <WellHome />,
+  [URLS.smokezone]: <SmokeZone />,
+  [URLS.cherryPick]: <CherryPick />,
 };
 
 export default sections;
