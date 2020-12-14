@@ -1,7 +1,9 @@
 import React from 'react';
 
+import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import portfolioTechnologiesList from '../constants/portfolioTechnologiesList';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const SmokeZone = () => (
@@ -37,4 +39,9 @@ const SmokeZone = () => (
   </div>
 );
 
-export default SmokeZone;
+const sectionData = {
+  sectionClassName: 'smoke-zone-bg',
+  sectionPage: URLS.smokezone,
+};
+
+export default withSectionData(sectionData)(SmokeZone);

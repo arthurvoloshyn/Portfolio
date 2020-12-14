@@ -1,9 +1,11 @@
 import React from 'react';
 import ParallaxMousemove from 'react-parallax-mousemove';
 
+import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import portfolioTechnologiesList from '../constants/portfolioTechnologiesList';
 import sectionStyles from '../constants/sectionStyles';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const CherryPick = () => (
@@ -33,4 +35,9 @@ const CherryPick = () => (
   </ParallaxMousemove>
 );
 
-export default CherryPick;
+const sectionData = {
+  sectionClassName: 'cherry-pick-bg',
+  sectionPage: URLS.cherryPick,
+};
+
+export default withSectionData(sectionData)(CherryPick);
