@@ -10,9 +10,11 @@ class Pattern extends Component {
     effectClassIn: PropTypes.string,
     effectClassOut: PropTypes.string,
     technologies: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string,
-      }),
+      PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+        }),
+      ),
     ),
     description: PropTypes.func,
     figure: PropTypes.func,
