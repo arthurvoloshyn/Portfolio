@@ -23,7 +23,7 @@ $img-path: '/imgs';
 }
 
 .linkful-bg {
-  background: #3c48fa !important;
+  background: #a3daff !important;
 }
 
 .compareip-bg {
@@ -126,6 +126,10 @@ $img-path: '/imgs';
 
 .factoringvergelijken-bg {
   background: #000 !important;
+
+  &.effects-factoringvergelijken {
+    background: #b0576a !important;
+  }
 
   &_layer {
     background-image: url('#{$img-path}/profil_city.png');

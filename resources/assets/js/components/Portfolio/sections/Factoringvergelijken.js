@@ -1,8 +1,10 @@
 import React from 'react';
 
+import URLS from '../../../constants/urls';
 import portfolioLinksList from '../constants/portfolioLinksList';
 import IMGS from '../../../constants/imgs';
 import sectionStyles from '../constants/sectionStyles';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const Factoringvergelijken = () => (
@@ -38,4 +40,9 @@ const Factoringvergelijken = () => (
   </div>
 );
 
-export default Factoringvergelijken;
+const sectionData = {
+  sectionClassName: 'factoringvergelijken-bg',
+  sectionPage: URLS.factoringvergelijken,
+};
+
+export default withSectionData(sectionData)(Factoringvergelijken);
