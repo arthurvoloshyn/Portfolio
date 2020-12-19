@@ -24,7 +24,6 @@ $dark-menu-color: #333538;
 }
 
 .menu {
-  @import 'stroke';
   bottom: 3em;
   left: 0;
   overflow: hidden;
@@ -110,7 +109,6 @@ $dark-menu-color: #333538;
   }
 
   .inner {
-    @import 'effects';
     height: 100%;
     overflow-y: auto;
     padding: 0 140px 2em 0;
@@ -188,6 +186,8 @@ $dark-menu-color: #333538;
         }
       }
     }
+
+    @import 'effects';
   }
 
   .morph-shape {
@@ -203,6 +203,8 @@ $dark-menu-color: #333538;
       transition: stroke 0.25s;
     }
   }
+
+  @import 'stroke';
 }
 
 .menu.menu--open {
