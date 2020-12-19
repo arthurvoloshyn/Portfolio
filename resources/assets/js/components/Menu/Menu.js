@@ -38,16 +38,6 @@ class Menu extends Component {
     super(props);
 
     stylesList.forEach(({ prop, value }) => (this[prop] = getStylesList(value)));
-
-    this.state = this.setStyles();
-  }
-
-  componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.escFunction, false);
   }
 
   clickHandler = page => {
@@ -57,38 +47,21 @@ class Menu extends Component {
     reloadPage(true);
   };
 
-  escFunction = ({ key }) => key === 'Escape' && this.menuStyleHandler();
-
-  menuStyleHandler = () => {
-    const stylesState = this.setStyles();
-
-    this.setState(stylesState);
-  };
-
-  setStyles = () => {
-    const {
-      page: { page },
-    } = this.props;
-
-    return {
-      effectStyle: this.styleClasses[page],
-      styleStroke: this.styleStroke[page],
-    };
-  };
-
   render() {
-    const { effectStyle, styleStroke } = this.state;
     const {
       menu: { status },
       page: { page },
     } = this.props;
 
+    const effectStyle = this.styleClasses[page];
+    const styleStroke = this.styleStroke[page];
     const styleMenu = this.styleMenu[page];
+
     const morphShapeClasses = classNames('morph-shape', { [styleStroke]: status });
 
     return (
       <nav className="menu" data-section={styleMenu} id="menu">
-        <button className="menu__handle" onClick={this.menuStyleHandler}>
+        <button className="menu__handle">
           <span>Menu</span>
         </button>
         <div className="inner">

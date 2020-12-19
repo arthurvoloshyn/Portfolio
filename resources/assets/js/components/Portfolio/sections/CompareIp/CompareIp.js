@@ -38,20 +38,15 @@ class CompareIp extends Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     const { firstTime } = this.state;
     const {
-      page: { page },
+      page: { page: nextPage },
     } = nextProps;
 
-    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
-
-    menuItems.forEach(menuItem => {
-      if (page === URLS.compareip) {
-        firstTime && this.show();
-
-        menuItem.classList.add('compareip-bg');
-      } else {
-        menuItem.classList.remove('compareip-bg');
-      }
-    });
+    if (nextPage === URLS.compareip) {
+      firstTime && this.show();
+      this.updateMenuClasses(true);
+    } else {
+      this.updateMenuClasses();
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -68,6 +63,14 @@ class CompareIp extends Component {
       this.show();
     }
   }
+
+  updateMenuClasses = withAdding => {
+    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
+    const classMethod = withAdding ? 'add' : 'remove';
+    const sectionClassName = 'compareip-bg';
+
+    menuItems.forEach(menuItem => menuItem.classList[classMethod](sectionClassName));
+  };
 
   showDescription = () =>
     this.setState({
@@ -87,6 +90,7 @@ class CompareIp extends Component {
 
   render() {
     const { visible, animateClass } = this.state;
+    const logoStyles = { opacity: visible };
 
     return (
       <div className="CompareIp">
@@ -94,7 +98,7 @@ class CompareIp extends Component {
           <div ref={this.classSlideshow} className="slideshow">
             <div className="slide slide--current">
               <div className="slide__bg slide__bg--6" />
-              <h2 className="word word--6" style={{ opacity: visible }}>
+              <h2 className="word word--6" style={logoStyles}>
                 CompareIp
               </h2>
 

@@ -123,10 +123,9 @@ class SVGMenu extends Component {
 
   updateMenuStyle = withAdding => {
     const menuItems = document.querySelectorAll('#fp-nav ul li a span');
+    const classMethod = withAdding ? 'add' : 'remove';
 
-    menuItems.forEach(menuItem =>
-      withAdding ? classie.add(menuItem, 'effect--open') : classie.remove(menuItem, 'effect--open'),
-    );
+    menuItems.forEach(menuItem => classie[classMethod](menuItem, 'effect--open'));
   };
 
   animatePath = () => {
