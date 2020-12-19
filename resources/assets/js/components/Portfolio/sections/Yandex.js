@@ -1,6 +1,8 @@
 import React from 'react';
 
+import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const Yandex = () => (
@@ -42,4 +44,9 @@ const Yandex = () => (
   />
 );
 
-export default Yandex;
+const sectionData = {
+  sectionClassName: 'yandex-bg',
+  sectionPage: URLS.yandex,
+};
+
+export default withSectionData(sectionData)(Yandex);

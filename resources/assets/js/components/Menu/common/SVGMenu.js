@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import GetPath from '../../../services/GetPath';
 import { toggleStatus, setStatusMenu } from '../../../actions/menu';
-import getStylesList from '../utils/getStylesList';
 
 /* eslint-disable react/sort-comp */
 class SVGMenu extends Component {
@@ -14,7 +13,6 @@ class SVGMenu extends Component {
     }),
     page: PropTypes.shape({
       statusReload: PropTypes.bool,
-      page: PropTypes.string,
     }),
     toggleStatus: PropTypes.func,
     setStatus: PropTypes.func,
@@ -26,7 +24,6 @@ class SVGMenu extends Component {
     },
     page: {
       statusReload: false,
-      page: '',
     },
     toggleStatus: () => {},
     setStatus: () => {},
@@ -35,8 +32,6 @@ class SVGMenu extends Component {
   path = GetPath();
 
   scrollKeys = ['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown'];
-
-  effectStyleClasses = getStylesList('effects');
 
   componentDidMount() {
     this.init();
@@ -111,7 +106,7 @@ class SVGMenu extends Component {
   removeClass = () => {
     this.enableScroll();
 
-    this.updateMenu();
+    this.updateMenuStyle();
 
     classie.remove(this.el, 'menu--anim');
     setTimeout(() => classie.remove(this.el, 'menu--open'), 250);
@@ -120,22 +115,17 @@ class SVGMenu extends Component {
   addClass = () => {
     this.disableScroll();
 
-    this.updateMenu(true);
+    this.updateMenuStyle(true);
 
     classie.add(this.el, 'menu--anim');
     setTimeout(() => classie.add(this.el, 'menu--open'), 250);
   };
 
-  updateMenu = withAdding => {
-    const {
-      page: { page },
-    } = this.props;
-
-    const effectStyle = this.effectStyleClasses[page];
+  updateMenuStyle = withAdding => {
     const menuItems = document.querySelectorAll('#fp-nav ul li a span');
 
     menuItems.forEach(menuItem =>
-      withAdding ? classie.add(menuItem, effectStyle) : classie.remove(menuItem, effectStyle),
+      withAdding ? classie.add(menuItem, 'effect--open') : classie.remove(menuItem, 'effect--open'),
     );
   };
 

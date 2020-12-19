@@ -59,7 +59,11 @@ $img-path: '/imgs';
 }
 
 .welhome-bg {
-  background: #e6e6e6 !important;
+  background: #000 !important;
+
+  &.effect--open {
+    background: #e6e6e6 !important;
+  }
 
   &_layer {
     background-image: url('#{$img-path}/Skyline.png');
@@ -113,27 +117,40 @@ $img-path: '/imgs';
 }
 
 .yandex-bg {
-  background: #ed2025 !important;
+  background: #000 !important;
+
+  &.effect--open {
+    background: #ed2025 !important;
+  }
 }
 
 .c2corner-bg {
   background: #002877 !important;
+
+  &.effect--open {
+    background: #05f !important;
+  }
 }
 
 .arcbazar-bg {
   background: #000 !important;
+
+  &.effect--open {
+    background: #8f6ab7 !important;
+  }
 }
 
 .factoringvergelijken-bg {
   background: #000 !important;
 
-  &.effects-factoringvergelijken {
+  &.effect--open {
     background: #b0576a !important;
   }
 
   &_layer {
     background-image: url('#{$img-path}/profil_city.png');
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     bottom: 0;
     min-height: 40vh;
@@ -145,4 +162,8 @@ $img-path: '/imgs';
 
 .cherry-pick-bg {
   background: #000 !important;
+
+  &.effect--open {
+    background: #e8222d !important;
+  }
 }

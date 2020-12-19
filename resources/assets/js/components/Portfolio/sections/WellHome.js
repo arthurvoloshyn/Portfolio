@@ -1,7 +1,9 @@
 import React from 'react';
 
+import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
 import sectionStyles from '../constants/sectionStyles';
+import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
 const WellHome = () => (
@@ -39,4 +41,9 @@ const WellHome = () => (
   </div>
 );
 
-export default WellHome;
+const sectionData = {
+  sectionClassName: 'welhome-bg',
+  sectionPage: URLS.welhome,
+};
+
+export default withSectionData(sectionData)(WellHome);

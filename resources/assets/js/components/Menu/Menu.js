@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import menuList from './constants/menuList';
+import stylesList from './constants/stylesList';
 import { reloadPage, setPage } from '../../actions/page';
 import getStylesList from './utils/getStylesList';
 import SVGMenu from './common/SVGMenu';
 
 import './scss/Menu.scss';
-
-const styleClasses = getStylesList('effects');
-const styleStroke = getStylesList('stroke');
 
 class Menu extends Component {
   static propTypes = {
@@ -39,14 +37,9 @@ class Menu extends Component {
   constructor(props) {
     super(props);
 
-    const {
-      page: { page },
-    } = this.props;
+    stylesList.forEach(({ prop, value }) => (this[prop] = getStylesList(value)));
 
-    this.state = {
-      effectStyle: styleClasses[page],
-      styleStroke: styleStroke[page],
-    };
+    this.state = this.setStyles();
   }
 
   componentDidMount() {
@@ -67,26 +60,34 @@ class Menu extends Component {
   escFunction = ({ key }) => key === 'Escape' && this.menuStyleHandler();
 
   menuStyleHandler = () => {
+    const stylesState = this.setStyles();
+
+    this.setState(stylesState);
+  };
+
+  setStyles = () => {
     const {
       page: { page },
     } = this.props;
 
-    this.setState({
-      effectStyle: styleClasses[page],
-      styleStroke: styleStroke[page],
-    });
+    return {
+      effectStyle: this.styleClasses[page],
+      styleStroke: this.styleStroke[page],
+    };
   };
 
   render() {
     const { effectStyle, styleStroke } = this.state;
     const {
       menu: { status },
+      page: { page },
     } = this.props;
 
+    const styleMenu = this.styleMenu[page];
     const morphShapeClasses = classNames('morph-shape', { [styleStroke]: status });
 
     return (
-      <nav className="menu" id="menu">
+      <nav className="menu" data-section={styleMenu} id="menu">
         <button className="menu__handle" onClick={this.menuStyleHandler}>
           <span>Menu</span>
         </button>
