@@ -26,8 +26,8 @@ const CherryPick = () => (
       logo={IMGS.cherries}
       logoDescription={() => (
         <p className="header-container">
-          <p className="header">CherryPick</p>
-          <p className="paragraph">A platform for job search and job posting</p>
+          <span className="header">CherryPick</span>
+          <span className="paragraph">A platform for job search and job posting</span>
         </p>
       )}
       technologies={portfolioTechnologiesList.cherryPick}

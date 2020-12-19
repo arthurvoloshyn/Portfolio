@@ -94,13 +94,15 @@ class Loading extends Component {
       animations &&
         this.container.removeEventListener(this.animEndEventName, onEndInitialAnimation);
 
-      forFade.style.visibility = 'hidden';
+      forFade && (forFade.style.visibility = 'hidden');
 
       this.startLoading();
 
       setTimeout(() => {
-        forFade.style.visibility = 'visible';
-        forFade.classList.add('animated', 'fadeIn');
+        if (forFade) {
+          forFade.style.visibility = 'visible';
+          forFade.classList.add('animated', 'fadeIn');
+        }
 
         propsSetStatus(false);
       }, 1000);

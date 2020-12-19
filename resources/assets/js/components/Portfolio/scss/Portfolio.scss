@@ -66,9 +66,7 @@ $img-path: '/imgs';
   }
 
   &_layer {
-    background-image: url('#{$img-path}/Skyline.png');
-    background-position: center;
-    background-size: cover;
+    background: center / cover no-repeat url('#{$img-path}/Skyline.png');
     bottom: -50px;
     min-height: 40vh;
     overflow: hidden;
@@ -148,10 +146,7 @@ $img-path: '/imgs';
   }
 
   &_layer {
-    background-image: url('#{$img-path}/profil_city.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: center / cover no-repeat url('#{$img-path}/profil_city.png');
     bottom: 0;
     min-height: 40vh;
     overflow: hidden;
