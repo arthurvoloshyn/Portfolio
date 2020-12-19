@@ -75,7 +75,7 @@ class Pattern extends Component {
             {technologies.map((technologiesRow, i) => (
               <div key={`technologiesRow_${i}`}>
                 {technologiesRow.map(({ id }) => (
-                  <div key={id} />
+                  <div key={id} className={id} />
                 ))}
               </div>
             ))}

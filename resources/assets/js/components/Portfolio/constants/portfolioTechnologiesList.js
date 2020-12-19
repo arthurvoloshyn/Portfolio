@@ -4,7 +4,7 @@ const portfolioTechnologiesList = {
     [{ id: 'php' }, { id: 'js' }],
   ],
   smokeZone: [
-    [{ id: 'apache' }, { id: 'javascript' }, { id: 'jq' }],
+    [{ id: 'apache' }, { id: 'js' }, { id: 'jq' }],
     [{ id: 'mvc' }, { id: 'mysql' }, { id: 'php' }],
   ],
 };

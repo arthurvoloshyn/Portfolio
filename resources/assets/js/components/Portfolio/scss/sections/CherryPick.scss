@@ -10,31 +10,29 @@
 
   .technologies-container {
     .technologies {
-      div div {
-        -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-      }
+      div {
+        div {
+          -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+        }
 
-      div:nth-child(1) {
-        div:nth-child(1) {
+        &.typescript {
           background-image: url('#{$img-path}/cheryPick/typescript.png');
         }
 
-        div:nth-child(2) {
+        &.laravel {
           background-image: url('#{$img-path}/cheryPick/laravel.png');
         }
 
-        div:nth-child(3) {
+        &.mysql {
           background-image: url('#{$img-path}/cheryPick/mysql.png');
         }
-      }
 
-      div:nth-child(2) {
-        div:nth-child(1) {
+        &.php {
           background-image: url('#{$img-path}/cheryPick/php.png');
         }
 
-        div:nth-child(2) {
+        &.js {
           background-image: url('#{$img-path}/cheryPick/js.png');
         }
       }
