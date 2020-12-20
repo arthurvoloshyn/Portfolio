@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReactFullPage from '@fullpage/react-fullpage';
 
-import environment from '../../constants/environment';
-import sections from './constants/sections';
 import { setPage } from '../../actions/page';
+import ENV from '../../constants/env';
+import sections from './constants/sections';
 
 import './scss/Portfolio.scss';
 
@@ -31,7 +31,7 @@ const Portfolio = ({ setPage }) => {
       <ReactFullPage
         anchors={sectionUrls}
         keyboardScrolling
-        licenseKey={environment.fullPageLicenseKey}
+        licenseKey={ENV.fullPageLicenseKey}
         navigation
         onLeave={onLeave}
         render={onRender}

@@ -24,7 +24,7 @@ const Houses = () => (
           The system for the design and buying a construction project of building
         </p>
       )}
-      logoText="HOOMES"
+      logoText="HOMES"
     />
   </div>
 );

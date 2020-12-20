@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 
-import RegExps from '../../../constants/regExps';
+import REG_EXPS from '../../../constants/regExps';
 import getAction from '../../../actions/contact';
 import contactApi from '../utils/contactApi';
 
@@ -101,7 +101,7 @@ class Form extends Component {
 
   _validate = (name = null) => {
     let resultValidation = true;
-    const ruleEmail = RegExps.email;
+    const ruleEmail = REG_EXPS.email;
 
     this.addError = fieldName => {
       this[fieldName].current.classList.remove('goodInput');
@@ -136,7 +136,7 @@ class Form extends Component {
     } = this.props;
 
     return (
-      <div className="contact-form" id="mycontact_form_container">
+      <div className="contact-form" id="myContact_form_container">
         <p>Contact me</p>
         <p>If you have any questions, use the form below ...</p>
 

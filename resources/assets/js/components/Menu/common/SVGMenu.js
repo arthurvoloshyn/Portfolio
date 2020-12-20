@@ -108,8 +108,8 @@ class SVGMenu extends Component {
 
     this.updateMenuStyle();
 
-    classie.remove(this.el, 'menu--anim');
-    setTimeout(() => classie.remove(this.el, 'menu--open'), 250);
+    this.el.classList.remove('menu--anim');
+    setTimeout(() => this.el.classList.remove('menu--open'), 250);
   };
 
   addClass = () => {
@@ -117,15 +117,15 @@ class SVGMenu extends Component {
 
     this.updateMenuStyle(true);
 
-    classie.add(this.el, 'menu--anim');
-    setTimeout(() => classie.add(this.el, 'menu--open'), 250);
+    this.el.classList.add('menu--anim');
+    setTimeout(() => this.el.classList.add('menu--open'), 250);
   };
 
   updateMenuStyle = withAdding => {
     const menuItems = document.querySelectorAll('#fp-nav ul li a span');
     const classMethod = withAdding ? 'add' : 'remove';
 
-    menuItems.forEach(menuItem => classie[classMethod](menuItem, 'effect--open'));
+    menuItems.forEach(menuItem => menuItem.classList[classMethod]('effect--open'));
   };
 
   animatePath = () => {

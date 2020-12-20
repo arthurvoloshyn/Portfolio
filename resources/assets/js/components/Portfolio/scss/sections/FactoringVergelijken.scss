@@ -1,4 +1,4 @@
-.Factoringvergelijken {
+.FactoringVergelijken {
   background-image: linear-gradient(
     to right top,
     #2f2541,
@@ -11,7 +11,7 @@
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$img-path}/factoringvergelijken/factoringvergelijken-desktop.png');
+      background-image: url('#{$img-path}/factoringVergelijken/factoringVergelijken-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -126,7 +126,7 @@
 
   @media (max-width: 850px) {
     .technologies {
-      background-image: url('#{$img-path}/factoringvergelijken/factoringvergelijken-mobile.png') !important;
+      background-image: url('#{$img-path}/factoringVergelijken/factoringVergelijken-mobile.png') !important;
       height: 220px !important;
       width: 350px !important;
     }
@@ -134,7 +134,7 @@
 
   @media (max-width: 500px) {
     .technologies {
-      background-image: url('#{$img-path}/factoringvergelijken/factoringvergelijken-mobile.png') !important;
+      background-image: url('#{$img-path}/factoringVergelijken/factoringVergelijken-mobile.png') !important;
       height: 150px !important;
       width: 250px !important;
     }

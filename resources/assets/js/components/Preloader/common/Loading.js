@@ -112,7 +112,7 @@ class Loading extends Component {
     window.addEventListener('scroll', this.noScroll);
 
     // initial animation
-    classie.add(this.container, 'loading');
+    this.container.classList.add('loading');
 
     const { animations } = this.support;
 
@@ -162,8 +162,8 @@ class Loading extends Component {
             imgLoader.classList.remove('show');
           }
 
-          classie.remove(this.container, 'loading');
-          classie.add(this.container, 'loaded');
+          this.container.classList.remove('loading');
+          this.container.classList.add('loaded');
           clearInterval(interval);
 
           const onEndHeaderAnimation = ({ target }) => {
@@ -174,7 +174,7 @@ class Loading extends Component {
               window.removeEventListener(this.animEndEventName, onEndHeaderAnimation);
             }
 
-            classie.add(document.body, 'layout-switch');
+            document.body.classList.add('layout-switch');
             window.removeEventListener('scroll', this.noScroll);
           };
 

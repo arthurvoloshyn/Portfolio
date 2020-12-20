@@ -6,9 +6,9 @@ const URLS = {
 
   welhome: 'welhome',
   history24: 'history24',
-  smokezone: 'smoke-zone',
+  smokeZone: 'smoke-zone',
   yandex: 'yandex',
-  compareip: 'compareip',
+  compareIp: 'compareIp',
   smsplaza: 'smsplaza',
   abirix: 'abirix',
   first_slide: 'first-slide',
@@ -18,7 +18,7 @@ const URLS = {
   linkful: 'linkful',
   neocore: 'casino',
   arcbazar: 'arcbazar',
-  factoringvergelijken: 'factoringvergelijken',
+  factoringVergelijken: 'factoringVergelijken',
 
   urlSkills: '/skills',
   urlContacts: '/contacts',

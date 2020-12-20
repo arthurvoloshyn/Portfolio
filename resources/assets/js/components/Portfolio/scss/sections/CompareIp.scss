@@ -183,7 +183,7 @@
       height: auto;
 
       .img-container {
-        background-image: url('#{$img-path}/compareip/compare.png');
+        background-image: url('#{$img-path}/compareIp/compare.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -295,6 +295,7 @@
   }
 
   .draw-border {
+    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
     background: none;
     border: none;
     cursor: pointer;
@@ -307,8 +308,6 @@
     &:focus {
       outline: 2px dotted #dc2e2e;
     }
-
-    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
   }
 
   @media screen and (max-width: 40em) {

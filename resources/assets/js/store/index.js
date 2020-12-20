@@ -1,10 +1,10 @@
 import { createStore, compose } from 'redux';
 
-import environment from '../constants/environment';
+import ENV from '../constants/env';
 import reducers from '../reducers';
 
 const composeEnhancers =
-  !environment.isProd && typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  !ENV.isProd && typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : compose;
 

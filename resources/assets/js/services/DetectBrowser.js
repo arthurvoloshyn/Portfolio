@@ -1,8 +1,8 @@
-import RegExps from '../constants/regExps';
+import REG_EXPS from '../constants/regExps';
 
 const { userAgent } = navigator;
 const { webstore: chromeWebstore, runtime: chromeRuntime } = window.chrome;
-const { constructor: constructorRegExps } = RegExps;
+const { constructor: constructorRegExp } = REG_EXPS;
 
 const DetectBrowser = {
   isOpera: () => !!(window.opr && opr.addons) || !!window.opera || userAgent.indexOf(' OPR/') >= 0,
@@ -12,7 +12,7 @@ const DetectBrowser = {
 
   // Safari 3.0+ "[object HTMLElementConstructor]"
   isSafari: () =>
-    constructorRegExps.test(window.HTMLElement) ||
+    constructorRegExp.test(window.HTMLElement) ||
     (p => p.toString() === '[object SafariRemoteNotification]')(
       !window.safari || (typeof safari !== 'undefined' && safari.pushNotification),
     ),

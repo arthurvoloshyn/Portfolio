@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import environment from '../../../constants/environment';
+import ENV from '../../../constants/env';
 import getDisplayName from '../utils/getDisplayName';
 import updateMenuClasses from '../utils/updateMenuClasses';
 
@@ -59,7 +59,7 @@ const withSectionData = ({
     }
   }
 
-  !environment.isProd &&
+  !ENV.isProd &&
     (WithSectionData.displayName = `WithSectionData(${getDisplayName(WrappedComponent)})`);
 
   const mapStateToProps = ({ page }) => ({ page });

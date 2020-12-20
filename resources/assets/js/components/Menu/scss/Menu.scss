@@ -4,7 +4,7 @@ $default-menu-color: #5f656f;
 $light-menu-color: #abafb5;
 $dark-menu-color: #333538;
 
-$sections: menu-factoringvergelijken $dark-menu-color, menu-c2corner $dark-menu-color,
+$sections: menu-factoringVergelijken $dark-menu-color, menu-c2corner $dark-menu-color,
   menu-houses $light-menu-color, menu-history24 $light-menu-color, menu-cherry $dark-menu-color;
 
 @mixin styling-menu($data-section, $color) {
@@ -24,6 +24,7 @@ $sections: menu-factoringvergelijken $dark-menu-color, menu-c2corner $dark-menu-
 }
 
 .menu {
+  @import 'stroke';
   bottom: 3em;
   left: 0;
   overflow: hidden;
@@ -105,6 +106,7 @@ $sections: menu-factoringvergelijken $dark-menu-color, menu-c2corner $dark-menu-
   }
 
   .inner {
+    @import 'effects';
     height: 100%;
     overflow-y: auto;
     padding: 0 140px 2em 0;
@@ -183,8 +185,6 @@ $sections: menu-factoringvergelijken $dark-menu-color, menu-c2corner $dark-menu-
         }
       }
     }
-
-    @import 'effects';
   }
 
   .morph-shape {
@@ -200,8 +200,6 @@ $sections: menu-factoringvergelijken $dark-menu-color, menu-c2corner $dark-menu-
       transition: stroke 0.25s;
     }
   }
-
-  @import 'stroke';
 }
 
 .menu.menu--open {

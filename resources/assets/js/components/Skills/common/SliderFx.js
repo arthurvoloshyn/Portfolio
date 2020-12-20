@@ -69,7 +69,7 @@ class SliderFx {
       );
 
     // the slider starts a bit later...
-    setTimeout(() => callback.call(), speed * 0.2);
+    setTimeout(() => callback(), speed * 0.2);
 
     // change svg path on entering slide to "curved"
     currItem
@@ -134,7 +134,7 @@ class SliderFx {
         el.className = c;
         el.innerHTML = content;
 
-        disabled && classie.add(el, 'disabled');
+        disabled && el.classList.add('disabled');
 
         nav.appendChild(el);
 
@@ -200,7 +200,7 @@ class SliderFx {
 
       this.support
         ? this.itemsList.addEventListener(transEndEventName, transitionEndFn)
-        : transitionEndFn.call();
+        : transitionEndFn();
 
       // keyboard navigation events
       document.addEventListener('keydown', ({ key: evKey, code: evCode }) => {
@@ -264,16 +264,16 @@ class SliderFx {
   _toggleNavControls = () => {
     switch (this.curr) {
       case 0:
-        classie.remove(this.navNext, 'disabled');
-        classie.add(this.navPrev, 'disabled');
+        this.navNext.classList.remove('disabled');
+        this.navPrev.classList.add('disabled');
         break;
       case this.itemsCount - 1:
-        classie.add(this.navNext, 'disabled');
-        classie.remove(this.navPrev, 'disabled');
+        this.navNext.classList.add('disabled');
+        this.navPrev.classList.remove('disabled');
         break;
       default:
-        classie.remove(this.navNext, 'disabled');
-        classie.remove(this.navPrev, 'disabled');
+        this.navNext.classList.remove('disabled');
+        this.navPrev.classList.remove('disabled');
         break;
     }
   };

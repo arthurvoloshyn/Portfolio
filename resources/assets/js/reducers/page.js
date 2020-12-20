@@ -13,7 +13,7 @@ const initialState = {
 const pageReducer = (state = initialState, { type, page, statusReload }) => {
   switch (type) {
     case ACTION_TYPES.SET_PAGE:
-      return { ...state, page: page || 'main' };
+      return { ...state, page: page || URLS.main };
     case ACTION_TYPES.RELOAD_PAGE:
       return { ...state, statusReload };
     default:

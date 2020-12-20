@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ReactRotatingText from 'react-rotating-text';
 import PropTypes from 'prop-types';
+import ReactRotatingText from 'react-rotating-text';
 
 import socialNetworkList from './constants/socialNetworkList';
 
@@ -17,10 +17,10 @@ const Home = ({ preloader: { preloader } }) => {
 
   return (
     <div className="ip-main for_fade">
-      <div className="Preivew">
-        <div className="Preivew__neon">ARTUR VOLOSHYN</div>
-        <div className="Preivew__info">&lt; Software Engineer /&gt;</div>
-        <div className="Preivew__info Preivew__label_tech">
+      <div className="Preview">
+        <div className="Preview__neon">ARTUR VOLOSHYN</div>
+        <div className="Preview__info">&lt; Software Engineer /&gt;</div>
+        <div className="Preview__info Preview__label_tech">
           <p>Working with technologies such as {drawReactRotatingText()}</p>
         </div>
       </div>

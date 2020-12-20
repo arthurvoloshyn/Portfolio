@@ -42,9 +42,9 @@ class CompareIp extends Component {
       page: { page: nextPage },
     } = nextProps;
 
-    const sectionClassName = 'compareip-bg';
+    const sectionClassName = 'compareIp-bg';
 
-    if (nextPage === URLS.compareip) {
+    if (nextPage === URLS.compareIp) {
       firstTime && this.show();
       updateMenuClasses(sectionClassName, true);
     } else {
@@ -62,7 +62,7 @@ class CompareIp extends Component {
       preloader: { preloader: prevPreloader },
     } = prevProps;
 
-    if (!preloader && prevPreloader && page === URLS.compareip && firstTime) {
+    if (!preloader && prevPreloader && page === URLS.compareIp && firstTime) {
       this.show();
     }
   }

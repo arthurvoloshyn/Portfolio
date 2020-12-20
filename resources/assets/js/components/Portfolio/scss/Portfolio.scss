@@ -11,7 +11,7 @@ $img-path: '/imgs';
 @import 'sections/CherryPick';
 @import 'sections/Houses';
 @import 'sections/Arcbazar';
-@import 'sections/Factoringvergelijken';
+@import 'sections/FactoringVergelijken';
 @import 'sections/Linkful';
 @import 'sections/Smsplaza';
 @import 'sections/Abirix';
@@ -26,7 +26,7 @@ $img-path: '/imgs';
   background: #a3daff !important;
 }
 
-.compareip-bg {
+.compareIp-bg {
   background: rgba(237, 32, 37, 0.7) !important;
 }
 
@@ -138,7 +138,7 @@ $img-path: '/imgs';
   }
 }
 
-.factoringvergelijken-bg {
+.factoringVergelijken-bg {
   background: #000 !important;
 
   &.effect--open {

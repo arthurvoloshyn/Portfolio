@@ -41,7 +41,7 @@ const SmokeZone = () => (
 
 const sectionData = {
   sectionClassName: 'smoke-zone-bg',
-  sectionPage: URLS.smokezone,
+  sectionPage: URLS.smokeZone,
 };
 
 export default withSectionData(sectionData)(SmokeZone);

@@ -19,9 +19,6 @@ const getStylesList = type => {
       case 'cherry-pick':
         styleClass = 'cherry';
         break;
-      case 'compareip':
-        styleClass = 'compareIp';
-        break;
       case 'casino':
         styleClass = 'neocore';
         break;

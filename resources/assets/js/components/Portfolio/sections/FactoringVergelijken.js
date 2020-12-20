@@ -1,18 +1,18 @@
 import React from 'react';
 
 import URLS from '../../../constants/urls';
-import portfolioLinksList from '../constants/portfolioLinksList';
 import IMGS from '../../../constants/imgs';
+import portfolioLinksList from '../constants/portfolioLinksList';
 import sectionStyles from '../constants/sectionStyles';
 import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
-const Factoringvergelijken = () => (
+const FactoringVergelijken = () => (
   <div style={sectionStyles.outer}>
-    <div className="factoringvergelijken-bg_layer" />
+    <div className="factoringVergelijken-bg_layer" />
 
     <Pattern
-      classname="Factoringvergelijken"
+      classname="FactoringVergelijken"
       description={() => (
         <div className="description">
           <p>
@@ -29,20 +29,20 @@ const Factoringvergelijken = () => (
           <span>factoring</span>
         </div>
       )}
-      logo={IMGS.factoringvergelijken}
+      logo={IMGS.factoringVergelijken}
       logoDescription={() => (
         <p className="header-container">
           <span className="paragraph">Online factoring services</span>
         </p>
       )}
-      url={portfolioLinksList.factoringvergelijken}
+      url={portfolioLinksList.factoringVergelijken}
     />
   </div>
 );
 
 const sectionData = {
-  sectionClassName: 'factoringvergelijken-bg',
-  sectionPage: URLS.factoringvergelijken,
+  sectionClassName: 'factoringVergelijken-bg',
+  sectionPage: URLS.factoringVergelijken,
 };
 
-export default withSectionData(sectionData)(Factoringvergelijken);
+export default withSectionData(sectionData)(FactoringVergelijken);
