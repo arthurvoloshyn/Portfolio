@@ -11,10 +11,7 @@
   "keywords": [
     "react",
     "reactjs",
-    "redux",
-    "jest",
-    "enzyme",
-    "jquery"
+    "redux"
   ],
   "author": "Artur Voloshyn (https://github.com/arturw1998)",
   "license": "MIT",
