@@ -2,8 +2,9 @@ import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import portfolioLinksList from '../../constants/portfolioLinksList';
 import URLS from '../../../../constants/urls';
+import portfolioLinksList from '../../constants/portfolioLinksList';
+import updateMenuClasses from '../../utils/updateMenuClasses';
 import Slideshow from './common/Slideshow';
 
 import './common/wordFx';
@@ -41,11 +42,13 @@ class CompareIp extends Component {
       page: { page: nextPage },
     } = nextProps;
 
+    const sectionClassName = 'compareip-bg';
+
     if (nextPage === URLS.compareip) {
       firstTime && this.show();
-      this.updateMenuClasses(true);
+      updateMenuClasses(sectionClassName, true);
     } else {
-      this.updateMenuClasses();
+      updateMenuClasses(sectionClassName);
     }
   }
 
@@ -63,14 +66,6 @@ class CompareIp extends Component {
       this.show();
     }
   }
-
-  updateMenuClasses = withAdding => {
-    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
-    const classMethod = withAdding ? 'add' : 'remove';
-    const sectionClassName = 'compareip-bg';
-
-    menuItems.forEach(menuItem => menuItem.classList[classMethod](sectionClassName));
-  };
 
   showDescription = () =>
     this.setState({

@@ -1,11 +1,11 @@
 @import 'Icons';
 
-$sections: menu-normal, menu-factoringvergelijken, menu-c2corner, menu-arcbazar, menu-yandex,
-  menu-welhome, menu-cherry;
-
 $default-menu-color: #5f656f;
 $light-menu-color: #abafb5;
 $dark-menu-color: #333538;
+
+$sections: menu-factoringvergelijken $dark-menu-color, menu-c2corner $dark-menu-color,
+  menu-houses $light-menu-color, menu-history24 $light-menu-color, menu-cherry $dark-menu-color;
 
 @mixin styling-menu($data-section, $color) {
   &[data-section='#{$data-section}'] {
@@ -24,6 +24,7 @@ $dark-menu-color: #333538;
 }
 
 .menu {
+  @import 'stroke';
   bottom: 3em;
   left: 0;
   overflow: hidden;
@@ -38,12 +39,8 @@ $dark-menu-color: #333538;
   z-index: 100;
 
   &:not(.menu--open) {
-    @each $section in $sections {
-      @if $section == menu-normal {
-        @include styling-menu($section, $default-menu-color);
-      } @else {
-        @include styling-menu($section, $dark-menu-color);
-      }
+    @each $data-section, $color in $sections {
+      @include styling-menu($data-section, $color);
     }
   }
 
@@ -69,7 +66,7 @@ $dark-menu-color: #333538;
     & span,
     &:after,
     &:before {
-      background: $light-menu-color;
+      background: $default-menu-color;
     }
 
     &:after,
@@ -109,6 +106,7 @@ $dark-menu-color: #333538;
   }
 
   .inner {
+    @import 'effects';
     height: 100%;
     overflow-y: auto;
     padding: 0 140px 2em 0;
@@ -151,7 +149,7 @@ $dark-menu-color: #333538;
         transition: transform 0.6s;
 
         i {
-          color: #5f656f;
+          color: $default-menu-color;
           display: block;
 
           font-size: 2.1em;
@@ -173,6 +171,7 @@ $dark-menu-color: #333538;
           font-weight: bold;
           margin: 0 auto;
           text-align: center !important;
+          transition: color 0.5s;
         }
 
         i,
@@ -186,8 +185,6 @@ $dark-menu-color: #333538;
         }
       }
     }
-
-    @import 'effects';
   }
 
   .morph-shape {
@@ -198,13 +195,11 @@ $dark-menu-color: #333538;
     width: 240px;
 
     svg path {
-      stroke: $light-menu-color;
+      stroke: $default-menu-color;
       stroke-width: 5px;
       transition: stroke 0.25s;
     }
   }
-
-  @import 'stroke';
 }
 
 .menu.menu--open {
@@ -222,7 +217,7 @@ $dark-menu-color: #333538;
     & span,
     &:after,
     &:before {
-      background: #5f656f;
+      background: $default-menu-color;
     }
 
     &:before {

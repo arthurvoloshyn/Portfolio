@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import environment from '../../../constants/environment';
 import getDisplayName from '../utils/getDisplayName';
+import updateMenuClasses from '../utils/updateMenuClasses';
 
 const withSectionData = ({
   sectionPage,
@@ -33,20 +34,17 @@ const withSectionData = ({
         page: { page },
       } = nextProps;
 
-      const menuItems = document.querySelectorAll('#fp-nav ul li a span');
       const isCurrentSection = Array.isArray(sectionPage)
         ? sectionPage.includes(page)
         : page === sectionPage;
 
-      menuItems.forEach(menuItem => {
-        if (isCurrentSection) {
-          onEnter && onEnter();
-          menuItem.classList.add(sectionClassName);
-        } else {
-          onLeave && onLeave();
-          menuItem.classList.remove(sectionClassName);
-        }
-      });
+      if (isCurrentSection) {
+        onEnter && onEnter();
+        updateMenuClasses(sectionClassName, true);
+      } else {
+        onLeave && onLeave();
+        updateMenuClasses(sectionClassName);
+      }
     }
 
     toggle = () =>
