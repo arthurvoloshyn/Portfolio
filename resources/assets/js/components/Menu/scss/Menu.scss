@@ -24,7 +24,6 @@ $sections: menu-factoringVergelijken $dark-menu-color, menu-c2corner $dark-menu-
 }
 
 .menu {
-  @import 'stroke';
   bottom: 3em;
   left: 0;
   overflow: hidden;
@@ -106,7 +105,6 @@ $sections: menu-factoringVergelijken $dark-menu-color, menu-c2corner $dark-menu-
   }
 
   .inner {
-    @import 'effects';
     height: 100%;
     overflow-y: auto;
     padding: 0 140px 2em 0;
@@ -185,6 +183,8 @@ $sections: menu-factoringVergelijken $dark-menu-color, menu-c2corner $dark-menu-
         }
       }
     }
+
+    @import 'effects';
   }
 
   .morph-shape {
@@ -200,6 +200,8 @@ $sections: menu-factoringVergelijken $dark-menu-color, menu-c2corner $dark-menu-
       transition: stroke 0.25s;
     }
   }
+
+  @import 'stroke';
 }
 
 .menu.menu--open {
