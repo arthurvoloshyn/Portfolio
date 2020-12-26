@@ -9,7 +9,6 @@
   ],
   "resources/assets/js/**/*.+(scss)": [
     "prettier --parser scss --write",
-    "stylelint --fix --syntax scss --max-warnings=0",
     "git add"
   ]
 }
