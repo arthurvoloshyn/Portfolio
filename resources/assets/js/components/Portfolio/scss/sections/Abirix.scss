@@ -29,11 +29,11 @@
     }
 
     .arrow-up {
-      background-image: url('#{$img-path}/abirix/arrow-up.svg');
+      background-image: url('#{$portfolio-img-path}/abirix/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url('#{$img-path}/abirix/arrow-down.svg');
+      background-image: url('#{$portfolio-img-path}/abirix/arrow-down.svg');
     }
 
     .description {
@@ -112,7 +112,7 @@
         width: 300px;
 
         div {
-          background-image: url('#{$img-path}/abirix/abirix.png');
+          background-image: url('#{$portfolio-img-path}/abirix/abirix.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;

@@ -31,11 +31,11 @@
     }
 
     .arrow-up {
-      background-image: url('#{$img-path}/linkful/arrow-up.svg');
+      background-image: url('#{$portfolio-img-path}/linkful/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url('#{$img-path}/linkful/arrow-down.svg');
+      background-image: url('#{$portfolio-img-path}/linkful/arrow-down.svg');
     }
 
     .description {
@@ -57,7 +57,7 @@
       width: 100%;
 
       .logo {
-        background-image: url('#{$img-path}/linkful/logo-color.png');
+        background-image: url('#{$portfolio-img-path}/linkful/logo-color.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -113,7 +113,7 @@
         width: 550px;
 
         div {
-          background-image: url('#{$img-path}/linkful/linkful.png');
+          background-image: url('#{$portfolio-img-path}/linkful/linkful.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;

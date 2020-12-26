@@ -1,26 +1,26 @@
 const imgsPath = '../imgs';
-const skillsPath = '/skills';
+const skillsImgPath = `${imgsPath}/skills`;
+const portfolioImgPath = `${imgsPath}/portfolio`;
 
 const IMGS = {
   preloader: `${imgsPath}/logo.png`,
 
-  location: `${imgsPath}/location-pin.png`,
+  location: `${imgsPath}/contact/location-pin.png`,
 
-  imgPathBack: `${imgsPath}${skillsPath}/backand/`,
-  imgPathFront: `${imgsPath}${skillsPath}/frontend/`,
-  imgPathOther: `${imgsPath}${skillsPath}/other/`,
+  imgPathBack: `${skillsImgPath}/backand/`,
+  imgPathFront: `${skillsImgPath}/frontend/`,
+  imgPathOther: `${skillsImgPath}/other/`,
 
-  yandex: `${imgsPath}/yandex/logo.png`,
-  wellHome: `${imgsPath}/wh.jpg`,
-  smokeZone: `${imgsPath}/smoke_zone.png`,
-  hookah: `${imgsPath}/hookah3.svg`,
-  skyline: `${imgsPath}/Skyline.png`,
-  history: `${imgsPath}/history.jpg`,
-  pantheon: `${imgsPath}/pantheon2.svg`,
-  profileCity: `${imgsPath}/profile_city.png`,
-  factoringVergelijken: `${imgsPath}/logo_f.png`,
-  cherries: `${imgsPath}/cherries.svg`,
-  arcbazar: `${imgsPath}/arcbazar_logo.png`,
+  yandex: `${portfolioImgPath}/yandex/logo.png`,
+  wellHome: `${portfolioImgPath}/welhome/wh.jpg`,
+  smokeZone: `${portfolioImgPath}/smoke-zone/smoke_zone.png`,
+  hookah: `${portfolioImgPath}/smoke-zone/hookah3.svg`,
+  skyline: `${portfolioImgPath}/welhome/Skyline.png`,
+  history: `${portfolioImgPath}/history/history.jpg`,
+  pantheon: `${portfolioImgPath}/history/pantheon2.svg`,
+  factoringVergelijken: `${portfolioImgPath}/factoringVergelijken/logo_f.png`,
+  cherries: `${portfolioImgPath}/cheryPick/cherries.svg`,
+  arcbazar: `${portfolioImgPath}/arcbazar/arcbazar_logo.png`,
 };
 
 export default IMGS;

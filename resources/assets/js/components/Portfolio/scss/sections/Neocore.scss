@@ -34,11 +34,11 @@ $secondColor: #000;
     }
 
     .arrow-up {
-      background-image: url('#{$img-path}/neocore/arrow-up.svg');
+      background-image: url('#{$portfolio-img-path}/neocore/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url('#{$img-path}/neocore/arrow-down.svg');
+      background-image: url('#{$portfolio-img-path}/neocore/arrow-down.svg');
     }
 
     .description {
@@ -62,7 +62,7 @@ $secondColor: #000;
       width: 100%;
 
       .logo {
-        background-image: url('#{$img-path}/neocore/logo.svg');
+        background-image: url('#{$portfolio-img-path}/neocore/logo.svg');
         background-repeat: no-repeat;
         background-size: contain;
         height: 200px;
@@ -113,7 +113,7 @@ $secondColor: #000;
         width: 600px;
 
         div {
-          background-image: url('#{$img-path}/neocore/neocore_skills.png');
+          background-image: url('#{$portfolio-img-path}/neocore/neocore_skills.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;

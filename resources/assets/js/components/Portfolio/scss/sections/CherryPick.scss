@@ -17,23 +17,23 @@
         }
 
         &.typescript {
-          background-image: url('#{$img-path}/cheryPick/typescript.png');
+          background-image: url('#{$portfolio-img-path}/cheryPick/typescript.png');
         }
 
         &.laravel {
-          background-image: url('#{$img-path}/cheryPick/laravel.png');
+          background-image: url('#{$portfolio-img-path}/cheryPick/laravel.png');
         }
 
         &.mysql {
-          background-image: url('#{$img-path}/cheryPick/mysql.png');
+          background-image: url('#{$portfolio-img-path}/cheryPick/mysql.png');
         }
 
         &.php {
-          background-image: url('#{$img-path}/cheryPick/php.png');
+          background-image: url('#{$portfolio-img-path}/cheryPick/php.png');
         }
 
         &.js {
-          background-image: url('#{$img-path}/cheryPick/js.png');
+          background-image: url('#{$portfolio-img-path}/cheryPick/js.png');
         }
       }
     }
@@ -113,11 +113,11 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel.svg');
+    background-image: url('#{$portfolio-img-path}/cancel.svg');
   }
 }
 

@@ -34,11 +34,11 @@
     }
 
     .arrow-up {
-      background-image: url('#{$img-path}/smsplaza/arrow-up.svg');
+      background-image: url('#{$portfolio-img-path}/smsplaza/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url('#{$img-path}/smsplaza/arrow-down.svg');
+      background-image: url('#{$portfolio-img-path}/smsplaza/arrow-down.svg');
     }
 
     .description {
@@ -113,7 +113,7 @@
         width: 300px;
 
         div {
-          background-image: url('#{$img-path}/smsplaza/smsplaza.png');
+          background-image: url('#{$portfolio-img-path}/smsplaza/smsplaza.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;

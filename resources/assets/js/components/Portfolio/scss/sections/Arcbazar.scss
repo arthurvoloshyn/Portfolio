@@ -10,7 +10,7 @@
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$img-path}/arcbazar/arcbazar-desktop.png');
+      background-image: url('#{$portfolio-img-path}/arcbazar/arcbazar-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -147,16 +147,16 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel.svg');
+    background-image: url('#{$portfolio-img-path}/cancel.svg');
   }
 
   @media (max-width: 850px) {
     .technologies {
-      background-image: url('#{$img-path}/arcbazar/arcbazar-mobile.png') !important;
+      background-image: url('#{$portfolio-img-path}/arcbazar/arcbazar-mobile.png') !important;
       height: 220px !important;
       width: 350px !important;
     }
@@ -164,7 +164,7 @@
 
   @media (max-width: 500px) {
     .technologies {
-      background-image: url('#{$img-path}/arcbazar/arcbazar-mobile.png') !important;
+      background-image: url('#{$portfolio-img-path}/arcbazar/arcbazar-mobile.png') !important;
       height: 150px !important;
       width: 250px !important;
     }

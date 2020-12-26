@@ -4,6 +4,10 @@
   width: 50vw;
   z-index: 10;
 
+  .leaflet-marker-icon {
+    cursor: grab;
+  }
+
   .leaflet-control-attribution a {
     color: #004e6d;
   }

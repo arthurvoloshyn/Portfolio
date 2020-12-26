@@ -9,30 +9,30 @@
         }
 
         &.apache {
-          background-image: url('#{$img-path}/smoke-zone/apache.png');
+          background-image: url('#{$portfolio-img-path}/smoke-zone/apache.png');
           background-size: 150px;
           height: 150px;
           width: 150px;
         }
 
         &.js {
-          background-image: url('#{$img-path}/smoke-zone/js.svg');
+          background-image: url('#{$portfolio-img-path}/smoke-zone/js.svg');
         }
 
         &.jq {
-          background-image: url('#{$img-path}/smoke-zone/jq.svg');
+          background-image: url('#{$portfolio-img-path}/smoke-zone/jq.svg');
         }
 
         &.mvc {
-          background-image: url('#{$img-path}/smoke-zone/mvc.svg');
+          background-image: url('#{$portfolio-img-path}/smoke-zone/mvc.svg');
         }
 
         &.mysql {
-          background-image: url('#{$img-path}/smoke-zone/mysql.svg');
+          background-image: url('#{$portfolio-img-path}/smoke-zone/mysql.svg');
         }
 
         &.php {
-          background-image: url('#{$img-path}/smoke-zone/php.svg');
+          background-image: url('#{$portfolio-img-path}/smoke-zone/php.svg');
         }
       }
     }
@@ -98,7 +98,7 @@
   }
 
   .arrow {
-    background-image: url('#{$img-path}/down-arrow_white.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow_white.svg');
     background-position: center;
     background-size: 80px;
     cursor: pointer;
@@ -111,11 +111,11 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow_white.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow_white.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel_white.svg');
+    background-image: url('#{$portfolio-img-path}/cancel_white.svg');
   }
 }
 

@@ -25,7 +25,7 @@ $yandex-red: #ed2025;
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$img-path}/yandex/yandex-desktop.png');
+      background-image: url('#{$portfolio-img-path}/yandex/yandex-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
 
@@ -88,7 +88,7 @@ $yandex-red: #ed2025;
   }
 
   .arrow {
-    background-image: url('#{$img-path}/down-arrow-red.svg');
+    background-image: url('#{$portfolio-img-path}/yandex/down-arrow-red.svg');
     background-position: center;
     background-size: 80px;
     cursor: pointer;
@@ -99,17 +99,17 @@ $yandex-red: #ed2025;
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow-red.svg');
+    background-image: url('#{$portfolio-img-path}/yandex/down-arrow-red.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel.svg');
+    background-image: url('#{$portfolio-img-path}/cancel.svg');
   }
 
   @media (max-width: 750px) {
     .technologies-container {
       .technologies {
-        background-image: url('#{$img-path}/yandex/yandex-mobile.png') !important;
+        background-image: url('#{$portfolio-img-path}/yandex/yandex-mobile.png') !important;
         height: 220px !important;
         width: 350px !important;
       }
@@ -119,7 +119,7 @@ $yandex-red: #ed2025;
   @media (max-width: 500px) {
     .technologies-container {
       .technologies {
-        background-image: url('#{$img-path}/yandex/yandex-mobile.png') !important;
+        background-image: url('#{$portfolio-img-path}/yandex/yandex-mobile.png') !important;
         height: 140px !important;
         width: 250px !important;
       }
