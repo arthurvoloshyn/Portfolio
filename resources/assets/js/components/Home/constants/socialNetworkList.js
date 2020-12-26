@@ -4,7 +4,7 @@ const socialNetworkList = [
     link: 'https://github.com/ArturW1998',
   },
   {
-    label: 'linkedin',
+    label: 'linkedIn',
     link: 'https://www.linkedin.com/in/artur-voloshyn-4439b61a4/',
   },
   {

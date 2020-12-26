@@ -1,3 +1,5 @@
+$main-page-img-path: '#{$img-path}/main_page';
+
 .Icons__icon_container {
   display: flex;
   flex-direction: row;
@@ -13,18 +15,18 @@
     width: 40px;
   }
 
-  a.linkedin div {
-    background-image: url('#{$img-path}/main_page/linkedin.png');
+  a.linkedIn div {
+    background-image: url('#{$main-page-img-path}/linkedIn.png');
   }
 
   a.git div {
-    background-image: url('#{$img-path}/main_page/git.png');
+    background-image: url('#{$main-page-img-path}/git.png');
     max-height: 256px;
     max-width: 256px;
   }
 
   a.skype div {
-    background-image: url('#{$img-path}/main_page/skype.png');
+    background-image: url('#{$main-page-img-path}/skype.png');
   }
 
   a {
