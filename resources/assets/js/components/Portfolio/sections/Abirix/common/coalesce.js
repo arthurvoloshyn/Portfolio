@@ -1,14 +1,14 @@
 import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../../utils/utils';
 import {
   createSectionCanvas,
-  getParticleProps,
-  getDrawParticleProps,
-  setParticleProps,
   drawParticlePreparation,
-  resizeCanvas,
+  getDrawParticleProps,
+  getParticleProps,
+  removeCanvas,
   renderGlow,
   renderToScreen,
-  removeCanvas,
+  resizeCanvas,
+  setParticleProps,
 } from '../../../utils/common';
 
 const particleCount = 75;

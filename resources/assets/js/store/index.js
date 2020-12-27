@@ -1,4 +1,4 @@
-import { createStore, compose } from 'redux';
+import { compose, createStore } from 'redux';
 
 import ENV from '../constants/env';
 import reducers from '../reducers';

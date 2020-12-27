@@ -3,9 +3,9 @@ import SimplexNoise from 'simplex-noise';
 import { cos, fadeInOut, rand, sin, TAU } from '../../../utils/utils';
 import {
   createSectionCanvas,
+  removeCanvas,
   resizeCanvas,
   updateFigure,
-  removeCanvas,
 } from '../../../utils/common';
 
 const circleCount = 10;

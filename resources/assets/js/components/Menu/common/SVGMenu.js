@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import GetPath from '../../../services/GetPath';
-import { toggleStatus, setStatusMenu } from '../../../actions/menu';
+import { setStatusMenu, toggleStatus } from '../../../actions/menu';
 
 /* eslint-disable react/sort-comp */
 class SVGMenu extends Component {
@@ -188,6 +188,7 @@ class SVGMenu extends Component {
     return <div />;
   }
 }
+
 /* eslint-enable */
 
 const mapStateToProps = ({ menu, page }) => ({ menu, page });

@@ -1,4 +1,4 @@
-import { mapApiPaths, formApiPaths } from '../constants/apiPaths';
+import { formApiPaths, mapApiPaths } from '../constants/apiPaths';
 import getApiInstance from './getApiInstance';
 
 const {
