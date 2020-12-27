@@ -3,14 +3,14 @@ import SimplexNoise from 'simplex-noise';
 import { cos, fadeInOut, lerp, rand, randRange, sin, TAU } from '../../../utils/utils';
 import {
   createSectionCanvas,
-  getParticleProps,
-  setParticleProps,
-  getDrawParticleProps,
   drawParticlePreparation,
-  resizeCanvas,
+  getDrawParticleProps,
+  getParticleProps,
+  removeCanvas,
   renderGlow,
   renderToScreen,
-  removeCanvas,
+  resizeCanvas,
+  setParticleProps,
 } from '../../../utils/common';
 
 const particleCount = 400;
