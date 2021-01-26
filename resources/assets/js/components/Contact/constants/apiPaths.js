@@ -1,12 +1,14 @@
+/* eslint-disable max-len */
 export const mapApiPaths = {
   basePath: 'https://api.mapbox.com/styles/v1',
-  usernamePath: '/giwoxe7356',
-  styleIdPath: '/ckhtiwwsd2d0s1amk78fdxdbi',
+  usernamePath: '/arturvoloshyn',
+  styleIdPath: '/ckkeag6fv12sr17qzpqku7lia',
   tilesPath: '/tiles/256/{z}/{x}/{y}@2x',
   accessTokenParam: 'access_token=',
   accessToken:
-    'pk.eyJ1IjoiZ2l3b3hlNzM1NiIsImEiOiJja2h0ZWoydzAxemF6MzJrNm1meDZwZDkzIn0.AVLQ7HlSCIB0rQvOqV14Sg',
+    'pk.eyJ1IjoiYXJ0dXJ2b2xvc2h5biIsImEiOiJja2tlYW90MWQwemVoMnZwYWN0eXVpbnluIn0.SY6tqK1eDwoUyekv6VlVnA',
 };
+/* eslint-enable */
 
 export const formApiPaths = {
   mailPath: '/mail',
