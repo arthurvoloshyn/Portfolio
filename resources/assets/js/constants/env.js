@@ -1,4 +1,4 @@
-const { NODE_ENV, FULL_PAGE_LICENSE_KEY } = process.env;
+const { NODE_ENV, MIX_FULL_PAGE_LICENSE_KEY: FULL_PAGE_LICENSE_KEY } = process.env;
 
 const ENV = {
   isProd: NODE_ENV === 'production',
