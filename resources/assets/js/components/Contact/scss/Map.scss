@@ -4,8 +4,16 @@
   width: 50vw;
   z-index: 10;
 
+  &:active {
+    cursor: grabbing;
+  }
+
   .leaflet-marker-icon {
     cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
   }
 
   .leaflet-control-attribution a {
