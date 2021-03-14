@@ -1,7 +1,7 @@
 {
   "name": "Artur Voloshyn",
   "short_name": "Artur Voloshyn",
-  "start_url": "/?utm_source=web_app_manifest",
+  "start_url": "/",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone",
