@@ -68,6 +68,10 @@ const skillList = [
     alt: 'RxJS',
   },
   {
+    src: `${imgPathFront}clarity.png`,
+    alt: 'Clarity Core',
+  },
+  {
     src: `${imgPathFront}jquery.png`,
     alt: 'jQuery',
   },
@@ -168,44 +172,12 @@ const skillList = [
     alt: 'Prettier',
   },
   {
-    src: `${imgPathFront}styled-components.png`,
-    alt: 'Styled components',
-  },
-  {
-    src: `${imgPathFront}material-ui.png`,
-    alt: 'Material-UI',
-  },
-  {
-    src: `${imgPathFront}babel.png`,
-    alt: 'Babel',
-  },
-  {
     src: `${imgPathOther}git.png`,
     alt: 'Git',
   },
   {
     src: `${imgPathOther}docker.svg`,
     alt: 'Docker',
-  },
-  {
-    src: `${imgPathOther}rest.png`,
-    alt: 'Representational State Transfer',
-  },
-  {
-    src: `${imgPathOther}http.png`,
-    alt: 'HyperText Transfer Protocol',
-  },
-  {
-    src: `${imgPathOther}xml.png`,
-    alt: 'Extensible Markup Language',
-  },
-  {
-    src: `${imgPathOther}json.png`,
-    alt: 'JavaScript Object Notation',
-  },
-  {
-    src: `${imgPathOther}svg.png`,
-    alt: 'Scalable Vector Graphics',
   },
   {
     src: `${imgPathOther}linux.png`,
