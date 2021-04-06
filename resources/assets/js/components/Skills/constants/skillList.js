@@ -2,14 +2,15 @@ import IMGS from '../../../constants/imgs';
 
 const { imgPathBack, imgPathFront, imgPathOther } = IMGS;
 
+/* eslint-disable max-len */
 const skillList = [
   {
     src: `${imgPathFront}html.png`,
-    alt: 'HyperText Markup Language',
+    alt: 'HTML',
   },
   {
     src: `${imgPathFront}css.png`,
-    alt: 'Cascading Style Sheets',
+    alt: 'CSS',
   },
   {
     src: `${imgPathFront}js.png`,
@@ -25,23 +26,15 @@ const skillList = [
   },
   {
     src: `${imgPathFront}redux.png`,
-    alt: 'Redux',
-  },
-  {
-    src: `${imgPathFront}redux-saga.png`,
-    alt: 'Redux-Saga',
-  },
-  {
-    src: `${imgPathFront}redux-thunk.png`,
-    alt: 'Redux-Thunk',
+    alt: 'Redux, as well as technologies such as Redux-Saga and Redux-Thunk',
   },
   {
     src: `${imgPathFront}mobx.png`,
     alt: 'MobX',
   },
   {
-    src: `${imgPathFront}graphql.jpeg`,
-    alt: 'GraphQL',
+    src: `${imgPathFront}graphql.png`,
+    alt: 'GraphQL and Apollo',
   },
   {
     src: `${imgPathFront}next.svg`,
@@ -53,23 +46,16 @@ const skillList = [
   },
   {
     src: `${imgPathFront}vue.png`,
-    alt: 'Vue.js',
-  },
-  {
-    src: `${imgPathFront}nuxt.png`,
-    alt: 'Nuxt.js',
-  },
-  {
-    src: `${imgPathFront}vuex.png`,
-    alt: 'Vuex',
+    alt: 'Vue, as well as technologies such as Nuxt.js and Vuex',
   },
   {
     src: `${imgPathFront}rxjs.png`,
     alt: 'RxJS',
   },
   {
-    src: `${imgPathFront}clarity.png`,
-    alt: 'Clarity Core',
+    src: `${imgPathFront}web_components.png`,
+    alt:
+      'Web Components, as well as technologies such as Stencil.js, Polymer, Bit, Lit-html and Clarity Core',
   },
   {
     src: `${imgPathFront}jquery.png`,
@@ -84,100 +70,45 @@ const skillList = [
     alt: 'Pug',
   },
   {
-    src: `${imgPathFront}bootstrap.png`,
-    alt: 'Bootstrap',
+    src: `${imgPathFront}css_preprocessors.png`,
+    alt: 'CSS preprocessors such as SASS, LESS, Stylus and PostCSS',
   },
   {
-    src: `${imgPathFront}materialize.svg`,
-    alt: 'Materialize',
+    src: `${imgPathFront}css_frameworks.png`,
+    alt: 'CSS frameworks such as Bootstrap, Materialize, Foundation, Skeleton and Tailwind CSS',
   },
   {
-    src: `${imgPathFront}tailwind.png`,
-    alt: 'Tailwind CSS',
+    src: `${imgPathFront}bundlers.png`,
+    alt: 'Bundlers and task managers such as Webpack, Gulp, Rollup.js, Parcel Snowpack and Bower',
   },
   {
-    src: `${imgPathFront}sass.png`,
-    alt: 'Syntactically Awesome Style Sheets',
-  },
-  {
-    src: `${imgPathFront}less.png`,
-    alt: 'Leaner Style Sheets',
-  },
-  {
-    src: `${imgPathFront}postCSS.png`,
-    alt: 'PostCSS',
-  },
-  {
-    src: `${imgPathFront}stylus.svg`,
-    alt: 'Stylus',
-  },
-  {
-    src: `${imgPathFront}webpack.png`,
-    alt: 'Webpack',
-  },
-  {
-    src: `${imgPathFront}gulp.svg`,
-    alt: 'Gulp',
-  },
-  {
-    src: `${imgPathFront}parcel.png`,
-    alt: 'Parcel.js',
-  },
-  {
-    src: `${imgPathFront}npm.png`,
-    alt: 'Node package manager',
-  },
-  {
-    src: `${imgPathFront}yarn.png`,
-    alt: 'Yarn',
-  },
-  {
-    src: `${imgPathFront}jest.png`,
-    alt: 'Jest',
-  },
-  {
-    src: `${imgPathFront}react_testing_library.png`,
-    alt: 'React Testing Library',
-  },
-  {
-    src: `${imgPathFront}enzyme.png`,
-    alt: 'Enzyme',
-  },
-  {
-    src: `${imgPathFront}cypress.png`,
-    alt: 'Cypress',
-  },
-  {
-    src: `${imgPathFront}mocha.png`,
-    alt: 'Mocha',
-  },
-  {
-    src: `${imgPathFront}karma.png`,
-    alt: 'Karma',
+    src: `${imgPathFront}js_testing_frameworks.png`,
+    alt:
+      'JS testing utilities such as Jest, Cypress, Mocha, Enzyme, Testing Library (RTL), Karma, Jasmine and Chai',
   },
   {
     src: `${imgPathFront}pwa.png`,
-    alt: 'Progressive Web Applications',
-  },
-  {
-    src: `${imgPathFront}eslint.png`,
-    alt: 'ESLint',
-  },
-  {
-    src: `${imgPathFront}stylelint.svg`,
-    alt: 'Stylelint',
-  },
-  {
-    src: `${imgPathFront}prettier.png`,
-    alt: 'Prettier',
+    alt: 'PWA and AMP',
   },
   {
     src: `${imgPathOther}git.png`,
-    alt: 'Git',
+    alt: 'Git, as well as technologies such as GitHub, GitLab and Bitbucket',
   },
   {
     src: `${imgPathOther}docker.svg`,
     alt: 'Docker',
+  },
+  {
+    src: `${imgPathOther}linters.png`,
+    alt: 'Linters and code formatters such as ESLint, Stylelint and Prettier',
+  },
+  {
+    src: `${imgPathOther}serverless_&_servers.png`,
+    alt: 'Serverless and servers such as AWS, Azure, GCP, Firebase, Nginx and Apache',
+  },
+  {
+    src: `${imgPathOther}cms.png`,
+    alt: "CMS's such as Expression.Cloud and WordPress",
   },
   {
     src: `${imgPathBack}nodejs.png`,
@@ -185,32 +116,17 @@ const skillList = [
   },
   {
     src: `${imgPathBack}php.png`,
-    alt: 'Hypertext Preprocessor',
+    alt: 'PHP',
   },
   {
     src: `${imgPathBack}laravel.png`,
     alt: 'Laravel',
   },
   {
-    src: `${imgPathBack}mysql.png`,
-    alt: 'MySQL',
-  },
-  {
-    src: `${imgPathBack}Postgresql_elephant.svg`,
-    alt: 'PostgreSQL',
-  },
-  {
-    src: `${imgPathBack}mongo.png`,
-    alt: 'MongoDB',
-  },
-  {
-    src: `${imgPathBack}nginx.png`,
-    alt: 'Nginx',
-  },
-  {
-    src: `${imgPathBack}apache.png`,
-    alt: 'Apache HTTP Server',
+    src: `${imgPathBack}databases.png`,
+    alt: 'Databases such as MySQL, PostgreSQL, MongoDB and Firebase',
   },
 ];
+/* eslint-enable */
 
 export default skillList;

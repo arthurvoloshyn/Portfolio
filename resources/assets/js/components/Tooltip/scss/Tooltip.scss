@@ -33,18 +33,18 @@
 
   &.bottom {
     left: 50%;
-    top: 100%;
+    top: 80%;
     transform: translateX(-50%);
   }
 
   &.right {
-    left: 100%;
+    left: 80%;
     top: 50%;
     transform: translateY(-50%);
   }
 
   &.left {
-    right: 100%;
+    right: 80%;
     top: 50%;
     transform: translateY(-50%);
   }

@@ -36,7 +36,12 @@ class Skills extends Component {
                   {slide.map((skills, index) => (
                     <div key={`skillRow_${index}`}>
                       {skills.map(({ src, alt }) => (
-                        <Tooltip key={alt} content={alt} wrapperClassName="slide-item">
+                        <Tooltip
+                          key={alt}
+                          content={alt}
+                          position={index === 0 ? 'bottom' : 'top'}
+                          wrapperClassName="slide-item"
+                        >
                           <img alt={alt} className="slide-img" src={src} />
                         </Tooltip>
                       ))}
