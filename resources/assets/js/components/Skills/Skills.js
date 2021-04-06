@@ -2,6 +2,7 @@ import React, { Component, createRef } from 'react';
 
 import getSkills from './utils/utils';
 import SliderFx from './common/SliderFx';
+import Tooltip from '../Tooltip/Tooltip';
 
 import './scss/Skills.scss';
 
@@ -35,7 +36,9 @@ class Skills extends Component {
                   {slide.map((skills, index) => (
                     <div key={`skillRow_${index}`}>
                       {skills.map(({ src, alt }) => (
-                        <img key={alt} alt={alt} src={src} title={alt} />
+                        <Tooltip key={alt} content={alt} wrapperClassName="slide-item">
+                          <img alt={alt} className="slide-img" src={src} />
+                        </Tooltip>
                       ))}
                     </div>
                   ))}

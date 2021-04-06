@@ -103,8 +103,12 @@
       justify-content: space-between;
       width: 100%;
 
-      img {
+      .slide-item {
         width: 15%;
+
+        .slide-img {
+          width: 100%;
+        }
       }
     }
   }
@@ -181,7 +185,7 @@
     left: 6% !important;
     right: 6% !important;
 
-    div div img {
+    .slide-item {
       width: 23% !important;
     }
   }
@@ -192,7 +196,7 @@
     left: 16%;
     right: 16%;
 
-    div div img {
+    .slide-item {
       width: 18%;
     }
   }

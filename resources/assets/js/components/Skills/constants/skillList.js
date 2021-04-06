@@ -180,10 +180,6 @@ const skillList = [
     alt: 'Docker',
   },
   {
-    src: `${imgPathOther}linux.png`,
-    alt: 'Linux',
-  },
-  {
     src: `${imgPathBack}nodejs.png`,
     alt: 'Node.js',
   },
