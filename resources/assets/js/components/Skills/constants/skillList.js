@@ -84,7 +84,7 @@ const skillList = [
   {
     src: `${imgPathFront}js_testing_frameworks.png`,
     alt:
-      'JS testing utilities such as Jest, Cypress, Mocha, Enzyme, Testing Library (RTL), Karma, Jasmine and Chai',
+      'JS testing utilities such as Jest, Enzyme, Testing Library (RTL), Cypress, Mocha, Karma, Jasmine and Chai',
   },
   {
     src: `${imgPathFront}pwa.png`,
