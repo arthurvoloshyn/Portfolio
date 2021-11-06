@@ -129,14 +129,18 @@ export const resizeCanvas = (canvas, ctx, center) => {
     canvas.a.height = innerHeight;
   }
 
-  ctx && ctx.a && ctx.a.drawImage(canvas.b, 0, 0);
+  if (ctx && ctx.a) {
+    ctx.a.drawImage(canvas.b, 0, 0);
+  }
 
   if (canvas && canvas.b) {
     canvas.b.width = innerWidth;
     canvas.b.height = innerHeight;
   }
 
-  ctx && ctx.b && ctx.b.drawImage(canvas.a, 0, 0);
+  if (ctx && ctx.b) {
+    ctx.b.drawImage(canvas.a, 0, 0);
+  }
 
   if (center && canvas && canvas.a) {
     const { width, height } = canvas.a;

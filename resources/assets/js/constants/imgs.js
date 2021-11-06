@@ -7,7 +7,7 @@ const IMGS = {
 
   location: `${imgsPath}/contact/location-pin.png`,
 
-  imgPathBack: `${skillsImgPath}/backand/`,
+  imgPathBack: `${skillsImgPath}/backend/`,
   imgPathFront: `${skillsImgPath}/frontend/`,
   imgPathOther: `${skillsImgPath}/other/`,
 
