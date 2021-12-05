@@ -17,11 +17,8 @@ const SmokeZone = () => (
       description={() => (
         <div className="description">
           <p>
-            I have developed the online store, based on the unique MVC core;
-            <span>
-              promotion, and support; development of a flexible administration panel with content
-              management features.
-            </span>
+            I have developed the online store, based on the unique MVC core; promotion, and support;
+            development of a flexible administration panel with content management features.
           </p>
         </div>
       )}

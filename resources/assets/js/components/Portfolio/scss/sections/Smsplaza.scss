@@ -13,7 +13,7 @@
   }
 
   .mt-50 {
-    margin-top: 50px !important;
+    margin-top: 70px !important;
   }
 
   .smspalza-container {
@@ -32,6 +32,7 @@
       cursor: pointer;
       height: 50px;
       width: 50px;
+      margin-top: 25px;
     }
 
     .arrow-up {
@@ -46,7 +47,7 @@
       color: #41b883;
       font-family: Roboto, sans-serif;
       font-size: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       margin-top: 20px;
       max-width: 400px;
       text-align: center;
@@ -62,7 +63,7 @@
       .logo {
         color: #41b883;
         font-family: 'Luckiest Guy', cursive;
-        font-size: 65px;
+        font-size: 90px;
         font-weight: normal;
         line-height: 1;
         margin: 0;
@@ -86,9 +87,10 @@
 
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      line-height: 27px;
       justify-content: center;
-      max-width: 400px;
-      min-height: 300px;
+      max-width: 430px;
+      min-height: 250px;
       text-align: justify;
       width: 100%;
       z-index: 10000;
@@ -102,7 +104,7 @@
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      min-height: 300px;
+      min-height: 250px;
       width: 100%;
       z-index: 10000;
 
@@ -118,7 +120,7 @@
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          height: 300px;
+          height: 250px;
           width: 100%;
         }
       }

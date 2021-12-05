@@ -20,13 +20,11 @@
         color: #fff;
         filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
         font-family: 'Alfa Slab One', cursive;
-        font-size: 20px;
-        margin-bottom: 50px;
-        margin-top: 50px;
+        font-size: 23px;
+        margin: 15px 0 0 0;
         max-width: 600px;
-        padding-left: 20px;
-        padding-right: 20px;
         text-align: center;
+        line-height: 32px;
       }
     }
 
@@ -44,10 +42,12 @@
     .logoText {
       color: #fff;
       font-family: 'Alfa Slab One', cursive;
-      font-size: 65px;
+      font-size: 75px;
       line-height: 0;
       text-shadow: #000 4px 4px 0;
       z-index: 100;
+      margin: 30px;
+      letter-spacing: 2px;
     }
 
     .header {
@@ -65,12 +65,14 @@
       color: #fff;
       filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
       font-family: 'Alfa Slab One', cursive;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 300;
-      letter-spacing: 0.62px;
-      line-height: 30px;
+      letter-spacing: 1px;
+      line-height: 35px;
       text-align: center;
       z-index: 100;
+      margin: 25px 0 5px 0;
+      max-width: 540px;
     }
   }
 
@@ -83,8 +85,8 @@
     -webkit-filter: drop-shadow(0 0 15px #000);
     filter: drop-shadow(0 0 15px #000);
     height: 80px;
-    margin: auto;
     width: 80px;
+    margin-top: 45px;
   }
 
   .show {

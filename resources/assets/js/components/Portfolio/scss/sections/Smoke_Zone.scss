@@ -11,7 +11,7 @@
         &.apache {
           background-image: url('#{$portfolio-img-path}/smoke-zone/apache.png');
           background-size: 150px;
-          height: 150px;
+          height: 130px;
           width: 150px;
         }
 
@@ -41,13 +41,13 @@
       p {
         color: #c80085;
         font-family: 'Roboto';
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 20px;
         margin-top: 20px;
         max-width: 600px;
-        padding-left: 20px;
-        padding-right: 20px;
         text-align: center;
+        line-height: 32px;
+        font-weight: 500;
       }
     }
 
@@ -63,17 +63,16 @@
     justify-content: center;
 
     img {
-      -webkit-filter: drop-shadow(0 0 15px #9937ac);
-      filter: drop-shadow(0 0 15px #9937ac);
       width: 300px;
     }
 
     .header {
       color: #fff;
       font-family: 'OpenSans';
-      font-size: 50px;
+      font-size: 55px;
       font-weight: 600;
       margin-bottom: 0;
+      margin-top: 25px;
       text-align: center;
       text-shadow: rgb(153, 55, 172) 5px 5px 8px;
       text-transform: uppercase;
@@ -88,8 +87,8 @@
       color: #c80085;
       font-family: 'Roboto';
       font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 0.62px;
+      font-weight: 500;
+      letter-spacing: 0.7px;
       line-height: 30px;
       margin-top: 0;
       text-align: center;
@@ -106,8 +105,8 @@
     -webkit-filter: drop-shadow(0 0 15px #9937ac);
     filter: drop-shadow(0 0 15px #9937ac);
     height: 80px;
-    margin: auto;
     width: 80px;
+    margin-top: 45px;
   }
 
   .show {

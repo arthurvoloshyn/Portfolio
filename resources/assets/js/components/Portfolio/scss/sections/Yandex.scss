@@ -40,9 +40,10 @@ $yandex-red: #ed2025;
     .description {
       p {
         color: #000;
-        font-size: 17px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 35px;
         text-align: center;
+        margin: 20px 70px 0;
 
         b {
           color: $yandex-red;
@@ -75,12 +76,13 @@ $yandex-red: #ed2025;
 
     p {
       color: #000;
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 300;
-      letter-spacing: 0.62px;
-      line-height: 42px;
+      letter-spacing: 1px;
+      line-height: 35px;
       text-align: center;
       z-index: 100;
+      margin: 25px 0 0 0;
 
       b {
         color: $yandex-red;
@@ -95,8 +97,8 @@ $yandex-red: #ed2025;
     cursor: pointer;
     display: block;
     height: 80px;
-    margin: auto;
     width: 80px;
+    margin-top: 45px;
   }
 
   .show {

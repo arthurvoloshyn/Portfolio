@@ -48,7 +48,7 @@ const Smsplaza = ({ info, toggle }) => (
             rel="noopener noreferrer"
             target="_blank"
           >
-            CHECK IT OUT
+            Check it out
           </a>
         </div>
       </div>

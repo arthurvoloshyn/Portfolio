@@ -31,7 +31,7 @@ const FactoringVergelijken = () => (
       )}
       logo={IMGS.factoringVergelijken}
       logoDescription={() => (
-        <p className="header-container">
+        <p className="header-container unset-mg">
           <span className="paragraph">Online factoring services</span>
         </p>
       )}

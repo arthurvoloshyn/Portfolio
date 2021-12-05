@@ -27,6 +27,7 @@
       cursor: pointer;
       height: 50px;
       width: 50px;
+      margin-top: 30px;
     }
 
     .arrow-up {
@@ -40,10 +41,10 @@
     .description {
       color: #f0ea42;
       font-family: Roboto, sans-serif;
-      font-size: 20px;
+      font-size: 25px;
       margin-bottom: 20px;
       margin-top: 20px;
-      max-width: 400px;
+      max-width: 430px;
       text-align: center;
     }
 
@@ -57,7 +58,7 @@
       .logo {
         color: #f0ea42;
         font-family: 'Alfa Slab One', cursive;
-        font-size: 65px;
+        font-size: 62px;
         font-weight: normal;
         line-height: 1;
         margin: 0;
@@ -85,9 +86,10 @@
 
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      line-height: 27px;
       justify-content: center;
       max-width: 400px;
-      min-height: 300px;
+      min-height: 220px;
       text-align: justify;
       width: 100%;
       z-index: 10000;
@@ -101,7 +103,7 @@
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      min-height: 300px;
+      min-height: 220px;
       width: 100%;
       z-index: 10000;
 

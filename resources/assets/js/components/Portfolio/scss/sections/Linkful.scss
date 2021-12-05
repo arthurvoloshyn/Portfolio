@@ -25,10 +25,9 @@
       background-repeat: no-repeat;
       background-size: contain;
       cursor: pointer;
-      -webkit-filter: drop-shadow(0 0 15px #b9edf8);
-      filter: drop-shadow(0 0 3px #b9edf8);
       height: 50px;
       width: 50px;
+      margin-top: 30px;
     }
 
     .arrow-up {
@@ -43,11 +42,11 @@
       color: #a3daff;
       font-family: Roboto, sans-serif;
       font-size: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       margin-top: 20px;
       max-width: 400px;
       text-align: center;
-      text-shadow: #b9edf8 0 0 5px;
+      line-height: 28px;
     }
 
     .header {
@@ -62,8 +61,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        -webkit-filter: drop-shadow(0 0 15px #b9edf8);
-        filter: drop-shadow(0 0 3px #b9edf8);
         height: 200px;
         opacity: 0.9;
         width: 200px;
@@ -85,11 +82,11 @@
 
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      line-height: 22px;
       justify-content: center;
-      max-width: 400px;
+      max-width: 430px;
       min-height: 200px;
       text-align: justify;
-      text-shadow: #b9edf8 0 0 5px;
       width: 100%;
       z-index: 10000;
     }

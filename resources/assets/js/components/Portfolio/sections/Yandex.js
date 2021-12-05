@@ -11,18 +11,8 @@ const Yandex = () => (
     description={() => (
       <div className="description">
         <p>
-          <b>I</b> have build the game. This is a SPA on jQuery and <b>W</b>
-          ebpack
-          <br />
-          with Ada
-          <b>p</b>
-          tive <b>I</b>
-          nterface
-          <br />
-          and <b>o</b>
-          ptimization of perform
-          <b>a</b>
-          nce.
+          <b>I</b> have build the game. This is a SPA on jQuery and <b>W</b>ebpack with Ada<b>p</b>
+          tive <b>I</b>nterface and <b>o</b>ptimization of perform<b>a</b>nce.
         </p>
       </div>
     )}

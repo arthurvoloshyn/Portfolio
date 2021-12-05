@@ -17,14 +17,13 @@
       p {
         color: #000;
         font-family: 'Roboto';
-        font-size: 18px;
-        font-weight: 100;
+        font-size: 20px;
+        font-weight: 300;
         margin-bottom: 10px;
         margin-top: 10px;
         max-width: 600px;
-        padding-left: 20px;
-        padding-right: 20px;
         text-align: center;
+        line-height: 32px;
       }
 
       a {
@@ -47,6 +46,8 @@
 
     img {
       width: 400px;
+      position: relative;
+      top: 50px;
     }
 
     .header {
@@ -71,9 +72,9 @@
     cursor: pointer;
     display: block;
     height: 80px;
-    margin: auto;
     position: relative;
     width: 80px;
+    margin-top: 45px;
   }
 
   .show {
