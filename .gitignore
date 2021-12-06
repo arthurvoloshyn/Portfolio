@@ -10,6 +10,7 @@
 /.idea
 /.vscode
 /.vagrant
+/.composer.phar
 
 # testing
 .phpunit.result.cache

@@ -4,15 +4,14 @@ $main-page-img-path: '#{$img-path}/main_page';
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
   margin-top: 100px;
-  width: 300px;
+  width: 250px;
 
   div {
-    background-size: 40px;
-    height: 40px;
+    background-size: 50px;
+    height: 50px;
     position: relative;
-    width: 40px;
+    width: 50px;
   }
 
   a.linkedIn div {
@@ -38,6 +37,13 @@ $main-page-img-path: '#{$img-path}/main_page';
   }
 
   @media (max-width: 500px) {
-    margin-top: 30px;
+    margin-top: 70px;
+    width: 200px;
+
+    div {
+      background-size: 40px;
+      height: 40px;
+      width: 40px;
+    }
   }
 }

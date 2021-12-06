@@ -6,38 +6,7 @@
   justify-content: center;
 
   .loading_text {
-    -webkit-animation: loading_text 3s linear infinite;
-    animation: loading_text 3s linear infinite;
     color: #87ceeb;
     font-size: 20px;
-    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
-  }
-
-  @-webkit-keyframes loading_text {
-    0% {
-      text-shadow: 0 0 0 #87ceeb, 0 0 0 #87ceeb;
-    }
-
-    50% {
-      text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
-    }
-
-    100% {
-      text-shadow: 0 0 0 #87ceeb, 0 0 0 #87ceeb;
-    }
-  }
-
-  @keyframes loading_text {
-    0% {
-      text-shadow: 0 0 0 #87ceeb, 0 0 0 #87ceeb;
-    }
-
-    50% {
-      text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
-    }
-
-    100% {
-      text-shadow: 0 0 0 #87ceeb, 0 0 0 #87ceeb;
-    }
   }
 }
