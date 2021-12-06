@@ -91,7 +91,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     justify-content: center;
     width: 100%;
 
@@ -99,9 +99,14 @@
       align-items: center;
       display: flex;
       flex-direction: row;
-      height: 25vh;
+      height: auto;
       justify-content: space-between;
       width: 100%;
+      margin-bottom: 45px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       .slide-item {
         width: 15%;
@@ -185,10 +190,12 @@
   .slide {
     left: 6% !important;
     right: 6% !important;
+  }
+}
 
-    .slide-item {
-      width: 23% !important;
-    }
+@media screen and (max-width: 450px) {
+  .slide div div {
+    margin-bottom: 25px;
   }
 }
 

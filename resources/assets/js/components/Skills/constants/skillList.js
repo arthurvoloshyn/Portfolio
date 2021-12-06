@@ -37,7 +37,7 @@ const skillList = [
     alt: 'GraphQL and Apollo',
   },
   {
-    src: `${imgPathFront}next.svg`,
+    src: `${imgPathFront}next.png`,
     alt: 'Next.js',
   },
   {
@@ -95,7 +95,7 @@ const skillList = [
     alt: 'Git, as well as technologies such as GitHub, GitLab and Bitbucket',
   },
   {
-    src: `${imgPathOther}docker.svg`,
+    src: `${imgPathOther}docker.png`,
     alt: 'Docker',
   },
   {

@@ -13,9 +13,9 @@ export const chunkArray = (myArray, chunkSize) => {
 };
 
 const getSkills = () => {
-  const list = chunkArray(skillList, 16);
+  const list = chunkArray(skillList, 15);
 
-  return list.map(subList => chunkArray(subList, 4));
+  return list.map(subList => chunkArray(subList, 5));
 };
 
 export default getSkills;

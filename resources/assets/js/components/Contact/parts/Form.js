@@ -138,7 +138,9 @@ class Form extends Component {
     return (
       <div className="contact-form" id="myContact_form_container">
         <p>Contact me</p>
-        <p>If you have any questions, use the form below ...</p>
+        <p>
+          <span>If you have any questions, </span>use the form below...
+        </p>
 
         <form ref={this.contactForm} onSubmit={this._onSubmit}>
           <div>

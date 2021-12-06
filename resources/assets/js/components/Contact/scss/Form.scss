@@ -9,16 +9,16 @@
 
   p {
     color: #87ceeb;
-    text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
   }
 
   p:first-of-type {
     font-family: 'Wire One', Helvetica, Arial, sans-serif;
     font-size: 100px;
+    margin: 100px 0 20px;
   }
 
   p:nth-child(2) {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   form {
@@ -32,16 +32,23 @@
 
       input,
       textarea {
-        background-color: #181818;
+        background-color: #1b242e;
         border: none;
         color: #87ceeb;
         height: 50px;
-        margin-bottom: 5px;
         margin-left: 5px;
         margin-right: 5px;
         outline: none;
         padding-left: 15px;
-        text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
+        font-size: 14px;
+      }
+
+      input {
+        margin-bottom: 5px;
+      }
+
+      textarea {
+        margin-bottom: 10px;
       }
 
       input[name='username'],
@@ -53,7 +60,6 @@
       input::placeholder,
       textarea::placeholder {
         color: #87ceeb;
-        text-shadow: 0 0 10px #87ceeb, 0 0 15px #87ceeb;
       }
 
       input[name='subject'] {
@@ -83,7 +89,8 @@
         margin-top: 5px;
         padding-left: 6px;
         transition-duration: 1s;
-        width: 150px;
+        max-width: 610px;
+        width: 100%;
 
         &:hover {
           background: #00bfff;
@@ -111,6 +118,10 @@
         textarea[name='body'] {
           max-width: 290px;
         }
+
+        input[type='submit'] {
+          max-width: 290px;
+        }
       }
     }
 
@@ -123,11 +134,30 @@
 
   @media (max-width: 1320px) {
     width: 100%;
+    padding: 0 30px;
+    margin-bottom: 40px;
   }
 
-  @media (max-width: 460px) {
+  @media (max-width: 675px) {
     p:nth-child(2) {
-      font-size: 14px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    p:first-of-type {
+      font-size: 95px;
+      margin-bottom: 15px;
+    }
+
+    p:nth-child(2) {
+      font-size: 20px;
     }
   }
 }
