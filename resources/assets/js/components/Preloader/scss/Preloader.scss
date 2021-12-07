@@ -40,5 +40,9 @@
   #img_loader {
     margin-top: 90px;
     width: 300px !important;
+
+    @media (max-height: 700px) {
+      margin-top: 25px;
+    }
   }
 }
