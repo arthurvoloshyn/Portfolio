@@ -31,8 +31,8 @@
       background-size: contain;
       cursor: pointer;
       height: 50px;
-      width: 50px;
       margin-top: 40px;
+      width: 50px;
     }
 
     .arrow-up {
@@ -47,11 +47,11 @@
       color: #41b883;
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      line-height: 28px;
       margin-bottom: 35px;
       margin-top: 15px;
       max-width: 400px;
       text-align: center;
-      line-height: 28px;
     }
 
     .header {
@@ -84,10 +84,10 @@
       align-items: center;
       color: #41b883;
       flex-direction: column;
-      line-height: 25px;
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
+      line-height: 25px;
       max-width: 400px;
       min-height: 250px;
       text-align: justify;
@@ -179,9 +179,9 @@
 @media (max-width: 400px) {
   .smsplaza {
     .info-container {
-      max-width: 235px !important;
-      margin-right: 20px;
       line-height: 18px !important;
+      margin-right: 20px;
+      max-width: 235px !important;
     }
 
     .row {
@@ -203,8 +203,8 @@
 
       .arrow {
         height: 40px;
-        width: 40px;
         margin-top: 20px;
+        width: 40px;
       }
     }
   }

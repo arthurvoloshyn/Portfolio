@@ -26,8 +26,8 @@
       background-size: contain;
       cursor: pointer;
       height: 50px;
-      width: 50px;
       margin-top: 40px;
+      width: 50px;
     }
 
     .arrow-up {
@@ -42,11 +42,11 @@
       color: #a3daff;
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      line-height: 28px;
       margin-bottom: 35px;
       margin-top: 15px;
       max-width: 400px;
       text-align: center;
-      line-height: 28px;
     }
 
     .header {
@@ -79,10 +79,10 @@
       align-items: center;
       color: #a3daff;
       flex-direction: column;
-      line-height: 20px;
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
+      line-height: 20px;
       max-width: 400px;
       min-height: 200px;
       text-align: justify;
@@ -121,7 +121,6 @@
     }
   }
 }
-
 
 @media (max-height: 600px) and (min-width: 651px) {
   .linkful .linkful-container {
@@ -181,9 +180,9 @@
 @media (max-width: 400px) {
   .linkful {
     .info-container {
-      max-width: 235px !important;
-      margin-right: 20px;
       line-height: 17px !important;
+      margin-right: 20px;
+      max-width: 235px !important;
     }
 
     .row {
@@ -191,8 +190,8 @@
     }
 
     .description {
-      max-width: 225px !important;
       line-height: 22px !important;
+      max-width: 225px !important;
     }
 
     .linkful-container {
@@ -202,8 +201,8 @@
 
       .arrow {
         height: 40px;
-        width: 40px;
         margin-top: 20px;
+        width: 40px;
       }
     }
   }
