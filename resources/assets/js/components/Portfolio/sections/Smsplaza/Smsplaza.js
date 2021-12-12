@@ -12,7 +12,7 @@ const Smsplaza = ({ info, toggle }) => (
       <div className="frame" />
 
       <div className="content content--canvas--smsplaza">
-        <div className="smspalza-container">
+        <div className="smsplaza-container">
           <div className="header">
             <a href={portfolioLinksList.smsplaza} rel="noopener noreferrer" target="_blank">
               <h2 className="logo">SMSPLAZA</h2>

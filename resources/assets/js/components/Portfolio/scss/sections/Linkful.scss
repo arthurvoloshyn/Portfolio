@@ -25,10 +25,9 @@
       background-repeat: no-repeat;
       background-size: contain;
       cursor: pointer;
-      -webkit-filter: drop-shadow(0 0 15px #b9edf8);
-      filter: drop-shadow(0 0 3px #b9edf8);
       height: 50px;
       width: 50px;
+      margin-top: 40px;
     }
 
     .arrow-up {
@@ -43,11 +42,11 @@
       color: #a3daff;
       font-family: Roboto, sans-serif;
       font-size: 20px;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin-bottom: 35px;
+      margin-top: 15px;
       max-width: 400px;
       text-align: center;
-      text-shadow: #b9edf8 0 0 5px;
+      line-height: 28px;
     }
 
     .header {
@@ -62,8 +61,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        -webkit-filter: drop-shadow(0 0 15px #b9edf8);
-        filter: drop-shadow(0 0 3px #b9edf8);
         height: 200px;
         opacity: 0.9;
         width: 200px;
@@ -82,14 +79,13 @@
       align-items: center;
       color: #a3daff;
       flex-direction: column;
-
+      line-height: 20px;
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
       max-width: 400px;
       min-height: 200px;
       text-align: justify;
-      text-shadow: #b9edf8 0 0 5px;
       width: 100%;
       z-index: 10000;
     }
@@ -126,6 +122,20 @@
   }
 }
 
+
+@media (max-height: 600px) and (min-width: 651px) {
+  .linkful .linkful-container {
+    .arrow {
+      margin-top: 20px;
+    }
+
+    .description {
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+  }
+}
+
 @media (max-width: 650px) {
   .linkful {
     .info-container {
@@ -157,17 +167,44 @@
     .row {
       width: 300px !important;
     }
+
+    .linkful-container .tech-container {
+      min-height: 135px;
+
+      .row div {
+        height: 135px;
+      }
+    }
   }
 }
 
 @media (max-width: 400px) {
   .linkful {
     .info-container {
-      max-width: 250px !important;
+      max-width: 235px !important;
+      margin-right: 20px;
+      line-height: 17px !important;
     }
 
     .row {
       width: 240px !important;
+    }
+
+    .description {
+      max-width: 225px !important;
+      line-height: 22px !important;
+    }
+
+    .linkful-container {
+      .tzie-small {
+        font-size: 12px !important;
+      }
+
+      .arrow {
+        height: 40px;
+        width: 40px;
+        margin-top: 20px;
+      }
     }
   }
 }
