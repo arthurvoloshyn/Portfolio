@@ -169,7 +169,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        height: 25vh;
+        height: 100px;
         justify-content: space-between;
         width: 100%;
 
@@ -244,11 +244,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 10vw;
+    font-size: 100px;
     font-weight: 400;
     grid-area: title;
     justify-content: center;
-    margin: 0 0 0.25em;
+    margin: 0;
     position: relative;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
@@ -309,10 +309,20 @@
 
     @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
   }
+}
 
-  @media screen and (max-width: 40em) {
+@media screen and (max-width: 640px) {
+  .CompareIp {
     .slide .word {
-      font-size: 2.7em;
+      font-size: 42px;
+    }
+
+    .small-text {
+      font-size: 18px !important;
+    }
+
+    .draw-border {
+      margin-top: 20px;
     }
   }
 }
@@ -324,11 +334,8 @@
     }
 
     .word--6 {
-      max-width: 300px;
-    }
-
-    .small-text {
-      font-size: 18px !important;
+      max-width: 235px;
+      text-align: center;
     }
   }
 }
