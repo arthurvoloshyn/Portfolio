@@ -69,6 +69,7 @@ $portfolio-img-path: '#{$img-path}/portfolio';
     background: center / cover no-repeat url('#{$portfolio-img-path}/welhome/Skyline.png');
     bottom: -50px;
     min-height: 40vh;
+    opacity: 0.5;
     overflow: hidden;
     position: absolute;
     width: 110%;
@@ -110,6 +111,7 @@ $portfolio-img-path: '#{$img-path}/portfolio';
 
   &_layer {
     height: 100%;
+    opacity: 0.5;
     position: absolute;
   }
 }
@@ -150,6 +152,7 @@ $portfolio-img-path: '#{$img-path}/portfolio';
       url('#{$portfolio-img-path}/factoringVergelijken/profile_city.png');
     bottom: 0;
     min-height: 40vh;
+    opacity: 0.5;
     overflow: hidden;
     position: absolute;
     width: 110%;

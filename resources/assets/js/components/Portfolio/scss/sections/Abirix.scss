@@ -26,6 +26,7 @@
       background-size: contain;
       cursor: pointer;
       height: 50px;
+      margin-top: 40px;
       width: 50px;
     }
 
@@ -41,8 +42,9 @@
       color: #f0ea42;
       font-family: Roboto, sans-serif;
       font-size: 20px;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      line-height: 28px;
+      margin-bottom: 25px;
+      margin-top: 25px;
       max-width: 400px;
       text-align: center;
     }
@@ -82,12 +84,12 @@
       box-shadow: 0 0 100px #000;
       color: #f0ea42;
       flex-direction: column;
-
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
+      line-height: 25px;
       max-width: 400px;
-      min-height: 300px;
+      min-height: 200px;
       text-align: justify;
       width: 100%;
       z-index: 10000;
@@ -101,7 +103,7 @@
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      min-height: 300px;
+      min-height: 200px;
       width: 100%;
       z-index: 10000;
 
@@ -127,6 +129,12 @@
 
 @media (max-width: 650px) {
   .abirix {
+    .header {
+      .logo {
+        font-size: 45px !important;
+      }
+    }
+
     .info-container {
       max-width: 300px !important;
     }
@@ -146,26 +154,45 @@
 
 @media (max-width: 530px) {
   .abirix {
-    .header {
-      .logo {
-        font-size: 45px !important;
-      }
-    }
+    .abirix-container .tech-container {
+      min-height: 135px;
 
-    .row {
-      width: 150px !important;
+      .row div {
+        height: 135px;
+      }
     }
   }
 }
 
 @media (max-width: 400px) {
   .abirix {
-    .info-container {
-      max-width: 250px !important;
+    .header {
+      .logo {
+        font-size: 30px !important;
+        text-shadow: #ce8c32 2px 2px 0;
+      }
     }
 
-    .row {
-      width: 240px !important;
+    .info-container {
+      line-height: 18px !important;
+      max-width: 235px !important;
+    }
+
+    .description {
+      line-height: 22px !important;
+      max-width: 165px !important;
+    }
+
+    .abirix-container {
+      .tzie-small {
+        font-size: 15px !important;
+      }
+
+      .arrow {
+        height: 40px;
+        margin-top: 20px;
+        width: 40px;
+      }
     }
   }
 }

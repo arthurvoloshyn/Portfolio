@@ -30,9 +30,6 @@
         font-weight: normal;
         line-height: 28px;
         margin-bottom: 10px;
-
-        margin-top: 40px;
-
         max-width: 600px;
         padding-bottom: 5px;
 
@@ -103,6 +100,10 @@
       padding: 5px 20px;
       z-index: 100;
     }
+
+    .header-container {
+      margin: 0;
+    }
   }
 
   .arrow {
@@ -127,7 +128,7 @@
   @media (max-width: 850px) {
     .technologies {
       background-image: url('#{$portfolio-img-path}/factoringVergelijken/factoringVergelijken-mobile.png') !important;
-      height: 220px !important;
+      height: 160px !important;
       width: 350px !important;
     }
   }
@@ -135,13 +136,14 @@
   @media (max-width: 500px) {
     .technologies {
       background-image: url('#{$portfolio-img-path}/factoringVergelijken/factoringVergelijken-mobile.png') !important;
-      height: 150px !important;
+      height: 140px !important;
       width: 250px !important;
     }
 
     .logo-container {
       img {
-        max-width: 300px;
+        margin-bottom: 5px;
+        max-width: 250px;
         width: 100%;
       }
     }
