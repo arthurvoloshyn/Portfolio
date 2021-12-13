@@ -38,11 +38,15 @@ $yandex-red: #ed2025;
     }
 
     .description {
+      margin-bottom: 0;
+
       p {
         color: #000;
         font-size: 17px;
         line-height: 30px;
         text-align: center;
+        margin-bottom: 0;
+        padding: 0 20px;
 
         b {
           color: $yandex-red;
@@ -78,9 +82,10 @@ $yandex-red: #ed2025;
       font-size: 17px;
       font-weight: 300;
       letter-spacing: 0.62px;
-      line-height: 42px;
+      line-height: 34px;
       text-align: center;
       z-index: 100;
+      margin: 25px 0 0;
 
       b {
         color: $yandex-red;
@@ -95,7 +100,7 @@ $yandex-red: #ed2025;
     cursor: pointer;
     display: block;
     height: 80px;
-    margin: auto;
+    margin: 40px auto auto;
     width: 80px;
   }
 
@@ -124,6 +129,10 @@ $yandex-red: #ed2025;
         height: 140px !important;
         width: 250px !important;
       }
+    }
+
+    .logo-container img {
+      width: 200px;
     }
   }
 }
