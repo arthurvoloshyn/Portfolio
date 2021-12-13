@@ -132,8 +132,8 @@
     }
 
     .header-container {
-      text-align: center !important;
       margin-bottom: 0;
+      text-align: center !important;
 
       .header {
         display: block;
@@ -184,16 +184,16 @@
         font-size: 17px !important;
         line-height: 24px !important;
         max-width: 225px !important;
-        padding-right: 0 !important;
         padding-left: 0 !important;
+        padding-right: 0 !important;
       }
     }
 
     .arrow {
       background-size: 50px !important;
       height: 50px !important;
-      width: 50px !important;
       margin-top: 20px !important;
+      width: 50px !important;
     }
   }
 }

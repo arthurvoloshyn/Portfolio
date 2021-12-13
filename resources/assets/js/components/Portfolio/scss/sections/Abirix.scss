@@ -26,8 +26,8 @@
       background-size: contain;
       cursor: pointer;
       height: 50px;
-      width: 50px;
       margin-top: 40px;
+      width: 50px;
     }
 
     .arrow-up {
@@ -42,11 +42,11 @@
       color: #f0ea42;
       font-family: Roboto, sans-serif;
       font-size: 20px;
+      line-height: 28px;
       margin-bottom: 25px;
       margin-top: 25px;
       max-width: 400px;
       text-align: center;
-      line-height: 28px;
     }
 
     .header {
@@ -84,10 +84,10 @@
       box-shadow: 0 0 100px #000;
       color: #f0ea42;
       flex-direction: column;
-      line-height: 25px;
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
+      line-height: 25px;
       max-width: 400px;
       min-height: 200px;
       text-align: justify;
@@ -174,13 +174,13 @@
     }
 
     .info-container {
-      max-width: 235px !important;
       line-height: 18px !important;
+      max-width: 235px !important;
     }
 
     .description {
-      max-width: 165px !important;
       line-height: 22px !important;
+      max-width: 165px !important;
     }
 
     .abirix-container {
@@ -190,8 +190,8 @@
 
       .arrow {
         height: 40px;
-        width: 40px;
         margin-top: 20px;
+        width: 40px;
       }
     }
   }

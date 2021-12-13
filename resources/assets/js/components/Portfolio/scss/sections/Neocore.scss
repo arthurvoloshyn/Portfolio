@@ -31,8 +31,8 @@ $secondColor: #000;
       background-size: contain;
       cursor: pointer;
       height: 50px;
-      width: 50px;
       margin-top: 40px;
+      width: 50px;
     }
 
     .arrow-up {
@@ -84,10 +84,10 @@ $secondColor: #000;
       align-items: center;
       color: $baseColor;
       flex-direction: column;
-      line-height: 25px;
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
+      line-height: 25px;
       max-width: 400px;
       min-height: 200px;
       text-align: justify;
@@ -191,8 +191,8 @@ $secondColor: #000;
 @media (max-width: 400px) {
   .neocore {
     .info-container {
-      max-width: 235px !important;
       line-height: 18px !important;
+      max-width: 235px !important;
     }
 
     .row {
@@ -211,8 +211,8 @@ $secondColor: #000;
 
       .arrow {
         height: 40px;
-        width: 40px;
         margin-top: 20px;
+        width: 40px;
       }
     }
   }
