@@ -22,7 +22,7 @@ const skillList = [
   },
   {
     src: `${imgPathFront}react.png`,
-    alt: 'React',
+    alt: 'React and Preact',
   },
   {
     src: `${imgPathFront}redux.png`,
@@ -55,7 +55,7 @@ const skillList = [
   {
     src: `${imgPathFront}web_components.png`,
     alt:
-      'Web Components, as well as technologies such as Stencil.js, Polymer, Bit, Lit-html and Clarity Core',
+      'Web Components, as well as technologies such as Stencil.js, Polymer, Bit, Lit-html, LitElement, Skate.js, Slim.js and Clarity Core',
   },
   {
     src: `${imgPathFront}jquery.png`,
@@ -84,7 +84,7 @@ const skillList = [
   {
     src: `${imgPathFront}js_testing_frameworks.png`,
     alt:
-      'JS testing utilities such as Jest, Enzyme, Testing Library (RTL), Cypress, Mocha, Karma, Jasmine and Chai',
+      'JS testing utilities such as Jest, Enzyme, Testing Library (RTL), Cypress, Puppeteer, Mocha, Karma, Jasmine and Chai',
   },
   {
     src: `${imgPathFront}pwa.png`,
