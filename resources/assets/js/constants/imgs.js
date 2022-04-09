@@ -11,7 +11,7 @@ const IMGS = {
   imgPathFront: `${skillsImgPath}/frontend/`,
   imgPathOther: `${skillsImgPath}/other/`,
 
-  yandex: `${portfolioImgPath}/yandex/logo.png`,
+  google: `${portfolioImgPath}/google/logo.png`,
   wellHome: `${portfolioImgPath}/welhome/wh.jpg`,
   smokeZone: `${portfolioImgPath}/smoke-zone/smoke_zone.png`,
   hookah: `${portfolioImgPath}/smoke-zone/hookah3.svg`,

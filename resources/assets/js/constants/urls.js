@@ -7,7 +7,7 @@ const URLS = {
   welhome: 'welhome',
   history24: 'history24',
   smokeZone: 'smoke-zone',
-  yandex: 'yandex',
+  google: 'google',
   compareIp: 'compareIp',
   smsplaza: 'smsplaza',
   abirix: 'abirix',

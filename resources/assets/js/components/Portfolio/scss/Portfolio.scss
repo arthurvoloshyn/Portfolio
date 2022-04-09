@@ -3,7 +3,7 @@ $portfolio-img-path: '#{$img-path}/portfolio';
 
 @import 'common/base.css';
 @import 'Pattern';
-@import 'sections/Yandex';
+@import 'sections/Google';
 @import 'sections/Smoke_Zone';
 @import 'sections/History24';
 @import 'sections/WellHome';
@@ -116,7 +116,7 @@ $portfolio-img-path: '#{$img-path}/portfolio';
   }
 }
 
-.yandex-bg {
+.google-bg {
   background: #000 !important;
 
   &.effect--open {
