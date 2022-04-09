@@ -14,7 +14,7 @@ const linkList = [
   URLS.factoringVergelijken,
   URLS.abirix,
   URLS.arcbazar,
-  URLS.yandex,
+  URLS.google,
   URLS.houses,
   URLS.smokeZone,
   URLS.history24,

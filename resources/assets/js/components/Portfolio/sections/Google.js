@@ -5,9 +5,9 @@ import IMGS from '../../../constants/imgs';
 import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
-const Yandex = () => (
+const Google = () => (
   <Pattern
-    classname="Yandex"
+    classname="Google"
     description={() => (
       <div className="description">
         <p>
@@ -28,7 +28,7 @@ const Yandex = () => (
     )}
     effectClassIn="bounceIn"
     effectClassOut="bounceOut"
-    logo={IMGS.yandex}
+    logo={IMGS.google}
     logoDescription={() => (
       <p>
         <b>S</b>
@@ -37,16 +37,16 @@ const Yandex = () => (
         In honor of <b>F</b>
         ebruary 23
         <br />
-        For <b>Y</b>
-        andex maps
+        For <b>G</b>
+        oogle maps
       </p>
     )}
   />
 );
 
 const sectionData = {
-  sectionClassName: 'yandex-bg',
-  sectionPage: URLS.yandex,
+  sectionClassName: 'google-bg',
+  sectionPage: URLS.google,
 };
 
-export default withSectionData(sectionData)(Yandex);
+export default withSectionData(sectionData)(Google);

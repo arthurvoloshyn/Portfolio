@@ -1,19 +1,19 @@
-$yandex-red: #ed2025;
+$google-red: #ed2025;
 
 @font-face {
   font-display: swap;
   font-family: 'YS Text';
   font-style: normal;
   font-weight: 300;
-  src: url('/fonts/yandex/YandexSansText-Light.eot');
-  src: url('/fonts/yandex/YandexSansText-Light.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/yandex/YandexSansText-Light.woff2') format('woff2'),
-    url('/fonts/yandex/YandexSansText-Light.woff') format('woff'),
-    url('/fonts/yandex/YandexSansText-Light.ttf') format('truetype'),
-    url('/fonts/yandex/YandexSansText-Light.svg#YSText-Light') format('svg');
+  src: url('/fonts/google/GoogleSansText-Light.eot');
+  src: url('/fonts/google/GoogleSansText-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/google/GoogleSansText-Light.woff2') format('woff2'),
+    url('/fonts/google/GoogleSansText-Light.woff') format('woff'),
+    url('/fonts/google/GoogleSansText-Light.ttf') format('truetype'),
+    url('/fonts/google/GoogleSansText-Light.svg#YSText-Light') format('svg');
 }
 
-.Yandex {
+.Google {
   background: #ecf0f1;
 
   p,
@@ -26,7 +26,7 @@ $yandex-red: #ed2025;
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$portfolio-img-path}/yandex/yandex-desktop.png');
+      background-image: url('#{$portfolio-img-path}/google/google-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
 
@@ -49,7 +49,7 @@ $yandex-red: #ed2025;
         text-align: center;
 
         b {
-          color: $yandex-red;
+          color: $google-red;
         }
       }
     }
@@ -57,7 +57,7 @@ $yandex-red: #ed2025;
     .rotate_button {
       figure {
         span {
-          border: 5px solid $yandex-red;
+          border: 5px solid $google-red;
         }
 
         span:nth-child(1) {
@@ -65,7 +65,7 @@ $yandex-red: #ed2025;
         }
 
         span:nth-child(2) {
-          background: $yandex-red;
+          background: $google-red;
           color: #fff;
         }
       }
@@ -88,13 +88,13 @@ $yandex-red: #ed2025;
       z-index: 100;
 
       b {
-        color: $yandex-red;
+        color: $google-red;
       }
     }
   }
 
   .arrow {
-    background-image: url('#{$portfolio-img-path}/yandex/down-arrow-red.svg');
+    background-image: url('#{$portfolio-img-path}/google/down-arrow-red.svg');
     background-position: center;
     background-size: 80px;
     cursor: pointer;
@@ -105,7 +105,7 @@ $yandex-red: #ed2025;
   }
 
   .show {
-    background-image: url('#{$portfolio-img-path}/yandex/down-arrow-red.svg');
+    background-image: url('#{$portfolio-img-path}/google/down-arrow-red.svg');
   }
 
   .hide {
@@ -115,7 +115,7 @@ $yandex-red: #ed2025;
   @media (max-width: 750px) {
     .technologies-container {
       .technologies {
-        background-image: url('#{$portfolio-img-path}/yandex/yandex-mobile.png') !important;
+        background-image: url('#{$portfolio-img-path}/google/google-mobile.png') !important;
         height: 220px !important;
         width: 350px !important;
       }
@@ -125,7 +125,7 @@ $yandex-red: #ed2025;
   @media (max-width: 500px) {
     .technologies-container {
       .technologies {
-        background-image: url('#{$portfolio-img-path}/yandex/yandex-mobile.png') !important;
+        background-image: url('#{$portfolio-img-path}/google/google-mobile.png') !important;
         height: 140px !important;
         width: 250px !important;
       }

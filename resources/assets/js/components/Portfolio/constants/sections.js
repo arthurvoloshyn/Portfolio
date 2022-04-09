@@ -9,7 +9,7 @@ import Abirix from '../sections/Abirix/Abirix';
 import C2Corner from '../sections/C2Corner';
 import Neocore from '../sections/Neocore/Neocore';
 import Arcbazar from '../sections/Arcbazar';
-import Yandex from '../sections/Yandex';
+import Google from '../sections/Google';
 import Houses from '../sections/Houses';
 import History24 from '../sections/History24';
 import WellHome from '../sections/WellHome';
@@ -25,7 +25,7 @@ const sections = {
   [URLS.c2corner]: <C2Corner />,
   [URLS.neocore]: <Neocore />,
   [URLS.arcbazar]: <Arcbazar />,
-  [URLS.yandex]: <Yandex />,
+  [URLS.google]: <Google />,
   [URLS.houses]: <Houses />,
   [URLS.history24]: <History24 />,
   [URLS.welhome]: <WellHome />,

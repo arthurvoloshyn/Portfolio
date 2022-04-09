@@ -27,9 +27,9 @@ const History24 = () => (
       logo={IMGS.pantheon}
       logoDescription={() => (
         <p className="header-container">
-          <span className="header">HISTORY.RF</span>
+          <span className="header">HISTORY.UA</span>
           <span className="paragraph">
-            Russian portal for online preparation for exams on history
+            Ukrainian portal for online preparation for exams on history
           </span>
         </p>
       )}
