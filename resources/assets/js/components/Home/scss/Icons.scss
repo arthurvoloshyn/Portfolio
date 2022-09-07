@@ -24,8 +24,8 @@ $main-page-img-path: '#{$img-path}/main_page';
     max-width: 256px;
   }
 
-  a.skype div {
-    background-image: url('#{$main-page-img-path}/skype.png');
+  a.email div {
+    background-image: url('#{$main-page-img-path}/email.png');
   }
 
   a {

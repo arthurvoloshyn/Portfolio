@@ -89,7 +89,7 @@
         margin-top: 5px;
         max-width: 610px;
         padding-left: 6px;
-        transition-duration: 1s;
+        transition: background 1s, color 1s;
         width: 100%;
 
         &:hover {
