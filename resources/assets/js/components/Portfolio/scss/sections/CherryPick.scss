@@ -1,47 +1,46 @@
 .CherryPick {
-  background: #f00000;
-
   /* fallback for old browsers */
+  background: #dc281e;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#dc281e), to(#f00000));
-  background: linear-gradient(to right, #dc281e, #f00000);
+  background: -webkit-gradient(linear, left top, right top, from(#df3026), to(#dc281e));
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #df3026, #dc281e);
 
   .technologies-container {
     .technologies {
-      div div {
-        -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-      }
-
-      div:nth-child(1) {
-        div:nth-child(1) {
-          background-image: url('#{$img-path}/cheryPick/angular.png');
+      div {
+        div {
+          -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
         }
 
-        div:nth-child(2) {
-          background-image: url('#{$img-path}/cheryPick/laravel.png');
+        &.typescript {
+          background-image: url('#{$portfolio-img-path}/cheryPick/typescript.png');
         }
 
-        div:nth-child(3) {
-          background-image: url('#{$img-path}/cheryPick/mysql.png');
-        }
-      }
-
-      div:nth-child(2) {
-        div:nth-child(1) {
-          background-image: url('#{$img-path}/cheryPick/php.png');
+        &.laravel {
+          background-image: url('#{$portfolio-img-path}/cheryPick/laravel.png');
         }
 
-        div:nth-child(2) {
-          background-image: url('#{$img-path}/cheryPick/js.png');
+        &.mysql {
+          background-image: url('#{$portfolio-img-path}/cheryPick/mysql.png');
+        }
+
+        &.php {
+          background-image: url('#{$portfolio-img-path}/cheryPick/php.png');
+        }
+
+        &.js {
+          background-image: url('#{$portfolio-img-path}/cheryPick/js.png');
         }
       }
     }
 
     .description {
+      margin-bottom: 0;
+
       p {
         color: #000;
         font-family: 'Hammersmith One', sans-serif;
@@ -87,6 +86,7 @@
       font-family: 'Open Sans', 'Condensed';
       font-size: 50px;
       font-weight: 600;
+      margin-bottom: 10px;
       text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px;
       text-transform: uppercase;
       z-index: 100;
@@ -116,35 +116,38 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel.svg');
+    background-image: url('#{$portfolio-img-path}/cancel.svg');
   }
 }
 
 @media (max-width: 500px) {
-  .Smoke_Zone {
+  .CherryPick {
+    .logo-container {
+      .header {
+        font-size: 35px;
+        padding-right: 25px;
+      }
+
+      img {
+        width: 150px;
+      }
+    }
+
     .technologies-container {
       .technologies {
         -webkit-box-direction: normal;
         -webkit-box-orient: vertical;
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
 
         div div {
           background-size: 50px !important;
           height: 50px !important;
           width: 50px !important;
-        }
-
-        div:nth-child(1) {
-          div:nth-child(1) {
-            background-size: 100px !important;
-            height: 100px !important;
-            width: 100px !important;
-          }
         }
       }
     }

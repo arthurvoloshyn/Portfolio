@@ -1,17 +1,16 @@
 .Arcbazar {
-  background: #9796f0;
-
   /* fallback for old browsers */
+  background: #9796f0;
 
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#fbc7d4), to(#9796f0));
-  background: linear-gradient(to right, #fbc7d4, #9796f0);
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #fbc7d4, #9796f0);
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$img-path}/arcbazar/arcbazar-desktop.png');
+      background-image: url('#{$portfolio-img-path}/arcbazar/arcbazar-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -32,10 +31,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      .first {
-        margin-top: 40px;
-      }
 
       .last {
         margin-bottom: 10px;
@@ -59,12 +54,9 @@
         padding-right: 20px;
         padding-top: 5px;
         text-align: center;
-
-        width: -webkit-fit-content;
-
-        width: -moz-fit-content;
-
-        width: fit-content;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
       }
 
       a {
@@ -123,14 +115,14 @@
     }
 
     .paragraph {
-      background: #000;
+      background: rgba(0, 0, 0, 0.5);
       color: #a696c8;
-
       font-family: 'Hammersmith One', sans-serif;
       font-size: 20px;
       font-weight: 300;
       letter-spacing: 0.62px;
       line-height: 30px;
+      margin: 0;
       padding: 5px 20px;
       z-index: 100;
     }
@@ -148,16 +140,22 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel.svg');
+    background-image: url('#{$portfolio-img-path}/cancel.svg');
+  }
+
+  @media (max-width: 600px) {
+    .logo-container .paragraph {
+      max-width: 275px;
+    }
   }
 
   @media (max-width: 850px) {
     .technologies {
-      background-image: url('#{$img-path}/arcbazar/arcbazar-mobile.png') !important;
+      background-image: url('#{$portfolio-img-path}/arcbazar/arcbazar-mobile.png') !important;
       height: 220px !important;
       width: 350px !important;
     }
@@ -165,7 +163,7 @@
 
   @media (max-width: 500px) {
     .technologies {
-      background-image: url('#{$img-path}/arcbazar/arcbazar-mobile.png') !important;
+      background-image: url('#{$portfolio-img-path}/arcbazar/arcbazar-mobile.png') !important;
       height: 150px !important;
       width: 250px !important;
     }
@@ -176,12 +174,16 @@
           margin-bottom: 0 !important;
           margin-top: 0 !important;
         }
+
+        .first {
+          margin-top: 20px !important;
+        }
       }
     }
 
     .logo-container {
       img {
-        max-width: 300px;
+        max-width: 225px;
         width: 100%;
       }
     }

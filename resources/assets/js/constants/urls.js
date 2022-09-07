@@ -3,11 +3,12 @@ const URLS = {
   skills: 'skills',
   portfolio: 'portfolio',
   contacts: 'contacts',
+
   welhome: 'welhome',
   history24: 'history24',
-  smokezone: 'smoke-zone',
-  yandex: 'yandex',
-  compareip: 'compareip',
+  smokeZone: 'smoke-zone',
+  google: 'google',
+  compareIp: 'compareIp',
   smsplaza: 'smsplaza',
   abirix: 'abirix',
   first_slide: 'first-slide',
@@ -17,11 +18,12 @@ const URLS = {
   linkful: 'linkful',
   neocore: 'casino',
   arcbazar: 'arcbazar',
-  factoringvergelijken: 'factoringvergelijken',
-  url_skills: '/skills',
-  url_contacts: '/contacts',
-  url_portfolio: '/portfolio',
-  url_home: '/',
+  factoringVergelijken: 'factoringVergelijken',
+
+  urlSkills: '/skills',
+  urlContacts: '/contacts',
+  urlPortfolio: '/portfolio',
+  urlHome: '/',
 };
 
 export default URLS;

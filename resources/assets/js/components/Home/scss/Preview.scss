@@ -1,0 +1,38 @@
+.Preview {
+  color: #87ceeb;
+  margin: 0 auto;
+  text-align: center;
+
+  div:nth-child(1) {
+    color: #fff;
+    font-family: 'Wire One', Helvetica, Arial, sans-serif;
+    font-size: 115px;
+  }
+
+  div:nth-child(2) {
+    font-size: 30px;
+  }
+
+  div:nth-child(3) {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 500px) {
+    div:nth-child(1) {
+      font-size: 70px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    div:nth-child(2) {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    div:nth-child(3) {
+      font-size: 14px;
+    }
+  }
+}

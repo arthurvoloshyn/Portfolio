@@ -1,23 +1,29 @@
-import { linksList } from './linksList';
+import linkList from '../constants/linkList';
 
-export const getStylesList = type => {
+const getStylesList = type => {
   const styleClasses = {};
 
-  linksList.forEach(item => {
+  linkList.forEach(item => {
     let styleClass;
 
-    if (item === 'main' || item === 'skills' || item === 'contacts') {
-      styleClass = 'normal';
-    } else if (item === 'portfolio' || item === 'first-slide') {
-      styleClass = 'linkful';
-    } else if (item === 'cherry-pick') {
-      styleClass = 'cherry';
-    } else if (item === 'compareip') {
-      styleClass = 'compareIp';
-    } else if (item === 'casino') {
-      styleClass = 'neocore';
-    } else {
-      styleClass = item;
+    switch (item) {
+      case 'main':
+      case 'skills':
+      case 'contacts':
+        styleClass = 'normal';
+        break;
+      case 'portfolio':
+      case 'first-slide':
+        styleClass = 'linkful';
+        break;
+      case 'cherry-pick':
+        styleClass = 'cherry';
+        break;
+      case 'casino':
+        styleClass = 'neocore';
+        break;
+      default:
+        styleClass = item;
     }
 
     styleClasses[item] = `${type}-${styleClass}`;
@@ -25,3 +31,5 @@ export const getStylesList = type => {
 
   return styleClasses;
 };
+
+export default getStylesList;

@@ -1,5 +1,6 @@
 .smsplaza {
   background: hsla(260, 40%, 5%, 1);
+
   .frame {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
@@ -15,7 +16,7 @@
     margin-top: 50px !important;
   }
 
-  .smspalza-container {
+  .smsplaza-container {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -30,23 +31,25 @@
       background-size: contain;
       cursor: pointer;
       height: 50px;
+      margin-top: 40px;
       width: 50px;
     }
 
     .arrow-up {
-      background-image: url('#{$img-path}/smsplaza/arrow-up.svg');
+      background-image: url('#{$portfolio-img-path}/smsplaza/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url('#{$img-path}/smsplaza/arrow-down.svg');
+      background-image: url('#{$portfolio-img-path}/smsplaza/arrow-down.svg');
     }
 
     .description {
       color: #41b883;
       font-family: Roboto, sans-serif;
       font-size: 20px;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      line-height: 28px;
+      margin-bottom: 35px;
+      margin-top: 15px;
       max-width: 400px;
       text-align: center;
     }
@@ -65,7 +68,6 @@
         font-weight: normal;
         line-height: 1;
         margin: 0;
-        text-shadow: #36495d 4px 4px 0;
         z-index: 100;
       }
     }
@@ -82,12 +84,12 @@
       align-items: center;
       color: #41b883;
       flex-direction: column;
-
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
+      line-height: 25px;
       max-width: 400px;
-      min-height: 300px;
+      min-height: 250px;
       text-align: justify;
       width: 100%;
       z-index: 10000;
@@ -101,7 +103,7 @@
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      min-height: 300px;
+      min-height: 250px;
       width: 100%;
       z-index: 10000;
 
@@ -113,14 +115,30 @@
         width: 300px;
 
         div {
-          background-image: url('#{$img-path}/smsplaza/smsplaza.png');
+          background-image: url('#{$portfolio-img-path}/smsplaza/smsplaza.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          height: 300px;
+          height: 250px;
           width: 100%;
         }
       }
+    }
+  }
+}
+
+@media (max-height: 600px) and (min-width: 651px) {
+  .smsplaza .smsplaza-container {
+    .arrow {
+      margin-top: 20px;
+    }
+
+    .description {
+      margin-bottom: 25px;
+    }
+
+    .mt-50 {
+      margin: 45px 0 0 !important;
     }
   }
 }
@@ -137,10 +155,6 @@
       margin-top: 20px !important;
       max-width: 350px !important;
     }
-
-    .row {
-      width: 200px !important;
-    }
   }
 }
 
@@ -148,12 +162,16 @@
   .smsplaza {
     .header {
       .logo {
-        font-size: 45px !important;
+        font-size: 40px !important;
       }
     }
 
-    .row {
-      width: 150px !important;
+    .smsplaza-container .tech-container {
+      min-height: 135px;
+
+      .row div {
+        height: 135px;
+      }
     }
   }
 }
@@ -161,11 +179,32 @@
 @media (max-width: 400px) {
   .smsplaza {
     .info-container {
-      max-width: 250px !important;
+      line-height: 18px !important;
+      max-width: 235px !important;
     }
 
     .row {
       width: 240px !important;
+
+      div {
+        height: 150px;
+      }
+    }
+
+    .description {
+      max-width: 225px !important;
+    }
+
+    .smsplaza-container {
+      .tzie-small {
+        font-size: 15px !important;
+      }
+
+      .arrow {
+        height: 40px;
+        margin-top: 20px;
+        width: 40px;
+      }
     }
   }
 }

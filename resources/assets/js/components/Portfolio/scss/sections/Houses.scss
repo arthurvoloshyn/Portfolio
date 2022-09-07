@@ -1,11 +1,11 @@
 .Houses {
-  background-image: url('#{$img-path}/city.jpg');
+  background-image: url('#{$portfolio-img-path}/houses/city.jpg');
 
   background-size: cover;
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$img-path}/houses/houses-desktop.png');
+      background-image: url('#{$portfolio-img-path}/houses/houses-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -16,13 +16,15 @@
     }
 
     .description {
+      margin-bottom: 0;
+
       p {
         color: #fff;
         filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
         font-family: 'Alfa Slab One', cursive;
         font-size: 20px;
-        margin-bottom: 50px;
-        margin-top: 50px;
+        line-height: 32px;
+        margin: 0;
         max-width: 600px;
         padding-left: 20px;
         padding-right: 20px;
@@ -31,23 +33,6 @@
     }
 
     .rotate_button {
-      //figure {
-      //
-      //  span {
-      //
-      //    border: 5px solid white;;
-      //
-      //  }
-      //  span:nth-child(1) {
-      //    color: #ffffff;;
-      //  }
-      //  span:nth-child(2) {
-      //    color: #ffffff;
-      //    background: transparent;
-      //  }
-      //
-      //}
-
       display: none;
     }
   }
@@ -61,7 +46,7 @@
     .logoText {
       color: #fff;
       font-family: 'Alfa Slab One', cursive;
-      font-size: 65px;
+      font-size: 60px;
       line-height: 0;
       text-shadow: #000 4px 4px 0;
       z-index: 100;
@@ -86,13 +71,15 @@
       font-weight: 300;
       letter-spacing: 0.62px;
       line-height: 30px;
+      margin: 0;
+      max-width: 425px;
       text-align: center;
       z-index: 100;
     }
   }
 
   .arrow {
-    background-image: url('#{$img-path}/down-arrow_white.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow_white.svg');
     background-position: center;
     background-size: 80px;
     cursor: pointer;
@@ -105,16 +92,16 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow_white.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow_white.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel_white.svg');
+    background-image: url('#{$portfolio-img-path}/cancel_white.svg');
   }
 
   @media (max-width: 850px) {
     .technologies {
-      background-image: url('#{$img-path}/houses/houses-mobile.png') !important;
+      background-image: url('#{$portfolio-img-path}/houses/houses-mobile.png') !important;
       height: 220px !important;
       width: 350px !important;
     }
@@ -122,7 +109,7 @@
 
   @media (max-width: 500px) {
     .technologies {
-      background-image: url('#{$img-path}/houses/houses-mobile.png') !important;
+      background-image: url('#{$portfolio-img-path}/houses/houses-mobile.png') !important;
       height: 150px !important;
       width: 250px !important;
     }

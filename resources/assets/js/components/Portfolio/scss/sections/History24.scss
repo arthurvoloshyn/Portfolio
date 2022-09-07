@@ -3,7 +3,7 @@
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$img-path}/history/history-desktop.png');
+      background-image: url('#{$portfolio-img-path}/history/history-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -22,8 +22,7 @@
         font-size: 20px;
         font-weight: 100;
         line-height: 30px;
-        margin-bottom: 50px;
-        margin-top: 50px;
+        margin-bottom: 0;
         max-width: 800px;
         padding-left: 20px;
         padding-right: 20px;
@@ -32,22 +31,6 @@
     }
 
     .rotate_button {
-      //figure {
-      //
-      //  span {
-      //
-      //    border: 5px solid white;;
-      //
-      //  }
-      //  span:nth-child(1) {
-      //    color: #ffffff;;
-      //  }
-      //  span:nth-child(2) {
-      //    color: #ffffff;
-      //    background: transparent;
-      //  }
-      //
-      //}
       display: none;
     }
   }
@@ -61,13 +44,14 @@
     img {
       -webkit-filter: drop-shadow(0 0 15px #000);
       filter: drop-shadow(0 0 15px #000);
-      width: 300px;
+      width: 200px;
     }
 
     .header {
       color: #fff;
       font-family: 'Luckiest Guy', cursive;
       font-size: 50px;
+      margin: 10px 0 !important;
       text-align: center;
       text-transform: uppercase;
       z-index: 100;
@@ -87,10 +71,14 @@
       text-align: center;
       z-index: 100;
     }
+
+    .header-container {
+      max-width: 425px;
+    }
   }
 
   .arrow {
-    background-image: url('#{$img-path}/down-arrow_white.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow_white.svg');
     background-position: center;
     background-size: 80px;
     cursor: pointer;
@@ -103,43 +91,43 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow_white.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow_white.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel_white.svg');
+    background-image: url('#{$portfolio-img-path}/cancel_white.svg');
+  }
+
+  @media (max-width: 1000px) {
+    .technologies {
+      width: 700px !important;
+    }
   }
 
   @media (max-width: 850px) {
     .technologies {
-      background-image: url('#{$img-path}/history/history-mobile.png') !important;
-      height: 220px !important;
+      background-image: url('#{$portfolio-img-path}/history/history-mobile.png') !important;
+      height: 160px !important;
       width: 350px !important;
     }
   }
 
   @media (max-width: 500px) {
     .logo-container {
-      img {
-        max-width: 200px;
-      }
-
       .header {
         font-size: 36px !important;
         text-align: center;
       }
+
+      .header-container {
+        max-width: 250px !important;
+      }
     }
 
     .technologies-container {
-      .description {
-        p span {
-          display: none;
-        }
-      }
-
       .technologies {
-        background-image: url('#{$img-path}/history/history-mobile.png') !important;
-        height: 150px !important;
+        background-image: url('#{$portfolio-img-path}/history/history-mobile.png') !important;
+        height: 140px !important;
         width: 250px !important;
       }
     }

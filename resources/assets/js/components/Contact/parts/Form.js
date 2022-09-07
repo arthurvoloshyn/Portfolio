@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 
+import REG_EXPS from '../../../constants/regExps';
 import getAction from '../../../actions/contact';
+import contactApi from '../utils/contactApi';
 
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/scale.css';
@@ -12,13 +14,15 @@ const USERNAME = 'username';
 const EMAIL = 'email';
 const SUBJECT = 'subject';
 const BODY = 'body';
+const fieldNames = [USERNAME, EMAIL, SUBJECT, BODY];
 
 const configAlert = {
   position: 'top-right',
   effect: 'scale',
   beep: false,
-  timeout: 2000,
+  timeout: 3000,
 };
+const stackAlert = { limit: 3 };
 
 class Form extends Component {
   static propTypes = {
@@ -41,6 +45,8 @@ class Form extends Component {
     getAction: () => {},
   };
 
+  state = { disableForm: false };
+
   contactForm = createRef();
 
   username = createRef();
@@ -51,26 +57,26 @@ class Form extends Component {
 
   body = createRef();
 
-  _send = () => {
-    const {
-      contact: { username, subject, email, body },
-    } = this.props;
+  _send = async () => {
+    const { contact: contactData } = this.props;
 
     Alert.info('Message is Sent', configAlert);
 
-    axios
-      .post('/mail', {
-        username,
-        subject,
-        email,
-        body,
-      })
-      .then(() => Alert.success('Message Sent', configAlert))
-      .catch(() => Alert.error('Error(', configAlert));
+    try {
+      const res = await contactApi.sendMail(contactData);
+      if (res.exception) throw new Error(res);
+      Alert.success('Message Sent', configAlert);
+      return true;
+    } catch (e) {
+      Alert.error('Error. Please contact me through the home page', configAlert);
+      return false;
+    }
   };
 
-  _onSubmit = e => {
+  _onSubmit = async e => {
     e.preventDefault();
+
+    this.setState({ disableForm: true });
 
     const error = this._validate();
     const { getAction } = this.props;
@@ -81,22 +87,21 @@ class Form extends Component {
       return;
     }
 
-    this._send();
+    const successStatus = await this._send();
+    this.setState({ disableForm: false });
+    if (!successStatus) return;
 
     this.contactForm.current.reset();
-    this.username.current.classList.remove('goodInput');
-    this.email.current.classList.remove('goodInput');
-    this.subject.current.classList.remove('goodInput');
-    this.body.current.classList.remove('goodInput');
 
-    getAction(USERNAME, '');
-    getAction(EMAIL, '');
-    getAction(SUBJECT, '');
-    getAction(BODY, '');
+    fieldNames.forEach(fieldName => {
+      this[fieldName].current.classList.remove('goodInput');
+      getAction(fieldName, '');
+    });
   };
 
   _onKeyUp = ({ target: { name, value } }) => {
     const { getAction } = this.props;
+
     const actionResult = getAction(name, value);
     const { fieldName } = actionResult;
 
@@ -105,7 +110,7 @@ class Form extends Component {
 
   _validate = (name = null) => {
     let resultValidation = true;
-    const ruleEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const ruleEmail = REG_EXPS.email;
 
     this.addError = fieldName => {
       this[fieldName].current.classList.remove('goodInput');
@@ -123,7 +128,8 @@ class Form extends Component {
       emailField && ruleEmail.test(emailField) ? this.removeError(EMAIL) : this.addError(EMAIL);
     }
 
-    [USERNAME, SUBJECT, BODY].forEach(fieldName => {
+    const fieldNamesWithoutEmail = fieldNames.filter(fieldName => fieldName !== EMAIL);
+    fieldNamesWithoutEmail.forEach(fieldName => {
       if (name == null || name === fieldName) {
         const currentField = this[fieldName].current.value;
         currentField ? this.removeError(fieldName) : this.addError(fieldName);
@@ -137,16 +143,20 @@ class Form extends Component {
     const {
       contact: { username, subject, email, body },
     } = this.props;
+    const { disableForm } = this.state;
 
     return (
-      <div className="contact-form" id="mycontact_form_container">
+      <div className="contact-form" id="myContact_form_container">
         <p>Contact me</p>
-        <p>If you have any question, use form below ...</p>
+        <p>
+          <span>If you have any questions, </span>use the form below...
+        </p>
 
         <form ref={this.contactForm} onSubmit={this._onSubmit}>
           <div>
             <input
               ref={this.username}
+              disabled={disableForm}
               name={USERNAME}
               onChange={this._onKeyUp}
               placeholder="Name"
@@ -155,6 +165,7 @@ class Form extends Component {
             />
             <input
               ref={this.email}
+              disabled={disableForm}
               name={EMAIL}
               onChange={this._onKeyUp}
               placeholder="Email"
@@ -165,6 +176,7 @@ class Form extends Component {
           <div>
             <input
               ref={this.subject}
+              disabled={disableForm}
               name={SUBJECT}
               onChange={this._onKeyUp}
               placeholder="Subject"
@@ -175,6 +187,7 @@ class Form extends Component {
           <div>
             <textarea
               ref={this.body}
+              disabled={disableForm}
               name={BODY}
               onChange={this._onKeyUp}
               placeholder="Message"
@@ -185,7 +198,7 @@ class Form extends Component {
             <input type="submit" value="Send" />
           </div>
         </form>
-        <Alert stack={{ limit: 3 }} />
+        <Alert stack={stackAlert} />
       </div>
     );
   }

@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
-import { skillsList } from './utils/menuList';
-import { getStylesList } from './utils/getStylesList';
+import classNames from 'classnames';
 
 import { reloadPage, setPage } from '../../actions/page';
-
-import SVGMenu from './lib/SVGMenu';
+import menuList from './constants/menuList';
+import stylesList from './constants/stylesList';
+import getStylesList from './utils/getStylesList';
+import SVGMenu from './common/SVGMenu';
 
 import './scss/Menu.scss';
-
-const ESC = 27;
-const styleClasses = getStylesList('effects');
-const styleStroke = getStylesList('stroke');
 
 class Menu extends Component {
   static propTypes = {
@@ -41,22 +37,7 @@ class Menu extends Component {
   constructor(props) {
     super(props);
 
-    const {
-      page: { page },
-    } = props;
-
-    this.state = {
-      effectStyle: styleClasses[page],
-      styleStroke: styleStroke[page],
-    };
-  }
-
-  componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.escFunction, false);
+    stylesList.forEach(({ prop, value }) => (this[prop] = getStylesList(value)));
   }
 
   clickHandler = page => {
@@ -66,48 +47,41 @@ class Menu extends Component {
     reloadPage(true);
   };
 
-  escFunction = ({ keyCode }) => {
-    if (keyCode === ESC) {
-      this.menuStyleHandler();
-    }
-  };
-
-  menuStyleHandler = () => {
+  render() {
     const {
+      menu: { status },
       page: { page },
     } = this.props;
 
-    this.setState({
-      effectStyle: styleClasses[page],
-      styleStroke: styleStroke[page],
-    });
-  };
+    const effectStyle = this.styleClasses[page];
+    const styleStroke = this.styleStroke[page];
+    const styleMenu = this.styleMenu[page];
 
-  render() {
-    const { effectStyle, styleStroke } = this.state;
-    const {
-      menu: { status },
-    } = this.props;
+    const morphShapeClasses = classNames('morph-shape', { [styleStroke]: status });
 
     return (
-      <nav className="menu" id="menu">
-        <button className="menu__handle" onClick={this.menuStyleHandler}>
+      <nav className="menu" data-section={styleMenu} id="menu">
+        <button className="menu__handle">
           <span>Menu</span>
         </button>
         <div className="inner">
           <ul className={effectStyle}>
-            {skillsList.map(({ title, icon, page }) => (
-              <li key={title} onClick={() => this.clickHandler(page)}>
-                <a>
-                  <i className={`icon fas fa-${icon}`} />
-                  <span>{title}</span>
-                </a>
-              </li>
-            ))}
+            {menuList.map(({ title, icon, page }) => {
+              const menuHandler = () => this.clickHandler(page);
+
+              return (
+                <li key={title}>
+                  <a onClick={menuHandler}>
+                    <i className={`icon fas fa-${icon}`} />
+                    <span>{title}</span>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div
-          className={`morph-shape ${status ? styleStroke : ''}`}
+          className={morphShapeClasses}
           data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410"
           data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410"
         >

@@ -1,9 +1,9 @@
 $img-path: '/imgs';
+$portfolio-img-path: '#{$img-path}/portfolio';
 
 @import 'common/base.css';
 @import 'Pattern';
-@import 'ScrollButton';
-@import 'sections/Yandex';
+@import 'sections/Google';
 @import 'sections/Smoke_Zone';
 @import 'sections/History24';
 @import 'sections/WellHome';
@@ -11,7 +11,7 @@ $img-path: '/imgs';
 @import 'sections/CherryPick';
 @import 'sections/Houses';
 @import 'sections/Arcbazar';
-@import 'sections/Factoringvergelijken';
+@import 'sections/FactoringVergelijken';
 @import 'sections/Linkful';
 @import 'sections/Smsplaza';
 @import 'sections/Abirix';
@@ -23,10 +23,10 @@ $img-path: '/imgs';
 }
 
 .linkful-bg {
-  background: #3c48fa !important;
+  background: #a3daff !important;
 }
 
-.compareip-bg {
+.compareIp-bg {
   background: rgba(237, 32, 37, 0.7) !important;
 }
 
@@ -40,32 +40,129 @@ $img-path: '/imgs';
 
 .houses-bg {
   background: #fff !important;
+
+  &_outer {
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &_layer {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+  }
 }
 
 .welhome-bg {
-  background: #e6e6e6 !important;
+  background: #000 !important;
+
+  &.effect--open {
+    background: #e6e6e6 !important;
+  }
+
+  &_layer {
+    background: center / cover no-repeat url('#{$portfolio-img-path}/welhome/Skyline.png');
+    bottom: -50px;
+    min-height: 40vh;
+    opacity: 0.5;
+    overflow: hidden;
+    position: absolute;
+    width: 110%;
+  }
 }
 
 .history24-bg {
   background: #e6e6e6 !important;
+
+  &_outer {
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &_layer {
+    background-image: url('#{$portfolio-img-path}/history/history.jpg');
+    background-position: center;
+    background-size: cover;
+    bottom: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+  }
 }
 
 .smoke-zone-bg {
   background: #d40080 !important;
+
+  &_outer {
+    background: center / cover #000;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &_layer {
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+  }
 }
 
-.yandex-bg {
-  background: #ed2025 !important;
+.google-bg {
+  background: #000 !important;
+
+  &.effect--open {
+    background: #ed2025 !important;
+  }
 }
 
 .c2corner-bg {
   background: #002877 !important;
+
+  &.effect--open {
+    background: #05f !important;
+  }
 }
 
 .arcbazar-bg {
   background: #000 !important;
+
+  &.effect--open {
+    background: #8f6ab7 !important;
+  }
 }
 
-.factoringvergelijken-bg {
+.factoringVergelijken-bg {
   background: #000 !important;
+
+  &.effect--open {
+    background: #b0576a !important;
+  }
+
+  &_layer {
+    background: center / cover no-repeat
+      url('#{$portfolio-img-path}/factoringVergelijken/profile_city.png');
+    bottom: 0;
+    min-height: 40vh;
+    opacity: 0.5;
+    overflow: hidden;
+    position: absolute;
+    width: 110%;
+  }
+}
+
+.cherry-pick-bg {
+  background: #000 !important;
+
+  &.effect--open {
+    background: #e8222d !important;
+  }
 }

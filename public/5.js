@@ -1092,7 +1092,7 @@ Bounds.prototype = {
 
 	// @method intersects(otherBounds: Bounds): Boolean
 	// Returns `true` if the rectangle intersects the given bounds. Two bounds
-	// intersect if they have at least one point in common.
+	// intersect if they have at least one point in utils.
 	intersects: function (bounds) { // (Bounds) -> Boolean
 		bounds = toBounds(bounds);
 
@@ -1320,7 +1320,7 @@ LatLngBounds.prototype = {
 	},
 
 	// @method intersects(otherBounds: LatLngBounds): Boolean
-	// Returns `true` if the rectangle intersects the given bounds. Two bounds intersect if they have at least one point in common.
+	// Returns `true` if the rectangle intersects the given bounds. Two bounds intersect if they have at least one point in utils.
 	intersects: function (bounds) {
 		bounds = toLatLngBounds(bounds);
 
@@ -1693,7 +1693,7 @@ var Earth = extend({}, CRS, {
  * @namespace Projection
  * @projection L.Projection.SphericalMercator
  *
- * Spherical Mercator projection — the most common projection for online maps,
+ * Spherical Mercator projection — the most utils projection for online maps,
  * used by almost all free and commercial tile providers. Assumes that Earth is
  * a sphere. Used by the `EPSG:3857` CRS.
  */
@@ -1809,7 +1809,7 @@ function toTransformation(a, b, c, d) {
  * @namespace CRS
  * @crs L.CRS.EPSG3857
  *
- * The most common CRS for online maps, used by almost all free and commercial
+ * The most utils CRS for online maps, used by almost all free and commercial
  * tile providers. Uses Spherical Mercator projection. Set in by default in
  * Map's `crs` option.
  */
@@ -6471,7 +6471,7 @@ var EPSG3395 = extend({}, Earth, {
  * @namespace CRS
  * @crs L.CRS.EPSG4326
  *
- * A common CRS among GIS enthusiasts. Uses simple Equirectangular projection.
+ * A utils CRS among GIS enthusiasts. Uses simple Equirectangular projection.
  *
  * Leaflet 1.0.x complies with the [TMS coordinate scheme for EPSG:4326](https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification#global-geodetic),
  * which is a breaking change from 0.7.x behaviour.  If you are using a `TileLayer`
@@ -7430,7 +7430,7 @@ var Marker = Layer.extend({
 		// @option icon: Icon = *
 		// Icon instance to use for rendering the marker.
 		// See [Icon documentation](#L.Icon) for details on how to customize the marker icon.
-		// If not specified, a common instance of `L.Icon.Default` is used.
+		// If not specified, a utils instance of `L.Icon.Default` is used.
 		icon: new IconDefault(),
 
 		// Option inherited from "Interactive layer" abstract class
@@ -24205,8 +24205,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../css-loader/index.js!./scale.css", function() {
-			var newContent = require("!!../../../css-loader/index.js!./scale.css");
+		module.hot.accept("!!../../../css-loader/LoadingPage.js!./scale.css", function() {
+			var newContent = require("!!../../../css-loader/LoadingPage.js!./scale.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -24237,8 +24237,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../css-loader/index.js!./s-alert-default.css", function() {
-			var newContent = require("!!../../css-loader/index.js!./s-alert-default.css");
+		module.hot.accept("!!../../css-loader/LoadingPage.js!./s-alert-default.css", function() {
+			var newContent = require("!!../../css-loader/LoadingPage.js!./s-alert-default.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -24647,7 +24647,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -24655,7 +24655,7 @@ Object.defineProperty(exports, "__esModule", {
 var _actionTypes = __webpack_require__("./resources/assets/js/constants/actionTypes.js");
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -24673,9 +24673,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -24689,9 +24689,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -24717,7 +24717,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -24739,7 +24739,7 @@ __webpack_require__("./resources/assets/js/components/Contact/scss/Contact.scss"
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -24759,9 +24759,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -24776,9 +24776,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -24807,7 +24807,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -24826,7 +24826,7 @@ __webpack_require__("./node_modules/react-s-alert/dist/s-alert-css-effects/scale
 
 var _redux = __webpack_require__("./node_modules/redux/es/redux.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -24839,7 +24839,7 @@ var _contact2 = _interopRequireDefault(_contact);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -25047,9 +25047,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -25070,9 +25070,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -25105,7 +25105,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -25116,14 +25116,14 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactLeaflet = __webpack_require__("./node_modules/react-leaflet/es/index.js");
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -25159,9 +25159,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -25179,9 +25179,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -25220,8 +25220,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Contact.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Contact.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Contact.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Contact.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

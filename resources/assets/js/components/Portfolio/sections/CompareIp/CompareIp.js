@@ -2,11 +2,12 @@ import React, { Component, createRef } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Constants from '../../../../constants/constants';
 import URLS from '../../../../constants/urls';
+import portfolioLinksList from '../../constants/portfolioLinksList';
+import updateMenuClasses from '../../utils/updateMenuClasses';
+import Slideshow from './common/Slideshow';
 
-import Slideshow from './lib/Slideshow';
-import './lib/wordFx';
+import './common/wordFx';
 
 class CompareIp extends Component {
   static propTypes = {
@@ -35,6 +36,22 @@ class CompareIp extends Component {
     firstTime: true,
   };
 
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    const { firstTime } = this.state;
+    const {
+      page: { page: nextPage },
+    } = nextProps;
+
+    const sectionClassName = 'compareIp-bg';
+
+    if (nextPage === URLS.compareIp) {
+      firstTime && this.show();
+      updateMenuClasses(sectionClassName, true);
+    } else {
+      updateMenuClasses(sectionClassName);
+    }
+  }
+
   componentDidUpdate(prevProps) {
     const {
       preloader: { preloader },
@@ -42,39 +59,24 @@ class CompareIp extends Component {
     } = this.props;
     const { firstTime } = this.state;
     const {
-      preloader: { preloader: prevPropsPreloader },
+      preloader: { preloader: prevPreloader },
     } = prevProps;
 
-    if (!preloader && prevPropsPreloader && page === URLS.compareip && firstTime) {
+    if (!preloader && prevPreloader && page === URLS.compareIp && firstTime) {
       this.show();
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    const { firstTime } = this.state;
-    const {
-      page: { page: nextPropsPage },
-    } = nextProps;
-
-    if (nextPropsPage === URLS.compareip) {
-      if (firstTime) {
-        this.show();
-      }
-
-      $('#fp-nav ul li a span').addClass('compareip-bg');
-    } else {
-      $('#fp-nav ul li a span').removeClass('compareip-bg');
-    }
-  }
-
-  showDescription = () => {
+  showDescription = () =>
     this.setState({
       animateClass: 'animated fadeIn',
     });
-  };
 
   show = () => {
-    this.slideshow = new Slideshow(this.classSlideshow.current, this.showDescription);
+    const { current } = this.classSlideshow;
+
+    this.slideshow = new Slideshow(current, this.showDescription);
+
     this.setState({
       firstTime: false,
       visible: true,
@@ -83,6 +85,7 @@ class CompareIp extends Component {
 
   render() {
     const { visible, animateClass } = this.state;
+    const logoStyles = { opacity: visible };
 
     return (
       <div className="CompareIp">
@@ -90,7 +93,7 @@ class CompareIp extends Component {
           <div ref={this.classSlideshow} className="slideshow">
             <div className="slide slide--current">
               <div className="slide__bg slide__bg--6" />
-              <h2 className="word word--6" style={{ opacity: visible }}>
+              <h2 className="word word--6" style={logoStyles}>
                 CompareIp
               </h2>
 
@@ -100,7 +103,7 @@ class CompareIp extends Component {
                 <div className="img-container" />
                 <a
                   className="draw-border"
-                  href={Constants.compareIp}
+                  href={portfolioLinksList.compareIp}
                   rel="noopener noreferrer"
                   target="_blank"
                 >

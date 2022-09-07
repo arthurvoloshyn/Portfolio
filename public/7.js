@@ -28,7 +28,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -46,7 +46,7 @@ __webpack_require__("./resources/assets/js/components/Skills/scss/Skills.scss");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -57,7 +57,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var imgPathBack = '../imgs/skills/backand/';
+var imgPathBack = '../imgs/skills/backend/';
 var imgPathFront = '../imgs/skills/frontend/';
 var imgPathOther = '../imgs/skills/other/';
 
@@ -101,21 +101,21 @@ var Skills = function (_Component) {
                   null,
                   _react2.default.createElement('img', { src: imgPathBack + 'python1.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'nodejs.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'php1.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'nginx1.png' })
+                  _react2.default.createElement('img', { src: imgPathBack + 'php.png' }),
+                  _react2.default.createElement('img', { src: imgPathBack + 'nginx.png' })
                 ),
                 _react2.default.createElement(
                   'div',
                   null,
                   _react2.default.createElement('img', { src: imgPathBack + 'graphql .jpeg' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'mongo.png' }),
-                  _react2.default.createElement('img', { src: imgPathBack + 'mysql1.png' }),
+                  _react2.default.createElement('img', { src: imgPathBack + 'mysql.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'symfony.png' })
                 ),
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathBack + 'laravel3.png' }),
+                  _react2.default.createElement('img', { src: imgPathBack + 'laravel.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'lumen-logo.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'yii2.png' }),
                   _react2.default.createElement('img', { src: imgPathBack + 'express1.png' })
@@ -143,7 +143,7 @@ var Skills = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'js1.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'js.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'vue.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'nuxt.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'vuex.png' })
@@ -187,16 +187,16 @@ var Skills = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'html2.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'css2.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'html.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'css.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'jquery.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'npm.png' })
                 ),
                 _react2.default.createElement(
                   'div',
                   null,
-                  _react2.default.createElement('img', { src: imgPathFront + 'bootstrap1.png' }),
-                  _react2.default.createElement('img', { src: imgPathFront + 'enzym.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'bootstrap.png' }),
+                  _react2.default.createElement('img', { src: imgPathFront + 'enzyme.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'jest.png' }),
                   _react2.default.createElement('img', { src: imgPathFront + 'eslint.png' })
                 ),
@@ -226,9 +226,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -246,9 +246,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -280,13 +280,13 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -542,16 +542,16 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
+  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
+  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
   leaveModule(module);
 })();
 
@@ -559,16 +559,16 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
-  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/lib/SliderFx.js');
+  reactHotLoader.register(SliderFx, 'SliderFx', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
+  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Skills/libs/SliderFx.js');
   leaveModule(module);
 })();
 
@@ -597,8 +597,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Skills.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Skills.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Skills.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

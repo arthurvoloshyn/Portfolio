@@ -79,7 +79,7 @@
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "camelcase": ["error", { "properties": "never" }],
+    "camelcase": ["error", { "properties": "never", "allow": ["^UNSAFE_"] }],
     "comma-dangle": [
       "error",
       {
@@ -92,6 +92,7 @@
     ],
     "comma-spacing": ["error", { "before": false, "after": true }],
     "comma-style": ["error", "last"],
+    "consistent-return": "off",
     "constructor-super": "error",
     "curly": ["error", "multi-line"],
     "dot-location": ["error", "property"],
@@ -122,6 +123,7 @@
     "jsx-quotes": "error",
     "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
     "keyword-spacing": ["error", { "before": true, "after": true }],
+    "max-classes-per-file": ["error", 3],
     "max-len": ["error", {
       "code": 100,
       "tabWidth": 2,
@@ -140,6 +142,7 @@
     "no-const-assign": "error",
     "no-constant-condition": ["error", { "checkLoops": false }],
     "no-control-regex": "error",
+    "no-bitwise": ["error", { "allow": ["|"] }],
     "no-debugger": "error",
     "no-delete-var": "error",
     "no-dupe-args": "error",
@@ -175,6 +178,7 @@
       "allowSamePrecedence": true
     }],
     "no-mixed-spaces-and-tabs": "error",
+    "no-multi-assign": "off",
     "no-multi-spaces": "error",
     "no-multi-str": "error",
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
@@ -190,6 +194,7 @@
     "no-octal-escape": "error",
     "no-path-concat": "error",
     "no-proto": "error",
+    "no-plusplus": "off",
     "no-redeclare": "error",
     "no-regex-spaces": "error",
     "no-return-assign": ["error", "except-parens"],
@@ -200,14 +205,14 @@
     "no-shadow": "off",
     "no-shadow-restricted-names": "error",
     "no-sparse-arrays": "error",
-    "no-tabs": "error",
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
     "no-template-curly-in-string": "error",
     "no-this-before-super": "error",
     "no-throw-literal": "error",
     "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-undef-init": "error",
-    "no-underscore-dangle": "error",
+    "no-underscore-dangle": "off",
     "no-unexpected-multiline": "error",
     "no-unmodified-loop-condition": "error",
     "no-unneeded-ternary": ["error", { "defaultAssignment": false }],
@@ -288,8 +293,11 @@
     "react/jsx-max-props-per-line": "error",
     "react/jsx-no-literals": "off",
     "react/jsx-no-undef": "error",
+    "react/jsx-one-expression-per-line": "off",
     "react/jsx-pascal-case": "error",
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-sort-props": "error",
+    "react/no-array-index-key": "off",
     "react/no-danger": "error",
     "react/no-did-update-set-state": "error",
     "react/no-multi-comp": "error",
@@ -314,6 +322,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/state-in-constructor": "off",
+    "react/static-property-placement": "off",
     "react/button-has-type": "off",
     "react/prop-types": "error",
 
@@ -321,7 +330,7 @@
 
     "prettier/prettier": "error",
 
-    "jsx-a11y/anchor-is-valid": "error",
+    "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off"
   }

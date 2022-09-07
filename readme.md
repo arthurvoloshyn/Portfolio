@@ -54,7 +54,6 @@ To run tests using PHPUnit:
 
 - react ^16.x
 - redux 4.x
-- jquery 3.x
 
 ### To install
 

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Arbutus+Slab');
 
 //=== Drawing effect
-
 @mixin btn-border-drawing(
   $color: #ccc,
   $hover: #000000,
@@ -13,7 +12,7 @@
   box-shadow: inset 0 0 0 $width $color;
   color: $color;
   position: relative;
-  transition: color $duration $duration/3;
+  transition: color $duration $duration / 3;
 
   &:after,
   &:before {
@@ -170,7 +169,7 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        height: 25vh;
+        height: 100px;
         justify-content: space-between;
         width: 100%;
 
@@ -184,7 +183,7 @@
       height: auto;
 
       .img-container {
-        background-image: url('#{$img-path}/compareip/compare.png');
+        background-image: url('#{$portfolio-img-path}/compareIp/compare.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -245,11 +244,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 10vw;
+    font-size: 100px;
     font-weight: 400;
     grid-area: title;
     justify-content: center;
-    margin: 0 0 0.25em;
+    margin: 0;
     position: relative;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
@@ -296,24 +295,34 @@
   }
 
   .draw-border {
-    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
     background: none;
     border: none;
     cursor: pointer;
     font: 700 1.2rem 'Roboto Slab', sans-serif;
     letter-spacing: 0.05rem;
-    line-height: 1.5;
     margin-top: 40px;
     padding: 1em 2em;
 
     &:focus {
       outline: 2px dotted #dc2e2e;
     }
-  }
 
-  @media screen and (max-width: 40em) {
+    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .CompareIp {
     .slide .word {
-      font-size: 2.7em;
+      font-size: 42px;
+    }
+
+    .small-text {
+      font-size: 18px !important;
+    }
+
+    .draw-border {
+      margin-top: 20px;
     }
   }
 }
@@ -325,11 +334,8 @@
     }
 
     .word--6 {
-      max-width: 300px;
-    }
-
-    .small-text {
-      font-size: 18px !important;
+      max-width: 235px;
+      text-align: center;
     }
   }
 }

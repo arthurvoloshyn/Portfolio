@@ -1,7 +1,4 @@
-/* Set everything to take full height */
-
 /* Main slideshow wrapper */
-
 #Skills_slideshow {
   height: 100vh;
   margin: 0;
@@ -24,22 +21,9 @@
       transform: translateZ(0);
 
       > svg {
-        fill: #161517;
+        fill: #1b242e;
         position: relative;
         z-index: -1;
-      }
-
-      &:nth-child(2) > svg,
-      &:nth-child(3) > svg {
-        fill: #161517;
-      }
-
-      &:nth-child(4) > svg {
-        fill: #9d9e94;
-      }
-
-      &:nth-child(6) > svg {
-        fill: #e5b8ad;
       }
     }
   }
@@ -107,7 +91,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     justify-content: center;
     width: 100%;
 
@@ -115,12 +99,22 @@
       align-items: center;
       display: flex;
       flex-direction: row;
-      height: 25vh;
+      height: auto;
       justify-content: space-between;
+      margin-bottom: 45px;
       width: 100%;
 
-      img {
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .slide-item {
         width: 15%;
+
+        .slide-img {
+          cursor: auto;
+          width: 100%;
+        }
       }
     }
   }
@@ -196,10 +190,12 @@
   .slide {
     left: 6% !important;
     right: 6% !important;
+  }
+}
 
-    div div img {
-      width: 23% !important;
-    }
+@media screen and (max-width: 450px) {
+  .slide div div {
+    margin-bottom: 25px;
   }
 }
 
@@ -208,7 +204,7 @@
     left: 16%;
     right: 16%;
 
-    div div img {
+    .slide-item {
       width: 18%;
     }
   }

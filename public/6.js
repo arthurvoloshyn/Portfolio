@@ -1030,9 +1030,9 @@ var es6_regexp_match = __webpack_require__(77);
 var external_react_ = __webpack_require__(2);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// CONCATENATED MODULE: ./components/Wrapper/index.js
+// CONCATENATED MODULE: ./components/Wrapper/LoadingPage.js
 /* eslint-disable import/no-extraneous-dependencies */var Wrapper_Wrapper=function Wrapper(_ref){var children=_ref.children;return external_react_default.a.createElement(external_react_["Fragment"],null,children);};/* harmony default export */ var components_Wrapper = (Wrapper_Wrapper);
-// CONCATENATED MODULE: ./components/index.js
+// CONCATENATED MODULE: ./components/LoadingPage.js
 /* eslint-disable */var windowExists=function windowExists(){if(typeof window==='undefined'){return false;}try{var env="production".toLowerCase();return!env.match(/test/);}catch(e){return true;}};/* harmony default export */ var components = __webpack_exports__["default"] = ((function(){var exported;if(windowExists()){exported=__webpack_require__(75).default;}else{// NOTE: SSR support
 exported=__webpack_require__(48).default;}exported.Wrapper=components_Wrapper;return exported;})());
 
@@ -2301,7 +2301,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ham
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);", ""]);
 
 // module
-exports.push([module.i, ".flex {\n  display: flex !important; }\n\n.none {\n  display: none !important; }\n\n.Pattern {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n  .Pattern .technologies-container {\n    z-index: 100;\n    display: none;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center; }\n    .Pattern .technologies-container .technologies {\n      display: flex;\n      flex-direction: row;\n      justify-content: center;\n      align-items: center; }\n      .Pattern .technologies-container .technologies div {\n        display: flex;\n        flex-direction: row;\n        justify-content: center;\n        align-items: center; }\n        .Pattern .technologies-container .technologies div div {\n          display: block;\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100px;\n          height: 100px;\n          margin-left: 20px;\n          margin-right: 20px;\n          margin-top: 20px; }\n    .Pattern .technologies-container .description {\n      max-width: 600px;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      padding-left: 20px;\n      padding-right: 20px; }\n      @media (max-height: 400px) {\n        .Pattern .technologies-container .description {\n          margin-top: 10px !important;\n          margin-bottom: 10px !important; }\n          .Pattern .technologies-container .description p {\n            line-height: 22px !important; } }\n    .Pattern .technologies-container .rotate_button figure {\n      margin-bottom: 30px !important;\n      width: 200px;\n      height: 60px;\n      cursor: pointer;\n      perspective: 500px;\n      -webkit-perspective: 500px; }\n      @media (max-height: 400px) {\n        .Pattern .technologies-container .rotate_button figure {\n          margin-bottom: 10px !important; } }\n      .Pattern .technologies-container .rotate_button figure:hover div {\n        transform: rotateX(-90deg); }\n      .Pattern .technologies-container .rotate_button figure div {\n        height: 100%;\n        transform-style: preserve-3d;\n        -webkit-transform-style: preserve-3d;\n        transition: 0.25s;\n        -webkit-transition: 0.25s; }\n      .Pattern .technologies-container .rotate_button figure span {\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        box-sizing: border-box;\n        font-family: 'Source Sans Pro', sans-serif;\n        line-height: 50px;\n        font-size: 17pt;\n        text-align: center;\n        text-transform: uppercase; }\n      .Pattern .technologies-container .rotate_button figure span:nth-child(1) {\n        transform: translate3d(0, 0, 30px);\n        -webkit-transform: translate3d(0, 0, 30px); }\n      .Pattern .technologies-container .rotate_button figure span:nth-child(2) {\n        transform: rotateX(90deg) translate3d(0, 0, 30px);\n        -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px); }\n  .Pattern .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .Pattern .logo-container img {\n      width: 300px; }\n      @media (max-height: 400px) {\n        .Pattern .logo-container img {\n          width: 120px !important; } }\n    .Pattern .logo-container .header-container {\n      text-align: center !important; }\n      .Pattern .logo-container .header-container .header {\n        display: block; }\n\n@media (max-width: 500px), (max-height: 400px) {\n  .Pattern .technologies-container .technologies {\n    margin-bottom: 10px !important; }\n    .Pattern .technologies-container .technologies div div {\n      background-size: 50px !important;\n      width: 50px !important;\n      height: 50px !important; }\n  .Pattern .technologies-container .description {\n    margin-top: 0px !important;\n    margin-bottom: 20px;\n    font-size: 16px !important;\n    line-height: 22px; }\n    .Pattern .technologies-container .description p {\n      margin-top: 15px !important;\n      margin-bottom: 5px !important;\n      font-size: 17px !important;\n      max-width: 300px !important; }\n  .Pattern .logo-container img {\n    width: 150px; }\n  .Pattern .logo-container .logoText {\n    font-size: 40px !important; }\n  .Pattern .logo-container .paragraph {\n    font-size: 17px !important;\n    max-width: 300px !important; }\n  .Pattern .logo-container .rotate_button figure {\n    margin-bottom: 15px !important; }\n  .Pattern .arrow {\n    background-size: 40px !important;\n    width: 40px !important;\n    height: 40px !important; } }\n\n@media (max-width: 1150px) {\n  .Pattern .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; } }\n\n@media (max-height: 850px) {\n  .Pattern .technologies-container div {\n    justify-content: space-between !important; }\n  .Pattern .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; }\n    .Pattern .technologies-container .technologies div div {\n      background-size: 50px !important;\n      width: 50px !important;\n      height: 50px !important; } }\n\n@media (max-height: 650px) and (orientation: landscape) {\n  .Pattern .technologies-container .description p {\n    display: none !important; }\n  .Pattern .logo-container .paragraph {\n    max-width: none !important; }\n  .Pattern .header {\n    margin-top: 0px !important; } }\n\n.toTopAnchor {\n  position: absolute;\n  right: 20px;\n  bottom: 20px;\n  display: block;\n  background-image: url(/imgs/totop.svg);\n  background-position: center;\n  background-size: 40px;\n  width: 40px;\n  height: 40px;\n  margin: auto;\n  cursor: pointer; }\n\n@media (max-height: 500px) {\n  .toTopAnchor {\n    display: none !important; } }\n\n@font-face {\n  font-family: \"YS Text\";\n  src: url(\"/fonts/yandex/YandexSansText-Light.eot\");\n  src: url(\"/fonts/yandex/YandexSansText-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/fonts/yandex/YandexSansText-Light.woff2\") format(\"woff2\"), url(\"/fonts/yandex/YandexSansText-Light.woff\") format(\"woff\"), url(\"/fonts/yandex/YandexSansText-Light.ttf\") format(\"truetype\"), url(\"/fonts/yandex/YandexSansText-Light.svg#YSText-Light\") format(\"svg\");\n  font-weight: 300;\n  font-style: normal;\n  font-display: swap; }\n\n.Yandex {\n  background: #ecf0f1; }\n  .Yandex p, .Yandex span {\n    font-family: \"YS Text\";\n    font-weight: 300;\n    font-style: normal;\n    font-stretch: normal; }\n  .Yandex .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/yandex/yandex-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Yandex .technologies-container .description p {\n    font-size: 17px;\n    color: black;\n    text-align: center;\n    line-height: 30px; }\n    .Yandex .technologies-container .description p b {\n      color: #ED2025; }\n  .Yandex .technologies-container .rotate_button figure span {\n    border: 5px solid #ED2025; }\n  .Yandex .technologies-container .rotate_button figure span:nth-child(1) {\n    color: black; }\n  .Yandex .technologies-container .rotate_button figure span:nth-child(2) {\n    color: white;\n    background: #ED2025; }\n  .Yandex .logo-container img {\n    width: 300px; }\n  .Yandex .logo-container p {\n    font-size: 17px;\n    color: black;\n    letter-spacing: 0.62px;\n    line-height: 42px;\n    font-weight: 300;\n    text-align: center;\n    z-index: 100; }\n    .Yandex .logo-container p b {\n      color: #ED2025; }\n  .Yandex .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow-red.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer; }\n  .Yandex .show {\n    background-image: url(/imgs/down-arrow-red.svg); }\n  .Yandex .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 750px) {\n    .Yandex .technologies-container .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/yandex/yandex-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Yandex .technologies-container .technologies {\n      width: 250px !important;\n      height: 140px !important;\n      background-image: url(/imgs/yandex/yandex-mobile.png) !important; } }\n\n.Smoke_Zone {\n  background: black; }\n  .Smoke_Zone .technologies-container .technologies div div {\n    background-size: contain !important; }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n    background-image: url(/imgs/smoke-zone/apache.png);\n    background-size: 150px;\n    width: 150px;\n    height: 150px; }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(2) {\n    background-image: url(/imgs/smoke-zone/javascript.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(3) {\n    background-image: url(/imgs/smoke-zone/jq.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(2) div:nth-child(1) {\n    background-image: url(/imgs/smoke-zone/mvc.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(2) div:nth-child(2) {\n    background-image: url(/imgs/smoke-zone/mysql.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(2) div:nth-child(3) {\n    background-image: url(/imgs/smoke-zone/php.svg); }\n  .Smoke_Zone .technologies-container .description p {\n    font-family: 'Roboto';\n    max-width: 600px;\n    font-size: 18px;\n    margin-top: 20px;\n    margin-bottom: 20px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: #C80085;\n    text-align: center; }\n  .Smoke_Zone .technologies-container .rotate_button {\n    display: none; }\n  .Smoke_Zone .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .Smoke_Zone .logo-container img {\n      width: 300px;\n      -webkit-filter: drop-shadow(0px 0px 15px #9937AC);\n      filter: drop-shadow(0px 0px 15px #9937AC); }\n    .Smoke_Zone .logo-container .header {\n      font-family: 'OpenSans';\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      font-weight: 600;\n      text-shadow: #9937ac 5px 5px 8px;\n      z-index: 100;\n      margin-bottom: 0px;\n      text-align: center; }\n      @media (max-height: 400px) {\n        .Smoke_Zone .logo-container .header {\n          font-size: 30px; } }\n    .Smoke_Zone .logo-container .paragraph {\n      font-family: 'Roboto';\n      font-size: 20px;\n      color: #C80085;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100;\n      margin-top: 0px;\n      text-align: center; }\n  .Smoke_Zone .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow_white.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    -webkit-filter: drop-shadow(0px 0px 15px #9937AC);\n    filter: drop-shadow(0px 0px 15px #9937AC); }\n  .Smoke_Zone .show {\n    background-image: url(/imgs/down-arrow_white.svg); }\n  .Smoke_Zone .hide {\n    background-image: url(/imgs/cancel_white.svg); }\n\n@media (max-width: 500px) {\n  .Smoke_Zone .logo-container img {\n    max-width: 200px; }\n  .Smoke_Zone .logo-container .header {\n    font-size: 36px !important;\n    text-align: center; }\n  .Smoke_Zone .technologies-container .description p span {\n    display: none; }\n  .Smoke_Zone .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; }\n    .Smoke_Zone .technologies-container .technologies div div {\n      width: 50px !important;\n      height: 50px !important; }\n    .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n      width: 100px !important;\n      height: 100px !important; } }\n\n.History24 {\n  background: black; }\n  .History24 .technologies-container .technologies {\n    width: 900px;\n    height: 100px;\n    background-image: url(/imgs/history/history-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .History24 .technologies-container .description {\n    max-width: 800px !important; }\n    .History24 .technologies-container .description p {\n      font-family: 'Luckiest Guy', cursive;\n      max-width: 800px;\n      font-size: 20px;\n      margin-top: 50px;\n      margin-bottom: 50px;\n      padding-left: 20px;\n      padding-right: 20px;\n      color: white;\n      text-align: center;\n      font-weight: 100;\n      line-height: 30px; }\n  .History24 .technologies-container .rotate_button {\n    display: none; }\n  .History24 .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .History24 .logo-container img {\n      width: 300px;\n      -webkit-filter: drop-shadow(0px 0px 15px black);\n      filter: drop-shadow(0px 0px 15px black); }\n    .History24 .logo-container .header {\n      font-family: 'Luckiest Guy', cursive;\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      z-index: 100;\n      text-align: center; }\n      @media (max-height: 400px) {\n        .History24 .logo-container .header {\n          font-size: 30px; } }\n    .History24 .logo-container .paragraph {\n      font-family: 'Luckiest Guy', cursive;\n      font-size: 20px;\n      color: white;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      text-align: center;\n      z-index: 100; }\n  .History24 .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow_white.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    -webkit-filter: drop-shadow(0px 0px 15px black);\n    filter: drop-shadow(0px 0px 15px black); }\n  .History24 .show {\n    background-image: url(/imgs/down-arrow_white.svg); }\n  .History24 .hide {\n    background-image: url(/imgs/cancel_white.svg); }\n  @media (max-width: 850px) {\n    .History24 .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/history/history-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .History24 .logo-container img {\n      max-width: 200px; }\n    .History24 .logo-container .header {\n      font-size: 36px !important;\n      text-align: center; }\n    .History24 .technologies-container .description p span {\n      display: none; }\n    .History24 .technologies-container .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/history/history-mobile.png) !important; } }\n\n.WellHome {\n  background: white; }\n  .WellHome .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/welhome/welhome-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .WellHome .technologies-container .description p {\n    font-family: 'Roboto';\n    max-width: 600px;\n    font-size: 18px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: black;\n    text-align: center;\n    font-weight: 100; }\n  .WellHome .technologies-container .description a {\n    color: black;\n    text-decoration: none; }\n  .WellHome .technologies-container .rotate_button {\n    display: none; }\n  .WellHome .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .WellHome .logo-container img {\n      width: 400px; }\n    .WellHome .logo-container .header {\n      display: none !important; }\n    .WellHome .logo-container .paragraph {\n      font-family: 'Luckiest Guy', cursive;\n      font-size: 20px;\n      color: black;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100;\n      margin-top: 0px !important; }\n  .WellHome .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .WellHome .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .WellHome .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 850px) {\n    .WellHome .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/welhome/welhome-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .WellHome .logo-container .header {\n      font-size: 36px !important;\n      text-align: center; }\n    .WellHome .technologies-container .description p span {\n      display: none; }\n    .WellHome .technologies-container .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/welhome/welhome-mobile.png) !important; } }\n\n.C2Corner {\n  background: #3399FF; }\n  .C2Corner .technologies-container .technologies {\n    width: 900px;\n    height: 100px;\n    background-image: url(/imgs/c2corner/c2corner-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .C2Corner .technologies-container .description {\n    max-width: 900px; }\n    .C2Corner .technologies-container .description p {\n      color: #003399;\n      font-family: 'Alfa Slab One', cursive;\n      max-width: 900px;\n      font-size: 17px;\n      margin-top: 50px;\n      margin-bottom: 50px;\n      padding-left: 20px;\n      padding-right: 20px;\n      text-align: center; }\n  .C2Corner .technologies-container .rotate_button figure span {\n    border: 5px solid #003399; }\n  .C2Corner .technologies-container .rotate_button figure span:nth-child(1) {\n    color: #003399; }\n  .C2Corner .technologies-container .rotate_button figure span:nth-child(2) {\n    color: #003399;\n    background: transparent; }\n  .C2Corner .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .C2Corner .logo-container .logoText {\n      color: #003399;\n      text-shadow: #3366CC 4px 4px 0px;\n      font-family: 'Alfa Slab One', cursive;\n      z-index: 100;\n      font-size: 65px;\n      line-height: 0; }\n    .C2Corner .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-align: center; }\n    .C2Corner .logo-container .paragraph {\n      color: #003399;\n      font-family: 'Alfa Slab One', cursive;\n      font-size: 20px;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      text-align: center;\n      z-index: 100;\n      max-width: 700px; }\n  .C2Corner .arrow {\n    display: block;\n    background-image: url(/imgs/c2corner/arrow-down.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    margin-top: 30px;\n    cursor: pointer; }\n  .C2Corner .show {\n    background-image: url(/imgs/c2corner/arrow-down.svg); }\n  .C2Corner .hide {\n    background-image: url(/imgs/c2corner/arrow-up.svg); }\n  @media (max-width: 850px) {\n    .C2Corner .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/c2corner/c2corner-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .C2Corner .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/c2corner/c2corner-mobile.png) !important; } }\n\n.CherryPick {\n  background: #F00000;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to right, #DC281E, #F00000);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #DC281E, #F00000);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n  .CherryPick .technologies-container .technologies div div {\n    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); }\n  .CherryPick .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n    background-image: url(/imgs/cheryPick/angular.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(1) div:nth-child(2) {\n    background-image: url(/imgs/cheryPick/laravel.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(1) div:nth-child(3) {\n    background-image: url(/imgs/cheryPick/mysql.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(2) div:nth-child(1) {\n    background-image: url(/imgs/cheryPick/php.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(2) div:nth-child(2) {\n    background-image: url(/imgs/cheryPick/js.png); }\n  .CherryPick .technologies-container .description p {\n    font-family: 'Hammersmith One', sans-serif;\n    max-width: 600px;\n    font-size: 18px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: black;\n    text-align: center; }\n  .CherryPick .technologies-container .description a {\n    color: black;\n    text-decoration: none; }\n  .CherryPick .technologies-container .rotate_button {\n    display: none; }\n  .CherryPick .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .CherryPick .logo-container img {\n      width: 200px; }\n    .CherryPick .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: black;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px; }\n    .CherryPick .logo-container .paragraph {\n      display: inline-block;\n      font-family: 'Hammersmith One', sans-serif;\n      font-size: 20px;\n      color: black;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100; }\n  .CherryPick .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .CherryPick .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .CherryPick .hide {\n    background-image: url(/imgs/cancel.svg); }\n\n@media (max-width: 500px) {\n  .Smoke_Zone .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; }\n    .Smoke_Zone .technologies-container .technologies div div {\n      background-size: 50px !important;\n      width: 50px !important;\n      height: 50px !important; }\n    .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n      background-size: 100px !important;\n      width: 100px !important;\n      height: 100px !important; } }\n\n.Houses {\n  background-image: url(/imgs/city.jpg);\n  background-size: cover; }\n  .Houses .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/houses/houses-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Houses .technologies-container .description p {\n    font-family: 'Alfa Slab One', cursive;\n    max-width: 600px;\n    font-size: 20px;\n    margin-top: 50px;\n    margin-bottom: 50px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: white;\n    text-align: center;\n    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5)); }\n  .Houses .technologies-container .rotate_button {\n    display: none; }\n  .Houses .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .Houses .logo-container .logoText {\n      color: white;\n      font-family: 'Alfa Slab One', cursive;\n      text-shadow: black 4px 4px 0px;\n      z-index: 100;\n      font-size: 65px;\n      line-height: 0; }\n    .Houses .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-align: center;\n      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5)); }\n    .Houses .logo-container .paragraph {\n      font-family: 'Alfa Slab One', cursive;\n      font-size: 20px;\n      color: white;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      text-align: center;\n      z-index: 100;\n      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5)); }\n  .Houses .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow_white.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    -webkit-filter: drop-shadow(0px 0px 15px black);\n    filter: drop-shadow(0px 0px 15px black); }\n  .Houses .show {\n    background-image: url(/imgs/down-arrow_white.svg); }\n  .Houses .hide {\n    background-image: url(/imgs/cancel_white.svg); }\n  @media (max-width: 850px) {\n    .Houses .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/houses/houses-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Houses .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/houses/houses-mobile.png) !important; } }\n\n.Arcbazar {\n  background: #9796f0;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #fbc7d4, #9796f0);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n  .Arcbazar .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/arcbazar/arcbazar-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Arcbazar .technologies-container .description {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column; }\n    .Arcbazar .technologies-container .description .first {\n      margin-top: 40px; }\n    .Arcbazar .technologies-container .description .last {\n      margin-bottom: 10px; }\n    .Arcbazar .technologies-container .description p {\n      padding-top: 5px;\n      padding-bottom: 5px;\n      font-family: 'Hammersmith One', sans-serif;\n      line-height: 28px;\n      max-width: 600px;\n      font-size: 18px;\n      padding-left: 20px;\n      padding-right: 20px;\n      color: black;\n      text-align: center;\n      font-weight: normal;\n      width: fit-content;\n      margin-top: 0px;\n      margin-bottom: 0px; }\n    .Arcbazar .technologies-container .description a {\n      color: black;\n      text-decoration: none; }\n  .Arcbazar .technologies-container .rotate_button figure span {\n    border: 5px solid black; }\n  .Arcbazar .technologies-container .rotate_button figure span:nth-child(1) {\n    color: black; }\n  .Arcbazar .technologies-container .rotate_button figure span:nth-child(2) {\n    color: #a696c8;\n    background: black; }\n  .Arcbazar .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .Arcbazar .logo-container img {\n      width: 400px; }\n      @media (max-height: 400px) {\n        .Arcbazar .logo-container img {\n          width: 180px !important; } }\n    .Arcbazar .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: black;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px; }\n    .Arcbazar .logo-container .paragraph {\n      background: black;\n      padding-left: 20px;\n      padding-right: 20px;\n      padding-top: 5px;\n      padding-bottom: 5px;\n      font-family: 'Hammersmith One', sans-serif;\n      font-size: 20px;\n      color: #a696c8;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100; }\n  .Arcbazar .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .Arcbazar .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .Arcbazar .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 850px) {\n    .Arcbazar .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/arcbazar/arcbazar-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Arcbazar .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/arcbazar/arcbazar-mobile.png) !important; }\n    .Arcbazar .technologies-container .description p {\n      margin-top: 0 !important;\n      margin-bottom: 0px !important; }\n    .Arcbazar .logo-container img {\n      width: 100%;\n      max-width: 300px; } }\n\n.Factoringvergelijken {\n  background-image: linear-gradient(to right top, #2F2541, #6E3C5F, #B0576A, #E38065, #FEB85F, #F9F871); }\n  .Factoringvergelijken .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/factoringvergelijken/factoringvergelijken-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Factoringvergelijken .technologies-container .description p {\n    padding-top: 5px;\n    padding-bottom: 5px;\n    font-family: 'Hammersmith One', sans-serif;\n    line-height: 28px;\n    max-width: 600px;\n    font-size: 18px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: black;\n    text-align: center;\n    font-weight: normal;\n    margin-top: 40px;\n    margin-bottom: 10px; }\n  .Factoringvergelijken .technologies-container .description a {\n    color: black;\n    text-decoration: none; }\n  .Factoringvergelijken .technologies-container .rotate_button figure span {\n    border: 5px solid black; }\n  .Factoringvergelijken .technologies-container .rotate_button figure span:nth-child(1) {\n    color: #2F2541;\n    background: transparent; }\n  .Factoringvergelijken .technologies-container .rotate_button figure span:nth-child(2) {\n    color: #2F2541;\n    background: transparent; }\n  .Factoringvergelijken .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .Factoringvergelijken .logo-container img {\n      width: 500px; }\n      @media (max-height: 400px) {\n        .Factoringvergelijken .logo-container img {\n          width: 220px !important; } }\n    .Factoringvergelijken .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: black;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px; }\n    .Factoringvergelijken .logo-container .paragraph {\n      padding-left: 20px;\n      padding-right: 20px;\n      padding-top: 5px;\n      padding-bottom: 5px;\n      font-family: 'Hammersmith One', sans-serif;\n      font-size: 20px;\n      color: black;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100; }\n  .Factoringvergelijken .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .Factoringvergelijken .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .Factoringvergelijken .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 850px) {\n    .Factoringvergelijken .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/factoringvergelijken/factoringvergelijken-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Factoringvergelijken .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/factoringvergelijken/factoringvergelijken-mobile.png) !important; }\n    .Factoringvergelijken .logo-container img {\n      width: 100%;\n      max-width: 300px; } }\n\n.linkful {\n  background: #0b0812; }\n  .linkful a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .linkful .mt-50 {\n    margin-top: 50px !important; }\n  .linkful .linkful-container {\n    height: 100%;\n    width: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .linkful .linkful-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      -webkit-filter: drop-shadow(0px 0px 15px #B9EDF8);\n      filter: drop-shadow(0px 0px 3px #B9EDF8);\n      cursor: pointer; }\n    .linkful .linkful-container .arrow-up {\n      background-image: url(/imgs/linkful/arrow-up.svg); }\n    .linkful .linkful-container .arrow-down {\n      background-image: url(/imgs/linkful/arrow-down.svg); }\n    .linkful .linkful-container .description {\n      font-family: Roboto,sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      color: #a3daff;\n      text-shadow: #B9EDF8 0px 0px 5px; }\n    .linkful .linkful-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .linkful .linkful-container .header .logo {\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: contain;\n        width: 200px;\n        height: 200px;\n        background-image: url(/imgs/linkful/logo-color.png);\n        -webkit-filter: drop-shadow(0px 0px 15px #B9EDF8);\n        filter: drop-shadow(0px 0px 3px #B9EDF8);\n        opacity: 0.9; }\n    .linkful .linkful-container .d-flex {\n      display: flex; }\n    .linkful .linkful-container .d-none {\n      display: none; }\n    .linkful .linkful-container .info-container {\n      width: 100%;\n      min-height: 200px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto,sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #a3daff;\n      text-shadow: #B9EDF8 0px 0px 5px; }\n    .linkful .linkful-container .tzie-small {\n      font-size: 15px !important; }\n    .linkful .linkful-container .tech-container {\n      width: 100%;\n      min-height: 200px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .linkful .linkful-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 550px;\n        align-items: center;\n        justify-content: space-between; }\n        .linkful .linkful-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 200px;\n          background-image: url(/imgs/linkful/linkful.png); }\n\n@media (max-width: 650px) {\n  .linkful .info-container {\n    max-width: 300px !important; }\n  .linkful .description {\n    font-size: 16px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .linkful .header .logo {\n    width: 150px !important;\n    height: 150px !important; }\n  .linkful .row {\n    width: 400px !important; } }\n\n@media (max-width: 530px) {\n  .linkful .row {\n    width: 300px !important; } }\n\n@media (max-width: 400px) {\n  .linkful .info-container {\n    max-width: 250px !important; }\n  .linkful .row {\n    width: 240px !important; } }\n\n.smsplaza {\n  background: #0b0812; }\n  .smsplaza .frame {\n    background: rgba(0, 0, 0, 0.5);\n    box-shadow: 0 0 100px black; }\n  .smsplaza a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .smsplaza .mt-50 {\n    margin-top: 50px !important; }\n  .smsplaza .smspalza-container {\n    width: 100%;\n    height: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .smsplaza .smspalza-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      cursor: pointer; }\n    .smsplaza .smspalza-container .arrow-up {\n      background-image: url(/imgs/smsplaza/arrow-up.svg); }\n    .smsplaza .smspalza-container .arrow-down {\n      background-image: url(/imgs/smsplaza/arrow-down.svg); }\n    .smsplaza .smspalza-container .description {\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      color: #41B883; }\n    .smsplaza .smspalza-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .smsplaza .smspalza-container .header .logo {\n        color: #41B883;\n        text-shadow: #36495D 4px 4px 0px;\n        z-index: 100;\n        font-size: 65px;\n        font-family: 'Luckiest Guy', cursive;\n        line-height: 1; }\n    .smsplaza .smspalza-container .d-flex {\n      display: flex; }\n    .smsplaza .smspalza-container .d-none {\n      display: none; }\n    .smsplaza .smspalza-container .info-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #41B883; }\n    .smsplaza .smspalza-container .tzie-small {\n      font-size: 18px !important; }\n    .smsplaza .smspalza-container .tech-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .smsplaza .smspalza-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 300px;\n        align-items: center;\n        justify-content: space-between; }\n        .smsplaza .smspalza-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 300px;\n          background-image: url(/imgs/smsplaza/smsplaza.png); }\n\n@media (max-width: 650px) {\n  .smsplaza .info-container {\n    max-width: 300px !important; }\n  .smsplaza .description {\n    font-size: 16px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .smsplaza .row {\n    width: 200px !important; } }\n\n@media (max-width: 530px) {\n  .smsplaza .header .logo {\n    font-size: 45px !important; }\n  .smsplaza .row {\n    width: 150px !important; } }\n\n@media (max-width: 400px) {\n  .smsplaza .info-container {\n    max-width: 250px !important; }\n  .smsplaza .row {\n    width: 240px !important; } }\n\n.abirix {\n  background: black; }\n  .abirix a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .abirix .mt-50 {\n    margin-top: 50px !important; }\n  .abirix .abirix-container {\n    width: 100%;\n    height: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .abirix .abirix-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      cursor: pointer; }\n    .abirix .abirix-container .arrow-up {\n      background-image: url(/imgs/abirix/arrow-up.svg); }\n    .abirix .abirix-container .arrow-down {\n      background-image: url(/imgs/abirix/arrow-down.svg); }\n    .abirix .abirix-container .description {\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      color: #f0ea42; }\n    .abirix .abirix-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .abirix .abirix-container .header .logo {\n        color: #f0ea42;\n        text-shadow: #ce8c32 4px 4px 0px;\n        z-index: 100;\n        font-size: 65px;\n        font-family: 'Alfa Slab One', cursive;\n        line-height: 1; }\n    .abirix .abirix-container .d-flex {\n      display: flex; }\n    .abirix .abirix-container .d-none {\n      display: none; }\n    .abirix .abirix-container .info-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #f0ea42;\n      background: rgba(0, 0, 0, 0.5);\n      border-radius: 50%;\n      box-shadow: 0px 0px 100px black; }\n    .abirix .abirix-container .tzie-small {\n      font-size: 18px !important; }\n    .abirix .abirix-container .tech-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .abirix .abirix-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 300px;\n        align-items: center;\n        justify-content: space-between; }\n        .abirix .abirix-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 200px;\n          background-image: url(/imgs/abirix/abirix.png); }\n\n@media (max-width: 650px) {\n  .abirix .info-container {\n    max-width: 300px !important; }\n  .abirix .description {\n    font-size: 16px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .abirix .row {\n    width: 200px !important; } }\n\n@media (max-width: 530px) {\n  .abirix .header .logo {\n    font-size: 45px !important; }\n  .abirix .row {\n    width: 150px !important; } }\n\n@media (max-width: 400px) {\n  .abirix .info-container {\n    max-width: 250px !important; }\n  .abirix .row {\n    width: 240px !important; } }\n\n/* Color schemes */\n.demo-1 {\n  --color-text: #fff;\n  --color-bg: #101010;\n  --color-link: #fff;\n  --color-link-hover: #fff473;\n  --color-nav: #fff;\n  --color-bg-slide-1: #4cabef;\n  --color-bg-slide-2: #0406e6;\n  --color-bg-slide-3: #272526;\n  --color-bg-slide-4: #b9b9b9;\n  --color-bg-slide-5: #5900ce;\n  --color-bg-slide-6: #1b1a1a;\n  --color-bg-slide-7: #bf2525;\n  --color-bg-slide-8: #d6d1d1;\n  --color-bg-slide-9: #000000; }\n\n.CompareIp {\n  /* Header */\n  /* Slideshow */\n  /* Word + SVG styles */ }\n  .CompareIp .content {\n    position: relative;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 0 auto;\n    min-height: 100vh; }\n  .CompareIp .content--fixed {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    display: grid;\n    align-content: space-between;\n    width: 100%;\n    max-width: none;\n    min-height: 0;\n    height: 100vh;\n    padding: 1.5em;\n    pointer-events: none;\n    grid-template-columns: 50% 50%;\n    grid-template-rows: auto auto 4em;\n    grid-template-areas: 'header header' '... ...' 'github demos'; }\n  .CompareIp .content--fixed a {\n    pointer-events: auto; }\n  .CompareIp .codrops-header {\n    position: relative;\n    z-index: 100;\n    display: flex;\n    flex-direction: row;\n    align-items: flex-start;\n    align-items: center;\n    align-self: start;\n    grid-area: header;\n    justify-self: start; }\n  .CompareIp .codrops-header__title {\n    font-size: 1.15em;\n    font-weight: normal;\n    margin: 0 0 0 1em;\n    padding: 0.75em 0; }\n  .CompareIp .slideshow {\n    position: absolute !important;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0; }\n  .CompareIp .slide {\n    position: absolute !important;\n    width: 100vw;\n    height: 100vh;\n    top: 0;\n    left: 0 !important;\n    display: flex;\n    flex-direction: column;\n    align-content: center;\n    justify-content: center;\n    align-items: center;\n    pointer-events: none;\n    opacity: 0;\n    z-index: 1; }\n    .CompareIp .slide div {\n      width: 100%;\n      height: 100vh;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .CompareIp .slide div div {\n        width: 100%;\n        height: 25vh;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: space-between; }\n        .CompareIp .slide div div img {\n          width: 15%; }\n    .CompareIp .slide .description {\n      height: auto; }\n      .CompareIp .slide .description .img-container {\n        width: 300px;\n        display: block;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url(/imgs/compareip/compare.png); }\n  .CompareIp .slide--current {\n    opacity: 1;\n    pointer-events: auto;\n    z-index: 100; }\n  .CompareIp .slide__bg {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0; }\n  .CompareIp .slide__bg--6 {\n    background: var(--color-bg-slide-6); }\n  .CompareIp .slidenav {\n    position: relative;\n    margin: 16em 0 0 0;\n    z-index: 200; }\n  .CompareIp .slidenav__item {\n    background: none;\n    border: none;\n    font-size: 1.5em;\n    color: var(--color-nav);\n    margin: 1em; }\n  .CompareIp .slidenav__item:focus {\n    outline: none; }\n  .CompareIp .slidenav__item:hover {\n    opacity: 0.6; }\n  .CompareIp .slidenav__item--next .icon {\n    transform: rotate(180deg); }\n  .CompareIp .word {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    flex-wrap: wrap;\n    margin: 0 0 0.25em 0;\n    cursor: default;\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n    grid-area: title;\n    font-size: 10vw;\n    font-weight: 400; }\n  .CompareIp .word span {\n    display: block;\n    position: relative;\n    flex: none;\n    white-space: pre; }\n  .CompareIp .small-text {\n    font-size: 22px !important; }\n  .CompareIp .word--6 {\n    font-family: 'Hammersmith One', sans-serif; }\n  .CompareIp .word--6 .char1,\n  .CompareIp .word--6 .char8 {\n    color: #dc2e2e; }\n  .CompareIp .shapes {\n    position: fixed;\n    pointer-events: none;\n    top: 0;\n    left: 0;\n    height: 200vh; }\n  @media screen and (max-width: 40em) {\n    .CompareIp .slide .word {\n      font-size: 2.7em; } }\n  .CompareIp .hide {\n    opacity: 0; }\n  .CompareIp .description {\n    font-size: 16px !important; }\n  .CompareIp .draw-border {\n    margin-top: 40px;\n    background: none;\n    border: none;\n    cursor: pointer;\n    line-height: 1.5;\n    font: 700 1.2rem 'Roboto Slab', sans-serif;\n    padding: 1em 2em;\n    letter-spacing: 0.05rem;\n    box-shadow: inset 0 0 0 4px #d6d1d1;\n    color: #d6d1d1;\n    transition: color 0.25s 0.08333s;\n    position: relative; }\n    .CompareIp .draw-border:focus {\n      outline: 2px dotted #dc2e2e; }\n    .CompareIp .draw-border::before, .CompareIp .draw-border::after {\n      border: 0 solid transparent;\n      box-sizing: border-box;\n      content: '';\n      pointer-events: none;\n      position: absolute;\n      width: 0;\n      height: 0;\n      bottom: 0;\n      right: 0; }\n    .CompareIp .draw-border::before {\n      border-bottom-width: 4px;\n      border-left-width: 4px; }\n    .CompareIp .draw-border::after {\n      border-top-width: 4px;\n      border-right-width: 4px; }\n    .CompareIp .draw-border:hover {\n      color: #dc2e2e; }\n      .CompareIp .draw-border:hover::before, .CompareIp .draw-border:hover::after {\n        border-color: #dc2e2e;\n        transition: border-color 0s, width 0.25s, height 0.25s;\n        width: 100%;\n        height: 100%; }\n      .CompareIp .draw-border:hover::before {\n        transition-delay: 0s, 0s, 0.25s; }\n      .CompareIp .draw-border:hover::after {\n        transition-delay: 0s, 0.25s, 0s; }\n\n@media (max-width: 500px) {\n  .CompareIp .img-container {\n    width: 220px !important; }\n  .CompareIp .word--6 {\n    max-width: 300px; }\n  .CompareIp .small-text {\n    font-size: 18px !important; } }\n\n.neocore {\n  background: black; }\n  .neocore a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .neocore .mt-50 {\n    margin-top: 50px !important; }\n  .neocore .neocore-container {\n    width: 100%;\n    height: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .neocore .neocore-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      cursor: pointer; }\n    .neocore .neocore-container .arrow-up {\n      background-image: url(/imgs/neocore/arrow-up.svg); }\n    .neocore .neocore-container .arrow-down {\n      background-image: url(/imgs/neocore/arrow-down.svg); }\n    .neocore .neocore-container .description {\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      z-index: 100;\n      color: #eec60a;\n      text-shadow: black 4px 4px 0px;\n      font-size: 40px;\n      font-family: 'Luckiest Guy', cursive;\n      line-height: 1; }\n    .neocore .neocore-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .neocore .neocore-container .header .logo {\n        background-image: url(/imgs/neocore/logo.svg);\n        background-size: contain;\n        background-repeat: no-repeat;\n        width: 200px;\n        height: 200px; }\n    .neocore .neocore-container .d-flex {\n      display: flex; }\n    .neocore .neocore-container .d-none {\n      display: none; }\n    .neocore .neocore-container .info-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #eec60a; }\n    .neocore .neocore-container .tzie-small {\n      font-size: 18px !important; }\n    .neocore .neocore-container .tech-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .neocore .neocore-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 600px;\n        align-items: center;\n        justify-content: space-between; }\n        .neocore .neocore-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 200px;\n          background-image: url(/imgs/neocore/neocore_skills.png); }\n\n@media (max-width: 650px) {\n  .neocore .info-container {\n    max-width: 300px !important; }\n  .neocore .description {\n    font-size: 32px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .neocore .row {\n    width: 400px !important; }\n  .neocore .logo {\n    width: 140px !important;\n    height: 140px !important; } }\n\n@media (max-width: 530px) {\n  .neocore .header .logo {\n    font-size: 45px !important; }\n  .neocore .row {\n    width: 30px !important; }\n    .neocore .row div {\n      background-image: url(/imgs/neocore/neocore_skills_sm.png) !important; } }\n\n@media (max-width: 400px) {\n  .neocore .info-container {\n    max-width: 250px !important; }\n  .neocore .row {\n    width: 200px !important; } }\n\n.neocore-bg {\n  background: #eec60a !important; }\n\n.linkful-bg {\n  background: #3c48fa !important; }\n\n.compareip-bg {\n  background: rgba(237, 32, 37, 0.7) !important; }\n\n.abirix-bg {\n  background: #f0ea42 !important; }\n\n.smsplaza-bg {\n  background: #41B883 !important; }\n\n.houses-bg {\n  background: white !important; }\n\n.welhome-bg {\n  background: #E6E6E6 !important; }\n\n.history24-bg {\n  background: #E6E6E6 !important; }\n\n.smoke-zone-bg {\n  background: #D40080 !important; }\n\n.yandex-bg {\n  background: #ED2025 !important; }\n\n.c2corner-bg {\n  background: #003399 !important; }\n\n.arcbazar-bg {\n  background: black !important; }\n\n.factoringvergelijken-bg {\n  background: black !important; }\n", ""]);
+exports.push([module.i, ".flex {\n  display: flex !important; }\n\n.none {\n  display: none !important; }\n\n.Pattern {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n  .Pattern .technologies-container {\n    z-index: 100;\n    display: none;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center; }\n    .Pattern .technologies-container .technologies {\n      display: flex;\n      flex-direction: row;\n      justify-content: center;\n      align-items: center; }\n      .Pattern .technologies-container .technologies div {\n        display: flex;\n        flex-direction: row;\n        justify-content: center;\n        align-items: center; }\n        .Pattern .technologies-container .technologies div div {\n          display: block;\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100px;\n          height: 100px;\n          margin-left: 20px;\n          margin-right: 20px;\n          margin-top: 20px; }\n    .Pattern .technologies-container .description {\n      max-width: 600px;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      padding-left: 20px;\n      padding-right: 20px; }\n      @media (max-height: 400px) {\n        .Pattern .technologies-container .description {\n          margin-top: 10px !important;\n          margin-bottom: 10px !important; }\n          .Pattern .technologies-container .description p {\n            line-height: 22px !important; } }\n    .Pattern .technologies-container .rotate_button figure {\n      margin-bottom: 30px !important;\n      width: 200px;\n      height: 60px;\n      cursor: pointer;\n      perspective: 500px;\n      -webkit-perspective: 500px; }\n      @media (max-height: 400px) {\n        .Pattern .technologies-container .rotate_button figure {\n          margin-bottom: 10px !important; } }\n      .Pattern .technologies-container .rotate_button figure:hover div {\n        transform: rotateX(-90deg); }\n      .Pattern .technologies-container .rotate_button figure div {\n        height: 100%;\n        transform-style: preserve-3d;\n        -webkit-transform-style: preserve-3d;\n        transition: 0.25s;\n        -webkit-transition: 0.25s; }\n      .Pattern .technologies-container .rotate_button figure span {\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        box-sizing: border-box;\n        font-family: 'Source Sans Pro', sans-serif;\n        line-height: 50px;\n        font-size: 17pt;\n        text-align: center;\n        text-transform: uppercase; }\n      .Pattern .technologies-container .rotate_button figure span:nth-child(1) {\n        transform: translate3d(0, 0, 30px);\n        -webkit-transform: translate3d(0, 0, 30px); }\n      .Pattern .technologies-container .rotate_button figure span:nth-child(2) {\n        transform: rotateX(90deg) translate3d(0, 0, 30px);\n        -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px); }\n  .Pattern .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .Pattern .logo-container img {\n      width: 300px; }\n      @media (max-height: 400px) {\n        .Pattern .logo-container img {\n          width: 120px !important; } }\n    .Pattern .logo-container .header-container {\n      text-align: center !important; }\n      .Pattern .logo-container .header-container .header {\n        display: block; }\n\n@media (max-width: 500px), (max-height: 400px) {\n  .Pattern .technologies-container .technologies {\n    margin-bottom: 10px !important; }\n    .Pattern .technologies-container .technologies div div {\n      background-size: 50px !important;\n      width: 50px !important;\n      height: 50px !important; }\n  .Pattern .technologies-container .description {\n    margin-top: 0px !important;\n    margin-bottom: 20px;\n    font-size: 16px !important;\n    line-height: 22px; }\n    .Pattern .technologies-container .description p {\n      margin-top: 15px !important;\n      margin-bottom: 5px !important;\n      font-size: 17px !important;\n      max-width: 300px !important; }\n  .Pattern .logo-container img {\n    width: 150px; }\n  .Pattern .logo-container .logoText {\n    font-size: 40px !important; }\n  .Pattern .logo-container .paragraph {\n    font-size: 17px !important;\n    max-width: 300px !important; }\n  .Pattern .logo-container .rotate_button figure {\n    margin-bottom: 15px !important; }\n  .Pattern .arrow {\n    background-size: 40px !important;\n    width: 40px !important;\n    height: 40px !important; } }\n\n@media (max-width: 1150px) {\n  .Pattern .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; } }\n\n@media (max-height: 850px) {\n  .Pattern .technologies-container div {\n    justify-content: space-between !important; }\n  .Pattern .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; }\n    .Pattern .technologies-container .technologies div div {\n      background-size: 50px !important;\n      width: 50px !important;\n      height: 50px !important; } }\n\n@media (max-height: 650px) and (orientation: landscape) {\n  .Pattern .technologies-container .description p {\n    display: none !important; }\n  .Pattern .logo-container .paragraph {\n    max-width: none !important; }\n  .Pattern .header {\n    margin-top: 0px !important; } }\n\n.toTopAnchor {\n  position: absolute;\n  right: 20px;\n  bottom: 20px;\n  display: block;\n  background-image: url(/imgs/totop.svg);\n  background-position: center;\n  background-size: 40px;\n  width: 40px;\n  height: 40px;\n  margin: auto;\n  cursor: pointer; }\n\n@media (max-height: 500px) {\n  .toTopAnchor {\n    display: none !important; } }\n\n@font-face {\n  font-family: \"YS Text\";\n  src: url(\"/fonts/google/YandexSansText-Light.eot\");\n  src: url(\"/fonts/google/YandexSansText-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/fonts/google/YandexSansText-Light.woff2\") format(\"woff2\"), url(\"/fonts/google/YandexSansText-Light.woff\") format(\"woff\"), url(\"/fonts/google/YandexSansText-Light.ttf\") format(\"truetype\"), url(\"/fonts/google/YandexSansText-Light.svg#YSText-Light\") format(\"svg\");\n  font-weight: 300;\n  font-style: normal;\n  font-display: swap; }\n\n.Yandex {\n  background: #ecf0f1; }\n  .Yandex p, .Yandex span {\n    font-family: \"YS Text\";\n    font-weight: 300;\n    font-style: normal;\n    font-stretch: normal; }\n  .Yandex .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/google/google-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Yandex .technologies-container .description p {\n    font-size: 17px;\n    color: black;\n    text-align: center;\n    line-height: 30px; }\n    .Yandex .technologies-container .description p b {\n      color: #ED2025; }\n  .Yandex .technologies-container .rotate_button figure span {\n    border: 5px solid #ED2025; }\n  .Yandex .technologies-container .rotate_button figure span:nth-child(1) {\n    color: black; }\n  .Yandex .technologies-container .rotate_button figure span:nth-child(2) {\n    color: white;\n    background: #ED2025; }\n  .Yandex .logo-container img {\n    width: 300px; }\n  .Yandex .logo-container p {\n    font-size: 17px;\n    color: black;\n    letter-spacing: 0.62px;\n    line-height: 42px;\n    font-weight: 300;\n    text-align: center;\n    z-index: 100; }\n    .Yandex .logo-container p b {\n      color: #ED2025; }\n  .Yandex .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow-red.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer; }\n  .Yandex .show {\n    background-image: url(/imgs/down-arrow-red.svg); }\n  .Yandex .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 750px) {\n    .Yandex .technologies-container .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/google/google-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Yandex .technologies-container .technologies {\n      width: 250px !important;\n      height: 140px !important;\n      background-image: url(/imgs/google/google-mobile.png) !important; } }\n\n.Smoke_Zone {\n  background: black; }\n  .Smoke_Zone .technologies-container .technologies div div {\n    background-size: contain !important; }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n    background-image: url(/imgs/smoke-zone/apache.png);\n    background-size: 150px;\n    width: 150px;\n    height: 150px; }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(2) {\n    background-image: url(/imgs/smoke-zone/javascript.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(3) {\n    background-image: url(/imgs/smoke-zone/jq.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(2) div:nth-child(1) {\n    background-image: url(/imgs/smoke-zone/mvc.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(2) div:nth-child(2) {\n    background-image: url(/imgs/smoke-zone/mysql.svg); }\n  .Smoke_Zone .technologies-container .technologies div:nth-child(2) div:nth-child(3) {\n    background-image: url(/imgs/smoke-zone/php.svg); }\n  .Smoke_Zone .technologies-container .description p {\n    font-family: 'Roboto';\n    max-width: 600px;\n    font-size: 18px;\n    margin-top: 20px;\n    margin-bottom: 20px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: #C80085;\n    text-align: center; }\n  .Smoke_Zone .technologies-container .rotate_button {\n    display: none; }\n  .Smoke_Zone .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .Smoke_Zone .logo-container img {\n      width: 300px;\n      -webkit-filter: drop-shadow(0px 0px 15px #9937AC);\n      filter: drop-shadow(0px 0px 15px #9937AC); }\n    .Smoke_Zone .logo-container .header {\n      font-family: 'OpenSans';\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      font-weight: 600;\n      text-shadow: #9937ac 5px 5px 8px;\n      z-index: 100;\n      margin-bottom: 0px;\n      text-align: center; }\n      @media (max-height: 400px) {\n        .Smoke_Zone .logo-container .header {\n          font-size: 30px; } }\n    .Smoke_Zone .logo-container .paragraph {\n      font-family: 'Roboto';\n      font-size: 20px;\n      color: #C80085;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100;\n      margin-top: 0px;\n      text-align: center; }\n  .Smoke_Zone .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow_white.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    -webkit-filter: drop-shadow(0px 0px 15px #9937AC);\n    filter: drop-shadow(0px 0px 15px #9937AC); }\n  .Smoke_Zone .show {\n    background-image: url(/imgs/down-arrow_white.svg); }\n  .Smoke_Zone .hide {\n    background-image: url(/imgs/cancel_white.svg); }\n\n@media (max-width: 500px) {\n  .Smoke_Zone .logo-container img {\n    max-width: 200px; }\n  .Smoke_Zone .logo-container .header {\n    font-size: 36px !important;\n    text-align: center; }\n  .Smoke_Zone .technologies-container .description p span {\n    display: none; }\n  .Smoke_Zone .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; }\n    .Smoke_Zone .technologies-container .technologies div div {\n      width: 50px !important;\n      height: 50px !important; }\n    .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n      width: 100px !important;\n      height: 100px !important; } }\n\n.History24 {\n  background: black; }\n  .History24 .technologies-container .technologies {\n    width: 900px;\n    height: 100px;\n    background-image: url(/imgs/history/history-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .History24 .technologies-container .description {\n    max-width: 800px !important; }\n    .History24 .technologies-container .description p {\n      font-family: 'Luckiest Guy', cursive;\n      max-width: 800px;\n      font-size: 20px;\n      margin-top: 50px;\n      margin-bottom: 50px;\n      padding-left: 20px;\n      padding-right: 20px;\n      color: white;\n      text-align: center;\n      font-weight: 100;\n      line-height: 30px; }\n  .History24 .technologies-container .rotate_button {\n    display: none; }\n  .History24 .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .History24 .logo-container img {\n      width: 300px;\n      -webkit-filter: drop-shadow(0px 0px 15px black);\n      filter: drop-shadow(0px 0px 15px black); }\n    .History24 .logo-container .header {\n      font-family: 'Luckiest Guy', cursive;\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      z-index: 100;\n      text-align: center; }\n      @media (max-height: 400px) {\n        .History24 .logo-container .header {\n          font-size: 30px; } }\n    .History24 .logo-container .paragraph {\n      font-family: 'Luckiest Guy', cursive;\n      font-size: 20px;\n      color: white;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      text-align: center;\n      z-index: 100; }\n  .History24 .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow_white.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    -webkit-filter: drop-shadow(0px 0px 15px black);\n    filter: drop-shadow(0px 0px 15px black); }\n  .History24 .show {\n    background-image: url(/imgs/down-arrow_white.svg); }\n  .History24 .hide {\n    background-image: url(/imgs/cancel_white.svg); }\n  @media (max-width: 850px) {\n    .History24 .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/history/history-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .History24 .logo-container img {\n      max-width: 200px; }\n    .History24 .logo-container .header {\n      font-size: 36px !important;\n      text-align: center; }\n    .History24 .technologies-container .description p span {\n      display: none; }\n    .History24 .technologies-container .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/history/history-mobile.png) !important; } }\n\n.WellHome {\n  background: white; }\n  .WellHome .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/welhome/welhome-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .WellHome .technologies-container .description p {\n    font-family: 'Roboto';\n    max-width: 600px;\n    font-size: 18px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: black;\n    text-align: center;\n    font-weight: 100; }\n  .WellHome .technologies-container .description a {\n    color: black;\n    text-decoration: none; }\n  .WellHome .technologies-container .rotate_button {\n    display: none; }\n  .WellHome .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .WellHome .logo-container img {\n      width: 400px; }\n    .WellHome .logo-container .header {\n      display: none !important; }\n    .WellHome .logo-container .paragraph {\n      font-family: 'Luckiest Guy', cursive;\n      font-size: 20px;\n      color: black;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100;\n      margin-top: 0px !important; }\n  .WellHome .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .WellHome .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .WellHome .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 850px) {\n    .WellHome .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/welhome/welhome-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .WellHome .logo-container .header {\n      font-size: 36px !important;\n      text-align: center; }\n    .WellHome .technologies-container .description p span {\n      display: none; }\n    .WellHome .technologies-container .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/welhome/welhome-mobile.png) !important; } }\n\n.C2Corner {\n  background: #3399FF; }\n  .C2Corner .technologies-container .technologies {\n    width: 900px;\n    height: 100px;\n    background-image: url(/imgs/c2corner/c2corner-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .C2Corner .technologies-container .description {\n    max-width: 900px; }\n    .C2Corner .technologies-container .description p {\n      color: #003399;\n      font-family: 'Alfa Slab One', cursive;\n      max-width: 900px;\n      font-size: 17px;\n      margin-top: 50px;\n      margin-bottom: 50px;\n      padding-left: 20px;\n      padding-right: 20px;\n      text-align: center; }\n  .C2Corner .technologies-container .rotate_button figure span {\n    border: 5px solid #003399; }\n  .C2Corner .technologies-container .rotate_button figure span:nth-child(1) {\n    color: #003399; }\n  .C2Corner .technologies-container .rotate_button figure span:nth-child(2) {\n    color: #003399;\n    background: transparent; }\n  .C2Corner .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .C2Corner .logo-container .logoText {\n      color: #003399;\n      text-shadow: #3366CC 4px 4px 0px;\n      font-family: 'Alfa Slab One', cursive;\n      z-index: 100;\n      font-size: 65px;\n      line-height: 0; }\n    .C2Corner .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-align: center; }\n    .C2Corner .logo-container .paragraph {\n      color: #003399;\n      font-family: 'Alfa Slab One', cursive;\n      font-size: 20px;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      text-align: center;\n      z-index: 100;\n      max-width: 700px; }\n  .C2Corner .arrow {\n    display: block;\n    background-image: url(/imgs/c2corner/arrow-down.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    margin-top: 30px;\n    cursor: pointer; }\n  .C2Corner .show {\n    background-image: url(/imgs/c2corner/arrow-down.svg); }\n  .C2Corner .hide {\n    background-image: url(/imgs/c2corner/arrow-up.svg); }\n  @media (max-width: 850px) {\n    .C2Corner .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/c2corner/c2corner-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .C2Corner .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/c2corner/c2corner-mobile.png) !important; } }\n\n.CherryPick {\n  background: #F00000;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to right, #DC281E, #F00000);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #DC281E, #F00000);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n  .CherryPick .technologies-container .technologies div div {\n    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); }\n  .CherryPick .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n    background-image: url(/imgs/cheryPick/angular.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(1) div:nth-child(2) {\n    background-image: url(/imgs/cheryPick/laravel.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(1) div:nth-child(3) {\n    background-image: url(/imgs/cheryPick/mysql.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(2) div:nth-child(1) {\n    background-image: url(/imgs/cheryPick/php.png); }\n  .CherryPick .technologies-container .technologies div:nth-child(2) div:nth-child(2) {\n    background-image: url(/imgs/cheryPick/js.png); }\n  .CherryPick .technologies-container .description p {\n    font-family: 'Hammersmith One', sans-serif;\n    max-width: 600px;\n    font-size: 18px;\n    margin-top: 10px;\n    margin-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: black;\n    text-align: center; }\n  .CherryPick .technologies-container .description a {\n    color: black;\n    text-decoration: none; }\n  .CherryPick .technologies-container .rotate_button {\n    display: none; }\n  .CherryPick .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .CherryPick .logo-container img {\n      width: 200px; }\n    .CherryPick .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: black;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px; }\n    .CherryPick .logo-container .paragraph {\n      display: inline-block;\n      font-family: 'Hammersmith One', sans-serif;\n      font-size: 20px;\n      color: black;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100; }\n  .CherryPick .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .CherryPick .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .CherryPick .hide {\n    background-image: url(/imgs/cancel.svg); }\n\n@media (max-width: 500px) {\n  .Smoke_Zone .technologies-container .technologies {\n    flex-direction: column;\n    margin-bottom: 50px; }\n    .Smoke_Zone .technologies-container .technologies div div {\n      background-size: 50px !important;\n      width: 50px !important;\n      height: 50px !important; }\n    .Smoke_Zone .technologies-container .technologies div:nth-child(1) div:nth-child(1) {\n      background-size: 100px !important;\n      width: 100px !important;\n      height: 100px !important; } }\n\n.Houses {\n  background-image: url(/imgs/city.jpg);\n  background-size: cover; }\n  .Houses .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/houses/houses-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Houses .technologies-container .description p {\n    font-family: 'Alfa Slab One', cursive;\n    max-width: 600px;\n    font-size: 20px;\n    margin-top: 50px;\n    margin-bottom: 50px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: white;\n    text-align: center;\n    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5)); }\n  .Houses .technologies-container .rotate_button {\n    display: none; }\n  .Houses .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .Houses .logo-container .logoText {\n      color: white;\n      font-family: 'Alfa Slab One', cursive;\n      text-shadow: black 4px 4px 0px;\n      z-index: 100;\n      font-size: 65px;\n      line-height: 0; }\n    .Houses .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: white;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-align: center;\n      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5)); }\n    .Houses .logo-container .paragraph {\n      font-family: 'Alfa Slab One', cursive;\n      font-size: 20px;\n      color: white;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      text-align: center;\n      z-index: 100;\n      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5)); }\n  .Houses .arrow {\n    display: block;\n    background-image: url(/imgs/down-arrow_white.svg);\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    -webkit-filter: drop-shadow(0px 0px 15px black);\n    filter: drop-shadow(0px 0px 15px black); }\n  .Houses .show {\n    background-image: url(/imgs/down-arrow_white.svg); }\n  .Houses .hide {\n    background-image: url(/imgs/cancel_white.svg); }\n  @media (max-width: 850px) {\n    .Houses .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/houses/houses-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Houses .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/houses/houses-mobile.png) !important; } }\n\n.Arcbazar {\n  background: #9796f0;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #fbc7d4, #9796f0);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n  .Arcbazar .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/arcbazar/arcbazar-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Arcbazar .technologies-container .description {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column; }\n    .Arcbazar .technologies-container .description .first {\n      margin-top: 40px; }\n    .Arcbazar .technologies-container .description .last {\n      margin-bottom: 10px; }\n    .Arcbazar .technologies-container .description p {\n      padding-top: 5px;\n      padding-bottom: 5px;\n      font-family: 'Hammersmith One', sans-serif;\n      line-height: 28px;\n      max-width: 600px;\n      font-size: 18px;\n      padding-left: 20px;\n      padding-right: 20px;\n      color: black;\n      text-align: center;\n      font-weight: normal;\n      width: fit-content;\n      margin-top: 0px;\n      margin-bottom: 0px; }\n    .Arcbazar .technologies-container .description a {\n      color: black;\n      text-decoration: none; }\n  .Arcbazar .technologies-container .rotate_button figure span {\n    border: 5px solid black; }\n  .Arcbazar .technologies-container .rotate_button figure span:nth-child(1) {\n    color: black; }\n  .Arcbazar .technologies-container .rotate_button figure span:nth-child(2) {\n    color: #a696c8;\n    background: black; }\n  .Arcbazar .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .Arcbazar .logo-container img {\n      width: 400px; }\n      @media (max-height: 400px) {\n        .Arcbazar .logo-container img {\n          width: 180px !important; } }\n    .Arcbazar .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: black;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px; }\n    .Arcbazar .logo-container .paragraph {\n      background: black;\n      padding-left: 20px;\n      padding-right: 20px;\n      padding-top: 5px;\n      padding-bottom: 5px;\n      font-family: 'Hammersmith One', sans-serif;\n      font-size: 20px;\n      color: #a696c8;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100; }\n  .Arcbazar .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .Arcbazar .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .Arcbazar .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 850px) {\n    .Arcbazar .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/arcbazar/arcbazar-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Arcbazar .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/arcbazar/arcbazar-mobile.png) !important; }\n    .Arcbazar .technologies-container .description p {\n      margin-top: 0 !important;\n      margin-bottom: 0px !important; }\n    .Arcbazar .logo-container img {\n      width: 100%;\n      max-width: 300px; } }\n\n.Factoringvergelijken {\n  background-image: linear-gradient(to right top, #2F2541, #6E3C5F, #B0576A, #E38065, #FEB85F, #F9F871); }\n  .Factoringvergelijken .technologies-container .technologies {\n    width: 700px;\n    height: 100px;\n    background-image: url(/imgs/factoringvergelijken/factoringvergelijken-desktop.png);\n    display: block;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain; }\n  .Factoringvergelijken .technologies-container .description p {\n    padding-top: 5px;\n    padding-bottom: 5px;\n    font-family: 'Hammersmith One', sans-serif;\n    line-height: 28px;\n    max-width: 600px;\n    font-size: 18px;\n    padding-left: 20px;\n    padding-right: 20px;\n    color: black;\n    text-align: center;\n    font-weight: normal;\n    margin-top: 40px;\n    margin-bottom: 10px; }\n  .Factoringvergelijken .technologies-container .description a {\n    color: black;\n    text-decoration: none; }\n  .Factoringvergelijken .technologies-container .rotate_button figure span {\n    border: 5px solid black; }\n  .Factoringvergelijken .technologies-container .rotate_button figure span:nth-child(1) {\n    color: #2F2541;\n    background: transparent; }\n  .Factoringvergelijken .technologies-container .rotate_button figure span:nth-child(2) {\n    color: #2F2541;\n    background: transparent; }\n  .Factoringvergelijken .logo-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center; }\n    .Factoringvergelijken .logo-container img {\n      width: 500px; }\n      @media (max-height: 400px) {\n        .Factoringvergelijken .logo-container img {\n          width: 220px !important; } }\n    .Factoringvergelijken .logo-container .header {\n      font-family: 'Open Sans', 'Condensed';\n      text-transform: uppercase;\n      color: black;\n      font-size: 50px;\n      font-weight: 600;\n      z-index: 100;\n      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 8px; }\n    .Factoringvergelijken .logo-container .paragraph {\n      padding-left: 20px;\n      padding-right: 20px;\n      padding-top: 5px;\n      padding-bottom: 5px;\n      font-family: 'Hammersmith One', sans-serif;\n      font-size: 20px;\n      color: black;\n      letter-spacing: 0.62px;\n      line-height: 30px;\n      font-weight: 300;\n      z-index: 100; }\n  .Factoringvergelijken .arrow {\n    display: block;\n    background-position: center;\n    background-size: 80px;\n    width: 80px;\n    height: 80px;\n    margin: auto;\n    cursor: pointer;\n    position: relative; }\n  .Factoringvergelijken .show {\n    background-image: url(/imgs/down-arrow.svg); }\n  .Factoringvergelijken .hide {\n    background-image: url(/imgs/cancel.svg); }\n  @media (max-width: 850px) {\n    .Factoringvergelijken .technologies {\n      width: 350px !important;\n      height: 220px !important;\n      background-image: url(/imgs/factoringvergelijken/factoringvergelijken-mobile.png) !important; } }\n  @media (max-width: 500px) {\n    .Factoringvergelijken .technologies {\n      width: 250px !important;\n      height: 150px !important;\n      background-image: url(/imgs/factoringvergelijken/factoringvergelijken-mobile.png) !important; }\n    .Factoringvergelijken .logo-container img {\n      width: 100%;\n      max-width: 300px; } }\n\n.linkful {\n  background: #0b0812; }\n  .linkful a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .linkful .mt-50 {\n    margin-top: 50px !important; }\n  .linkful .linkful-container {\n    height: 100%;\n    width: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .linkful .linkful-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      -webkit-filter: drop-shadow(0px 0px 15px #B9EDF8);\n      filter: drop-shadow(0px 0px 3px #B9EDF8);\n      cursor: pointer; }\n    .linkful .linkful-container .arrow-up {\n      background-image: url(/imgs/linkful/arrow-up.svg); }\n    .linkful .linkful-container .arrow-down {\n      background-image: url(/imgs/linkful/arrow-down.svg); }\n    .linkful .linkful-container .description {\n      font-family: Roboto,sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      color: #a3daff;\n      text-shadow: #B9EDF8 0px 0px 5px; }\n    .linkful .linkful-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .linkful .linkful-container .header .logo {\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: contain;\n        width: 200px;\n        height: 200px;\n        background-image: url(/imgs/linkful/logo-color.png);\n        -webkit-filter: drop-shadow(0px 0px 15px #B9EDF8);\n        filter: drop-shadow(0px 0px 3px #B9EDF8);\n        opacity: 0.9; }\n    .linkful .linkful-container .d-flex {\n      display: flex; }\n    .linkful .linkful-container .d-none {\n      display: none; }\n    .linkful .linkful-container .info-container {\n      width: 100%;\n      min-height: 200px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto,sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #a3daff;\n      text-shadow: #B9EDF8 0px 0px 5px; }\n    .linkful .linkful-container .tzie-small {\n      font-size: 15px !important; }\n    .linkful .linkful-container .tech-container {\n      width: 100%;\n      min-height: 200px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .linkful .linkful-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 550px;\n        align-items: center;\n        justify-content: space-between; }\n        .linkful .linkful-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 200px;\n          background-image: url(/imgs/linkful/linkful.png); }\n\n@media (max-width: 650px) {\n  .linkful .info-container {\n    max-width: 300px !important; }\n  .linkful .description {\n    font-size: 16px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .linkful .header .logo {\n    width: 150px !important;\n    height: 150px !important; }\n  .linkful .row {\n    width: 400px !important; } }\n\n@media (max-width: 530px) {\n  .linkful .row {\n    width: 300px !important; } }\n\n@media (max-width: 400px) {\n  .linkful .info-container {\n    max-width: 250px !important; }\n  .linkful .row {\n    width: 240px !important; } }\n\n.smsplaza {\n  background: #0b0812; }\n  .smsplaza .frame {\n    background: rgba(0, 0, 0, 0.5);\n    box-shadow: 0 0 100px black; }\n  .smsplaza a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .smsplaza .mt-50 {\n    margin-top: 50px !important; }\n  .smsplaza .smspalza-container {\n    width: 100%;\n    height: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .smsplaza .smspalza-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      cursor: pointer; }\n    .smsplaza .smspalza-container .arrow-up {\n      background-image: url(/imgs/smsplaza/arrow-up.svg); }\n    .smsplaza .smspalza-container .arrow-down {\n      background-image: url(/imgs/smsplaza/arrow-down.svg); }\n    .smsplaza .smspalza-container .description {\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      color: #41B883; }\n    .smsplaza .smspalza-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .smsplaza .smspalza-container .header .logo {\n        color: #41B883;\n        text-shadow: #36495D 4px 4px 0px;\n        z-index: 100;\n        font-size: 65px;\n        font-family: 'Luckiest Guy', cursive;\n        line-height: 1; }\n    .smsplaza .smspalza-container .d-flex {\n      display: flex; }\n    .smsplaza .smspalza-container .d-none {\n      display: none; }\n    .smsplaza .smspalza-container .info-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #41B883; }\n    .smsplaza .smspalza-container .tzie-small {\n      font-size: 18px !important; }\n    .smsplaza .smspalza-container .tech-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .smsplaza .smspalza-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 300px;\n        align-items: center;\n        justify-content: space-between; }\n        .smsplaza .smspalza-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 300px;\n          background-image: url(/imgs/smsplaza/smsplaza.png); }\n\n@media (max-width: 650px) {\n  .smsplaza .info-container {\n    max-width: 300px !important; }\n  .smsplaza .description {\n    font-size: 16px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .smsplaza .row {\n    width: 200px !important; } }\n\n@media (max-width: 530px) {\n  .smsplaza .header .logo {\n    font-size: 45px !important; }\n  .smsplaza .row {\n    width: 150px !important; } }\n\n@media (max-width: 400px) {\n  .smsplaza .info-container {\n    max-width: 250px !important; }\n  .smsplaza .row {\n    width: 240px !important; } }\n\n.abirix {\n  background: black; }\n  .abirix a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .abirix .mt-50 {\n    margin-top: 50px !important; }\n  .abirix .abirix-container {\n    width: 100%;\n    height: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .abirix .abirix-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      cursor: pointer; }\n    .abirix .abirix-container .arrow-up {\n      background-image: url(/imgs/abirix/arrow-up.svg); }\n    .abirix .abirix-container .arrow-down {\n      background-image: url(/imgs/abirix/arrow-down.svg); }\n    .abirix .abirix-container .description {\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      color: #f0ea42; }\n    .abirix .abirix-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .abirix .abirix-container .header .logo {\n        color: #f0ea42;\n        text-shadow: #ce8c32 4px 4px 0px;\n        z-index: 100;\n        font-size: 65px;\n        font-family: 'Alfa Slab One', cursive;\n        line-height: 1; }\n    .abirix .abirix-container .d-flex {\n      display: flex; }\n    .abirix .abirix-container .d-none {\n      display: none; }\n    .abirix .abirix-container .info-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #f0ea42;\n      background: rgba(0, 0, 0, 0.5);\n      border-radius: 50%;\n      box-shadow: 0px 0px 100px black; }\n    .abirix .abirix-container .tzie-small {\n      font-size: 18px !important; }\n    .abirix .abirix-container .tech-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .abirix .abirix-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 300px;\n        align-items: center;\n        justify-content: space-between; }\n        .abirix .abirix-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 200px;\n          background-image: url(/imgs/abirix/abirix.png); }\n\n@media (max-width: 650px) {\n  .abirix .info-container {\n    max-width: 300px !important; }\n  .abirix .description {\n    font-size: 16px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .abirix .row {\n    width: 200px !important; } }\n\n@media (max-width: 530px) {\n  .abirix .header .logo {\n    font-size: 45px !important; }\n  .abirix .row {\n    width: 150px !important; } }\n\n@media (max-width: 400px) {\n  .abirix .info-container {\n    max-width: 250px !important; }\n  .abirix .row {\n    width: 240px !important; } }\n\n/* Color schemes */\n.demo-1 {\n  --color-text: #fff;\n  --color-bg: #101010;\n  --color-link: #fff;\n  --color-link-hover: #fff473;\n  --color-nav: #fff;\n  --color-bg-slide-1: #4cabef;\n  --color-bg-slide-2: #0406e6;\n  --color-bg-slide-3: #272526;\n  --color-bg-slide-4: #b9b9b9;\n  --color-bg-slide-5: #5900ce;\n  --color-bg-slide-6: #1b1a1a;\n  --color-bg-slide-7: #bf2525;\n  --color-bg-slide-8: #d6d1d1;\n  --color-bg-slide-9: #000000; }\n\n.CompareIp {\n  /* Header */\n  /* Slideshow */\n  /* Word + SVG styles */ }\n  .CompareIp .content {\n    position: relative;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 0 auto;\n    min-height: 100vh; }\n  .CompareIp .content--fixed {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    display: grid;\n    align-content: space-between;\n    width: 100%;\n    max-width: none;\n    min-height: 0;\n    height: 100vh;\n    padding: 1.5em;\n    pointer-events: none;\n    grid-template-columns: 50% 50%;\n    grid-template-rows: auto auto 4em;\n    grid-template-areas: 'header header' '... ...' 'github demos'; }\n  .CompareIp .content--fixed a {\n    pointer-events: auto; }\n  .CompareIp .codrops-header {\n    position: relative;\n    z-index: 100;\n    display: flex;\n    flex-direction: row;\n    align-items: flex-start;\n    align-items: center;\n    align-self: start;\n    grid-area: header;\n    justify-self: start; }\n  .CompareIp .codrops-header__title {\n    font-size: 1.15em;\n    font-weight: normal;\n    margin: 0 0 0 1em;\n    padding: 0.75em 0; }\n  .CompareIp .slideshow {\n    position: absolute !important;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0; }\n  .CompareIp .slide {\n    position: absolute !important;\n    width: 100vw;\n    height: 100vh;\n    top: 0;\n    left: 0 !important;\n    display: flex;\n    flex-direction: column;\n    align-content: center;\n    justify-content: center;\n    align-items: center;\n    pointer-events: none;\n    opacity: 0;\n    z-index: 1; }\n    .CompareIp .slide div {\n      width: 100%;\n      height: 100vh;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .CompareIp .slide div div {\n        width: 100%;\n        height: 25vh;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: space-between; }\n        .CompareIp .slide div div img {\n          width: 15%; }\n    .CompareIp .slide .description {\n      height: auto; }\n      .CompareIp .slide .description .img-container {\n        width: 300px;\n        display: block;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url(/imgs/compareip/compare.png); }\n  .CompareIp .slide--current {\n    opacity: 1;\n    pointer-events: auto;\n    z-index: 100; }\n  .CompareIp .slide__bg {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0; }\n  .CompareIp .slide__bg--6 {\n    background: var(--color-bg-slide-6); }\n  .CompareIp .slidenav {\n    position: relative;\n    margin: 16em 0 0 0;\n    z-index: 200; }\n  .CompareIp .slidenav__item {\n    background: none;\n    border: none;\n    font-size: 1.5em;\n    color: var(--color-nav);\n    margin: 1em; }\n  .CompareIp .slidenav__item:focus {\n    outline: none; }\n  .CompareIp .slidenav__item:hover {\n    opacity: 0.6; }\n  .CompareIp .slidenav__item--next .icon {\n    transform: rotate(180deg); }\n  .CompareIp .word {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    flex-wrap: wrap;\n    margin: 0 0 0.25em 0;\n    cursor: default;\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n    grid-area: title;\n    font-size: 10vw;\n    font-weight: 400; }\n  .CompareIp .word span {\n    display: block;\n    position: relative;\n    flex: none;\n    white-space: pre; }\n  .CompareIp .small-text {\n    font-size: 22px !important; }\n  .CompareIp .word--6 {\n    font-family: 'Hammersmith One', sans-serif; }\n  .CompareIp .word--6 .char1,\n  .CompareIp .word--6 .char8 {\n    color: #dc2e2e; }\n  .CompareIp .shapes {\n    position: fixed;\n    pointer-events: none;\n    top: 0;\n    left: 0;\n    height: 200vh; }\n  @media screen and (max-width: 40em) {\n    .CompareIp .slide .word {\n      font-size: 2.7em; } }\n  .CompareIp .hide {\n    opacity: 0; }\n  .CompareIp .description {\n    font-size: 16px !important; }\n  .CompareIp .draw-border {\n    margin-top: 40px;\n    background: none;\n    border: none;\n    cursor: pointer;\n    line-height: 1.5;\n    font: 700 1.2rem 'Roboto Slab', sans-serif;\n    padding: 1em 2em;\n    letter-spacing: 0.05rem;\n    box-shadow: inset 0 0 0 4px #d6d1d1;\n    color: #d6d1d1;\n    transition: color 0.25s 0.08333s;\n    position: relative; }\n    .CompareIp .draw-border:focus {\n      outline: 2px dotted #dc2e2e; }\n    .CompareIp .draw-border::before, .CompareIp .draw-border::after {\n      border: 0 solid transparent;\n      box-sizing: border-box;\n      content: '';\n      pointer-events: none;\n      position: absolute;\n      width: 0;\n      height: 0;\n      bottom: 0;\n      right: 0; }\n    .CompareIp .draw-border::before {\n      border-bottom-width: 4px;\n      border-left-width: 4px; }\n    .CompareIp .draw-border::after {\n      border-top-width: 4px;\n      border-right-width: 4px; }\n    .CompareIp .draw-border:hover {\n      color: #dc2e2e; }\n      .CompareIp .draw-border:hover::before, .CompareIp .draw-border:hover::after {\n        border-color: #dc2e2e;\n        transition: border-color 0s, width 0.25s, height 0.25s;\n        width: 100%;\n        height: 100%; }\n      .CompareIp .draw-border:hover::before {\n        transition-delay: 0s, 0s, 0.25s; }\n      .CompareIp .draw-border:hover::after {\n        transition-delay: 0s, 0.25s, 0s; }\n\n@media (max-width: 500px) {\n  .CompareIp .img-container {\n    width: 220px !important; }\n  .CompareIp .word--6 {\n    max-width: 300px; }\n  .CompareIp .small-text {\n    font-size: 18px !important; } }\n\n.neocore {\n  background: black; }\n  .neocore a {\n    text-decoration: none;\n    color: inherit;\n    outline: none; }\n  .neocore .mt-50 {\n    margin-top: 50px !important; }\n  .neocore .neocore-container {\n    width: 100%;\n    height: 100%;\n    z-index: 10000;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center; }\n    .neocore .neocore-container .arrow {\n      background-position: center;\n      background-repeat: no-repeat;\n      background-size: contain;\n      width: 50px;\n      height: 50px;\n      cursor: pointer; }\n    .neocore .neocore-container .arrow-up {\n      background-image: url(/imgs/neocore/arrow-up.svg); }\n    .neocore .neocore-container .arrow-down {\n      background-image: url(/imgs/neocore/arrow-down.svg); }\n    .neocore .neocore-container .description {\n      max-width: 400px;\n      text-align: center;\n      margin-top: 20px;\n      margin-bottom: 20px;\n      z-index: 100;\n      color: #eec60a;\n      text-shadow: black 4px 4px 0px;\n      font-size: 40px;\n      font-family: 'Luckiest Guy', cursive;\n      line-height: 1; }\n    .neocore .neocore-container .header {\n      width: 100%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .neocore .neocore-container .header .logo {\n        background-image: url(/imgs/neocore/logo.svg);\n        background-size: contain;\n        background-repeat: no-repeat;\n        width: 200px;\n        height: 200px; }\n    .neocore .neocore-container .d-flex {\n      display: flex; }\n    .neocore .neocore-container .d-none {\n      display: none; }\n    .neocore .neocore-container .info-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      font-family: Roboto, sans-serif;\n      font-size: 20px;\n      max-width: 400px;\n      text-align: justify;\n      color: #eec60a; }\n    .neocore .neocore-container .tzie-small {\n      font-size: 18px !important; }\n    .neocore .neocore-container .tech-container {\n      width: 100%;\n      min-height: 300px;\n      z-index: 10000;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center; }\n      .neocore .neocore-container .tech-container .row {\n        display: flex;\n        flex-direction: row;\n        width: 600px;\n        align-items: center;\n        justify-content: space-between; }\n        .neocore .neocore-container .tech-container .row div {\n          background-position: center;\n          background-repeat: no-repeat;\n          background-size: contain;\n          width: 100%;\n          height: 200px;\n          background-image: url(/imgs/neocore/neocore_skills.png); }\n\n@media (max-width: 650px) {\n  .neocore .info-container {\n    max-width: 300px !important; }\n  .neocore .description {\n    font-size: 32px !important;\n    max-width: 350px !important;\n    margin-top: 20px !important;\n    margin-bottom: 20px !important; }\n  .neocore .row {\n    width: 400px !important; }\n  .neocore .logo {\n    width: 140px !important;\n    height: 140px !important; } }\n\n@media (max-width: 530px) {\n  .neocore .header .logo {\n    font-size: 45px !important; }\n  .neocore .row {\n    width: 30px !important; }\n    .neocore .row div {\n      background-image: url(/imgs/neocore/neocore_skills_sm.png) !important; } }\n\n@media (max-width: 400px) {\n  .neocore .info-container {\n    max-width: 250px !important; }\n  .neocore .row {\n    width: 200px !important; } }\n\n.neocore-bg {\n  background: #eec60a !important; }\n\n.linkful-bg {\n  background: #3c48fa !important; }\n\n.compareip-bg {\n  background: rgba(237, 32, 37, 0.7) !important; }\n\n.abirix-bg {\n  background: #f0ea42 !important; }\n\n.smsplaza-bg {\n  background: #41B883 !important; }\n\n.houses-bg {\n  background: white !important; }\n\n.welhome-bg {\n  background: #E6E6E6 !important; }\n\n.history24-bg {\n  background: #E6E6E6 !important; }\n\n.smoke-zone-bg {\n  background: #D40080 !important; }\n\n.google-bg {\n  background: #ED2025 !important; }\n\n.c2corner-bg {\n  background: #003399 !important; }\n\n.arcbazar-bg {\n  background: black !important; }\n\n.factoringvergelijken-bg {\n  background: black !important; }\n", ""]);
 
 // exports
 
@@ -2797,7 +2797,7 @@ Better rank ordering method by Stefan Gustavson in 2012.
   // amd
   if (true) !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {return SimplexNoise;}).call(exports, __webpack_require__, exports, module),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  // common js
+  // utils js
   if (true) exports.SimplexNoise = SimplexNoise;
   // browser
   else if (typeof window !== 'undefined') window.SimplexNoise = SimplexNoise;
@@ -2824,7 +2824,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -2833,7 +2833,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _reactFullpage = __webpack_require__("./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js");
 
@@ -2896,7 +2896,7 @@ var _Neocore2 = _interopRequireDefault(_Neocore);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -3013,9 +3013,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -3034,9 +3034,9 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
@@ -3069,7 +3069,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3085,7 +3085,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3189,9 +3189,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3206,9 +3206,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3244,8 +3244,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Portfolio.scss", function() {
-			var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/sass-loader/lib/loader.js!./Portfolio.scss");
+		module.hot.accept("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Portfolio.scss", function() {
+			var newContent = require("!!../../../../../../node_modules/css-loader/LoadingPage.js!../../../../../../node_modules/sass-loader/libs/loader.js!./Portfolio.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -3269,7 +3269,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3282,7 +3282,7 @@ var _coalesce = __webpack_require__("./resources/assets/js/components/Portfolio/
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -3291,7 +3291,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3414,9 +3414,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3432,9 +3432,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -3463,7 +3463,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -3476,7 +3476,7 @@ var _util = __webpack_require__("./resources/assets/js/components/Portfolio/sect
 var _DetectBrowser = __webpack_require__("./resources/assets/js/services/DetectBrowser.js");
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -3722,45 +3722,45 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
     }
 
-    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseSize, 'baseSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeSize, 'rangeSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
+    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseSize, 'baseSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeSize, 'rangeSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
     leaveModule(module);
 })();
 
@@ -3768,45 +3768,45 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
     }
 
-    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseSize, 'baseSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeSize, 'rangeSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
-    reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/lib/coalesce.js');
+    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseSize, 'baseSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeSize, 'rangeSize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
+    reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Abirix/libs/coalesce.js');
     leaveModule(module);
 })();
 
@@ -3828,7 +3828,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3845,13 +3845,13 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -3860,7 +3860,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -3995,9 +3995,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4014,9 +4014,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4047,7 +4047,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4056,7 +4056,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -4064,7 +4064,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -4075,7 +4075,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4188,9 +4188,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4206,9 +4206,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4238,7 +4238,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4251,13 +4251,13 @@ var _Slideshow = __webpack_require__("./resources/assets/js/components/Portfolio
 
 var _Slideshow2 = _interopRequireDefault(_Slideshow);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
 __webpack_require__("./resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -4268,7 +4268,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4405,9 +4405,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4423,9 +4423,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -4455,7 +4455,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4469,7 +4469,7 @@ var _wordFx = __webpack_require__("./resources/assets/js/components/Portfolio/se
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -4617,17 +4617,17 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(effects, 'effects', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/Slideshow.js');
-  reactHotLoader.register(Slideshow, 'Slideshow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/Slideshow.js');
-  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/Slideshow.js');
+  reactHotLoader.register(effects, 'effects', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/Slideshow.js');
+  reactHotLoader.register(Slideshow, 'Slideshow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/Slideshow.js');
+  reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/Slideshow.js');
   leaveModule(module);
 })();
 
@@ -4635,17 +4635,17 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(effects, 'effects', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/Slideshow.js');
-  reactHotLoader.register(Slideshow, 'Slideshow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/Slideshow.js');
-  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/Slideshow.js');
+  reactHotLoader.register(effects, 'effects', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/Slideshow.js');
+  reactHotLoader.register(Slideshow, 'Slideshow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/Slideshow.js');
+  reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/Slideshow.js');
   leaveModule(module);
 })();
 
@@ -4663,13 +4663,13 @@ exports.default = _default2;
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5050,16 +5050,16 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register($jscomp, '$jscomp', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/anime.min.js');
-  reactHotLoader.register($jscomp$this, '$jscomp$this', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/anime.min.js');
+  reactHotLoader.register($jscomp, '$jscomp', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/anime.min.js');
+  reactHotLoader.register($jscomp$this, '$jscomp$this', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/anime.min.js');
   leaveModule(module);
 })();
 
@@ -5067,16 +5067,16 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register($jscomp, '$jscomp', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/anime.min.js');
-  reactHotLoader.register($jscomp$this, '$jscomp$this', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/anime.min.js');
+  reactHotLoader.register($jscomp, '$jscomp', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/anime.min.js');
+  reactHotLoader.register($jscomp$this, '$jscomp$this', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/anime.min.js');
   leaveModule(module);
 })();
 
@@ -5137,7 +5137,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5153,7 +5153,7 @@ var _anime2 = _interopRequireDefault(_anime);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5449,20 +5449,20 @@ exports.randomBetween = randomBetween;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(debounce, 'debounce', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(randomBetween, 'randomBetween', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(winsize, 'winsize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(Shape, 'Shape', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(Letter, 'Letter', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(Word, 'Word', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
+  reactHotLoader.register(debounce, 'debounce', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(randomBetween, 'randomBetween', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(winsize, 'winsize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(Shape, 'Shape', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(Letter, 'Letter', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(Word, 'Word', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
   leaveModule(module);
 })();
 
@@ -5470,20 +5470,20 @@ exports.randomBetween = randomBetween;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(debounce, 'debounce', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(randomBetween, 'randomBetween', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(winsize, 'winsize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(Shape, 'Shape', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(Letter, 'Letter', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
-  reactHotLoader.register(Word, 'Word', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/lib/wordFx.js');
+  reactHotLoader.register(debounce, 'debounce', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(randomBetween, 'randomBetween', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(winsize, 'winsize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(Shape, 'Shape', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(Letter, 'Letter', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
+  reactHotLoader.register(Word, 'Word', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/CompareIp/libs/wordFx.js');
   leaveModule(module);
 })();
 
@@ -5504,7 +5504,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Factoringvergelijken = undefined;
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5517,14 +5517,14 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5612,9 +5612,9 @@ var Factoringvergelijken = exports.Factoringvergelijken = function Factoringverg
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5629,9 +5629,9 @@ var Factoringvergelijken = exports.Factoringvergelijken = function Factoringverg
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5660,7 +5660,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5669,7 +5669,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -5677,7 +5677,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -5688,7 +5688,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5827,9 +5827,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5846,9 +5846,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -5879,7 +5879,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -5892,7 +5892,7 @@ var _Pattern = __webpack_require__("./resources/assets/js/components/Portfolio/p
 
 var _Pattern2 = _interopRequireDefault(_Pattern);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
@@ -5903,7 +5903,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6026,9 +6026,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6045,9 +6045,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6078,7 +6078,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6089,13 +6089,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _swirl = __webpack_require__("./resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js");
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -6104,7 +6104,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6247,9 +6247,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6265,9 +6265,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6295,7 +6295,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -6314,7 +6314,7 @@ var _DetectBrowser = __webpack_require__("./resources/assets/js/services/DetectB
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -6562,51 +6562,51 @@ window.addEventListener('resize', resize);
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
     }
 
-    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeY, 'rangeY', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(noiseSteps, 'noiseSteps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(renderToScreen, 'renderToScreen', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
+    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeY, 'rangeY', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(noiseSteps, 'noiseSteps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(renderToScreen, 'renderToScreen', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
     leaveModule(module);
 })();
 
@@ -6614,51 +6614,51 @@ window.addEventListener('resize', resize);
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
     }
 
-    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(renderToScreen, 'renderToScreen', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeY, 'rangeY', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(noiseSteps, 'noiseSteps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
-    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/lib/swirl.js');
+    reactHotLoader.register(initParticles, 'initParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(initParticle, 'initParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(drawParticles, 'drawParticles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(updateParticle, 'updateParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(drawParticle, 'drawParticle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(renderGlow, 'renderGlow', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(renderToScreen, 'renderToScreen', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(particleCount, 'particleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(particlePropCount, 'particlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(particlePropsLength, 'particlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeY, 'rangeY', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(noiseSteps, 'noiseSteps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
+    reactHotLoader.register(particleProps, 'particleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Linkful/libs/swirl.js');
     leaveModule(module);
 })();
 
@@ -6680,7 +6680,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6693,7 +6693,7 @@ var _shift = __webpack_require__("./resources/assets/js/components/Portfolio/sec
 
 var _urls = __webpack_require__("./resources/assets/js/constants/urls.js");
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/LoadingPage.js");
 
 var _propTypes = __webpack_require__("./node_modules/prop-types/index.js");
 
@@ -6702,7 +6702,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -6821,9 +6821,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6839,9 +6839,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -6871,7 +6871,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -6888,7 +6888,7 @@ var _simplexNoise2 = _interopRequireDefault(_simplexNoise);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
     enterModule && enterModule(module);
 })();
@@ -7100,48 +7100,48 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
     }
 
-    reactHotLoader.register(circleCount, 'circleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circlePropCount, 'circlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circlePropsLength, 'circlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circles, 'circles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circleProps, 'circleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(initCircles, 'initCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(initCircle, 'initCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(updateCircles, 'updateCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(updateCircle, 'updateCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(drawCircle, 'drawCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
+    reactHotLoader.register(circleCount, 'circleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circlePropCount, 'circlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circlePropsLength, 'circlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circles, 'circles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circleProps, 'circleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(initCircles, 'initCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(initCircle, 'initCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(updateCircles, 'updateCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(updateCircle, 'updateCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(drawCircle, 'drawCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(_default, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
     leaveModule(module);
 })();
 
@@ -7149,48 +7149,48 @@ exports.default = _default2;
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
     if (!reactHotLoader) {
         return;
     }
 
-    reactHotLoader.register(initCircles, 'initCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(initCircle, 'initCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(updateCircles, 'updateCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(updateCircle, 'updateCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(drawCircle, 'drawCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circleCount, 'circleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circlePropCount, 'circlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circlePropsLength, 'circlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circles, 'circles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(circleProps, 'circleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
-    reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/lib/shift.js');
+    reactHotLoader.register(initCircles, 'initCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(initCircle, 'initCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(updateCircles, 'updateCircles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(updateCircle, 'updateCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(drawCircle, 'drawCircle', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circleCount, 'circleCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circlePropCount, 'circlePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circlePropsLength, 'circlePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseRadius, 'baseRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeRadius, 'rangeRadius', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(xOff, 'xOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(yOff, 'yOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(zOff, 'zOff', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circles, 'circles', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(circleProps, 'circleProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(simplex, 'simplex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
+    reactHotLoader.register(_default2, 'default', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Neocore/libs/shift.js');
     leaveModule(module);
 })();
 
@@ -7212,7 +7212,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7223,7 +7223,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _pipeline = __webpack_require__("./resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js");
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -7240,7 +7240,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7385,9 +7385,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7403,9 +7403,9 @@ exports.default = _default2;
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7433,7 +7433,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7446,7 +7446,7 @@ var _util = __webpack_require__("./resources/assets/js/components/Portfolio/sect
 var _DetectBrowser = __webpack_require__("./resources/assets/js/services/DetectBrowser.js");
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7675,47 +7675,47 @@ function remove() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(pipeCount, 'pipeCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(pipePropCount, 'pipePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(pipePropsLength, 'pipePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(turnCount, 'turnCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(turnAmount, 'turnAmount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(turnChanceRange, 'turnChanceRange', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseWidth, 'baseWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeWidth, 'rangeWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(pipeProps, 'pipeProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(initPipes, 'initPipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(initPipe, 'initPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(updatePipes, 'updatePipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(updatePipe, 'updatePipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(drawPipe, 'drawPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
+  reactHotLoader.register(pipeCount, 'pipeCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(pipePropCount, 'pipePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(pipePropsLength, 'pipePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(turnCount, 'turnCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(turnAmount, 'turnAmount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(turnChanceRange, 'turnChanceRange', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseWidth, 'baseWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeWidth, 'rangeWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(pipeProps, 'pipeProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(initPipes, 'initPipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(initPipe, 'initPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(updatePipes, 'updatePipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(updatePipe, 'updatePipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(drawPipe, 'drawPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
   leaveModule(module);
 })();
 
@@ -7723,47 +7723,47 @@ function remove() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(initPipes, 'initPipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(initPipe, 'initPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(updatePipes, 'updatePipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(updatePipe, 'updatePipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(drawPipe, 'drawPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(pipeCount, 'pipeCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(pipePropCount, 'pipePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(pipePropsLength, 'pipePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(turnCount, 'turnCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(turnAmount, 'turnAmount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(turnChanceRange, 'turnChanceRange', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseWidth, 'baseWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeWidth, 'rangeWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
-  reactHotLoader.register(pipeProps, 'pipeProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/lib/pipeline.js');
+  reactHotLoader.register(initPipes, 'initPipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(initPipe, 'initPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(updatePipes, 'updatePipes', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(updatePipe, 'updatePipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(drawPipe, 'drawPipe', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(checkBounds, 'checkBounds', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(createCanvas, 'createCanvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(resize, 'resize', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(render, 'render', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(draw, 'draw', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(setup, 'setup', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(remove, 'remove', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(pipeCount, 'pipeCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(pipePropCount, 'pipePropCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(pipePropsLength, 'pipePropsLength', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(turnCount, 'turnCount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(turnAmount, 'turnAmount', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(turnChanceRange, 'turnChanceRange', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseSpeed, 'baseSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeSpeed, 'rangeSpeed', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseTTL, 'baseTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeTTL, 'rangeTTL', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseWidth, 'baseWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeWidth, 'rangeWidth', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(baseHue, 'baseHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(rangeHue, 'rangeHue', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(backgroundColor, 'backgroundColor', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(container, 'container', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(canvas, 'canvas', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(ctx, 'ctx', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(center, 'center', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(tick, 'tick', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
+  reactHotLoader.register(pipeProps, 'pipeProps', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Smsplaza/libs/pipeline.js');
   leaveModule(module);
 })();
 
@@ -7784,7 +7784,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.WellHome = undefined;
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7800,7 +7800,7 @@ var _Pattern2 = _interopRequireDefault(_Pattern);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7889,9 +7889,9 @@ var WellHome = exports.WellHome = function WellHome() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7906,9 +7906,9 @@ var WellHome = exports.WellHome = function WellHome() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -7936,7 +7936,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Yandex = undefined;
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7945,7 +7945,7 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__("./resources/assets/js/constants/constants.js");
+var _constants = __webpack_require__("./resources/assets/js/constants/portfolioLinksList.js");
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -7956,7 +7956,7 @@ var _Pattern2 = _interopRequireDefault(_Pattern);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -7964,7 +7964,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Yandex = exports.Yandex = function Yandex() {
   return _react2.default.createElement(_Pattern2.default, {
     classname: 'Yandex',
-    logo: '../imgs/yandex/logo.png',
+    logo: '../imgs/google/logo.png',
     url: _constants2.default.yandex,
     effectClassIn: 'bounceIn',
     effectClassOut: 'bounceOut',
@@ -8074,15 +8074,15 @@ var Yandex = exports.Yandex = function Yandex() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(Yandex, 'Yandex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Yandex.js');
+  reactHotLoader.register(Yandex, 'Yandex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Google.js');
   leaveModule(module);
 })();
 
@@ -8090,15 +8090,15 @@ var Yandex = exports.Yandex = function Yandex() {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(Yandex, 'Yandex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Yandex.js');
+  reactHotLoader.register(Yandex, 'Yandex', '/var/www/portfolio/resources/assets/js/components/Portfolio/sections/Google.js');
   leaveModule(module);
 })();
 
@@ -8118,13 +8118,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -8184,36 +8184,36 @@ var lerp = exports.lerp = function lerp(n1, n2, speed) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(PI, "PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(cos, "cos", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(sin, "sin", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(abs, "abs", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(sqrt, "sqrt", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(pow, "pow", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(round, "round", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(random, "random", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(atan2, "atan2", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(HALF_PI, "HALF_PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(TAU, "TAU", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(TO_RAD, "TO_RAD", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(floor, "floor", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(rand, "rand", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(randIn, "randIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(randRange, "randRange", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(fadeIn, "fadeIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(fadeOut, "fadeOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(fadeInOut, "fadeInOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(dist, "dist", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(angle, "angle", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(lerp, "lerp", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
+  reactHotLoader.register(PI, "PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(cos, "cos", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(sin, "sin", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(abs, "abs", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(sqrt, "sqrt", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(pow, "pow", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(round, "round", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(random, "random", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(atan2, "atan2", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(HALF_PI, "HALF_PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(TAU, "TAU", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(TO_RAD, "TO_RAD", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(floor, "floor", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(rand, "rand", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(randIn, "randIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(randRange, "randRange", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(fadeIn, "fadeIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(fadeOut, "fadeOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(fadeInOut, "fadeInOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(dist, "dist", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(angle, "angle", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(lerp, "lerp", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
   leaveModule(module);
 })();
 
@@ -8221,36 +8221,36 @@ var lerp = exports.lerp = function lerp(n1, n2, speed) {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
   }
 
-  reactHotLoader.register(PI, "PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(cos, "cos", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(sin, "sin", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(abs, "abs", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(sqrt, "sqrt", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(pow, "pow", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(round, "round", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(random, "random", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(atan2, "atan2", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(HALF_PI, "HALF_PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(TAU, "TAU", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(TO_RAD, "TO_RAD", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(floor, "floor", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(rand, "rand", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(randIn, "randIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(randRange, "randRange", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(fadeIn, "fadeIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(fadeOut, "fadeOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(fadeInOut, "fadeInOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(dist, "dist", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(angle, "angle", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
-  reactHotLoader.register(lerp, "lerp", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/common/util.js");
+  reactHotLoader.register(PI, "PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(cos, "cos", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(sin, "sin", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(abs, "abs", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(sqrt, "sqrt", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(pow, "pow", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(round, "round", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(random, "random", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(atan2, "atan2", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(HALF_PI, "HALF_PI", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(TAU, "TAU", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(TO_RAD, "TO_RAD", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(floor, "floor", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(rand, "rand", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(randIn, "randIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(randRange, "randRange", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(fadeIn, "fadeIn", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(fadeOut, "fadeOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(fadeInOut, "fadeInOut", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(dist, "dist", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(angle, "angle", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
+  reactHotLoader.register(lerp, "lerp", "/var/www/portfolio/resources/assets/js/components/Portfolio/sections/utils/utils.js");
   leaveModule(module);
 })();
 
@@ -8270,13 +8270,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").enterModule;
 
   enterModule && enterModule(module);
 })();
@@ -8323,9 +8323,9 @@ var DetectBrowser = exports.DetectBrowser = {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;
@@ -8339,9 +8339,9 @@ var DetectBrowser = exports.DetectBrowser = {
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/LoadingPage.js").leaveModule;
 
   if (!reactHotLoader) {
     return;

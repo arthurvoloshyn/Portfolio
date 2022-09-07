@@ -5,6 +5,7 @@ $secondColor: #000;
 
 .neocore {
   background: #000;
+
   a {
     color: inherit;
     outline: none;
@@ -30,25 +31,26 @@ $secondColor: #000;
       background-size: contain;
       cursor: pointer;
       height: 50px;
+      margin-top: 40px;
       width: 50px;
     }
 
     .arrow-up {
-      background-image: url('#{$img-path}/neocore/arrow-up.svg');
+      background-image: url('#{$portfolio-img-path}/neocore/arrow-up.svg');
     }
 
     .arrow-down {
-      background-image: url('#{$img-path}/neocore/arrow-down.svg');
+      background-image: url('#{$portfolio-img-path}/neocore/arrow-down.svg');
     }
 
     .description {
       color: $baseColor;
       font-family: 'Luckiest Guy', cursive;
       font-size: 40px;
-      line-height: 1;
-      margin-bottom: 20px;
-      margin-top: 20px;
-      max-width: 400px;
+      line-height: 1.25;
+      margin-bottom: 25px;
+      margin-top: 25px;
+      max-width: 500px;
       text-align: center;
       text-shadow: $secondColor 4px 4px 0;
       z-index: 100;
@@ -62,7 +64,7 @@ $secondColor: #000;
       width: 100%;
 
       .logo {
-        background-image: url('#{$img-path}/neocore/logo.svg');
+        background-image: url('#{$portfolio-img-path}/neocore/logo.svg');
         background-repeat: no-repeat;
         background-size: contain;
         height: 200px;
@@ -82,26 +84,27 @@ $secondColor: #000;
       align-items: center;
       color: $baseColor;
       flex-direction: column;
-
       font-family: Roboto, sans-serif;
       font-size: 20px;
       justify-content: center;
+      line-height: 25px;
       max-width: 400px;
-      min-height: 300px;
+      min-height: 200px;
       text-align: justify;
       width: 100%;
       z-index: 10000;
     }
 
     .tzie-small {
-      font-size: 18px !important;
+      font-size: 24px !important;
+      line-height: 36px !important;
     }
 
     .tech-container {
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      min-height: 300px;
+      min-height: 200px;
       width: 100%;
       z-index: 10000;
 
@@ -113,7 +116,7 @@ $secondColor: #000;
         width: 600px;
 
         div {
-          background-image: url('#{$img-path}/neocore/neocore_skills.png');
+          background-image: url('#{$portfolio-img-path}/neocore/neocore_skills.png');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
@@ -121,6 +124,24 @@ $secondColor: #000;
           width: 100%;
         }
       }
+    }
+  }
+}
+
+@media (max-height: 600px) and (min-width: 651px) {
+  .neocore .neocore-container {
+    .arrow {
+      margin-top: 20px;
+    }
+
+    .description {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+
+    .header .logo {
+      height: 150px;
+      width: 150px;
     }
   }
 }
@@ -146,6 +167,14 @@ $secondColor: #000;
       height: 140px !important;
       width: 140px !important;
     }
+
+    .neocore-container .tech-container {
+      min-height: 100px;
+
+      .row div {
+        height: 100px;
+      }
+    }
   }
 }
 
@@ -156,25 +185,35 @@ $secondColor: #000;
         font-size: 45px !important;
       }
     }
-
-    .row {
-      width: 30px !important;
-
-      div {
-        background-image: url('#{$img-path}/neocore/neocore_skills_sm.png') !important;
-      }
-    }
   }
 }
 
 @media (max-width: 400px) {
   .neocore {
     .info-container {
-      max-width: 250px !important;
+      line-height: 18px !important;
+      max-width: 235px !important;
     }
 
     .row {
       width: 200px !important;
+    }
+
+    .description {
+      max-width: 225px !important;
+    }
+
+    .neocore-container {
+      .tzie-small {
+        font-size: 15px !important;
+        line-height: 24px !important;
+      }
+
+      .arrow {
+        height: 40px;
+        margin-top: 20px;
+        width: 40px;
+      }
     }
   }
 }

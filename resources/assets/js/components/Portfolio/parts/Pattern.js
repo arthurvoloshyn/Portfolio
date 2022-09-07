@@ -9,8 +9,13 @@ class Pattern extends Component {
     url: PropTypes.string,
     effectClassIn: PropTypes.string,
     effectClassOut: PropTypes.string,
-
-    technologies: PropTypes.func,
+    technologies: PropTypes.arrayOf(
+      PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+        }),
+      ),
+    ),
     description: PropTypes.func,
     figure: PropTypes.func,
     logoDescription: PropTypes.func,
@@ -20,20 +25,19 @@ class Pattern extends Component {
     classname: '',
     logo: '',
     logoText: '',
-    url: '#',
+    url: '',
     effectClassIn: 'zoomIn',
     effectClassOut: 'zoomOut',
-
-    technologies: () => {},
+    figure: () => <div />,
+    technologies: [],
     description: () => {},
-    figure: () => {},
     logoDescription: () => {},
   };
 
   constructor(props) {
     super(props);
 
-    const { effectClassIn, effectClassOut } = props;
+    const { effectClassIn, effectClassOut } = this.props;
 
     this.clasess = {
       show: `animated ${effectClassIn} flex`,
@@ -45,11 +49,10 @@ class Pattern extends Component {
     };
   }
 
-  clickHandle = () => {
+  clickHandle = () =>
     this.setState(({ activeSide }) => ({
       activeSide: !activeSide,
     }));
-  };
 
   render() {
     const {
@@ -68,11 +71,24 @@ class Pattern extends Component {
     return (
       <div className={`Pattern ${classname}`}>
         <div className={`technologies-container ${activeSide ? hide : show}`}>
-          {technologies()}
+          <div className="technologies">
+            {technologies.map((technologiesRow, i) => (
+              <div key={`technologiesRow_${i}`}>
+                {technologiesRow.map(({ id }) => (
+                  <div key={id} className={id} />
+                ))}
+              </div>
+            ))}
+          </div>
+
           {description()}
-          <a className="rotate_button" href={url} rel="noopener noreferrer" target="_blank">
-            <figure>{figure()}</figure>
-          </a>
+
+          {url && (
+            <a className="rotate_button" href={url} rel="noopener noreferrer" target="_blank">
+              <figure>{figure()}</figure>
+            </a>
+          )}
+
           <div className="arrow hide" onClick={this.clickHandle} />
         </div>
 

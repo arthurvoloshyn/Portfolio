@@ -1,54 +1,42 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Constants from '../../../../constants/constants';
 import URLS from '../../../../constants/urls';
+import withSectionData from '../../hocs/withSectionData';
+import updateMenuClasses from '../../utils/updateMenuClasses';
+import { remove, setup } from './common/swirl';
 
-import { remove, setup } from './lib/swirl';
-
-const { portfolio, first_slide, linkful } = URLS;
+const { portfolio: portfolioUrl, first_slide: firstSlideUrl, linkful: linkfulUrl } = URLS;
+const sectionData = {
+  sectionClassName: 'linkful-bg',
+  sectionPage: [portfolioUrl, firstSlideUrl, linkfulUrl],
+  onEnter: () => setup(),
+  onLeave: () => remove(),
+};
 
 class Linkful extends Component {
   static propTypes = {
-    page: PropTypes.shape({
-      page: PropTypes.string,
-    }),
+    info: PropTypes.bool,
+    toggle: PropTypes.func,
   };
 
   static defaultProps = {
-    page: {
-      page: '',
-    },
-  };
-
-  state = {
     info: false,
+    toggle: () => {},
   };
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    const {
-      page: { page },
-    } = nextProps;
-
-    if (page === portfolio || page === first_slide || page === linkful) {
-      setup();
-      $('#fp-nav ul li a span').addClass('linkful-bg');
-    } else {
-      remove();
-      $('#fp-nav ul li a span').removeClass('linkful-bg');
-    }
+  componentDidMount() {
+    sectionData.onEnter();
+    setTimeout(() => updateMenuClasses(sectionData.sectionClassName, true), 0);
   }
 
-  toggle = () => {
-    this.setState(({ info }) => ({
-      info: !info,
-    }));
-  };
+  componentWillUnmount() {
+    sectionData.onLeave();
+    updateMenuClasses(sectionData.sectionClassName);
+  }
 
   render() {
-    const { info } = this.state;
-    const { linkfulUrl } = Constants;
+    const { info, toggle } = this.props;
 
     return (
       <div className="demo-2 linkful">
@@ -58,14 +46,10 @@ class Linkful extends Component {
           <div className="content content--canvas-linkful">
             <div className="linkful-container">
               <div className="header">
-                <a href={linkfulUrl} rel="noopener noreferrer" target="_blank">
-                  <div className="logo" />
-                </a>
+                <div className="logo" />
 
                 <div className="description">
-                  <a href={linkfulUrl} rel="noopener noreferrer" target="_blank">
-                    LINKFUL - A STUNNING WAY TO CREATE A&nbsp;PERFECT ABOUT&nbsp;ME PAGE!
-                  </a>
+                  <span>LINKFUL - A STUNNING WAY TO CREATE A&nbsp;PERFECT ABOUT&nbsp;ME PAGE!</span>
                 </div>
               </div>
 
@@ -76,24 +60,16 @@ class Linkful extends Component {
               </div>
 
               <div className={`info-container tzie-small ${info ? 'd-flex' : 'd-none'}`}>
-                I have created, designed and developed this project. I built the application using
+                I have created, designed, and developed this project. I built the application using
                 the most powerful and popular technologies. The frontend of the user dashboard was
-                built using React and Redux, and also used Saga to manage the asynchronous actions.
-                The administration panel is built with Laravel, and separate components with Vue
-                were also developed. The backend is based on Laravel, the Mysql database for storing
-                statistics. The system is fully tested.
+                built using React and Redux and also used Saga to manage the asynchronous actions.
+                The administration panel is built with Laravel, and separate components with Vue.js
+                were also developed. The backend is based on Laravel, the MySQL, and Mongo databases
+                for storing statistics. The system is fully tested. Infrastructure works on the
+                basis of Docker and Continues Delivery.
               </div>
 
-              <div className={`arrow ${info ? 'arrow-up' : 'arrow-down'}`} onClick={this.toggle} />
-
-              <a
-                className="mt-50 description"
-                href={linkfulUrl}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                CHECK IT OUT
-              </a>
+              <div className={`arrow ${info ? 'arrow-up' : 'arrow-down'}`} onClick={toggle} />
             </div>
           </div>
         </section>
@@ -102,6 +78,4 @@ class Linkful extends Component {
   }
 }
 
-const mapStateToProps = ({ page }) => ({ page });
-
-export default connect(mapStateToProps)(Linkful);
+export default withSectionData(sectionData)(Linkful);

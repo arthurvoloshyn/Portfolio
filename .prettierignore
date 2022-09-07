@@ -1,4 +1,4 @@
-resources/assets/js/components/Portfolio/sections/CompareIp/lib/charming.min.js
-resources/assets/js/components/Portfolio/sections/CompareIp/lib/anime.min.js
+resources/assets/js/components/Portfolio/sections/CompareIp/libs/charming.min.js
+resources/assets/js/components/Portfolio/sections/CompareIp/libs/anime.min.js
 
-resources/assets/js/components/Preloader/scss/animate.min.scss
+resources/assets/js/components/Preloader/scss/libs/animate.min.scss

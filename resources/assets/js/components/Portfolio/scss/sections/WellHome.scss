@@ -3,7 +3,7 @@
 
   .technologies-container {
     .technologies {
-      background-image: url('#{$img-path}/welhome/welhome-desktop.png');
+      background-image: url('#{$portfolio-img-path}/welhome/welhome-desktop.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -14,6 +14,8 @@
     }
 
     .description {
+      margin: 0;
+
       p {
         color: #000;
         font-family: 'Roboto';
@@ -63,6 +65,10 @@
       margin-top: 0 !important;
       z-index: 100;
     }
+
+    .header-container {
+      margin: 0;
+    }
   }
 
   .arrow {
@@ -77,17 +83,17 @@
   }
 
   .show {
-    background-image: url('#{$img-path}/down-arrow.svg');
+    background-image: url('#{$portfolio-img-path}/down-arrow.svg');
   }
 
   .hide {
-    background-image: url('#{$img-path}/cancel.svg');
+    background-image: url('#{$portfolio-img-path}/cancel.svg');
   }
 
   @media (max-width: 850px) {
     .technologies {
-      background-image: url('#{$img-path}/welhome/welhome-mobile.png') !important;
-      height: 220px !important;
+      background-image: url('#{$portfolio-img-path}/welhome/welhome-mobile.png') !important;
+      height: 160px !important;
       width: 350px !important;
     }
   }
@@ -98,18 +104,20 @@
         font-size: 36px !important;
         text-align: center;
       }
+
+      .header-container {
+        max-width: 225px;
+      }
     }
 
     .technologies-container {
-      .description {
-        p span {
-          display: none;
-        }
+      .description p {
+        margin-top: 0 !important;
       }
 
       .technologies {
-        background-image: url('#{$img-path}/welhome/welhome-mobile.png') !important;
-        height: 150px !important;
+        background-image: url('#{$portfolio-img-path}/welhome/welhome-mobile.png') !important;
+        height: 140px !important;
         width: 250px !important;
       }
     }

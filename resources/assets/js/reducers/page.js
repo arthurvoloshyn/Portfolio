@@ -1,8 +1,8 @@
 import URLS from '../constants/urls';
 import ACTION_TYPES from '../constants/actionTypes';
+import GetPath from '../services/GetPath';
 
-const { href } = window.location;
-const path = href.split('/')[3].split('#');
+const path = GetPath();
 const page = path[1] || path[0];
 
 const initialState = {
@@ -13,7 +13,7 @@ const initialState = {
 const pageReducer = (state = initialState, { type, page, statusReload }) => {
   switch (type) {
     case ACTION_TYPES.SET_PAGE:
-      return { ...state, page: page || 'main' };
+      return { ...state, page: page || URLS.main };
     case ACTION_TYPES.RELOAD_PAGE:
       return { ...state, statusReload };
     default:

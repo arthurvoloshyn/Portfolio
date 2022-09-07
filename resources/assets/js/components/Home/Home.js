@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ReactRotatingText from 'react-rotating-text';
 import PropTypes from 'prop-types';
+import ReactRotatingText from 'react-rotating-text';
 
-import Constants from '../../constants/constants';
+import socialNetworkList from './constants/socialNetworkList';
 
 import './scss/Home.scss';
 
@@ -12,34 +12,25 @@ const Home = ({ preloader: { preloader } }) => {
     preloader ? (
       ''
     ) : (
-      <ReactRotatingText items={['ReactJs', 'VueJs', 'NodeJs']} typingInterval={100} />
+      <ReactRotatingText items={['React.js', 'Vue.js', 'Node.js']} typingInterval={100} />
     );
-
-  const { linkedin, git, telegram } = Constants;
 
   return (
     <div className="ip-main for_fade">
-      <div className="Preivew">
-        <div className="Preivew__neon">ARTUR VOLOSHYN</div>
-        <div className="Preivew__info">&lt; Software Engineer /&gt;</div>
-        <div className="Preivew__info Preivew__label_tech">
-          <p>
-            Working with technologies such as
-            {drawReactRotatingText()}
-          </p>
+      <div className="Preview">
+        <div className="Preview__neon">ARTUR VOLOSHYN</div>
+        <div className="Preview__info">&lt; Software Engineer /&gt;</div>
+        <div className="Preview__info Preview__label_tech">
+          <p>Working with technologies such as {drawReactRotatingText()}</p>
         </div>
       </div>
 
       <div className="Icons__icon_container">
-        <a href={linkedin} rel="noopener noreferrer" target="_blank">
-          <div />
-        </a>
-        <a href={git} rel="noopener noreferrer" target="_blank">
-          <div />
-        </a>
-        <a href={telegram} rel="noopener noreferrer" target="_blank">
-          <div />
-        </a>
+        {socialNetworkList.map(({ id, link, target }) => (
+          <a key={id} className={id} href={link} rel="noopener noreferrer" target={target}>
+            <div />
+          </a>
+        ))}
       </div>
     </div>
   );
