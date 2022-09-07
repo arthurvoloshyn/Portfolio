@@ -83,7 +83,7 @@ class Form extends Component {
 
     if (!error) {
       Alert.error('Some field is Invalid', configAlert);
-
+      this.setState({ disableForm: false });
       return;
     }
 
