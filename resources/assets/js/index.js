@@ -10,8 +10,6 @@ import './bootstrap';
 
 import './index.scss';
 
-// It would be easier to live if life had source code...
-
 ReactDOM.render(
   <Router>
     <Provider store={store}>
