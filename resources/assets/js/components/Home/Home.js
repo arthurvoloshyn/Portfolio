@@ -26,8 +26,8 @@ const Home = ({ preloader: { preloader } }) => {
       </div>
 
       <div className="Icons__icon_container">
-        {socialNetworkList.map(({ label, link }) => (
-          <a key={label} className={label} href={link} rel="noopener noreferrer" target="_blank">
+        {socialNetworkList.map(({ id, link, target }) => (
+          <a key={id} className={id} href={link} rel="noopener noreferrer" target={target}>
             <div />
           </a>
         ))}
