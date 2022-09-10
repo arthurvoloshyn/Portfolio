@@ -18,7 +18,7 @@ const skillList = [
   },
   {
     src: `${imgPathFront}ts.png`,
-    alt: 'TypeScript',
+    alt: 'TypeScript and Flow',
   },
   {
     src: `${imgPathFront}react.png`,
@@ -26,7 +26,7 @@ const skillList = [
   },
   {
     src: `${imgPathFront}redux.png`,
-    alt: 'Redux, as well as technologies such as Redux-Saga and Redux-Thunk',
+    alt: 'Recoil and Redux, as well as technologies such as Redux-Saga and Redux-Thunk',
   },
   {
     src: `${imgPathFront}mobx.png`,
@@ -62,12 +62,12 @@ const skillList = [
     alt: 'jQuery',
   },
   {
-    src: `${imgPathFront}flow.png`,
-    alt: 'Flow',
+    src: `${imgPathFront}storybook.png`,
+    alt: 'Storybook and JSDoc',
   },
   {
-    src: `${imgPathFront}pug.png`,
-    alt: 'Pug',
+    src: `${imgPathFront}html_template_engines.png`,
+    alt: 'HTML template engines such as Pug, EJS and Blade',
   },
   {
     src: `${imgPathFront}css_preprocessors.png`,
@@ -75,7 +75,8 @@ const skillList = [
   },
   {
     src: `${imgPathFront}css_frameworks.png`,
-    alt: 'CSS frameworks such as Bootstrap, Materialize, Foundation, Skeleton and Tailwind CSS',
+    alt:
+      'CSS utilities such as Styled Components, Emotion, Styled JSX, Material-UI, Ant Design, Tailwind CSS, Bootstrap, Materialize, Foundation and Skeleton',
   },
   {
     src: `${imgPathFront}bundlers.png`,
