@@ -63,7 +63,7 @@ const skillList = [
   },
   {
     src: `${imgPathFront}storybook.png`,
-    alt: 'Storybook and JSDoc',
+    alt: 'Storybook, as well as technologies such as Loki and JSDoc',
   },
   {
     src: `${imgPathFront}html_template_engines.png`,
@@ -80,12 +80,13 @@ const skillList = [
   },
   {
     src: `${imgPathFront}bundlers.png`,
-    alt: 'Bundlers and task managers such as Webpack, Gulp, Rollup.js, Parcel Snowpack and Bower',
+    alt:
+      'Bundlers and task managers such as Webpack, Gulp, ESBuild, Rollup.js, Parcel Snowpack and Bower',
   },
   {
     src: `${imgPathFront}js_testing_frameworks.png`,
     alt:
-      'JS testing utilities such as Jest, Enzyme, Testing Library (RTL), Cypress, Puppeteer, Mocha, Karma, Jasmine and Chai',
+      'JS testing utilities such as Jest, Enzyme, Testing Library (RTL), Cypress, WebdriverIO, Puppeteer, Mocha, Karma, Jasmine and Chai',
   },
   {
     src: `${imgPathFront}pwa.png`,
