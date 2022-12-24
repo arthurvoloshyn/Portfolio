@@ -26,11 +26,11 @@ const skillList = [
   },
   {
     src: `${imgPathFront}redux.png`,
-    alt: 'Recoil and Redux, as well as technologies such as Redux-Saga and Redux-Thunk',
+    alt: 'Redux and Redux Toolkit, as well as technologies such as Redux-Saga and Redux-Thunk',
   },
   {
-    src: `${imgPathFront}mobx.png`,
-    alt: 'MobX',
+    src: `${imgPathFront}state_management.png`,
+    alt: 'State management libraries such as MobX, RxJS, Recoil, and Effector',
   },
   {
     src: `${imgPathFront}graphql.png`,
@@ -38,7 +38,7 @@ const skillList = [
   },
   {
     src: `${imgPathFront}next.png`,
-    alt: 'Next.js',
+    alt: 'Next.js, as well as SSR & SSG technologies such as Gatsby, HUGO, and Remix',
   },
   {
     src: `${imgPathFront}react_native.png`,
@@ -49,13 +49,9 @@ const skillList = [
     alt: 'Vue, as well as technologies such as Nuxt.js and Vuex',
   },
   {
-    src: `${imgPathFront}rxjs.png`,
-    alt: 'RxJS',
-  },
-  {
     src: `${imgPathFront}web_components.png`,
     alt:
-      'Web Components, as well as technologies such as Stencil.js, Polymer, Bit, Lit-html, LitElement, Skate.js, Slim.js and Clarity Core',
+      'Web Components, as well as technologies such as Stencil.js, Polymer, Bit, Lit-html, LitElement, FAST, SolidJS, Skate.js, Slim.js and Clarity Core',
   },
   {
     src: `${imgPathFront}jquery.png`,
@@ -76,7 +72,7 @@ const skillList = [
   {
     src: `${imgPathFront}css_frameworks.png`,
     alt:
-      'CSS utilities such as Styled Components, Emotion, Styled JSX, Material-UI, Ant Design, Tailwind CSS, Bootstrap, Materialize, Foundation and Skeleton',
+      'CSS tools such as Styled Components, Emotion, Styled JSX, Material-UI, Ant Design, Tailwind CSS, Bootstrap, Materialize, Foundation and Skeleton',
   },
   {
     src: `${imgPathFront}bundlers.png`,
@@ -86,7 +82,7 @@ const skillList = [
   {
     src: `${imgPathFront}js_testing_frameworks.png`,
     alt:
-      'JS testing utilities such as Jest, Enzyme, Testing Library (RTL), Cypress, WebdriverIO, Puppeteer, Mocha, Karma, Jasmine and Chai',
+      'JS testing tools such as Jest, Enzyme, Testing Library (RTL), Cypress, WebdriverIO, Puppeteer, Mocha, Karma, Jasmine and Chai',
   },
   {
     src: `${imgPathFront}pwa.png`,
@@ -99,6 +95,11 @@ const skillList = [
   {
     src: `${imgPathOther}docker.png`,
     alt: 'Docker',
+  },
+  {
+    src: `${imgPathOther}ci-cd.png`,
+    alt:
+      'CI/CD tools such as Github Actions, GitLab CI/CD, Travis CI, Jenkins, App Center, and Fastlane',
   },
   {
     src: `${imgPathOther}linters.png`,
