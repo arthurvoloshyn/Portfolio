@@ -54,24 +54,9 @@
   ],
 
   "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly",
-    "opr": "readonly",
-    "safari": "readonly",
-    "isIE": "readonly",
-    "isChrome": "readonly",
-    "isOpera": "readonly",
-    "$": "readonly",
-    "classie": "readonly",
-    "Word": "readonly",
-    "L": "readonly",
-    "axios": "readonly",
     "document": "readonly",
     "navigator": "readonly",
-    "window": "readonly",
-    "mina": "readonly",
-    "Snap": "readonly",
-    "transEndEventName": "readonly"
+    "window": "readonly"
   },
 
   "rules": {

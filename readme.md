@@ -1,61 +1,28 @@
 # Portfolio Application
 
-My own portfolio build on React and Laravel
+My own portfolio build on React
 
-[Demo](https://arturvoloshyn.herokuapp.com/)
+[Demo](https://ArturW1998.github.io/Portfolio)
 
 ## To clone
 
-- You'll need to have [git](https://git-scm.com/), [node](https://nodejs.org/en/), [php 7.2](https://www.php.net/), [mySQL](https://www.mysql.com/), [composer](https://getcomposer.org/) and [libpng](http://www.libpng.org/pub/png/libpng.html) installed in
-  your system.
+- You'll need to have [git](https://git-scm.com/), [node](https://nodejs.org/en/),
+  [php 7.2](https://www.php.net/), [mySQL](https://www.mysql.com/),
+  [composer](https://getcomposer.org/) and [libpng](http://www.libpng.org/pub/png/libpng.html)
+  installed in your system.
 
 `git clone https://github.com/ArturW1998/Portfolio.git`
 
-## Back-end
-
-### Provides
-
-- php 7.x
-- laravel 5.x
-
-### To install
-
-- Then install the dependencies:
-
-`composer install` / `php composer.phar install`
-
-- Copy `.env.dist` as `.env`
-
-- Replace the database and mail connection strings in the .env file
-
-- Migrate:
-
-`php artisan migrate`
-
-### Run development server
-
-- laravel 5.x
-
-`php artisan serve`
-
-Open the web browser to `http://127.0.0.1:8000/`
-
-### Unit Testing
-
-- phpunit 6.x
-
-To run tests using PHPUnit:
-
-`php artisan test`
-
-## Front-end
-
-### Provides
+## Provides
 
 - react ^16.x
 - redux 4.x
 
 ### To install
+
+- Copy `.env.dist` as `.env`
+
+- Replace the values of the environment variables with your own in the `.env` file
 
 - Then install the dependencies:
 
@@ -63,8 +30,7 @@ To run tests using PHPUnit:
 
 ### Run development server
 
-- webpack-dev-server 2.x
-- react-hot-loader 4.x
+- webpack-dev-server 3.x
 - redux-devtools (with browser plugin)
 
 `npm run dev`
@@ -73,7 +39,7 @@ Open the web browser to `http://localhost:3000/`
 
 ### To build the production package
 
-- webpack 3.x
+- webpack 4.x
 - babel 6.x
 
 `npm run prod`
@@ -90,10 +56,9 @@ To do the actual linting and formatting, run:
 
 ### Unit Testing
 
-- jest 23.x
-- enzyme 3.x
+- jest 24.x
 
-To run tests using Jest and Enzyme:
+To run tests using Jest:
 
 `npm test`
 

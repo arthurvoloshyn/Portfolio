@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#0E0D10" />
+    <meta name="application-name" content="%REACT_APP_TITLE%" />
+
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#0E0D10" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicons/icons/icon-512x512.png" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/favicons/browserconfig.xml" />
+
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0E0D10" />
+    <meta name="apple-mobile-web-app-title" content="%REACT_APP_TITLE%" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/favicons/icons/icon-512x512.png" />
+    <link rel="mask-icon" href="%PUBLIC_URL%/favicons/safari-pinned-tab.svg" color="#65afc4" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicons/favicon.ico" type="image/x-icon" />
+
+    <link href="%PUBLIC_URL%/favicons/icons/splash-640x1136.png" media="(width: 320px) and (height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-750x1334.png" media="(width: 375px) and (height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-828x1792.png" media="(width: 621px) and (height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-1125x2436.png" media="(width: 375px) and (height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-1242x2208.png" media="(width: 414px) and (height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-1242x2688.png" media="(width: 414px) and (height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-1536x2048.png" media="(width: 768px) and (height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-1668x2224.png" media="(width: 834px) and (height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-1668x2388.png" media="(width: 834px) and (height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="%PUBLIC_URL%/favicons/icons/splash-2048x2732.png" media="(width: 1024px) and (height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+    <!-- SEO -->
+    <meta name="google-site-verification" content="%REACT_APP_GOOGLE_SITE_VERIFICATION%" />
+    <meta name="author" content="%REACT_APP_AUTHOR%" />
+    <meta name="robots" content="all" />
+    <meta name="description" content="%REACT_APP_DESCRIPTION%" />
+    <meta name="keywords" content="%REACT_APP_KEYWORDS%" />
+    <title>%REACT_APP_TITLE%</title>
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%REACT_APP_URL%" />
+    <meta property="og:title" content="%REACT_APP_TITLE%" />
+    <meta property="og:description" content="%REACT_APP_DESCRIPTION%" />
+    <meta property="og:image" content="%PUBLIC_URL%/imgs/logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preload" href="/fonts/Raleway.woff2" as="font" crossorigin />
+    <link rel="preload" href="/fonts/wire_one.woff2" as="font" crossorigin />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js" integrity="sha256-oI+elz+sIm+jpn8F/qEspKoKveTc5uKeFHNNVexe6d8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GOOGLE_ANALYTIC%"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '%REACT_APP_GOOGLE_ANALYTIC%');
+    </script>
+  </body>
+</html>
