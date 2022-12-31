@@ -10,7 +10,7 @@ import App from './App';
 import './scss/index.scss';
 
 ReactDOM.render(
-  <Router>
+  <Router basename="/Portfolio/">
     <Provider store={store}>
       <App />
     </Provider>
