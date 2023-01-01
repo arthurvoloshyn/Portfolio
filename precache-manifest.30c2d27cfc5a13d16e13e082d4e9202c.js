@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd933485e8a36bcadbce2370eca4126c",
+    "revision": "8b7e938fd571a558ea488fa9dbde8ba1",
     "url": "/Portfolio/index.html"
   },
   {
@@ -8,12 +8,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/css/2.2d3d9491.chunk.css"
   },
   {
-    "revision": "0849835c083b58e15801",
+    "revision": "5985850dc4c4504a3a5f",
     "url": "/Portfolio/static/css/3.8fc694a2.chunk.css"
   },
   {
-    "revision": "feedcb4b49da925d1d29",
-    "url": "/Portfolio/static/css/4.2e772b35.chunk.css"
+    "revision": "888eb6d1a39b1bc437b9",
+    "url": "/Portfolio/static/css/4.0ee23766.chunk.css"
   },
   {
     "revision": "b5cc5c57e872b8070a4d",
@@ -28,19 +28,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/css/8.b7abfdf9.chunk.css"
   },
   {
-    "revision": "d4cc72b0f3b13e7dbc94",
-    "url": "/Portfolio/static/css/main.19a177e4.chunk.css"
+    "revision": "e8e79744e0648c79beba",
+    "url": "/Portfolio/static/css/main.38f60919.chunk.css"
   },
   {
     "revision": "80de7a4b9528df76b145",
     "url": "/Portfolio/static/js/2.9038f105.chunk.js"
   },
   {
-    "revision": "0849835c083b58e15801",
-    "url": "/Portfolio/static/js/3.c9fda1d5.chunk.js"
+    "revision": "5985850dc4c4504a3a5f",
+    "url": "/Portfolio/static/js/3.6060916e.chunk.js"
   },
   {
-    "revision": "feedcb4b49da925d1d29",
+    "revision": "888eb6d1a39b1bc437b9",
     "url": "/Portfolio/static/js/4.23ebdb17.chunk.js"
   },
   {
@@ -64,11 +64,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/js/9.edb97eb4.chunk.js"
   },
   {
-    "revision": "d4cc72b0f3b13e7dbc94",
-    "url": "/Portfolio/static/js/main.ab03fdb6.chunk.js"
+    "revision": "e8e79744e0648c79beba",
+    "url": "/Portfolio/static/js/main.80c7e769.chunk.js"
   },
   {
-    "revision": "4e339339252af795e51e",
-    "url": "/Portfolio/static/js/runtime~main.eb1b3316.js"
+    "revision": "e22217e376ed8563cccc",
+    "url": "/Portfolio/static/js/runtime~main.bc7a5aaf.js"
   }
 ]);
