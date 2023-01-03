@@ -11,9 +11,10 @@ import App from './App';
 import './scss/index.scss';
 
 const relativePath = homepage.split('/')[3];
+const basename = relativePath ? `/${relativePath}/` : undefined;
 
 ReactDOM.render(
-  <Router basename={`/${relativePath}/`}>
+  <Router basename={basename}>
     <Provider store={store}>
       <App />
     </Provider>
