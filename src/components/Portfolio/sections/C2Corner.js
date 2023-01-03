@@ -1,7 +1,7 @@
 import React from 'react';
 
 import URLS from '../../../constants/urls';
-import portfolioLinksList from '../constants/portfolioLinksList';
+import portfolioLinks from '../constants/portfolioLinks';
 import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
 
@@ -32,7 +32,7 @@ const C2Corner = () => (
       </p>
     )}
     logoText="C2CORNER"
-    url={portfolioLinksList.c2corner}
+    url={portfolioLinks.c2corner}
   />
 );
 

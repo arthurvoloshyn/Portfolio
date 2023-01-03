@@ -2,7 +2,7 @@ import React from 'react';
 
 import URLS from '../../../constants/urls';
 import IMGS from '../../../constants/imgs';
-import portfolioLinksList from '../constants/portfolioLinksList';
+import portfolioLinks from '../constants/portfolioLinks';
 import sectionStyles from '../constants/sectionStyles';
 import withSectionData from '../hocs/withSectionData';
 import Pattern from '../parts/Pattern';
@@ -35,7 +35,7 @@ const FactoringVergelijken = () => (
           <span className="paragraph">Online factoring services</span>
         </p>
       )}
-      url={portfolioLinksList.factoringVergelijken}
+      url={portfolioLinks.factoringVergelijken}
     />
   </div>
 );

@@ -9,12 +9,12 @@ const {
   accessTokenParam,
   accessToken,
 } = mapApiPaths;
-const { mailPath } = formApiPaths;
+const { emailPath } = formApiPaths;
 
 const contactApi = {
   getTileLayerUrl: () =>
     `${basePath}${usernamePath}${styleIdPath}${tilesPath}?${accessTokenParam}${accessToken}`,
-  sendMail: data => getApiInstance(mailPath, 'POST', data),
+  sendEmail: data => getApiInstance(emailPath, 'POST', data),
 };
 
 export default contactApi;

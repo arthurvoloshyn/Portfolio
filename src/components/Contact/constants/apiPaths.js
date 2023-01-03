@@ -11,5 +11,5 @@ export const mapApiPaths = {
 /* eslint-enable */
 
 export const formApiPaths = {
-  mailPath: '/mail',
+  emailPath: '/mail',
 };

@@ -6,6 +6,7 @@ import Alert from 'react-s-alert';
 import REG_EXPS from '../../../constants/regExps';
 import getAction from '../../../state/actions/contact';
 import contactApi from '../utils/contactApi';
+import sendMailTo from '../utils/sendMailTo';
 
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/scale.css';
@@ -60,16 +61,12 @@ class Form extends Component {
   _send = async () => {
     const { contact: contactData } = this.props;
 
-    Alert.info('Message is Sent', configAlert);
-
     try {
-      const res = await contactApi.sendMail(contactData);
+      const res = await contactApi.sendEmail(contactData);
       if (res.exception) throw new Error(res);
       Alert.success('Message Sent', configAlert);
-      return true;
-    } catch (e) {
-      Alert.error('Error. Please contact me through the home page', configAlert);
-      return false;
+    } catch {
+      sendMailTo(contactData);
     }
   };
 
@@ -87,9 +84,9 @@ class Form extends Component {
       return;
     }
 
-    const successStatus = await this._send();
+    await this._send();
+
     this.setState({ disableForm: false });
-    if (!successStatus) return;
 
     this.contactForm.current.reset();
 

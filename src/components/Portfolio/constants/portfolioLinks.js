@@ -1,4 +1,4 @@
-const portfolioLinksList = {
+const portfolioLinks = {
   compareIp: 'https://compareip.com/',
   c2corner: 'https://c2corner.com/',
   arcbazar: 'https://www.arcbazar.com/',
@@ -6,4 +6,4 @@ const portfolioLinksList = {
   smsplaza: 'https://smsplaza.io',
 };
 
-export default portfolioLinksList;
+export default portfolioLinks;

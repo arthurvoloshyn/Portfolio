@@ -1,17 +1,19 @@
+import SOCIAL_NETWORK from '../../../constants/socialNetwork';
+
 const socialNetworkList = [
   {
     id: 'linkedIn',
-    link: 'https://www.linkedin.com/in/artur-voloshyn-4439b61a4/',
+    link: SOCIAL_NETWORK.linkedIn,
     target: '_blank',
   },
   {
     id: 'git',
-    link: 'https://github.com/ArturW1998',
+    link: SOCIAL_NETWORK.gitHub,
     target: '_blank',
   },
   {
     id: 'email',
-    link: 'mailto:arthurvoloshyn@gmail.com',
+    link: `mailto:${SOCIAL_NETWORK.email}`,
     target: '_self',
   },
 ];

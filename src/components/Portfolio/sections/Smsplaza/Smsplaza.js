@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
-import portfolioLinksList from '../../constants/portfolioLinksList';
+import portfolioLinks from '../../constants/portfolioLinks';
 import withSectionData from '../../hocs/withSectionData';
 import { remove, setup } from './common/pipeline';
 
@@ -14,12 +14,12 @@ const Smsplaza = ({ info, toggle }) => (
       <div className="content content--canvas--smsplaza">
         <div className="smsplaza-container">
           <div className="header">
-            <a href={portfolioLinksList.smsplaza} rel="noopener noreferrer" target="_blank">
+            <a href={portfolioLinks.smsplaza} rel="noopener noreferrer" target="_blank">
               <h2 className="logo">SMSPLAZA</h2>
             </a>
 
             <div className="description">
-              <a href={portfolioLinksList.smsplaza} rel="noopener noreferrer" target="_blank">
+              <a href={portfolioLinks.smsplaza} rel="noopener noreferrer" target="_blank">
                 Receive SMS Online | Verification Service
               </a>
             </div>
@@ -44,7 +44,7 @@ const Smsplaza = ({ info, toggle }) => (
 
           <a
             className="mt-50 description"
-            href={portfolioLinksList.smsplaza}
+            href={portfolioLinks.smsplaza}
             rel="noopener noreferrer"
             target="_blank"
           >
