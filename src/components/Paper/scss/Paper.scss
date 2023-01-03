@@ -1,0 +1,12 @@
+.paper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  .paper_text {
+    color: #87ceeb;
+    font-size: 20px;
+  }
+}

@@ -1,9 +1,9 @@
 {
-  "homepage": "https://arturvoloshyn.herokuapp.com",
+  "homepage": "https://ArturW1998.github.io/Portfolio",
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "My own portfolio build on React and Laravel",
+  "description": "My own portfolio build on React",
   "repository": {
     "type": "git",
     "url": "https://github.com/ArturW1998/Portfolio"
@@ -15,39 +15,26 @@
   ],
   "author": "Artur Voloshyn (https://github.com/arturw1998)",
   "license": "MIT",
-  "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "watch-poll": "npm run watch -- --watch-poll",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "eslint --ext .js,.jsx resources/assets/js",
-    "lint:styles": "stylelint --syntax scss resources/assets/js/**/*.scss",
-    "lint:fix": "npm run lint -- --fix",
-    "lint:styles:fix": "npm run lint:styles -- --fix",
-    "format": "prettier \"resources/assets/js/**/*.{js,jsx,yml,yaml,ts,tsx,md,graphql,mdx}\" --write",
-    "format:styles": "prettier \"resources/assets/js/**/*.scss\" --parser scss --write",
-    "precommit": "lint-staged",
-    "test": "jest",
-    "test:update": "npm test -- -u",
-    "test:watch": "npm test -- --watchAll --verbose",
-    "test:coverage": "npm test -- --bail --coverage --watchAll",
-    "predeploy": "npm run prod",
-    "deploy": "git push heroku master",
-    "validate": "npm run lint && npm run lint:styles && npm run prod"
+  "dependencies": {
+    "@fullpage/react-fullpage": "0.1.18",
+    "classnames": "^2.2.6",
+    "leaflet": "^1.4.0",
+    "modernizr": "^3.6.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-leaflet": "^1.9.1",
+    "react-parallax-mousemove": "^1.1.0",
+    "react-redux": "^7.1.0",
+    "react-rotating-text": "^1.2.1",
+    "react-router-dom": "^5.1.2",
+    "react-s-alert": "^1.4.1",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1",
+    "simplex-noise": "^2.4.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^23.6.0",
-    "babel-plugin-dynamic-import-node": "^2.3.3",
-    "babel-preset-react": "^6.23.0",
-    "browser-sync": "^2.26.12",
-    "browser-sync-webpack-plugin": "^2.0.1",
-    "copy-webpack-plugin": "^4.6.0",
-    "cross-env": "^5.2.0",
-    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-react-app": "^5.2.1",
@@ -63,14 +50,10 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^1.7.0",
     "eslint-plugin-standard": "^4.0.1",
-    "handlebars": "^4.5.0",
+    "gh-pages": "^2.1.1",
     "husky": "^3.1.0",
-    "identity-obj-proxy": "^3.0.0",
-    "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-webpack-plugin": "^1.6.1",
-    "laravel-mix": "^2.0",
     "lint-staged": "^9.5.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "stylelint": "^12.0.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^3.0.0",
@@ -78,62 +61,39 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^3.1.1",
     "stylelint-prettier": "^1.1.2",
-    "stylelint-scss": "^3.18.0",
-    "webpack-cli": "^3.3.12"
+    "stylelint-scss": "^3.18.0"
   },
-  "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.13",
-    "axios": "^0.19",
-    "babel-preset-es2016": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "bootstrap-sass": "^3.4.1",
-    "classnames": "^2.2.6",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.5.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.6.0",
-    "jquery": "^3.3.1",
-    "leaflet": "^1.4.0",
-    "lodash": "^4.17.11",
-    "modernizr": "^3.6.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-hot-loader": "^4.5.3",
-    "react-leaflet": "^1.9.1",
-    "react-parallax-mousemove": "^1.1.0",
-    "react-redux": "^5.1.1",
-    "react-rotating-text": "^1.2.1",
-    "react-router-dom": "^5.1.2",
-    "react-s-alert": "^1.4.1",
-    "redux": "^4.0.1",
-    "simplex-noise": "^2.4.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "test:update": "npm test -- -u",
+    "test:watch": "npm test -- --watchAll --verbose",
+    "test:coverage": "npm test -- --bail --coverage --watchAll",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "lint:styles": "stylelint --syntax scss src/**/*.scss",
+    "lint": "eslint --ext .js,.jsx src",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:styles:fix": "npm run lint:styles -- --fix",
+    "format": "prettier \"src/**/*.{js,jsx,yml,yaml,ts,tsx,md,graphql,mdx}\" --write",
+    "format:styles": "prettier \"src/**/*.scss\" --parser scss --write",
+    "precommit": "lint-staged",
+    "validate": "npm run lint && npm run lint:styles && npm run build"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run precommit"
     }
   },
-  "jest": {
-    "verbose": true,
-    "clearMocks": true,
-    "collectCoverage": true,
-    "setupTestFrameworkScriptFile": "./config/setupTest.js",
-    "snapshotSerializers": [
-      "./node_modules/enzyme-to-json/serializer"
-    ],
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./__mocks__/fileMock.js",
-      "\\.(css|scss)$": "identity-obj-proxy"
-    }
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
       ">0.2%",
+      "not dead",
       "not op_mini all"
     ],
     "development": [
