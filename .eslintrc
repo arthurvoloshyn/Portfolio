@@ -56,7 +56,17 @@
   "globals": {
     "document": "readonly",
     "navigator": "readonly",
-    "window": "readonly"
+    "window": "readonly",
+    "opr": "readonly",
+    "safari": "readonly",
+    "isIE": "readonly",
+    "isChrome": "readonly",
+    "isOpera": "readonly",
+    "Word": "readonly",
+    "L": "readonly",
+    "mina": "readonly",
+    "Snap": "readonly",
+    "transEndEventName": "readonly"
   },
 
   "rules": {
