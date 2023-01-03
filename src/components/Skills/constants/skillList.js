@@ -1,135 +1,174 @@
-import IMGS from '../../../constants/imgs';
+import html from '../../../resources/imgs/skills/frontend/html.png';
+import css from '../../../resources/imgs/skills/frontend/css.png';
+import js from '../../../resources/imgs/skills/frontend/js.png';
+import ts from '../../../resources/imgs/skills/frontend/ts.png';
+import react from '../../../resources/imgs/skills/frontend/react.png';
+import redux from '../../../resources/imgs/skills/frontend/redux.png';
+import stateManagement from '../../../resources/imgs/skills/frontend/state_management.png';
+import graphql from '../../../resources/imgs/skills/frontend/graphql.png';
+import next from '../../../resources/imgs/skills/frontend/next.png';
+import reactNative from '../../../resources/imgs/skills/frontend/react_native.png';
+import vue from '../../../resources/imgs/skills/frontend/vue.png';
+import webComponents from '../../../resources/imgs/skills/frontend/web_components.png';
+import jquery from '../../../resources/imgs/skills/frontend/jquery.png';
+import storybook from '../../../resources/imgs/skills/frontend/storybook.png';
+import htmlTemplateEngines from '../../../resources/imgs/skills/frontend/html_template_engines.png';
+import cssPreprocessors from '../../../resources/imgs/skills/frontend/css_preprocessors.png';
+import cssTools from '../../../resources/imgs/skills/frontend/css_tools.png';
+import bundlers from '../../../resources/imgs/skills/frontend/bundlers.png';
+import jsTestingTools from '../../../resources/imgs/skills/frontend/js_testing_tools.png';
+import pwa from '../../../resources/imgs/skills/frontend/pwa.png';
 
-const { imgPathBack, imgPathFront, imgPathOther } = IMGS;
+import nodejs from '../../../resources/imgs/skills/backend/nodejs.png';
+import php from '../../../resources/imgs/skills/backend/php.png';
+import laravel from '../../../resources/imgs/skills/backend/laravel.png';
+import databases from '../../../resources/imgs/skills/backend/databases.png';
+
+import git from '../../../resources/imgs/skills/other/git.png';
+import docker from '../../../resources/imgs/skills/other/docker.png';
+import ciCd from '../../../resources/imgs/skills/other/ci-cd.png';
+import linters from '../../../resources/imgs/skills/other/linters.png';
+import serverlessAndServers from '../../../resources/imgs/skills/other/serverless_&_servers.png';
+import cms from '../../../resources/imgs/skills/other/cms.png';
 
 /* eslint-disable max-len */
-const skillList = [
+
+const frontendSkills = [
   {
-    src: `${imgPathFront}html.png`,
+    src: html,
     alt: 'HTML',
   },
   {
-    src: `${imgPathFront}css.png`,
+    src: css,
     alt: 'CSS',
   },
   {
-    src: `${imgPathFront}js.png`,
+    src: js,
     alt: 'JavaScript',
   },
   {
-    src: `${imgPathFront}ts.png`,
+    src: ts,
     alt: 'TypeScript and Flow',
   },
   {
-    src: `${imgPathFront}react.png`,
+    src: react,
     alt: 'React and Preact',
   },
   {
-    src: `${imgPathFront}redux.png`,
+    src: redux,
     alt: 'Redux and Redux Toolkit, as well as technologies such as Redux-Saga and Redux-Thunk',
   },
   {
-    src: `${imgPathFront}state_management.png`,
+    src: stateManagement,
     alt: 'State management libraries such as MobX, RxJS, Recoil, and Effector',
   },
   {
-    src: `${imgPathFront}graphql.png`,
+    src: graphql,
     alt: 'GraphQL and Apollo',
   },
   {
-    src: `${imgPathFront}next.png`,
+    src: next,
     alt: 'Next.js, as well as SSR & SSG technologies such as Gatsby, HUGO, and Remix',
   },
   {
-    src: `${imgPathFront}react_native.png`,
+    src: reactNative,
     alt: 'React Native',
   },
   {
-    src: `${imgPathFront}vue.png`,
+    src: vue,
     alt: 'Vue, as well as technologies such as Nuxt.js and Vuex',
   },
   {
-    src: `${imgPathFront}web_components.png`,
+    src: webComponents,
     alt:
       'Web Components, as well as technologies such as Stencil.js, Polymer, Bit, Lit-html, LitElement, FAST, SolidJS, Skate.js, Slim.js and Clarity Core',
   },
   {
-    src: `${imgPathFront}jquery.png`,
+    src: jquery,
     alt: 'jQuery',
   },
   {
-    src: `${imgPathFront}storybook.png`,
+    src: storybook,
     alt: 'Storybook, as well as technologies such as Loki and JSDoc',
   },
   {
-    src: `${imgPathFront}html_template_engines.png`,
+    src: htmlTemplateEngines,
     alt: 'HTML template engines such as Pug, EJS and Blade',
   },
   {
-    src: `${imgPathFront}css_preprocessors.png`,
+    src: cssPreprocessors,
     alt: 'CSS preprocessors such as SASS, LESS, Stylus and PostCSS',
   },
   {
-    src: `${imgPathFront}css_frameworks.png`,
+    src: cssTools,
     alt:
       'CSS tools such as Styled Components, Emotion, Styled JSX, Material-UI, Ant Design, Tailwind CSS, Bootstrap, Materialize, Foundation and Skeleton',
   },
   {
-    src: `${imgPathFront}bundlers.png`,
+    src: bundlers,
     alt:
       'Bundlers and task managers such as Webpack, Gulp, ESBuild, Rollup.js, Parcel Snowpack and Bower',
   },
   {
-    src: `${imgPathFront}js_testing_frameworks.png`,
+    src: jsTestingTools,
     alt:
       'JS testing tools such as Jest, Enzyme, Testing Library (RTL), Cypress, WebdriverIO, Puppeteer, Mocha, Karma, Jasmine and Chai',
   },
   {
-    src: `${imgPathFront}pwa.png`,
+    src: pwa,
     alt: 'PWA and AMP',
   },
+];
+
+const backendSkills = [
   {
-    src: `${imgPathOther}git.png`,
+    src: nodejs,
+    alt: 'Node.js',
+  },
+  {
+    src: php,
+    alt: 'PHP',
+  },
+  {
+    src: laravel,
+    alt: 'Laravel',
+  },
+  {
+    src: databases,
+    alt: 'Databases such as MySQL, PostgreSQL, MongoDB and Firebase',
+  },
+];
+
+const anotherSkills = [
+  {
+    src: git,
     alt: 'Git, as well as technologies such as GitHub, GitLab and Bitbucket',
   },
   {
-    src: `${imgPathOther}docker.png`,
+    src: docker,
     alt: 'Docker',
   },
   {
-    src: `${imgPathOther}ci-cd.png`,
+    src: ciCd,
     alt:
       'CI/CD tools such as Github Actions, GitLab CI/CD, Travis CI, Jenkins, App Center, and Fastlane',
   },
   {
-    src: `${imgPathOther}linters.png`,
+    src: linters,
     alt: 'Linters and code formatters such as ESLint, Stylelint and Prettier',
   },
   {
-    src: `${imgPathOther}serverless_&_servers.png`,
+    src: serverlessAndServers,
     alt: 'Serverless and servers such as AWS, Azure, GCP, Firebase, Nginx and Apache',
   },
   {
-    src: `${imgPathOther}cms.png`,
+    src: cms,
     alt: "CMS's such as Expression.Cloud and WordPress",
   },
-  {
-    src: `${imgPathBack}nodejs.png`,
-    alt: 'Node.js',
-  },
-  {
-    src: `${imgPathBack}php.png`,
-    alt: 'PHP',
-  },
-  {
-    src: `${imgPathBack}laravel.png`,
-    alt: 'Laravel',
-  },
-  {
-    src: `${imgPathBack}databases.png`,
-    alt: 'Databases such as MySQL, PostgreSQL, MongoDB and Firebase',
-  },
 ];
+
 /* eslint-enable */
+
+const skillList = [...frontendSkills, ...anotherSkills, ...backendSkills];
 
 export default skillList;

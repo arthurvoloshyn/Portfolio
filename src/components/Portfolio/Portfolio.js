@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReactFullPage from '@fullpage/react-fullpage';
 
-import { setPage } from '../../actions/page';
+import { setPage } from '../../state/actions/page';
 import ENV from '../../constants/env';
 import sections from './constants/sections';
 

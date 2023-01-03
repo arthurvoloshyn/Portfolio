@@ -4,9 +4,9 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import URLS from '../../../constants/urls';
-import setStatus from '../../../actions/preloader';
-import { reloadPage, setPage } from '../../../actions/page';
-import { setStatusMenu } from '../../../actions/menu';
+import setStatus from '../../../state/actions/preloader';
+import { reloadPage, setPage } from '../../../state/actions/page';
+import { setStatusMenu } from '../../../state/actions/menu';
 import compose from '../utils/compose';
 import PathLoader from './PathLoader';
 

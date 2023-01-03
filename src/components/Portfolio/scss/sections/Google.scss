@@ -1,3 +1,4 @@
+$font-path: '../../../resources/fonts';
 $google-red: #ed2025;
 
 @font-face {
@@ -5,12 +6,12 @@ $google-red: #ed2025;
   font-family: 'YS Text';
   font-style: normal;
   font-weight: 300;
-  src: url('/fonts/google/GoogleSansText-Light.eot');
-  src: url('/fonts/google/GoogleSansText-Light.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/google/GoogleSansText-Light.woff2') format('woff2'),
-    url('/fonts/google/GoogleSansText-Light.woff') format('woff'),
-    url('/fonts/google/GoogleSansText-Light.ttf') format('truetype'),
-    url('/fonts/google/GoogleSansText-Light.svg#YSText-Light') format('svg');
+  src: url('#{$font-path}/google/GoogleSansText-Light.eot');
+  src: url('#{$font-path}/google/GoogleSansText-Light.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/google/GoogleSansText-Light.woff2') format('woff2'),
+    url('#{$font-path}/google/GoogleSansText-Light.woff') format('woff'),
+    url('#{$font-path}/google/GoogleSansText-Light.ttf') format('truetype'),
+    url('#{$font-path}/google/GoogleSansText-Light.svg#YSText-Light') format('svg');
 }
 
 .Google {

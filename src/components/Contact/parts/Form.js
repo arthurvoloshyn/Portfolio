@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Alert from 'react-s-alert';
 
 import REG_EXPS from '../../../constants/regExps';
-import getAction from '../../../actions/contact';
+import getAction from '../../../state/actions/contact';
 import contactApi from '../utils/contactApi';
 
 import 'react-s-alert/dist/s-alert-default.css';

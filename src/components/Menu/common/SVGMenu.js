@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import GetPath from '../../../services/GetPath';
-import { setStatusMenu, toggleStatus } from '../../../actions/menu';
+import { setStatusMenu, toggleStatus } from '../../../state/actions/menu';
 
 /* eslint-disable react/sort-comp */
 class SVGMenu extends Component {

@@ -1,26 +1,33 @@
-const imgsPath = '../imgs';
-const skillsImgPath = `${imgsPath}/skills`;
-const portfolioImgPath = `${imgsPath}/portfolio`;
+import preloader from '../resources/imgs/logo.png';
+
+import location from '../resources/imgs/contact/location-pin.png';
+
+import google from '../resources/imgs/portfolio/google/logo.png';
+import wellHome from '../resources/imgs/portfolio/welhome/wh.jpg';
+import smokeZone from '../resources/imgs/portfolio/smoke-zone/smoke_zone.png';
+import hookah from '../resources/imgs/portfolio/smoke-zone/hookah3.svg';
+import skyline from '../resources/imgs/portfolio/welhome/Skyline.png';
+import history from '../resources/imgs/portfolio/history/history.jpg';
+import pantheon from '../resources/imgs/portfolio/history/pantheon2.svg';
+import factoringVergelijken from '../resources/imgs/portfolio/factoringVergelijken/logo_f.png';
+import cherries from '../resources/imgs/portfolio/cheryPick/cherries.svg';
+import arcbazar from '../resources/imgs/portfolio/arcbazar/arcbazar_logo.png';
 
 const IMGS = {
-  preloader: `${imgsPath}/logo.png`,
+  preloader,
 
-  location: `${imgsPath}/contact/location-pin.png`,
+  location,
 
-  imgPathBack: `${skillsImgPath}/backend/`,
-  imgPathFront: `${skillsImgPath}/frontend/`,
-  imgPathOther: `${skillsImgPath}/other/`,
-
-  google: `${portfolioImgPath}/google/logo.png`,
-  wellHome: `${portfolioImgPath}/welhome/wh.jpg`,
-  smokeZone: `${portfolioImgPath}/smoke-zone/smoke_zone.png`,
-  hookah: `${portfolioImgPath}/smoke-zone/hookah3.svg`,
-  skyline: `${portfolioImgPath}/welhome/Skyline.png`,
-  history: `${portfolioImgPath}/history/history.jpg`,
-  pantheon: `${portfolioImgPath}/history/pantheon2.svg`,
-  factoringVergelijken: `${portfolioImgPath}/factoringVergelijken/logo_f.png`,
-  cherries: `${portfolioImgPath}/cheryPick/cherries.svg`,
-  arcbazar: `${portfolioImgPath}/arcbazar/arcbazar_logo.png`,
+  google,
+  wellHome,
+  smokeZone,
+  hookah,
+  skyline,
+  history,
+  pantheon,
+  factoringVergelijken,
+  cherries,
+  arcbazar,
 };
 
 export default IMGS;

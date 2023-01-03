@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { reloadPage, setPage } from '../../actions/page';
+import { reloadPage, setPage } from '../../state/actions/page';
 import menuList from './constants/menuList';
 import stylesList from './constants/stylesList';
 import getStylesList from './utils/getStylesList';
