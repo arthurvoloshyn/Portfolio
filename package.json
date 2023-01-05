@@ -16,7 +16,7 @@
   "author": "Artur Voloshyn (https://github.com/arturw1998)",
   "license": "MIT",
   "dependencies": {
-    "@fullpage/react-fullpage": "0.1.18",
+    "@fullpage/react-fullpage": "0.1.17",
     "classnames": "^2.2.6",
     "leaflet": "^1.4.0",
     "modernizr": "^3.6.0",

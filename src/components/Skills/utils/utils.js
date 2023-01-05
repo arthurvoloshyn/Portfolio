@@ -1,6 +1,6 @@
 import skillList from '../constants/skillList';
 
-export const chunkArray = (myArray, chunkSize) => {
+const chunkArray = (myArray, chunkSize) => {
   const results = [];
 
   while (myArray.length) {
