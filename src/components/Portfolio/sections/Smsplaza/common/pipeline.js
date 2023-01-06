@@ -1,11 +1,11 @@
 import DetectBrowser from '../../../../../services/DetectBrowser';
-import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../../utils/utils';
+import { cos, fadeInOut, HALF_PI, rand, round, sin, TAU, TO_RAD } from '../../../utils/helpers';
 import {
   createSectionCanvas,
   removeCanvas,
   resizeCanvas,
   updateFigure,
-} from '../../../utils/common';
+} from '../../../utils/canvas';
 
 const pipeCount = 15;
 const pipePropCount = 8;

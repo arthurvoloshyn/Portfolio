@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import LoadingPage from '../Paper/LoadingPage';
-import NotFoundPage from '../Paper/NotFoundPage';
+import LoadingPage from '../LoadingPage';
+import NotFoundPage from '../NotFoundPage';
 import routes from './constants/routes';
 
 import 'leaflet/dist/leaflet.css';

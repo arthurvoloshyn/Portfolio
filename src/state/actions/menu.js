@@ -1,4 +1,4 @@
-import ACTION_TYPES from '../../constants/actionTypes';
+import ACTION_TYPES from '../actionTypes';
 
 export const toggleStatus = status => ({
   type: ACTION_TYPES.TOGGLE_MENU_STATUS,

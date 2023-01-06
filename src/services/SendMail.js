@@ -1,8 +1,6 @@
-import SOCIAL_NETWORK from '../../../constants/socialNetwork';
+import SOCIAL_NETWORK from '../constants/socialNetwork';
 
-const sendMailTo = contactData => {
-  const { username, subject, email, body } = contactData;
-
+const sendMail = ({ username, email, subject, body }) => {
   const emailSubject = encodeURIComponent(subject);
   const emailBody = encodeURIComponent(`From: ${username}\nEmail: ${email}\nMessage: ${body}`);
   const letter = `mailto:${SOCIAL_NETWORK.email}?subject=${emailSubject}&body=${emailBody}`;
@@ -14,4 +12,4 @@ const sendMailTo = contactData => {
   document.body.removeChild(anchor);
 };
 
-export default sendMailTo;
+export default sendMail;

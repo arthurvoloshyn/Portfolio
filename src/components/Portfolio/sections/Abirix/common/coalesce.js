@@ -1,4 +1,4 @@
-import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../../utils/utils';
+import { angle, cos, fadeInOut, HALF_PI, lerp, rand, sin } from '../../../utils/helpers';
 import {
   createSectionCanvas,
   drawParticlePreparation,
@@ -9,7 +9,7 @@ import {
   renderToScreen,
   resizeCanvas,
   setParticleProps,
-} from '../../../utils/common';
+} from '../../../utils/canvas';
 
 const particleCount = 75;
 const particlePropCount = 9;

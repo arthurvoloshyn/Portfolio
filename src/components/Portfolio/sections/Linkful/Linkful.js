@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
 import withSectionData from '../../hocs/withSectionData';
-import updateMenuClasses from '../../utils/updateMenuClasses';
+import { updateMenuClasses } from '../../../../utils/updateItemClasses';
 import { remove, setup } from './common/swirl';
 
 const { portfolio: portfolioUrl, first_slide: firstSlideUrl, linkful: linkfulUrl } = URLS;

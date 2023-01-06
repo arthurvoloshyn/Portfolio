@@ -1,8 +1,8 @@
 import URLS from '../../constants/urls';
-import ACTION_TYPES from '../../constants/actionTypes';
-import GetPath from '../../services/GetPath';
+import ACTION_TYPES from '../actionTypes';
+import getPath from '../../utils/getPath';
 
-const path = GetPath();
+const path = getPath();
 const page = path[1] || path[0];
 
 const initialState = {

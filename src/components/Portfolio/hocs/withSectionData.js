@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import ENV from '../../../constants/env';
 import getDisplayName from '../utils/getDisplayName';
-import updateMenuClasses from '../utils/updateMenuClasses';
+import { updateMenuClasses } from '../../../utils/updateItemClasses';
 
 const withSectionData = ({
   sectionPage,

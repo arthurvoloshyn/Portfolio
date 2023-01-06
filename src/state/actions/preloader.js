@@ -1,4 +1,4 @@
-import ACTION_TYPES from '../../constants/actionTypes';
+import ACTION_TYPES from '../actionTypes';
 
 const setStatus = preloader => ({
   type: ACTION_TYPES.SET_PRELOADER_STATUS,

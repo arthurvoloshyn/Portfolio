@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import GetPath from '../../../services/GetPath';
+import getPath from '../../../utils/getPath';
+import { updateMenuClasses } from '../../../utils/updateItemClasses';
 import { setStatusMenu, toggleStatus } from '../../../state/actions/menu';
 
 /* eslint-disable react/sort-comp */
@@ -29,7 +30,7 @@ class SVGMenu extends Component {
     setStatus: () => {},
   };
 
-  path = GetPath();
+  path = getPath();
 
   scrollKeys = ['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown'];
 
@@ -121,12 +122,7 @@ class SVGMenu extends Component {
     setTimeout(() => this.el.classList.add('menu--open'), 250);
   };
 
-  updateMenuStyle = withAdding => {
-    const menuItems = document.querySelectorAll('#fp-nav ul li a span');
-    const classMethod = withAdding ? 'add' : 'remove';
-
-    menuItems.forEach(menuItem => menuItem.classList[classMethod]('effect--open'));
-  };
+  updateMenuStyle = withAdding => updateMenuClasses('effect--open', withAdding);
 
   animatePath = () => {
     const {
