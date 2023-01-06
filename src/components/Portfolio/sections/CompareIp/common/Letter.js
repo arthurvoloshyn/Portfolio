@@ -1,4 +1,4 @@
-import { debounce } from '../../../utils/utils';
+import { debounce } from '../../../utils/helpers';
 import Shape from './Shape';
 
 class Letter {

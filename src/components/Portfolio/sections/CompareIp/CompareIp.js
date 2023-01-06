@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import URLS from '../../../../constants/urls';
 import portfolioLinks from '../../constants/portfolioLinks';
-import updateMenuClasses from '../../utils/updateMenuClasses';
+import { updateMenuClasses } from '../../../../utils/updateItemClasses';
 import Slideshow from './common/Slideshow';
 
 import './common/wordFx';

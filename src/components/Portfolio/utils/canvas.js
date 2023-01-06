@@ -1,5 +1,5 @@
 import DetectBrowser from '../../../services/DetectBrowser';
-import { rand } from './utils';
+import { rand } from './helpers';
 
 export const setParticleProps = (
   particleProps,

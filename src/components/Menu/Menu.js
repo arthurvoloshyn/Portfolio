@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { reloadPage, setPage } from '../../state/actions/page';
 import menuList from './constants/menuList';
 import stylesList from './constants/stylesList';
-import getStylesList from './utils/getStylesList';
+import getStylesList from './presenters/getStylesList';
 import SVGMenu from './common/SVGMenu';
 
 import './scss/Menu.scss';

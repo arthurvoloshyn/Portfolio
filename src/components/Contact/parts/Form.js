@@ -5,8 +5,7 @@ import Alert from 'react-s-alert';
 
 import REG_EXPS from '../../../constants/regExps';
 import getAction from '../../../state/actions/contact';
-import contactApi from '../utils/contactApi';
-import sendMailTo from '../utils/sendMailTo';
+import sendMail from '../../../services/SendMail';
 
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/scale.css';
@@ -46,8 +45,6 @@ class Form extends Component {
     getAction: () => {},
   };
 
-  state = { disableForm: false };
-
   contactForm = createRef();
 
   username = createRef();
@@ -58,35 +55,18 @@ class Form extends Component {
 
   body = createRef();
 
-  _send = async () => {
-    const { contact: contactData } = this.props;
-
-    try {
-      const res = await contactApi.sendEmail(contactData);
-      if (res.exception) throw new Error(res);
-      Alert.success('Message Sent', configAlert);
-    } catch {
-      sendMailTo(contactData);
-    }
-  };
-
-  _onSubmit = async e => {
+  _onSubmit = e => {
     e.preventDefault();
 
-    this.setState({ disableForm: true });
-
     const error = this._validate();
-    const { getAction } = this.props;
+    const { getAction, contact: contactData } = this.props;
 
     if (!error) {
       Alert.error('Some field is Invalid', configAlert);
-      this.setState({ disableForm: false });
       return;
     }
 
-    await this._send();
-
-    this.setState({ disableForm: false });
+    sendMail(contactData);
 
     this.contactForm.current.reset();
 
@@ -140,7 +120,6 @@ class Form extends Component {
     const {
       contact: { username, subject, email, body },
     } = this.props;
-    const { disableForm } = this.state;
 
     return (
       <div className="contact-form" id="myContact_form_container">
@@ -153,7 +132,6 @@ class Form extends Component {
           <div>
             <input
               ref={this.username}
-              disabled={disableForm}
               name={USERNAME}
               onChange={this._onKeyUp}
               placeholder="Name"
@@ -162,7 +140,6 @@ class Form extends Component {
             />
             <input
               ref={this.email}
-              disabled={disableForm}
               name={EMAIL}
               onChange={this._onKeyUp}
               placeholder="Email"
@@ -173,7 +150,6 @@ class Form extends Component {
           <div>
             <input
               ref={this.subject}
-              disabled={disableForm}
               name={SUBJECT}
               onChange={this._onKeyUp}
               placeholder="Subject"
@@ -184,7 +160,6 @@ class Form extends Component {
           <div>
             <textarea
               ref={this.body}
-              disabled={disableForm}
               name={BODY}
               onChange={this._onKeyUp}
               placeholder="Message"

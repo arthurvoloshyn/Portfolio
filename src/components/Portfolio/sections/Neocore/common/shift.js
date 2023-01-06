@@ -1,12 +1,12 @@
 import SimplexNoise from 'simplex-noise';
 
-import { cos, fadeInOut, rand, sin, TAU } from '../../../utils/utils';
+import { cos, fadeInOut, rand, sin, TAU } from '../../../utils/helpers';
 import {
   createSectionCanvas,
   removeCanvas,
   resizeCanvas,
   updateFigure,
-} from '../../../utils/common';
+} from '../../../utils/canvas';
 
 const circleCount = 10;
 const circlePropCount = 8;

@@ -1,6 +1,6 @@
 import SimplexNoise from 'simplex-noise';
 
-import { cos, fadeInOut, lerp, rand, randRange, sin, TAU } from '../../../utils/utils';
+import { cos, fadeInOut, lerp, rand, randRange, sin, TAU } from '../../../utils/helpers';
 import {
   createSectionCanvas,
   drawParticlePreparation,
@@ -11,7 +11,7 @@ import {
   renderToScreen,
   resizeCanvas,
   setParticleProps,
-} from '../../../utils/common';
+} from '../../../utils/canvas';
 
 const particleCount = 400;
 const particlePropCount = 9;

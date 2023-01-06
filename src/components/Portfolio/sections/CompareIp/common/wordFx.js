@@ -1,4 +1,4 @@
-import { debounce } from '../../../utils/utils';
+import { debounce } from '../../../utils/helpers';
 import charming from '../libs/charming.min';
 import anime from '../libs/anime.min';
 import Letter from './Letter';
