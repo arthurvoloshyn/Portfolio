@@ -38,7 +38,7 @@ class Linkful extends Component {
 
     sectionData.onEnter();
 
-    if (page === linkfulUrl) {
+    if (sectionData.sectionPage.includes(page)) {
       setTimeout(() => updateMenuClasses(sectionData.sectionClassName, true), 0);
     }
   }
