@@ -171,6 +171,7 @@
         flex-direction: column;
         height: 100px;
         justify-content: space-between;
+        margin-bottom: 0;
         width: 100%;
 
         img {
@@ -295,6 +296,7 @@
   }
 
   .draw-border {
+    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
     background: none;
     border: none;
     cursor: pointer;
@@ -306,8 +308,6 @@
     &:focus {
       outline: 2px dotted #dc2e2e;
     }
-
-    @include btn-border-drawing(#d6d1d1, #dc2e2e, 4px, bottom, right);
   }
 }
 
