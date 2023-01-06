@@ -18,16 +18,29 @@ class Linkful extends Component {
   static propTypes = {
     info: PropTypes.bool,
     toggle: PropTypes.func,
+    page: PropTypes.shape({
+      page: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
     info: false,
     toggle: () => {},
+    page: {
+      page: '',
+    },
   };
 
   componentDidMount() {
+    const {
+      page: { page },
+    } = this.props;
+
     sectionData.onEnter();
-    setTimeout(() => updateMenuClasses(sectionData.sectionClassName, true), 0);
+
+    if (page === linkfulUrl) {
+      setTimeout(() => updateMenuClasses(sectionData.sectionClassName, true), 0);
+    }
   }
 
   componentWillUnmount() {
