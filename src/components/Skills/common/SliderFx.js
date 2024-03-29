@@ -43,6 +43,7 @@ class SliderFx {
     this.extend(this.options, options);
 
     this.xDown = null;
+    this.yDown = null;
   }
 
   _morphSVGs = callback => {
@@ -230,15 +231,22 @@ class SliderFx {
   _addSwipeNavigationListener = () => {
     document.addEventListener('touchstart', ({ touches: [firstTouch] }) => {
       this.xDown = firstTouch.clientX;
+      this.yDown = firstTouch.clientY;
     });
 
-    document.addEventListener('touchmove', ({ touches: [{ clientX: xUp }] }) => {
-      if (!this.xDown) return;
+    document.addEventListener('touchmove', ({ touches: [{ clientX: xUp, clientY: yUp }] }) => {
+      if (!this.xDown || !this.yDown) return;
 
       const xDiff = this.xDown - xUp;
-      const isRightSwipe = xDiff > 0;
+      const yDiff = this.yDown - yUp;
 
-      isRightSwipe ? this._navigate('next') : this._navigate('prev');
+      // exclude vertical swipe navigation
+      const isHorizontalSwipe = Math.abs(xDiff) > Math.abs(yDiff);
+
+      if (isHorizontalSwipe) {
+        const isRightSwipe = xDiff > 0;
+        isRightSwipe ? this._navigate('next') : this._navigate('prev');
+      }
 
       this.xDown = null;
     });
