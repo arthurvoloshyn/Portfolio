@@ -9,19 +9,19 @@ import graphql from '../../../resources/imgs/skills/frontend/graphql.png';
 import next from '../../../resources/imgs/skills/frontend/next.png';
 import reactNative from '../../../resources/imgs/skills/frontend/react_native.png';
 import vue from '../../../resources/imgs/skills/frontend/vue.png';
+import angular from '../../../resources/imgs/skills/frontend/angular.png';
+import electron from '../../../resources/imgs/skills/frontend/electron.png';
 import webComponents from '../../../resources/imgs/skills/frontend/web_components.png';
 import jquery from '../../../resources/imgs/skills/frontend/jquery.png';
-import storybook from '../../../resources/imgs/skills/frontend/storybook.png';
-import htmlTemplateEngines from '../../../resources/imgs/skills/frontend/html_template_engines.png';
+import ionic from '../../../resources/imgs/skills/frontend/ionic.png';
 import cssPreprocessors from '../../../resources/imgs/skills/frontend/css_preprocessors.png';
-import cssTools from '../../../resources/imgs/skills/frontend/css_tools.png';
+import stylingTools from '../../../resources/imgs/skills/frontend/styling_tools.png';
 import bundlers from '../../../resources/imgs/skills/frontend/bundlers.png';
 import jsTestingTools from '../../../resources/imgs/skills/frontend/js_testing_tools.png';
 import pwa from '../../../resources/imgs/skills/frontend/pwa.png';
 
 import nodejs from '../../../resources/imgs/skills/backend/nodejs.png';
 import php from '../../../resources/imgs/skills/backend/php.png';
-import laravel from '../../../resources/imgs/skills/backend/laravel.png';
 import databases from '../../../resources/imgs/skills/backend/databases.png';
 
 import git from '../../../resources/imgs/skills/other/git.png';
@@ -36,7 +36,7 @@ import cms from '../../../resources/imgs/skills/other/cms.png';
 const frontendSkills = [
   {
     src: html,
-    alt: 'HTML',
+    alt: 'HTML, as well as HTML template engines such as Pug and EJS',
   },
   {
     src: css,
@@ -56,11 +56,12 @@ const frontendSkills = [
   },
   {
     src: redux,
-    alt: 'Redux and Redux Toolkit, as well as technologies such as Redux-Saga and Redux-Thunk',
+    alt:
+      'Redux and Redux Toolkit, as well as technologies such as RTKQuery, Redux-Saga and Redux-Thunk',
   },
   {
     src: stateManagement,
-    alt: 'State management libraries such as MobX, RxJS, Recoil, and Effector',
+    alt: 'State management libraries such as TanStack Query, Zustand, MobX and RxJS',
   },
   {
     src: graphql,
@@ -68,7 +69,7 @@ const frontendSkills = [
   },
   {
     src: next,
-    alt: 'Next.js, as well as SSR & SSG technologies such as Gatsby, HUGO, and Remix',
+    alt: 'Next.js, as well as SSR & SSG technologies such as Gatsby, Astro, Remix, HTMX and HUGO',
   },
   {
     src: reactNative,
@@ -76,43 +77,45 @@ const frontendSkills = [
   },
   {
     src: vue,
-    alt: 'Vue, as well as technologies such as Nuxt.js and Vuex',
+    alt: 'Vue, as well as technologies such as Nuxt.js and Pinia',
+  },
+  {
+    src: angular,
+    alt: 'Angular, as well as technologies such as Universal and NgRx',
+  },
+  {
+    src: electron,
+    alt: 'Electron and Tauri',
+  },
+  {
+    src: ionic,
+    alt: 'Apache Cordova and Ionic',
   },
   {
     src: webComponents,
-    alt:
-      'Web Components, as well as technologies such as Stencil.js, Polymer, Bit, Lit-html, LitElement, FAST, SolidJS, Skate.js, Slim.js and Clarity Core',
+    alt: 'Web Components such as Lit and Stencil',
   },
   {
     src: jquery,
     alt: 'jQuery',
   },
   {
-    src: storybook,
-    alt: 'Storybook, as well as technologies such as Loki and JSDoc',
-  },
-  {
-    src: htmlTemplateEngines,
-    alt: 'HTML template engines such as Pug, EJS and Blade',
-  },
-  {
     src: cssPreprocessors,
     alt: 'CSS preprocessors such as SASS, LESS, Stylus and PostCSS',
   },
   {
-    src: cssTools,
+    src: stylingTools,
     alt:
-      'CSS tools such as Styled Components, Emotion, Styled JSX, Material-UI, Ant Design, Tailwind CSS, Bootstrap, Materialize, Foundation and Skeleton',
+      'Styling tools such as Styled Components, Emotion, Material-UI, Ant Design, Tailwind CSS, Bootstrap, Radix UI, shadcn/ui and Headless UI',
   },
   {
     src: bundlers,
-    alt:
-      'Bundlers and task managers such as Webpack, Gulp, ESBuild, Rollup.js, Parcel Snowpack and Bower',
+    alt: 'Bundlers such as Vite and Webpack',
   },
   {
     src: jsTestingTools,
     alt:
-      'JS testing tools such as Jest, Enzyme, Testing Library (RTL), Cypress, WebdriverIO, Puppeteer, Mocha, Karma, Jasmine and Chai',
+      'JS testing tools such as Jest, Mocha, Vitest, React Testing Library, Enzyme, Playwright, Cypress, Detox, Storybook and Loki',
   },
   {
     src: pwa,
@@ -123,15 +126,11 @@ const frontendSkills = [
 const backendSkills = [
   {
     src: nodejs,
-    alt: 'Node.js',
+    alt: 'Node.js, as well as technologies such as Fastify, NestJS and Express',
   },
   {
     src: php,
-    alt: 'PHP',
-  },
-  {
-    src: laravel,
-    alt: 'Laravel',
+    alt: 'PHP and Laravel',
   },
   {
     src: databases,
@@ -150,20 +149,20 @@ const anotherSkills = [
   },
   {
     src: ciCd,
-    alt:
-      'CI/CD tools such as Github Actions, GitLab CI/CD, Travis CI, Jenkins, App Center, and Fastlane',
+    alt: 'CI/CD tools such as Github Actions, GitLab CI/CD, Jenkins, App Center and Fastlane',
   },
   {
     src: linters,
-    alt: 'Linters and code formatters such as ESLint, Stylelint and Prettier',
+    alt: 'Linters and code formatters such as ESLint, Stylelint, Prettier, OXLint and Biome.js',
   },
   {
     src: serverlessAndServers,
-    alt: 'Serverless and servers such as AWS, Azure, GCP, Firebase, Nginx and Apache',
+    alt:
+      'Infrastructure tools such as Terraform, AWS, Azure, GCP, Firebase, CloudFlare, Nginx and Apache',
   },
   {
     src: cms,
-    alt: "CMS's such as Expression.Cloud and WordPress",
+    alt: "CMS's such as WordPress and Strapi",
   },
 ];
 
