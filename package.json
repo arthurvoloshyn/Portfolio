@@ -1,5 +1,5 @@
 {
-  "homepage": "https://arturvoloshyn.vercel.app",
+  "homepage": "https://arturvoloshyn.netlify.app",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -71,8 +71,6 @@
     "test:update": "npm test -- -u",
     "test:watch": "npm test -- --watchAll --verbose",
     "test:coverage": "npm test -- --bail --coverage --watchAll",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "lint:styles": "stylelint --syntax scss src/**/*.scss",
     "lint": "eslint --ext .js,.jsx src",
     "lint:fix": "npm run lint -- --fix",

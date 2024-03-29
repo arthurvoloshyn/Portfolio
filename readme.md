@@ -2,7 +2,7 @@
 
 My own portfolio build on React
 
-[Demo](https://arturvoloshyn.vercel.app)
+[Demo](https://arturvoloshyn.netlify.app)
 
 ## To clone
 
