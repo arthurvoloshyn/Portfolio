@@ -71,6 +71,7 @@ class Menu extends Component {
 
               return (
                 <li key={title}>
+                  {/* eslint-disable jsx-a11y/anchor-is-valid */}
                   <a onClick={menuHandler}>
                     <i className={`icon fas fa-${icon}`} />
                     <span>{title}</span>
