@@ -41,6 +41,8 @@ class SliderFx {
     };
     this.options = this.extend({}, this.optionsDefault);
     this.extend(this.options, options);
+
+    this.xDown = null;
   }
 
   _morphSVGs = callback => {
@@ -219,7 +221,27 @@ class SliderFx {
             break;
         }
       });
+
+      // swipe navigation events
+      this._addSwipeNavigationListener();
     }
+  };
+
+  _addSwipeNavigationListener = () => {
+    document.addEventListener('touchstart', ({ touches: [firstTouch] }) => {
+      this.xDown = firstTouch.clientX;
+    });
+
+    document.addEventListener('touchmove', ({ touches: [{ clientX: xUp }] }) => {
+      if (!this.xDown) return;
+
+      const xDiff = this.xDown - xUp;
+      const isRightSwipe = xDiff > 0;
+
+      isRightSwipe ? this._navigate('next') : this._navigate('prev');
+
+      this.xDown = null;
+    });
   };
 
   _navigate = dir => {
