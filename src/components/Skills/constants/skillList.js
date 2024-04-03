@@ -28,7 +28,7 @@ import git from '../../../resources/imgs/skills/other/git.png';
 import docker from '../../../resources/imgs/skills/other/docker.png';
 import ciCd from '../../../resources/imgs/skills/other/ci-cd.png';
 import linters from '../../../resources/imgs/skills/other/linters.png';
-import serverlessAndServers from '../../../resources/imgs/skills/other/serverless_&_servers.png';
+import infrastructureTools from '../../../resources/imgs/skills/other/infrastructure_tools.png';
 import cms from '../../../resources/imgs/skills/other/cms.png';
 
 /* eslint-disable max-len */
@@ -156,7 +156,7 @@ const anotherSkills = [
     alt: 'Linters and code formatters such as ESLint, Stylelint, Prettier, OXLint and Biome.js',
   },
   {
-    src: serverlessAndServers,
+    src: infrastructureTools,
     alt:
       'Infrastructure tools such as Terraform, AWS, Azure, GCP, Firebase, CloudFlare, Nginx and Apache',
   },
