@@ -115,7 +115,7 @@ const frontendSkills = [
   {
     src: jsTestingTools,
     alt:
-      'JS testing tools such as Jest, Mocha, Vitest, React Testing Library, Enzyme, Playwright, Cypress, Detox, Storybook and Loki',
+      'JS testing tools such as Jest, Mocha, Vitest, Testing Library, Enzyme, Playwright, Cypress, Detox, Storybook and Loki',
   },
   {
     src: pwa,
