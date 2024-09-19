@@ -1,6 +1,6 @@
 const SOCIAL_NETWORK = {
   email: 'arthurvoloshyn@gmail.com',
-  gitHub: 'https://github.com/ArturW1998',
+  gitHub: 'https://github.com/arthurvoloshyn',
   linkedIn: 'https://www.linkedin.com/in/artur-voloshyn-4439b61a4/',
 };
 
